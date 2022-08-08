@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+/* Styles for topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  padding: 0 58px;
+  font-family: "Roboto", "Helvetica Neue";
+}
+
+.topbar a {
+  text-decoration: none;
+  color: black;
+}
+
+/* contact info styles */
+.contact-info a {
+  margin-right: 25px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.topbar i {
+  color: #3ec1ee;
+}
+/* contact info icons style */
+.contact-info a i {
+  font-size: 1.3rem;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+/* -----------contact info hover settings----------- */
+.contact-info a:hover {
+  cursor: pointer;
+  color: #285aeb;
+  font-size: 0.9rem;
+}
+
+.contact-info a:hover i {
+  cursor: pointer;
+  color: #2845eb;
+  font-size: 1.32rem;
+}
+/* -----------contact info hover settings----------- */
+
+/* social icons styles */
+.social-icons a {
+  font-size: 1.5rem;
+  margin-left: 29px;
+  cursor: pointer;
+}
+
+.fa-twitter,
+.fa-facebook-f,
+.fa-instagram,
+.fa-linkedin-in {
+  transition: all 0.3s;
+}
+
+/* -----------Social icons hover settings----------- */
+.social-icons .fa-twitter:hover {
+  color: #00acee;
+  font-size: 1.6rem;
+}
+.social-icons .fa-linkedin-in:hover {
+  color: #0072b1;
+  font-size: 1.6rem;
+}
+
+.social-icons .fa-instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+}
+.social-icons .fa-facebook-f:hover {
+  color: #3b5998;
+  font-size: 1.6rem;
+}
+/* -----------Social icons hover settings----------- */
+
+/* responsiveness settings */
+@media screen and (max-width: 1000px) {
+  .topbar {
+    padding: 0 20px;
+  }
+  .contact-info a {
+    margin-right: 20px;
+    font-size: 12px;
+  }
+  .contact-info a i {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+
+  .social-icons a {
+    font-size: 1.3rem;
+    margin-left: 25px;
+  }
+  .contact-info a:hover {
+    font-size: 0.8rem;
+  }
+
+  .contact-info a:hover i {
+    font-size: 1.13rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .topbar {
+    display: none;
+  }
+}
