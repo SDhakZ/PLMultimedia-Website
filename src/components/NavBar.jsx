@@ -23,6 +23,10 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Home
               </NavLink>
             </li>
@@ -34,6 +38,10 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Services
               </NavLink>
             </li>
@@ -45,6 +53,10 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Portfolio
               </NavLink>
             </li>
@@ -56,6 +68,10 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 About
               </NavLink>
             </li>
@@ -67,6 +83,10 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Blog
               </NavLink>
             </li>
@@ -78,6 +98,10 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 Contact
               </NavLink>
             </li>
