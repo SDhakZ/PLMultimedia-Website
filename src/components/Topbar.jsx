@@ -8,7 +8,7 @@ function Topbar() {
         <a href="#">
           <i class="fa-solid fa-phone"></i>+977 9860283950
         </a>
-        <a href="internships@plmultimediaservice.com">
+        <a href="mailto:internships@plmultimediaservice.com">
           <i class="fa-solid fa-envelope"></i>
           internships@plmultimediaservice.com
         </a>
