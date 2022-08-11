@@ -35,7 +35,7 @@ function Contact() {
               <span className="location-icon">
                 <FontAwesomeIcon icon={faLocationDot} size="xl" />
               </span>
-              <span className="location">Bharatpur-20, Chitwan</span>
+              Bharatpur-20, Chitwan
             </a>
             <a href="https://www.linkedin.com/feed/" target="_blank">
               <span className="linkedIn-icon">
@@ -51,7 +51,7 @@ function Contact() {
             </a>
             <a href="https://www.instagram.com/instagram/" target="_blank">
               <span className="instagram-icon">
-                <FontAwesomeIcon icon={faInstagram} size="xl" />
+                <i className="fa-brands fa-instagram"></i>
               </span>
               PLMultimediaService
             </a>

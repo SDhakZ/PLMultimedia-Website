@@ -84,10 +84,6 @@ body {
   padding-left: 2px;
 }
 
-.icons .location {
-  padding-left: 4px;
-}
-
 .icons .linkedIn-icon {
   padding-left: 2px;
   color: #07698b;
@@ -100,36 +96,18 @@ body {
 }
 
 .icons .instagram-icon {
-  color: #fbfbfd;
-  background: -moz-linear-gradient(
-    45deg,
-    #caf033 0%,
-    #e6913c 25%,
-    #dc2785 50%,
-    #e649dc 75%,
-    #6e1fe6 100%
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
   );
-  background: -webkit-linear-gradient(
-    45deg,
-    #caf033 0%,
-    #e6913c 25%,
-    #dc2785 50%,
-    #e649dc 75%,
-    #6e1fe6 100%
-  );
-  background: linear-gradient(
-    45deg,
-    #caf033 0%,
-    #e6913c 25%,
-    #dc2785 50%,
-    #e649dc 75%,
-    #6e1fe6 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#caf033', endCorgb(222, 88, 180)'#6e1fe6', GradientType=1);
-  border-radius: 8px;
-  padding: 4px;
-  padding-top: 6px;
-  padding-bottom: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
 }
 
 .icons .facebook-icon {
