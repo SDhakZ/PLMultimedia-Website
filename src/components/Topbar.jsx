@@ -1,10 +1,10 @@
 import React from "react";
-import "./Topbar.css";
+import TopbarCSS from "./Topbar.module.css";
 
 function Topbar() {
   return (
-    <div className="topbar">
-      <div className="contact-info">
+    <div className={TopbarCSS["topbar"]}>
+      <div className={TopbarCSS["contact-info"]}>
         <a href="#">
           <i class="fa-solid fa-phone"></i>+977 9860283950
         </a>
@@ -16,18 +16,18 @@ function Topbar() {
           <i class="fa-solid fa-location-dot"></i>Chitwan, Nepal
         </a>
       </div>
-      <div className="social-icons">
+      <div className={TopbarCSS["social-icons"]}>
         <a href="#">
-          <i className="fa-brands fa-twitter"></i>
+          <i className={`${TopbarCSS.twitter} fa-brands fa-twitter`}></i>
         </a>
-        <a href="#">
-          <i className="fa-brands fa-linkedin-in"></i>
+        <a href="https://www.linkedin.com/feed/">
+          <i className={`${TopbarCSS.linkedin} fa-brands fa-linkedin-in`}></i>
         </a>
-        <a href="#">
-          <i className="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/instagram/">
+          <i className={`${TopbarCSS.instagram} fa-brands fa-instagram`}></i>
         </a>
-        <a href="#">
-          <i className="fa-brands fa-facebook-f"></i>
+        <a href="https://www.facebook.com/plmultimediaservice">
+          <i className={`${TopbarCSS.facebook} fa-brands fa-facebook-f`}></i>
         </a>
       </div>
     </div>

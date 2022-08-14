@@ -51,24 +51,28 @@
   cursor: pointer;
 }
 
-.fa-twitter,
-.fa-facebook-f,
-.fa-instagram,
-.fa-linkedin-in {
+.twitter,
+.facebook,
+.instagram,
+.linkedin {
   transition: all 0.3s;
 }
 
 /* -----------Social icons hover settings----------- */
-.social-icons .fa-twitter:hover {
+.social-icons .twitter:hover {
   color: #00acee;
   font-size: 1.6rem;
 }
-.social-icons .fa-linkedin-in:hover {
+.social-icons .linkedin:hover {
   color: #0072b1;
   font-size: 1.6rem;
 }
 
-.social-icons .fa-instagram:hover {
+.lol:hover {
+  color: blue;
+}
+
+.social-icons .instagram:hover {
   background: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
@@ -82,7 +86,7 @@
   -webkit-text-fill-color: transparent;
   font-size: 1.6rem;
 }
-.social-icons .fa-facebook-f:hover {
+.social-icons .facebook:hover {
   color: #3b5998;
   font-size: 1.6rem;
 }
