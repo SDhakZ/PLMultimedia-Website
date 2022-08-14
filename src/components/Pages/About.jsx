@@ -9,7 +9,7 @@ function About() {
       <h1 className={AboutCSS.aboutUs}>About Us</h1>
       <div className={AboutCSS.WhoAreWe}>
         <div>
-          <img src={meeting} className={AboutCSS.meeting} />
+          <img src={meeting} className={AboutCSS.meeting} alt="meeting" />
         </div>
         <div className={AboutCSS.text}>
           <h2 className={AboutCSS.title}>Who Are We?</h2>
@@ -47,7 +47,7 @@ function About() {
           </p>
         </div>
         <div className={AboutCSS.writing}>
-          <img src={writing} />
+          <img src={writing} alt="writing" />
         </div>
       </div>
     </div>
