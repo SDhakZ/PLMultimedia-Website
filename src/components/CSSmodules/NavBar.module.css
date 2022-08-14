@@ -34,7 +34,7 @@
   margin-right: 3rem;
 }
 
-.nav-menu {
+.navMenu {
   display: flex;
   list-style: none;
 }
@@ -48,6 +48,7 @@
   margin-left: 1rem;
   font-family: "Cabin", sans-serif;
   font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .nav-links:hover {
@@ -117,7 +118,7 @@
 
 /* Menu toggle responsiveness */
 @media screen and (max-width: 960px) {
-  .nav-menu {
+  .navMenu {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -132,7 +133,7 @@
   .navbar {
     height: 4rem;
   }
-  .nav-menu.active {
+  .navMenu.active {
     background: #ececec;
     left: 0;
     opacity: 1;
@@ -175,7 +176,7 @@
     color: #fff;
   }
 
-  .fa-times {
+  .cross {
     display: block;
     position: absolute;
     top: 0;
@@ -218,7 +219,7 @@
     color: #fff;
   }
 
-  .nav-menu {
+  .navMenu {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -229,7 +230,7 @@
     opacity: 1;
     transition: all 0.3s ease;
   }
-  .fa-times {
+  .cross {
     display: block;
     position: absolute;
     top: 0;

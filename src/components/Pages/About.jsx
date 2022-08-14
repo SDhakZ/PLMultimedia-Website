@@ -1,7 +1,7 @@
 import React from "react";
 import meeting from "../../images/meeting.png";
 import writing from "../../images/writing.png";
-import AboutCSS from "../aboutUs.module.css";
+import AboutCSS from "../CSSmodules/aboutUs.module.css";
 
 function About() {
   return (

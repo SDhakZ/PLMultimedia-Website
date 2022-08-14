@@ -6,7 +6,7 @@ body {
 
 .column {
   display: flex;
-  padding: 66px 140px;
+  padding: 50px 140px;
 }
 
 .column-left {
@@ -14,21 +14,25 @@ body {
 }
 
 .get-in-touch {
-  font-family: "Bahnschrift";
-  font-style: normal;
+  font-family: "Inter";
   font-weight: 700;
   font-size: 58px;
   color: #2f2f2f;
+  margin-left: -4px;
+}
+
+p {
+  padding: 0;
 }
 
 .paragraph {
   font-family: "Roboto";
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.25rem;
-  margin-top: 25px;
   line-height: 40px;
   color: #2f2f2f;
-  max-width: 500px;
+  max-width: 700px;
+  margin-top: 25px;
 }
 
 .find-Us-At {
@@ -159,6 +163,18 @@ select {
   border: 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1rem;
+  transition: all 0.4s;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: rgba(59, 59, 59, 0.336) 0px 5px 15px 0px;
+  transform: translateY(-2px);
 }
 
 .form-email-phone {
@@ -166,7 +182,7 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #effbff;
+  background: #b2ecff;
   mix-blend-mode: normal;
   padding: 25px 0px;
   margin-top: 30px;
@@ -177,7 +193,7 @@ select {
 input[type="email"],
 input[type="phone"] {
   width: 95%;
-  height: 45px;
+  height: 40px;
   padding: 12px;
   display: inline-block;
   border: 0px;
@@ -185,10 +201,19 @@ input[type="phone"] {
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1rem;
+  transition: all 0.5s;
+}
+
+input[type="email"]:focus,
+input[type="phone"]:focus {
+  box-shadow: rgba(0, 25, 95, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  outline: none;
+  transform: translateY(-2px);
 }
 
 input[type="phone"] {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .textarea {
@@ -203,6 +228,14 @@ input[type="phone"] {
   text-align: start;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1.1rem;
+  transition: all 0.4s;
+}
+
+textarea:focus {
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 25, 95, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .form-sendMessage {

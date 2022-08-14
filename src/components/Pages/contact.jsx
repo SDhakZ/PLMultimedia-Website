@@ -70,7 +70,7 @@ function Contact() {
           <div className="content">
             <h2 className="sendMessage">Send message</h2>
             <div className="line"></div>
-            <select>
+            <select className="drop-down">
               <option value="Advertisement">Advertisement</option>
               <option value="Web Development">Web Development</option>
               <option value="Web Hosting">Web Hosting</option>
