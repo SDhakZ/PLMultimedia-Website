@@ -7,7 +7,7 @@
   color: #2f2f2f;
 }
 
-.aboutUs {
+.aboutUs-MainHeading {
   text-align: center;
   font-family: "Exo 2";
   font-style: italic;
@@ -18,30 +18,19 @@
   margin-bottom: 90px;
 }
 
-.meeting {
-  margin-left: -25px;
-}
-
-p {
-  padding: 20px 0;
-}
-
-.WhoAreWe {
+.aboutUs-WhoAreWe {
   display: flex;
   flex-direction: row;
   gap: 100px;
   margin-bottom: 100px;
 }
 
-.title {
-  font-family: "Bahnschrift";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 59px;
-  letter-spacing: 0.05em;
+.aboutUs-WhoAreWeImg {
+  margin-left: -25px;
 }
 
-.paragraph {
+.aboutUs-Paragraph {
+  padding: 20px 0;
   font-family: "Bahnschrift";
   font-style: normal;
   font-weight: 400;
@@ -50,50 +39,58 @@ p {
   text-align: justify;
 }
 
-.aim {
+.aboutUs-Title {
+  font-family: "Bahnschrift";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 59px;
+  letter-spacing: 0.05em;
+}
+
+.aboutUs-Aim {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 100px;
 }
 
-.writing {
+.aboutUs-AimImg {
   margin-right: -30px;
 }
+/*Responsive settings*/
 @media (max-width: 1350px) {
   .aboutUs-Container {
     padding: 50px 60px;
   }
-  .WhoAreWe {
+  .aboutUs-WhoAreWe {
     gap: 60px;
   }
 }
+
 @media (max-width: 1200px) {
   .aboutUs-Container {
     padding: 50px 100px;
   }
-  .aboutUs {
+  .aboutUs-MainHeading {
     font-size: 67px;
     line-height: 42px;
     letter-spacing: 0.075em;
     margin: 0 0 70px 0;
   }
-  .WhoAreWe {
+  .aboutUs-WhoAreWe {
     gap: 60px;
     margin-bottom: 70px;
   }
-  img {
+  .aboutUs-WhoAreWeImg,
+  .aboutUs-AimImg {
     width: 450px;
   }
-  .title {
+  .aboutUs-Title {
     font-size: 37px;
     letter-spacing: 0.03em;
   }
-  p {
+  .aboutUs-Paragraph {
     padding: 10px 0;
-  }
-
-  .paragraph {
     font-size: 17px;
     line-height: 30px;
   }
@@ -103,16 +100,14 @@ p {
   .aboutUs-Container {
     padding: 50px 40px;
   }
-
-  .WhoAreWe {
+  .aboutUs-WhoAreWe {
     gap: 40px;
   }
-
-  img {
+  .aboutUs-WhoAreWeImg,
+  .aboutUs-AimImg {
     width: 400px;
   }
-
-  .paragraph {
+  .aboutUs-Paragraph {
     font-size: 17px;
     line-height: 23px;
   }
@@ -122,47 +117,40 @@ p {
   .aboutUs-Container {
     padding: 50px 90px;
   }
-
-  .aboutUs {
+  .aboutUs-MainHeading {
     font-size: 52px;
     line-height: 38px;
     letter-spacing: 0.15em;
     margin-bottom: 50px;
   }
-
-  img {
+  .aboutUs-WhoAreWeImg,
+  .aboutUs-AimImg {
     width: 112%;
     margin: 0px -37px;
   }
-
-  .meeting {
+  .aboutUs-WhoAreWeImg {
     max-lines: 0px;
     margin: 0px -35px;
   }
-
-  .writing {
+  .aboutUs-AimImg {
     margin-right: 0px;
   }
-
-  .title {
+  .aboutUs-Title {
     font-size: 35px;
     letter-spacing: 0.05em;
     margin-bottom: 10px;
   }
-
-  .WhoAreWe {
+  .aboutUs-WhoAreWe {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
   }
-
-  .paragraph {
+  .aboutUs-Paragraph {
     font-size: 20px;
     line-height: 35px;
   }
-
-  .aim {
+  .aboutUs-Aim {
     flex-direction: column-reverse;
     gap: 20px;
   }
@@ -172,29 +160,24 @@ p {
   .aboutUs-Container {
     padding: 50px 70px;
   }
-
-  img {
+  .aboutUs-WhoAreWeImg,
+  .aboutUs-AimImg {
     width: 112%;
-  }
-  .meeting {
     margin: 0px -27px;
   }
-  .writing {
-    margin: 0px -13px;
-  }
-  .title {
+  .aboutUs-Title {
     font-size: 30px;
   }
-  .WhoAreWe {
+  .aboutUs-WhoAreWe {
     margin-bottom: 30px;
   }
-  .paragraph {
+  .aboutUs-Paragraph {
     font-size: 17px;
     line-height: 30px;
   }
 }
 @media (max-width: 445px) {
-  .aboutUs {
+  .aboutUs-MainHeading {
     font-size: 39px;
     line-height: 38px;
     margin-bottom: 20px;
@@ -205,31 +188,33 @@ p {
     padding: 20px 35px;
   }
 
-  .aboutUs {
+  .aboutUs-MainHeading {
     font-size: 32px;
   }
 
-  img {
+  .aboutUs-WhoAreWeImg,
+  .aboutUs-AimImg {
     width: 100%;
+    margin: 0px 0px;
   }
 
-  .title {
+  .aboutUs-Title {
     font-size: 29px;
     margin-bottom: 0px;
   }
 
-  .WhoAreWe {
+  .aboutUs-WhoAreWe {
     margin-bottom: 20px;
     gap: 10px;
   }
 
-  .paragraph {
+  .aboutUs-Paragraph {
     font-size: 16px;
     line-height: 25px;
     margin-bottom: -5px;
   }
 
-  .aim {
+  .aboutUs-Aim {
     gap: 10px;
   }
 }

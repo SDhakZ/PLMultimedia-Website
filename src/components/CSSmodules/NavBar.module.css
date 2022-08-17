@@ -31,12 +31,12 @@
   font-family: "Cabin";
   margin-right: 3rem;
 }
-
+/* Navigation ul tag class target */
 .navMenu {
   display: flex;
   list-style: none;
 }
-
+/* Navigation li tag class target */
 .nav-links {
   color: #fff;
   text-decoration: none;
@@ -48,13 +48,9 @@
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
-
+/* Navigation li tag class hover effect */
 .nav-links:hover {
   font-size: 1.3rem;
-}
-
-.fa-code {
-  margin-left: 1rem;
 }
 
 /* Active nav link styles */
@@ -91,6 +87,7 @@
   display: none;
 }
 
+/*Responsive settings*/
 @media screen and (max-width: 1200px) {
   .navbar {
     padding: 0 3.9rem;

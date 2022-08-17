@@ -15,7 +15,7 @@
 }
 
 /* contact info styles */
-.contact-info a {
+.topbar-contactInfo a {
   margin-right: 25px;
   font-size: 14px;
   transition: all 0.3s;
@@ -25,19 +25,19 @@
   color: #3ec1ee;
 }
 /* contact info icons style */
-.contact-info a i {
+.topbar-contactInfo a i {
   font-size: 1.3rem;
   margin-right: 10px;
   transition: all 0.3s;
 }
 /* -----------contact info hover settings----------- */
-.contact-info a:hover {
+.topbar-contactInfo a:hover {
   cursor: pointer;
   color: #285aeb;
   font-size: 0.9rem;
 }
 
-.contact-info a:hover i {
+.topbar-contactInfo a:hover i {
   cursor: pointer;
   color: #2845eb;
   font-size: 1.32rem;
@@ -97,11 +97,11 @@
   .topbar {
     padding: 0 20px;
   }
-  .contact-info a {
+  .topbar-contactInfo a {
     margin-right: 20px;
     font-size: 12px;
   }
-  .contact-info a i {
+  .topbar-contactInfo a i {
     font-size: 1.1rem;
     margin-right: 10px;
     margin-left: 0px;
@@ -111,11 +111,11 @@
     font-size: 1.3rem;
     margin-left: 25px;
   }
-  .contact-info a:hover {
+  .topbar-contactInfo a:hover {
     font-size: 0.8rem;
   }
 
-  .contact-info a:hover i {
+  .topbar-contactInfo a:hover i {
     font-size: 1.13rem;
   }
 }

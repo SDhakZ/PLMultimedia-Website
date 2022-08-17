@@ -7,6 +7,7 @@ import About from "./components/Pages/About";
 import { Blog } from "./components/Pages/Blog";
 import { Services } from "./components/Pages/Services";
 import { Portfolio } from "./components/Pages/Portfolio";
+import Footer from "./components/Footer";
 import Contact from "./components/Pages/contact";
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <Footer />
     </>
   );
 }

@@ -4,7 +4,7 @@ import TopbarCSS from "./CSSmodules/Topbar.module.css";
 function Topbar() {
   return (
     <div className={TopbarCSS["topbar"]}>
-      <div className={TopbarCSS["contact-info"]}>
+      <div className={TopbarCSS["topbar-contactInfo"]}>
         <a href="#">
           <i class="fa-solid fa-phone"></i>+977 9860283950
         </a>
