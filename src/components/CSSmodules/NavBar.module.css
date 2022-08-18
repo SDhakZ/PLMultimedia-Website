@@ -130,7 +130,7 @@
   }
 
   .nav-logo {
-    flex-grow: 0;
+    flex-grow: 1; /*0*/
   }
 
   .navbar {
