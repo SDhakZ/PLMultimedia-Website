@@ -68,10 +68,6 @@
   font-size: 1.6rem;
 }
 
-.lol:hover {
-  color: blue;
-}
-
 .social-icons .instagram:hover {
   background: radial-gradient(
     circle at 30% 107%,

@@ -8,7 +8,7 @@ class Footer extends Component {
       <div className={FooterCSS.footerSection}>
         <div className={FooterCSS["footer-row"]}>
           {/* for columns of footer */}
-          <div class={FooterCSS["footer-coll"]}>
+          <div class={FooterCSS["footer-col1"]}>
             <h4>
               PL
               <span className={FooterCSS["footer-companyName"]}>
@@ -100,8 +100,8 @@ class Footer extends Component {
 
           {/*copyright*/}
         </div>
-        <div className={FooterCSS["footer-colc"]}>
-          <span className={FooterCSS["footer-copyright"]}>©</span>
+        <div className={FooterCSS["footer-copyright"]}>
+          <span className={FooterCSS["footer-copyrightSymbol"]}>©</span>
           <p>2022, PL multimedia, rights reserved</p>
         </div>
       </div>

@@ -1,0 +1,86 @@
+/*Formalities*/
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+  }
+
+/*Service and More Cards styling*/
+.serviceCard {
+    height: 510px;
+    width: 370px;
+    background-color: #BCEBFC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 0.5s ease-in-out;
+}
+
+.serviceCard:hover{
+    color: white;
+    background-color: #3FBFE9;
+    height: 520px;
+    width: 380px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    height: 145px;
+    width: 145px;
+    margin-top: 60px;
+}
+
+.contactButton {
+    width: 170px;
+    height: 50px;
+    border-radius: 26px;
+}
+
+.aboutLogo {
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cardName {
+    font-size: 26px;
+    font-style: bold;
+}
+
+.cardDescription{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.contactButton {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.moreDetails{
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    padding: 55px;
+    text-align: center;
+}
+
+/*Service Card section*/
+.serviceCardSection{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-right: 141px;
+    margin-left: 142px;
+    row-gap: 70px;
+    column-gap: 28px;
+
+}

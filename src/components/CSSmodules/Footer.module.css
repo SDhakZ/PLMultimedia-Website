@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 .footerSection {
-  background-color: #fbf8f8;
+  background-color: #ffffff;
   padding: 67px 140px;
-  /* height: 100%; */
+  bottom: 0;
+  box-shadow: 0px -5px 45px rgb(187, 187, 187);
 }
+
 .footer-row {
   display: flex;
   flex-direction: row;
@@ -12,13 +14,13 @@
 }
 /* slogan section */
 
-.footer-coll {
+.footer-col1 {
   flex: 1.2;
   margin-right: 30px;
   min-width: 300px;
 }
 
-.footer-coll h4 {
+.footer-col1 h4 {
   font-size: 3rem;
   font-family: "Great Vibes", cursive;
   color: #454444;
@@ -35,7 +37,7 @@
   position: relative;
   margin-left: 30px;
 }
-.footer-coll p {
+.footer-col1 p {
   font-size: 1.1rem;
   font-family: "Roboto";
   color: #2f2f2f;
@@ -101,12 +103,13 @@
   line-height: 24px;
 }
 
+/*footer icons selector*/
 .footer-icons .twitter,
 .footer-icons .instagram,
 .footer-icons .facebook,
 .footer-icons .linkedin {
   color: #2f2f2f;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   transition: all 0.3s;
 }
 
@@ -115,17 +118,14 @@
   justify-content: space-between;
   gap: 5px;
   margin-top: 25px;
+  transition: all 0.3s;
 }
-
+/*footer icons hover effects*/
 .footer-icons .twitter:hover {
   color: #00acee;
 }
 .footer-icons .linkedin:hover {
   color: #0072b1;
-}
-
-.lol:hover {
-  color: blue;
 }
 
 .footer-icons .instagram:hover {
@@ -145,7 +145,7 @@
   color: #3b5998;
 }
 
-.footer-colc {
+.footer-copyright {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 1rem;
@@ -154,7 +154,7 @@
   margin-top: 50px;
 }
 
-.footer-copyright {
+.footer-copyrightSymbol {
   font-size: 1.5rem;
   margin-right: 10px;
 }
@@ -170,7 +170,7 @@
     padding: 50px 100px;
   }
 
-  .footer-coll p {
+  .footer-col1 p {
     font-size: 1rem;
     line-height: 30px;
   }
@@ -209,16 +209,16 @@
 }
 
 @media (max-width: 1000px) {
-  .footer-coll {
+  .footer-col1 {
     margin-right: 15px;
     min-width: 240px;
   }
 
-  .footer-coll h4 {
+  .footer-col1 h4 {
     font-size: 2rem;
   }
 
-  .footer-coll h4 .footer-companyName {
+  .footer-col1 h4 .footer-companyName {
     font-size: 1.3rem;
   }
 
@@ -226,7 +226,7 @@
     padding: 50px 40px;
   }
 
-  .footer-coll p {
+  .footer-col1 p {
     font-size: 15px;
     line-height: 29px;
   }
@@ -256,12 +256,12 @@
   .footer-services {
     min-width: fit-content;
   }
-  .footer-colc {
+  .footer-copyright {
     font-size: 0.8rem;
     margin-top: 50px;
   }
 
-  .footer-copyright {
+  .footer-copyrightSymbol {
     font-size: 1.2rem;
     margin-right: 6px;
   }
@@ -272,7 +272,7 @@
     padding: 40px 40px;
   }
 
-  .footer-coll {
+  .footer-col1 {
     margin-right: 0px;
     min-width: 200px;
   }
@@ -287,15 +287,15 @@
     flex-direction: column;
   }
 
-  .footer-coll h4 {
+  .footer-col1 h4 {
     font-size: 1.8rem;
   }
 
-  .footer-coll h4 .footer-companyName {
+  .footer-col1 h4 .footer-companyName {
     font-size: 1.3rem;
   }
 
-  .footer-coll p {
+  .footer-col1 p {
     font-size: 0.85rem;
     line-height: 24px;
     max-width: 240px;
@@ -342,19 +342,19 @@
     padding: 25px 35px;
   }
 
-  .footer-coll {
+  .footer-col1 {
     margin-right: 0px;
   }
 
-  .footer-coll h4 {
+  .footer-col1 h4 {
     font-size: 2rem;
   }
 
-  .footer-coll h4 .footer-companyName {
+  .footer-col1 h4 .footer-companyName {
     font-size: 1.5rem;
   }
 
-  .footer-coll p {
+  .footer-col1 p {
     font-size: 0.9rem;
     line-height: 25px;
     max-width: 240px;
@@ -401,20 +401,20 @@
     padding: 25px 35px;
   }
 
-  .footer-coll {
+  .footer-col1 {
     margin-right: 0px;
     min-width: fit-content;
   }
 
-  .footer-coll h4 {
+  .footer-col1 h4 {
     font-size: 1.8rem;
   }
 
-  .footer-coll h4 .footer-companyName {
+  .footer-col1 h4 .footer-companyName {
     font-size: 1.4rem;
   }
 
-  .footer-coll p {
+  .footer-col1 p {
     font-size: 0.8rem;
     line-height: 20px;
     max-width: 230px;
