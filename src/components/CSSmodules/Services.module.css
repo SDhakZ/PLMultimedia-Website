@@ -48,8 +48,6 @@
   filter: brightness(1);
 }
 
-
-
 .aboutLogo {
   margin: 20px;
   align-items: center;
@@ -89,7 +87,6 @@
 
 /*Dual card optimization*/
 @media all and (max-width: 1398px) {
-
   .serviceCardSection {
     display: flex;
     justify-content: center;
@@ -100,7 +97,6 @@
   .services-container {
     padding: 10% 10%;
   }
-
 }
 
 /*single card optimization*/
@@ -110,7 +106,7 @@
     height: 538px;
     width: 390px;
   }
-  
+
   .serviceCard:hover {
     height: 543px;
     width: 394px;
@@ -128,7 +124,7 @@
     height: 496px;
     width: 360px;
   }
-  
+
   .serviceCard:hover {
     height: 504px;
     width: 365px;
@@ -148,7 +144,4 @@
     padding: 10px;
     font-size: 18px;
   }
-
 }
-
-
