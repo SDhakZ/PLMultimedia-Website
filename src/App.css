@@ -7,7 +7,7 @@ body {
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 
-/* .container {
+.container {
   position: relative;
 
   overflow: hidden;
@@ -70,4 +70,4 @@ body {
     transform: scale(15) rotate(480deg);
     opacity: 0;
   }
-} */
+}
