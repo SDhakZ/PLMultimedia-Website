@@ -8,7 +8,7 @@ import DomainSearch from "../DomainSearch.jsx";
 
 function Services() {
   return (
-    <div className="ServicesPage">
+    <div className={ServicesCSS["ServicesPage"]}>
       <DomainSearch />
 
       <div className={ServicesCSS["services-container"]}>

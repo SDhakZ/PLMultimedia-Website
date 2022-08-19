@@ -76,7 +76,7 @@
 /*Service Card section*/
 .serviceCardSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5em 1em;
 }
