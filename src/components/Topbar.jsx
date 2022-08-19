@@ -6,14 +6,14 @@ function Topbar() {
     <div className={TopbarCSS["topbar"]}>
       <div className={TopbarCSS["topbar-contactInfo"]}>
         <a href="#">
-          <i class="fa-solid fa-phone"></i>+977 9860283950
+          <i className="fa-solid fa-phone"></i>+977 9860283950
         </a>
         <a href="mailto:internships@plmultimediaservice.com">
-          <i class="fa-solid fa-envelope"></i>
+          <i className="fa-solid fa-envelope"></i>
           internships@plmultimediaservice.com
         </a>
         <a href="#">
-          <i class="fa-solid fa-location-dot"></i>Chitwan, Nepal
+          <i className="fa-solid fa-location-dot"></i>Chitwan, Nepal
         </a>
       </div>
       <div className={TopbarCSS["social-icons"]}>

@@ -1,7 +1,7 @@
 /*Service and More Cards styling*/
 .serviceCard {
-  height: 510px;
-  width: 370px;
+  height: 496px;
+  width: 360px;
   background-color: #bcebfc;
   border-radius: 20px;
   display: flex;
@@ -14,8 +14,8 @@
 .serviceCard:hover {
   color: white;
   background-color: #3fbfe9;
-  height: 520px;
-  width: 380px;
+  height: 504px;
+  width: 365px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,8 @@
 }
 
 .logo {
-  height: 145px;
-  width: 145px;
+  height: 140px;
+  width: 140px;
   margin-top: 60px;
 }
 
@@ -34,7 +34,21 @@
   height: 50px;
   border-radius: 26px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: 0.4s ease;
 }
+
+.serviceCard:hover .contactButton:hover {
+  filter: brightness(0.8);
+}
+
+.serviceCard:hover .contactButton:active {
+  filter: brightness(1);
+}
+
+
 
 .aboutLogo {
   margin: 20px;
@@ -54,12 +68,6 @@
   font-size: 20px;
 }
 
-.contactButton {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
 .moreDetails {
   font-size: 70px;
   font-weight: 700;
@@ -70,11 +78,77 @@
 /*Service Card section*/
 .serviceCardSection {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px 40px;
+  gap: 1.5em 1em;
 }
 
 .services-container {
   padding: 60px 140px;
 }
+
+/*Dual card optimization*/
+@media all and (max-width: 1398px) {
+
+  .serviceCardSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4em 4em;
+  }
+
+  .services-container {
+    padding: 10% 10%;
+  }
+
+}
+
+/*single card optimization*/
+
+@media all and (max-width: 1070px) {
+  .serviceCard {
+    height: 538px;
+    width: 390px;
+  }
+  
+  .serviceCard:hover {
+    height: 543px;
+    width: 394px;
+  }
+
+  .logo {
+    height: 155px;
+    width: 155px;
+  }
+}
+
+/*Mobile optimization*/
+@media all and (max-width: 600px) {
+  .serviceCard {
+    height: 496px;
+    width: 360px;
+  }
+  
+  .serviceCard:hover {
+    height: 504px;
+    width: 365px;
+  }
+
+  .logo {
+    height: 130px;
+    width: 130px;
+  }
+
+  .cardName {
+    font-size: 24px;
+    font-style: bold;
+  }
+
+  .cardDescription {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+}
+
+

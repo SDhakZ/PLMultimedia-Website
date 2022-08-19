@@ -8,7 +8,7 @@ class Footer extends Component {
       <div className={FooterCSS.footerSection}>
         <div className={FooterCSS["footer-row"]}>
           {/* for columns of footer */}
-          <div class={FooterCSS["footer-col1"]}>
+          <div className={FooterCSS["footer-col1"]}>
             <h4>
               PL
               <span className={FooterCSS["footer-companyName"]}>
