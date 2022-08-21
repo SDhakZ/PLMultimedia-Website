@@ -17,6 +17,8 @@
   background-color: #3fbfe9;
   transform: translateY(-5px);
   border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .logo {
@@ -41,19 +43,21 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fbfbfd inset;
-  transition: all 0.45s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
 }
 
 .serviceCard:hover .contactButton:hover {
   border: solid 2px white;
-  box-shadow: none;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
+    rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
   color: white;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
     linear-gradient(90deg, #62cff5, #c091fc);
+  transform: translateY(-3px);
 }
 
 .serviceCard:hover .contactButton:active {

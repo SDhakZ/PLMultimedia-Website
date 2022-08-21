@@ -20,13 +20,14 @@
 }
 
 .primary:hover {
+  border: solid 2px white;
   box-shadow: none;
   color: white;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    linear-gradient(90deg, #62cff5, #a664fd);
+    linear-gradient(90deg, #62cff5, #c091fc);
 }
 
 .secondary {
