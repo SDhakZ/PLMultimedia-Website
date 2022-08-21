@@ -41,7 +41,7 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fbfbfd inset;
-  transition: all 0.2s;
+  transition: all 0.45s ease;
   cursor: pointer;
 }
 
@@ -53,7 +53,7 @@
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    linear-gradient(90deg, #62cff5, #a664fd);
+    linear-gradient(90deg, #62cff5, #c091fc);
 }
 
 .serviceCard:hover .contactButton:active {
