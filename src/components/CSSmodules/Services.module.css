@@ -57,7 +57,7 @@
       rgba(255, 255, 255, 0)
     ),
     linear-gradient(90deg, #62cff5, #c091fc);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .serviceCard:hover .contactButton:active {
