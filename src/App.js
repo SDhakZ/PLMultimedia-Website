@@ -2,7 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Topbar from "./components/Topbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home } from "./components/Pages/Home";
+import { Home } from "./components/Pages/Home.jsx";
 import About from "./components/Pages/About";
 import { Blog } from "./components/Pages/Blog";
 import Services from "./components/Pages/Services.jsx";

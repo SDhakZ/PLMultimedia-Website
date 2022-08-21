@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../components/Button";
 import DomainCSS from "../components/CSSmodules/domainSearch.module.css";
 
 function DomainSearch() {
@@ -90,6 +91,7 @@ function DomainSearch() {
           onChange={(text) => updateDomain(text.target.value)}
           placeholder="Enter domain name..."
         ></input>
+
         <button
           className={DomainCSS.searchButton}
           onClick={() => getData(displayInfo)}

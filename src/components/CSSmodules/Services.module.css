@@ -7,41 +7,53 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .serviceCard:hover {
   color: white;
   background-color: #3fbfe9;
-  height: 504px;
-  width: 365px;
+  transform: translateY(-5px);
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 .logo {
   height: 140px;
   width: 140px;
-  margin-top: 60px;
 }
 
 .contactButton {
-  width: 170px;
-  height: 50px;
   border-radius: 26px;
-  cursor: pointer;
-  font-size: 16px;
+  font-family: "Roboto";
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 30px;
-  transition: 0.4s ease;
+  width: 166px;
+  height: 51px;
+  color: #2f2f2f;
+  border: solid 2px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #c091fc);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fbfbfd inset;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
 .serviceCard:hover .contactButton:hover {
-  filter: brightness(0.8);
+  border: solid 2px white;
+  box-shadow: none;
+  color: white;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #a664fd);
 }
 
 .serviceCard:hover .contactButton:active {
@@ -78,9 +90,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.5em 1em;
+  gap: 3rem 1.5rem;
 }
-
 .services-container {
   padding: 60px 140px;
 }
@@ -108,8 +119,7 @@
   }
 
   .serviceCard:hover {
-    height: 543px;
-    width: 394px;
+    transform: translateY(-5px);
   }
 
   .logo {
@@ -126,8 +136,7 @@
   }
 
   .serviceCard:hover {
-    height: 504px;
-    width: 365px;
+    transform: translateY(-5px);
   }
 
   .logo {

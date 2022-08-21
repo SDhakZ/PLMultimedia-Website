@@ -28,25 +28,25 @@ class Footer extends Component {
             <h4>Our services</h4>
             <ul>
               <li>
-                <a href="#">Advertisment</a>
+                <a href="/services">Advertisment</a>
               </li>
               <li>
-                <a href="#">Media production</a>
+                <a href="/services">Media production</a>
               </li>
               <li>
-                <a href="#">Web Development</a>
+                <a href="/services">Web Development</a>
               </li>
               <li>
-                <a href="#">Mobile App Development</a>
+                <a href="/services">Mobile App Development</a>
               </li>
               <li>
-                <a href="#">Web Hosting</a>
+                <a href="/services">Web Hosting</a>
               </li>
               <li>
-                <a href="#">SEO Optimization</a>
+                <a href="/services">SEO Optimization</a>
               </li>
               <li>
-                <a href="#">Digital Marketing</a>
+                <a href="/services">Digital Marketing</a>
               </li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ class Footer extends Component {
                 <a href="#">FAQ</a>
               </li>
               <li>
-                <a href="#">Our Blog</a>
+                <a href="/blog">Our Blog</a>
               </li>
             </ul>
           </div>

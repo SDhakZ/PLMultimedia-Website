@@ -12,12 +12,12 @@ function Topbar() {
           <i className="fa-solid fa-envelope"></i>
           internships@plmultimediaservice.com
         </a>
-        <a href="#">
+        <a href="https://goo.gl/maps/47BJnRvNCWqCdfkQ6">
           <i className="fa-solid fa-location-dot"></i>Chitwan, Nepal
         </a>
       </div>
       <div className={TopbarCSS["social-icons"]}>
-        <a href="#">
+        <a href="https://twitter.com/">
           <i className={`${TopbarCSS.twitter} fa-brands fa-twitter`}></i>
         </a>
         <a href="https://www.linkedin.com/feed/">
