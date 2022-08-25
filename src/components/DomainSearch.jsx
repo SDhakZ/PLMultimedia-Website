@@ -1,22 +1,20 @@
 import React, { useState } from "react";
-import Button from "../components/Button";
 import DomainCSS from "../components/CSSmodules/domainSearch.module.css";
 
 function DomainSearch() {
   const [domain, updateDomain] = useState("");
-  const [domainInfo, setDomainInfo] = useState("");
   const [informUser, setInformUser] = useState(
     "Enter your domain to check if it is available"
   );
   const [infoColor, setInfoColor] = useState("black");
 
   //Domain information is fetched here
-  const getData = (callback) => {
+  const getData = () => {
     //Object with api liscence and host information
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "20564a779bmsh7c5886ff4fe51eap13c643jsn196f5c5373a0",
+        "X-RapidAPI-Key": "40ee149ac5msh6703a39179f879ep1f99c6jsn382fa7ab1073",
         "X-RapidAPI-Host": "domain-checker7.p.rapidapi.com",
       },
     };
@@ -27,44 +25,34 @@ function DomainSearch() {
       options
     )
       .then((response) => response.json())
-      .then((response) => setDomainInfo(response))
+      .then((response) => {
+        const { valid, available } = response;
+        console.log(response);
+        if (valid === false) {
+          setInformUser(
+            "The domain you have entered is invalid! please try again."
+          );
+          setInfoColor("red");
+        } else {
+          if (available === false) {
+            setInformUser(
+              "The domain you have entered is already taken! try another domain."
+            );
+            setInfoColor("red");
+          } else if (available === true) {
+            setInformUser(
+              "The domain you have entered is available!!! Contact us to register your domain."
+            );
+            setInfoColor("green");
+          } else {
+            setInformUser(
+              "Some unexpected error has occured please try again."
+            );
+            setInfoColor("red");
+          }
+        }
+      })
       .catch((err) => console.error(err));
-
-    console.log(domainInfo);
-
-    setTimeout(() => {
-      callback();
-    }, 2000);
-  };
-
-  //Function to display the response JSON into user readable sentence with appropirate response and text color
-  const displayInfo = () => {
-    console.log("the func is now starting");
-    console.log(domainInfo.valid);
-    console.log(domainInfo.available);
-    console.log("testing segment has ended");
-
-    if (domainInfo.valid === false) {
-      setInformUser(
-        "The domain you have entered is invalid! please try again."
-      );
-      setInfoColor("red");
-    } else {
-      if (domainInfo.available === false) {
-        setInformUser(
-          "The domain you have entered is already taken! try another domain."
-        );
-        setInfoColor("red");
-      } else if (domainInfo.available === true) {
-        setInformUser(
-          "The domain you have entered is available!!! Contact us to register your domain."
-        );
-        setInfoColor("green");
-      } else {
-        setInformUser("Some unexpected error has occured please try again.");
-        setInfoColor("red");
-      }
-    }
   };
 
   return (
@@ -91,11 +79,7 @@ function DomainSearch() {
           onChange={(text) => updateDomain(text.target.value)}
           placeholder="Enter domain name..."
         ></input>
-
-        <button
-          className={DomainCSS.searchButton}
-          onClick={() => getData(displayInfo)}
-        >
+        <button className={DomainCSS.searchButton} onClick={() => getData()}>
           Search
         </button>
       </div>
