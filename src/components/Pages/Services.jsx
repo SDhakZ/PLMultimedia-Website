@@ -12,6 +12,7 @@ function Services() {
       <DomainSearch />
 
       <div className={ServicesCSS["services-container"]}>
+        <h1 className={ServicesCSS["services-heading"]}>Our Services</h1>
         <div className={ServicesCSS.serviceCardSection}>
           <ServiceCard
             logo={require("../../logo/advertisement.png").default}

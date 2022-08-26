@@ -56,7 +56,7 @@
 /* Active nav link styles */
 .nav-item .active {
   border-bottom: 3px solid white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   bottom: 9px;
 }
@@ -90,7 +90,7 @@
 /*Responsive settings*/
 @media screen and (max-width: 1200px) {
   .navbar {
-    padding: 0 3.9rem;
+    padding: 0 3.5rem;
   }
 
   .nav-item .active {
