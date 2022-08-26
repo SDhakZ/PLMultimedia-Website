@@ -24,12 +24,14 @@
 .topbar i {
   color: #3ec1ee;
 }
+
 /* contact info icons style */
 .topbar-contactInfo a i {
   font-size: 1.3rem;
   margin-right: 10px;
   transition: all 0.3s;
 }
+
 /* -----------contact info hover settings----------- */
 .topbar-contactInfo a:hover {
   cursor: pointer;
