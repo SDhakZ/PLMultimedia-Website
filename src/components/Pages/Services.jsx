@@ -5,16 +5,26 @@ import React from "react";
 import { ServiceCard, MoreCard } from "../ServiceCard.jsx";
 import ServicesCSS from "../CSSmodules/Services.module.css";
 import DomainSearch from "../DomainSearch.jsx";
-
+import serviceData from "../../serviceData";
 function Services() {
   return (
     <div className={ServicesCSS["ServicesPage"]}>
+      <h1 className={ServicesCSS["services-heading"]}>Our Services</h1>
       <DomainSearch />
 
       <div className={ServicesCSS["services-container"]}>
-        <h1 className={ServicesCSS["services-heading"]}>Our Services</h1>
         <div className={ServicesCSS.serviceCardSection}>
-          <ServiceCard
+          {serviceData.map((service) => {
+            return (
+              <ServiceCard
+                key={service.id}
+                logo={service.logo}
+                title={service.title}
+                description={service.description}
+              />
+            );
+          })}
+          {/* <ServiceCard
             logo={require("../../logo/advertisement.png").default}
             title="Advertisement"
             description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
@@ -48,7 +58,7 @@ function Services() {
             logo={require("../../logo/mediaProduction.png").default}
             title="Media Production"
             description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          />
+          /> */}
 
           <MoreCard moreDetails="AND MANY MORE ..." />
         </div>

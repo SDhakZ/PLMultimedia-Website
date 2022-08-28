@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,500;1,700&display=swap");
 
 .ServicesPage {
-  padding: 60px 160px;
+  padding: 80px 160px;
 }
 
 /*Service Card section*/
@@ -18,7 +18,7 @@
   font-family: "Exo 2";
   font-weight: 600;
   font-size: 4rem;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
 }
 
 .moreDetails {
@@ -56,6 +56,13 @@
 
 .logo {
   width: 140px;
+  transition: 0.5s ease-in;
+}
+
+.serviceCard:hover .logo,
+.serviceCard:hover .cardName,
+.serviceCard:hover .cardDescription {
+  transform: translateY(-5px);
 }
 
 .aboutLogo {
@@ -68,9 +75,10 @@
 
 .cardName {
   font-family: "Inter";
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-top: 10px;
+  transition: transform 0.5s ease-in;
 }
 
 .cardDescription {
@@ -79,6 +87,7 @@
   font-weight: 400;
   font-size: 1.1rem;
   margin-top: 5px;
+  transition: transform 0.5s ease-in;
 }
 
 .contactButton {
@@ -184,7 +193,7 @@
     margin-bottom: 40px;
   }
   .ServicesPage {
-    padding: 50px 30px;
+    padding: 50px 50px;
   }
   .serviceCard {
     padding: 30px 0px;
@@ -212,6 +221,9 @@
 }
 
 @media all and (max-width: 850px) {
+  .ServicesPage {
+    padding: 50px 30px;
+  }
   .services-heading {
     font-size: 2.7rem;
     margin-bottom: 30px;
@@ -251,7 +263,7 @@
 /*Mobile optimization*/
 @media all and (max-width: 450px) {
   .ServicesPage {
-    padding: 60px 30px;
+    padding: 30px 30px;
   }
   .services-heading {
     font-size: 2.7rem;
@@ -268,7 +280,7 @@
   }
   .cardName {
     font-family: "Inter";
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-top: 0px;
   }
 
@@ -281,7 +293,7 @@
   }
 
   .logo {
-    width: 100px;
+    width: 90px;
     margin-bottom: 0;
   }
 
@@ -294,7 +306,7 @@
 
 @media all and (max-width: 350px) {
   .ServicesPage {
-    padding: 60px 20px;
+    padding: 40px 20px;
   }
   .services-heading {
     font-size: 2.2rem;
