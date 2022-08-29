@@ -12,8 +12,7 @@
   font-family: "Exo 2";
   font-style: italic;
   font-weight: 600;
-  font-size: 77px;
-  line-height: 92px;
+  font-size: 4.5rem;
   letter-spacing: 0.075em;
   margin-bottom: 90px;
 }
@@ -32,9 +31,9 @@
 .aboutUs-Paragraph {
   padding: 20px 0;
   font-family: "Bahnschrift";
-  font-style: normal;
+
   font-weight: 400;
-  font-size: 21px;
+  font-size: 1.3rem;
   line-height: 40px;
   text-align: justify;
 }
@@ -58,22 +57,68 @@
   margin-right: -30px;
 }
 /*Responsive settings*/
-@media (max-width: 1350px) {
-  .aboutUs-Container {
-    padding: 50px 60px;
+
+@media (max-width: 1400px) {
+  .aboutUs-MainHeading {
+    font-size: 4rem;
   }
   .aboutUs-WhoAreWe {
     gap: 60px;
+    margin-bottom: 70px;
+  }
+
+  .aboutUs-Aim {
+    gap: 60px;
+  }
+  .aboutUs-WhoAreWeImg,
+  .aboutUs-AimImg {
+    width: 500px;
+  }
+  .aboutUs-Title {
+    font-size: 3rem;
+    letter-spacing: 0.03em;
+  }
+  .aboutUs-Paragraph {
+    padding: 10px 0;
+    font-size: 1.2rem;
+    line-height: 30px;
   }
 }
 
 @media (max-width: 1200px) {
   .aboutUs-Container {
-    padding: 50px 100px;
+    padding: 50px 80px;
   }
   .aboutUs-MainHeading {
     font-size: 67px;
-    line-height: 42px;
+    letter-spacing: 0.075em;
+    margin: 0 0 70px 0;
+  }
+  .aboutUs-WhoAreWe {
+    gap: 60px;
+    margin-bottom: 70px;
+  }
+  .aboutUs-WhoAreWeImg,
+  .aboutUs-AimImg {
+    width: 450px;
+  }
+  .aboutUs-Title {
+    font-size: 37px;
+    letter-spacing: 0.03em;
+  }
+  .aboutUs-Paragraph {
+    padding: 10px 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .aboutUs-Container {
+    padding: 50px 50px;
+  }
+  .aboutUs-MainHeading {
+    font-size: 67px;
     letter-spacing: 0.075em;
     margin: 0 0 70px 0;
   }
@@ -158,18 +203,21 @@
 
 @media (max-width: 600px) {
   .aboutUs-Container {
-    padding: 50px 70px;
+    padding: 50px 40px;
   }
+
   .aboutUs-WhoAreWeImg,
   .aboutUs-AimImg {
-    width: 112%;
-    margin: 0px -27px;
+    width: 100%;
+    margin: 0 auto 0 auto;
   }
   .aboutUs-Title {
-    font-size: 30px;
+    font-size: 2.5rem;
   }
   .aboutUs-WhoAreWe {
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
   }
   .aboutUs-Paragraph {
     font-size: 17px;
@@ -179,7 +227,6 @@
 @media (max-width: 445px) {
   .aboutUs-MainHeading {
     font-size: 39px;
-    line-height: 38px;
     margin-bottom: 20px;
   }
 }

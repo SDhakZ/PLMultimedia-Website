@@ -24,41 +24,6 @@ function Services() {
               />
             );
           })}
-          {/* <ServiceCard
-            logo={require("../../logo/advertisement.png").default}
-            title="Advertisement"
-            description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          />
-          <ServiceCard
-            logo={require("../../logo/webDevelopment.png").default}
-            title="Web Development"
-            description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          />
-          <ServiceCard
-            logo={require("../../logo/webHosting.png").default}
-            title="Web Hosting"
-            description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          />
-          <ServiceCard
-            logo={require("../../logo/mobileAppDevelopment.png").default}
-            title="Mobile App Development"
-            description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          />
-          <ServiceCard
-            logo={require("../../logo/seo.png").default}
-            title="SEO Optimization"
-            description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          />
-          <ServiceCard
-            logo={require("../../logo/digitalMarketing.png").default}
-            title="Digital Marketing"
-            description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          />
-          <ServiceCard
-            logo={require("../../logo/mediaProduction.png").default}
-            title="Media Production"
-            description="lorem20 is not working on my vs code so i am randomly typing this paragraph. And how is the weather there in kathmandu?"
-          /> */}
 
           <MoreCard moreDetails="AND MANY MORE ..." />
         </div>

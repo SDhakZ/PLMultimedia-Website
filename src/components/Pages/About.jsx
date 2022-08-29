@@ -8,13 +8,13 @@ function About() {
     <div className={AboutCSS["aboutUs-Container"]}>
       <h1 className={AboutCSS["aboutUs-MainHeading"]}>About Us</h1>
       <div className={AboutCSS["aboutUs-WhoAreWe"]}>
-        <div>
+        <figure>
           <img
             src={meeting}
             className={AboutCSS["aboutUs-WhoAreWeImg"]}
             alt="meeting"
           />
-        </div>
+        </figure>
         <div className={AboutCSS["aboutUs-Text"]}>
           <h2 className={AboutCSS["aboutUs-Title"]}>Who Are We?</h2>
           <p className={AboutCSS["aboutUs-Paragraph"]}>
@@ -50,13 +50,13 @@ function About() {
             PageMaker including versions of Lorem Ipsum.
           </p>
         </div>
-        <div>
+        <figure>
           <img
             src={writing}
             className={AboutCSS["aboutUs-AimImg"]}
             alt="writing"
           />
-        </div>
+        </figure>
       </div>
     </div>
   );

@@ -1,0 +1,108 @@
+.portfolio-container {
+  padding: 80px 140px;
+}
+
+.portfolio-mainHeading {
+  text-align: center;
+  font-family: "Exo 2";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 4.5rem;
+  letter-spacing: 0.075em;
+  margin-bottom: 90px;
+}
+
+.portfolio-flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolioRow {
+  display: flex;
+  width: 100%;
+  gap: 8rem;
+  margin-bottom: 157px;
+}
+
+.RL {
+  flex-flow: row-reverse;
+}
+
+.portfolio-imgContainer {
+  width: 50%;
+}
+
+.portfolio-image {
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.portfolio-image:hover {
+  transform: translateY(-8px);
+  box-shadow: rgba(62, 62, 124, 0.719) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.418) 0px 8px 20px -8px;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+  justify-content: space-between;
+}
+
+.portfolio-heading {
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 3rem;
+  color: #2f2f2f;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.portfolio-paragraph {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 32px;
+  color: #4c565f;
+  /*For allowing line break in json*/
+  white-space: pre-line;
+  vertical-align: bottom;
+}
+
+.portfolio-button {
+  border-radius: 35px;
+  font-family: "Roboto";
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #2f2f2f;
+  border: solid 2px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #c091fc);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fbfbfd inset;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  align-self: baseline;
+}
+
+.portfolio-button:hover {
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
+    rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+  color: white;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #c091fc);
+  transform: translateY(-2px);
+}
