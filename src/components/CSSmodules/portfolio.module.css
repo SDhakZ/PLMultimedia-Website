@@ -1,13 +1,14 @@
 :root {
-  --fs-xl: 4.5rem;
-  --fs-h: 2.6rem;
-  --fs-p: 1.3rem;
-  --fs-bt: 1.15rem;
-  --fh-p: 35px;
+  --pd-c: 80px 140px; /*container padding*/
+  --fs-xl: 4.5rem; /* main heading size */
+  --fs-h: 2.6rem; /* heading font size */
+  --fs-p: 1.3rem; /* paragraph font size*/
+  --fs-bt: 1.15rem; /* button font size */
+  --fh-p: 35px; /* paragraph line height */
 }
 
 .portfolio-container {
-  padding: 80px 140px;
+  padding: var(--pd-c);
 }
 
 .portfolio-mainHeading {
@@ -112,11 +113,11 @@
 
 @media all and (max-width: 1500px) {
   :root {
-    --fs-xl: 4rem;
-    --fs-h: 1.8rem;
-    --fs-p: 1rem;
-    --fs-bt: 0.95rem;
-    --fh-p: 30px;
+    --fs-xl: 4rem; /* main heading size */
+    --fs-h: 1.8rem; /* heading font size */
+    --fs-p: 1rem; /* paragraph font size*/
+    --fs-bt: 0.95rem; /* button font size */
+    --fh-p: 30px; /* paragraph line height */
   }
 
   .portfolioRow {
@@ -136,20 +137,18 @@
 
 @media all and (max-width: 1200px) {
   :root {
-    --fs-xl: 3.5rem;
-    --fs-h: 1.8rem;
-    --fs-p: 0.95rem;
-    --fs-bt: 0.97rem;
-    --fh-p: 27px;
+    --pd-c: 50px 60px; /*container padding*/
+    --fs-xl: 3.5rem; /* main heading size */
+    --fs-h: 1.8rem; /* heading font size */
+    --fs-p: 0.95rem; /* paragraph font size*/
+    --fs-bt: 0.97rem; /* button font size */
+    --fh-p: 27px; /* paragraph line height */
   }
 
   .portfolio-mainHeading {
     margin-bottom: 55px;
   }
 
-  .portfolio-container {
-    padding: 50px 80px;
-  }
   .portfolioRow {
     gap: 3rem;
     margin-bottom: 90px;
@@ -164,19 +163,13 @@
   }
 }
 
-@media all and (max-width: 1100px) {
-  .portfolio-container {
-    padding: 50px 50px;
-  }
-}
-
 @media all and (max-width: 960px) {
   :root {
-    --fs-xl: 3.5rem;
-    --fs-h: 2rem;
-    --fs-p: 1.05rem;
-    --fs-bt: 1rem;
-    --fh-p: 28px;
+    --fs-xl: 3rem; /* main heading size */
+    --fs-h: 2rem; /* heading font size */
+    --fs-p: 1.05rem; /* paragraph font size*/
+    --fs-bt: 1rem; /* button font size */
+    --fh-p: 28px; /* paragraph line height */
   }
 
   .portfolioRow {
@@ -191,7 +184,7 @@
   }
 
   .portfolio-mainHeading {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .portfolioRow {
@@ -206,30 +199,16 @@
   }
 }
 
-@media all and (max-width: 850px) {
-  :root {
-    --fs-xl: 3rem;
-    --fs-h: 1.9rem;
-    --fs-p: 1rem;
-    --fs-bt: 1rem;
-    --fh-p: 25px;
-  }
-  .portfolio-container {
-    padding: 50px 40px;
-  }
-}
-
 @media all and (max-width: 600px) {
   :root {
-    --fs-xl: 2.5rem;
-    --fs-h: 1.5rem;
-    --fs-p: 0.9rem;
-    --fs-bt: 0.85rem;
-    --fh-p: 24px;
+    --pd-c: 20px 30px; /*container padding*/
+    --fs-xl: 2.5rem; /* main heading size */
+    --fs-h: 1.5rem; /* heading font size */
+    --fs-p: 0.9rem; /* paragraph font size*/
+    --fs-bt: 0.85rem; /* button font size */
+    --fh-p: 24px; /* paragraph line height */
   }
-  .portfolio-container {
-    padding: 30px 30px;
-  }
+
   .portfolio-imgContainer,
   .portfolio-content {
     width: 100%;
@@ -242,7 +221,7 @@
   }
 
   .portfolio-mainHeading {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .portfolioRow {
@@ -258,13 +237,14 @@
   }
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 400px) {
   :root {
-    --fs-xl: 2rem;
-    --fs-h: 1.35rem;
-    --fs-p: 0.875rem;
-    --fs-bt: 0.8rem;
-    --fh-p: 23px;
+    --pd-c: 30px 25px; /*container padding*/
+    --fs-xl: 1.8rem; /* main heading size */
+    --fs-h: 1.4rem; /* heading font size */
+    --fs-p: 0.875rem; /* paragraph font size*/
+    --fs-bt: 0.8rem; /* button font size */
+    --fh-p: 20px; /* paragraph line height */
   }
 
   .portfolio-imgContainer,
@@ -285,6 +265,6 @@
     margin-top: 13px;
   }
   .portfolio-heading {
-    margin-bottom: 13px;
+    margin-bottom: 8px;
   }
 }

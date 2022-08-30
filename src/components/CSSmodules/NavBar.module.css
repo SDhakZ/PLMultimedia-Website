@@ -1,20 +1,27 @@
 @import "https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap";
 
+:root {
+  --p-nc: 0 140px; /* Nav container padding */
+  --fs-li: 1.2rem; /* Nav links size */
+  --fs-ali: 1.3rem; /* active nav link size */
+  --fs-lg: 2rem; /* nav logo size */
+  --h-nav: 5=rem; /* nav height */
+}
+
 .navbar {
   background-color: #0e63e3;
-  height: 5.75rem;
+  height: var(--h-nav);
   display: flex;
-  justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 20;
-  padding: 0 8.75rem;
+  padding: var(--p-nc);
 }
 
 .nav-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 80px;
@@ -22,14 +29,10 @@
 /* Navigation logo styles */
 .nav-logo {
   color: #fff;
-  align-items: center;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
-  flex-grow: 1;
+  font-size: var(--fs-lg);
   font-family: "Cabin";
-  margin-right: 3rem;
 }
 /* Navigation ul tag class target */
 .navMenu {
@@ -42,21 +45,22 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   position: relative;
-  transition: all 0.5s;
   margin-left: 1rem;
   font-family: "Cabin", sans-serif;
-  font-size: 1.2rem;
+  font-size: var(--fs-li);
   letter-spacing: 1px;
+  transition: all 0.5s;
+  bottom: 0;
 }
 /* Navigation li tag class hover effect */
 .nav-links:hover {
-  font-size: 1.3rem;
+  font-size: var(--fs-ali);
 }
 
 /* Active nav link styles */
 .nav-item .active {
   border-bottom: 3px solid white;
-  font-size: 1.3rem;
+  font-size: var(--fs-ali);
   font-weight: bold;
   bottom: 5px;
 }
@@ -89,33 +93,25 @@
 
 /*Responsive settings*/
 @media screen and (max-width: 1200px) {
-  .navbar {
-    padding: 0 3.5rem;
+  :root {
+    --p-nc: 0 60px; /* Nav container padding */
+    --fs-li: 1.15rem; /* Nav links size */
+    --fs-ali: 1.2rem; /* active nav link size */
+    --fs-lg: 1.9rem; /* nav logo size */
+    --h-nav: 4.8rem; /* nav height */
   }
 
-  .nav-item .active {
-    font-size: 1.3rem;
-  }
-
-  .nav-links:hover {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .navbar {
-    padding: 0 1.65rem;
-    font-size: 1.1rem;
-  }
-
-  .nav-item .active {
-    font-size: 1.2rem;
-    transition: all 0.5s;
+  .nav-links {
+    margin-left: 0.8rem;
   }
 }
 
 /* Menu toggle responsiveness */
 @media screen and (max-width: 960px) {
+  :root {
+    --fs-lg: 2rem; /* nav logo size */
+    --h-nav: 4rem; /* nav height */
+  }
   .navMenu {
     display: flex;
     flex-direction: column;
@@ -123,19 +119,12 @@
     border-top: 1px solid #858585;
     position: absolute;
     top: 4rem;
-    left: -110%;
+    left: -100%;
     opacity: 1;
     transition: all 0.3s;
     overflow-x: hidden;
   }
 
-  .nav-logo {
-    flex-grow: 1; /*0*/
-  }
-
-  .navbar {
-    height: 4rem;
-  }
   .navMenu.active {
     background: #ececec;
     left: 0;
@@ -160,7 +149,7 @@
     display: table;
     color: #2f2f2f;
     margin-left: 0px;
-    padding: 1rem 1.375rem;
+    padding: 1rem 2rem;
   }
 
   .navbar ul li a:hover {
@@ -170,10 +159,6 @@
 
   .nav-icon {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-130%, 40%);
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
@@ -181,66 +166,45 @@
 
   .cross {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-150%, 30%);
     font-size: 2.5rem;
     cursor: pointer;
     color: #fff;
   }
 }
 
-@media screen and (max-width: 850px) {
-  .navbar {
-    padding: 0 0.37rem;
-  }
-
-  .nav-item .active {
-    font-size: 1.2rem;
+@media screen and (max-width: 600px) {
+  :root {
+    --p-nc: 0 30px; /* Nav container padding */
+    --fs-li: 1.1rem; /* Nav links size */
+    --fs-ali: 1.2rem; /* active nav link size */
+    --fs-lg: 1.8rem; /* nav logo size */
+    --h-nav: 4rem; /* nav height */
   }
 }
 
 @media screen and (max-width: 400px) {
-  .navbar {
-    padding: 0 0.37rem;
-    height: 3rem;
-    font-size: 1rem;
-  }
-
-  .nav-item .active {
-    font-size: 1.1rem;
-  }
-
-  .nav-logo {
-    font-size: 1.4rem;
+  :root {
+    --p-nc: 0 25px; /* Nav container padding */
+    --fs-li: 1rem; /* Nav links size */
+    --fs-ali: 1.05rem; /* active nav link size */
+    --fs-lg: 1.4rem; /* nav logo size */
+    --h-nav: 3.3rem; /* nav height */
   }
 
   .nav-icon {
-    transform: translate(-100%, 45%);
     font-size: 1.5rem;
-    color: #fff;
+  }
+
+  .cross {
+    font-size: 2rem;
   }
 
   .navMenu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-top: 1pxsolid #818181;
-    position: absolute;
-    top: 3rem;
+    top: 3.3rem;
     left: -110%;
-    opacity: 1;
-    transition: all 0.3s ease;
   }
-  .cross {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 25%);
-    font-size: 2rem;
-    cursor: pointer;
-    color: #fff;
+
+  .nav-links {
+    padding: 14px 25px;
   }
 }
