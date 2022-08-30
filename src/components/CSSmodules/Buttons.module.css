@@ -1,9 +1,9 @@
 .primary {
-  border-radius: 26px;
+  border-radius: 35px;
   font-family: "Roboto";
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  padding: 13px 25px;
+  padding: 15px 40px;
   color: #2f2f2f;
   border: solid 2px transparent;
   background-image: linear-gradient(
