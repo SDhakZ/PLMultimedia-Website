@@ -9,7 +9,7 @@ import serviceData from "../../serviceData";
 function Services() {
   return (
     <div className={ServicesCSS["ServicesPage"]}>
-      <h1 className={ServicesCSS["services-heading"]}>Our Services</h1>
+      <h1 className={ServicesCSS["services-mainHeading"]}>Our Services</h1>
       <DomainSearch />
 
       <div className={ServicesCSS["services-container"]}>

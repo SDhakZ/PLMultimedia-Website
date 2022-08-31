@@ -1,8 +1,18 @@
 /*Service and More Cards styling*/
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,500;1,700&display=swap");
 
+:root {
+  --pd-c: 80px 140px; /*container padding*/
+  --fs-xl: 4.5rem; /* main heading size */
+  --fs-S-h: 1.8rem; /* heading font size */
+  --fs-S-p: 1.3rem; /* paragraph font size*/
+  --fs-S-bt: 1.05rem; /* button font size */
+  --fh-S-p: 28px; /* paragraph line height */
+  --lg-S-w: 130px; /* logo width */
+}
+
 .ServicesPage {
-  padding: 80px 160px;
+  padding: var(--pd-c);
 }
 
 /*Service Card section*/
@@ -13,12 +23,12 @@
   gap: 3rem 1.5rem;
 }
 
-.services-heading {
+.services-mainHeading {
   text-align: center;
   font-family: "Exo 2";
   font-weight: 600;
-  font-size: 4.5rem;
-  margin-bottom: 60px;
+  font-size: var(--fs-xl);
+  margin-bottom: 90px;
 }
 
 .moreDetails {
@@ -31,8 +41,8 @@
 }
 
 .serviceCard {
-  padding: 40px 0px;
-  max-width: 360px;
+  padding: 30px 0px;
+  max-width: 370px;
   background-color: #bcebfc;
   border-radius: 20px;
   display: flex;
@@ -55,7 +65,7 @@
 }
 
 .logo {
-  width: 140px;
+  width: var(--lg-S-w);
   transition: 0.5s ease-in;
 }
 
@@ -75,7 +85,7 @@
 
 .cardName {
   font-family: "Inter";
-  font-size: 1.6rem;
+  font-size: var(--fs-S-h);
   font-weight: 700;
   margin-top: 10px;
   transition: transform 0.5s ease-in;
@@ -85,15 +95,16 @@
   font-family: "Roboto";
   padding: 10px;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: var(--fs-S-p);
   margin-top: 5px;
   transition: transform 0.5s ease-in;
+  line-height: var(--fh-S-p);
 }
 
 .contactButton {
   border-radius: 26px;
   font-family: "Roboto";
-  font-size: 1rem;
+  font-size: var(--fs-S-bt);
   font-weight: 600;
   padding: 13px 25px;
   color: #2f2f2f;
@@ -123,7 +134,14 @@
   transform: translateY(-2px);
 }
 
-@media all and (max-width: 1470px) {
+@media all and (max-width: 1500px) {
+  :root {
+    --fs-S-h: 1.4rem; /* heading font size */
+    --fs-S-p: 1rem; /* paragraph font size*/
+    --fs-S-bt: 0.95rem; /* button font size */
+    --fh-S-p: 23px; /* paragraph line height */
+    --lg-S-w: 95px; /* logo width */
+  }
   .serviceCardSection {
     display: flex;
     justify-content: space-evenly;
@@ -132,145 +150,133 @@
   }
 
   .serviceCard {
-    padding: 37px 0px;
-    width: 300px;
+    padding: 28px 0px;
+    width: 285px;
   }
 
-  .logo {
-    width: 115px;
-  }
   .cardName {
-    font-family: "Inter";
-    font-size: 1.6rem;
-    margin-top: 7px;
+    margin-top: 0px;
   }
 
   .cardDescription {
-    font-family: "Roboto";
-    padding: 10px;
-    font-weight: 400;
-    font-size: 1rem;
     margin-top: 5px;
+    padding: 5px;
   }
 
   .contactButton {
-    border-radius: 26px;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 10px 20px;
+    padding: 10px 15px;
   }
 }
-@media all and (max-width: 1270px) {
-  .services-heading {
-    font-size: 3.6rem;
+@media all and (max-width: 1200px) {
+  :root {
+    --fs-S-h: 1.3rem; /* heading font size */
+    --fs-S-p: 0.95rem; /* paragraph font size*/
+    --fs-S-bt: 0.9rem; /* button font size */
+    --fh-S-p: 20px; /* paragraph line height */
+    --lg-S-w: 90px; /* logo width */
+  }
+  .services-mainHeading {
     margin-bottom: 55px;
   }
-  .ServicesPage {
-    padding: 50px 80px;
+
+  .cardDescription {
+    margin-top: 4px;
   }
 
   .serviceCardSection {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 2.7rem 1.2rem;
-  }
-  .logo {
-    width: 100px;
   }
 
   .serviceCard {
-    padding: 35px 0px;
-    width: 300px;
+    padding: 34px 0px;
+    width: 290px;
+  }
+  .contactButton {
+    padding: 9px 13px;
   }
 }
 
 /*single card optimization*/
 
-@media all and (max-width: 1070px) {
-  .services-heading {
-    font-size: 3.2rem;
+@media all and (max-width: 960px) {
+  :root {
+    --fs-S-h: 1.2rem; /* heading font size */
+    --fs-S-p: 0.9rem; /* paragraph font size*/
+    --fs-S-bt: 0.85rem; /* button font size */
+    --fh-S-p: 20px; /* paragraph line height */
+    --lg-S-w: 75px; /* logo width */
+  }
+  .services-mainHeading {
     margin-bottom: 40px;
   }
-  .ServicesPage {
-    padding: 50px 50px;
+  .serviceCardSection {
+    justify-content: space-evenly;
   }
+
   .serviceCard {
     padding: 30px 0px;
     width: 250px;
   }
   .cardName {
-    font-size: 18px;
-    margin-top: 7px;
+    margin-top: 0px;
   }
 
   .cardDescription {
-    padding: 10px;
-    font-size: 13px;
+    padding: 0px;
     margin-top: 5px;
   }
 
-  .logo {
-    width: 85px;
-  }
-
   .contactButton {
-    font-size: 0.9rem;
-    padding: 8px 15px;
+    padding: 9px 15px;
   }
 }
 
-@media all and (max-width: 850px) {
-  .ServicesPage {
-    padding: 50px 30px;
+@media all and (max-width: 650px) {
+  :root {
+    --fs-S-h: 1.3rem; /* heading font size */
+    --fs-S-p: 1rem; /* paragraph font size*/
+    --fs-S-bt: 0.95rem; /* button font size */
+    --fh-S-p: 23px; /* paragraph line height */
+    --lg-S-w: 100px; /* logo width */
   }
-  .services-heading {
-    font-size: 2.7rem;
-    margin-bottom: 30px;
-  }
+
   .serviceCardSection {
     justify-content: space-evenly;
-    gap: 3rem 1.4rem;
+    gap: 2.5rem 1.4rem;
   }
 
   .serviceCard {
-    padding: 45px 0px;
-    width: 270px;
+    padding: 35px 0px;
+    width: 320px;
   }
   .cardName {
-    font-family: "Inter";
-    font-size: 1.3rem;
     margin-top: 0px;
   }
 
   .cardDescription {
-    padding: 7px;
-    font-size: 14px;
-    margin-top: 0px;
-  }
-
-  .logo {
-    width: 100px;
-    margin-bottom: 0;
+    padding: 5px;
   }
 
   .contactButton {
-    font-size: 1rem;
     padding: 9px 16px;
   }
 }
 
 /*Mobile optimization*/
-@media all and (max-width: 450px) {
-  .ServicesPage {
-    padding: 30px 30px;
+@media all and (max-width: 400px) {
+  :root {
+    --fs-S-p: 1rem; /* paragraph font size*/
+    --fs-S-bt: 0.95rem; /* button font size */
+    --fh-S-p: 22px; /* paragraph line height */
+    --lg-S-w: 90px; /* logo width */
   }
-  .services-heading {
-    font-size: 2.7rem;
+
+  .services-mainHeading {
     margin-bottom: 30px;
   }
   .serviceCardSection {
-    gap: 2rem 1.4rem;
+    gap: 1.5rem 1.4rem;
   }
 
   .serviceCard {
@@ -279,68 +285,10 @@
     min-width: 140px;
   }
   .cardName {
-    font-family: "Inter";
-    font-size: 1.3rem;
     margin-top: 0px;
-  }
-
-  .cardDescription {
-    font-family: "Roboto";
-    padding: 10px;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-top: 0px;
-  }
-
-  .logo {
-    width: 90px;
-    margin-bottom: 0;
   }
 
   .contactButton {
-    font-size: 1rem;
     padding: 10px 20px;
-    margin-top: 0;
-  }
-}
-
-@media all and (max-width: 350px) {
-  .ServicesPage {
-    padding: 40px 20px;
-  }
-  .services-heading {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  .serviceCardSection {
-    gap: 1.4rem 1.4rem;
-  }
-
-  .serviceCard {
-    padding: 30px 0px;
-    width: 100%;
-    min-width: 140px;
-  }
-  .cardName {
-    font-size: 1.3rem;
-    margin-top: 0px;
-  }
-
-  .cardDescription {
-    font-family: "Roboto";
-    padding: 10px;
-    font-weight: 400;
-    font-size: 0.875rem;
-    margin-top: 0px;
-  }
-
-  .logo {
-    width: 90px;
-    margin-bottom: 0;
-  }
-
-  .contactButton {
-    font-size: 0.875rem;
-    padding: 9px 18px;
   }
 }

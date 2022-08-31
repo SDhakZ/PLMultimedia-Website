@@ -15,7 +15,7 @@
   color: #2f2f2f;
 }
 
-.aboutUs-MainHeading {
+.aboutUs-mainHeading {
   text-align: center;
   font-family: "Exo 2";
   font-style: italic;
@@ -62,7 +62,6 @@
 
 .aboutUs-AimImg {
   margin-right: -30px;
- 
 }
 /*Responsive settings*/
 
@@ -98,7 +97,7 @@
     --fs-AU-p: 1rem; /* paragraph font size*/
     --fh-AU-p: 30px; /* paragraph line height */
   }
-  .aboutUs-MainHeading {
+  .aboutUs-mainHeading {
     margin: 0 0 70px 0;
   }
   .aboutUs-WhoAreWe {
@@ -124,7 +123,7 @@
   .aboutUs-AimImg {
     width: 420px;
   }
-  .aboutUs-MainHeading {
+  .aboutUs-mainHeading {
     margin-bottom: 40px;
   }
 }
@@ -176,7 +175,7 @@
     width: 100%;
     margin: 0 auto 0 auto;
   }
-  .aboutUs-MainHeading {
+  .aboutUs-mainHeading {
     margin-bottom: 20px;
   }
   .aboutUs-WhoAreWe {
@@ -192,7 +191,7 @@
     --fs-AU-p: 0.875rem; /* paragraph font size*/
     --fh-AU-p: 23px; /* paragraph line height */
   }
-  .aboutUs-MainHeading {
+  .aboutUs-mainHeading {
     margin-bottom: 25px;
   }
 

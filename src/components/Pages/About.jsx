@@ -6,7 +6,7 @@ import AboutCSS from "../CSSmodules/aboutUs.module.css";
 function About() {
   return (
     <div className={AboutCSS["aboutUs-Container"]}>
-      <h1 className={AboutCSS["aboutUs-MainHeading"]}>About Us</h1>
+      <h1 className={AboutCSS["aboutUs-mainHeading"]}>About Us</h1>
       <div className={AboutCSS["aboutUs-WhoAreWe"]}>
         <figure>
           <img
