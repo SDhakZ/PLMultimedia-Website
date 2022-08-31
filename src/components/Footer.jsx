@@ -61,7 +61,7 @@ class Footer extends Component {
                 <a href="#">Partner with us</a>
               </li>
               <li>
-                <a href="#">FAQ</a>
+                <a href="/FAQpage">FAQ</a>
               </li>
               <li>
                 <a href="/blog">Our Blog</a>

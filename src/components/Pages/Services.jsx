@@ -5,7 +5,7 @@ import React from "react";
 import { ServiceCard, MoreCard } from "../ServiceCard.jsx";
 import ServicesCSS from "../CSSmodules/Services.module.css";
 import DomainSearch from "../DomainSearch.jsx";
-import serviceData from "../../serviceData";
+import serviceData from "../../Datas/serviceData";
 import MainHeading from "../MainHeading";
 
 function Services() {

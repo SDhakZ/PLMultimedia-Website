@@ -1,6 +1,6 @@
 import React from "react";
 import portfolioCSS from "../CSSmodules/portfolio.module.css";
-import portfolioData from "../../portfolioData";
+import portfolioData from "../../Datas/portfolioData";
 import PortfolioSection from "../PortfolioSection";
 import MainHeading from "../MainHeading";
 
