@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import FAQCSS from "./CSSmodules/FAQCSS.module.css";
 import { Link } from "react-router-dom";
+import { getAllByDisplayValue } from "@testing-library/react";
 
 export function FAQcard({ question, answer }) {
   const [expanded, setExpand] = useState(false);
 
   return (
     <button className={FAQCSS.faqCard} onClick={() => setExpand(!expanded)}>
-      <div className={FAQCSS.faqQuestion}>
+      <div
+        className={
+          expanded
+            ? `${FAQCSS.faqQuestion} ${FAQCSS.active}`
+            : FAQCSS.faqQuestion
+        }
+      >
         {question}{" "}
         {expanded ? (
-          <div className={FAQCSS.mark}>-</div>
+          <div className={FAQCSS.minus}>-</div>
         ) : (
-          <div className={FAQCSS.mark}>+</div>
+          <div className={FAQCSS.plus}>+</div>
         )}
       </div>
       {expanded ? <div className={FAQCSS.faqAnswer}>{answer}</div> : null}
@@ -22,7 +29,7 @@ export function FAQcard({ question, answer }) {
 
 export function StillHaveQuestion() {
   return (
-    <div>
+    <div className={FAQCSS.MoreQuestionsContainer}>
       <h1 className={FAQCSS.stillHaveQuestion}>Still Have Question?</h1>
       <p className={FAQCSS.faqContact}>
         If you cannot find the answer for your question in the FAQ page you can

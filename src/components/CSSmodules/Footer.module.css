@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+:root {
+  --pd-foo-c: 60px 140px 70px; /*container padding*/
+  --fs-foo-h: 1.8rem; /* heading font size */
+  --fs-foo-cn: 2rem; /* company name font size */
+  --fs-foo-p: 1.15rem; /* paragraph font size*/
+  --mb-foo-p: 15px; /* margin bottom for links */
+  --fs-foo-lg: 2.5rem; /* social icons font size */
+}
+
 .footerSection {
   background-color: #ffffff;
-  padding: 67px 140px;
+  padding: var(--pd-foo-c);
   bottom: 0;
   box-shadow: 0px -5px 45px rgb(187, 187, 187);
 }
@@ -29,7 +38,7 @@
   position: relative;
 }
 .footer-companyName {
-  font-size: 2rem;
+  font-size: var(--fs-foo-cn);
   font-family: "Cabin", sans-serif;
   color: #454444;
   text-transform: capitalize;
@@ -38,7 +47,7 @@
   margin-left: 30px;
 }
 .footer-col1 p {
-  font-size: 1.1rem;
+  font-size: var(--fs-foo-p);
   font-family: "Roboto";
   color: #2f2f2f;
   font-weight: 600;
@@ -52,7 +61,7 @@
   flex: 1;
 }
 .footer-col h4 {
-  font-size: 1.8rem;
+  font-size: var(--fs-foo-h);
   font-family: "Bahnschrift";
   color: #2f2f2f;
   margin-bottom: 20px;
@@ -65,7 +74,7 @@
 }
 
 .footer-col ul li:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: var(--mb-foo-p);
   text-decoration: none;
 }
 
@@ -74,7 +83,7 @@
 }
 
 .footer-col ul li a {
-  font-size: 1.15rem;
+  font-size: var(--fs-foo-p);
   font-family: "Roboto";
   color: #636363;
   text-decoration: none;
@@ -94,10 +103,10 @@
 }
 
 .footer-colt p {
-  font-size: 1.25rem;
+  font-size: var(--fs-foo-p);
   font-family: "Roboto";
   color: #636363;
-  margin-bottom: 15px;
+  margin-bottom: var(--mb-foo-p);
   font-weight: 600;
   position: relative;
   line-height: 24px;
@@ -109,7 +118,7 @@
 .footer-icons .facebook,
 .footer-icons .linkedin {
   color: #2f2f2f;
-  font-size: 2.4rem;
+  font-size: var(--fs-foo-lg);
   transition: all 0.3s;
 }
 
@@ -159,15 +168,14 @@
   margin-right: 10px;
 }
 
-@media (max-width: 1350px) {
-  .footerSection {
-    padding: 50px 60px;
-  }
-}
-
 @media (max-width: 1200px) {
-  .footerSection {
-    padding: 50px 100px;
+  :root {
+    --pd-foo-c: 50px 60px 60px; /*container padding*/
+    --fs-foo-h: 1.6rem; /* heading font size */
+    --fs-foo-cn: 2rem; /* company name font size */
+    --mb-foo-p: 12px; /* margin bottom for links */
+    --fs-foo-p: 1rem; /* paragraph font size*/
+    --fs-foo-lg: 1.7rem; /* social icons font size */
   }
 
   .footer-col1 p {
@@ -176,21 +184,7 @@
   }
 
   .footer-col h4 {
-    font-size: 1.6rem;
-    margin-bottom: 18px;
-  }
-
-  .footer-col ul li:not(:last-child) {
-    margin-bottom: 1rem;
-    margin-bottom: 12px;
-  }
-
-  .footer-col ul li a {
-    font-size: 16px;
-  }
-
-  .footer-colt p {
-    font-size: 16px;
+    margin-bottom: 15px;
   }
 
   .footer-colt {
@@ -200,15 +194,23 @@
   .footer-services {
     min-width: fit-content;
   }
-  .footer-icons .twitter,
-  .footer-icons .instagram,
-  .footer-icons .facebook,
-  .footer-icons .linkedin {
-    font-size: 1.7rem;
-  }
 }
 
 @media (max-width: 1000px) {
+  :root {
+    --pd-foo-c: 50px 60px 60px; /*container padding*/
+    --fs-foo-h: 1.375rem; /* heading font size */
+    --fs-foo-cn: 1.3rem; /* company name font size */
+    --fs-foo-p: 0.9rem; /* paragraph font size*/
+    --mb-foo-p: 15px; /* margin bottom for links */
+    --fs-foo-lg: 1.7rem; /* social icons font size */
+  }
+
+  .footer-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .footer-col1 {
     margin-right: 15px;
     min-width: 240px;
@@ -218,44 +220,26 @@
     font-size: 2rem;
   }
 
-  .footer-col1 h4 .footer-companyName {
-    font-size: 1.3rem;
-  }
-
-  .footerSection {
-    padding: 50px 40px;
-  }
-
   .footer-col1 p {
     font-size: 15px;
     line-height: 29px;
   }
 
   .footer-col h4 {
-    font-size: 22px;
     margin-bottom: 18px;
   }
 
-  .footer-col ul li:not(:last-child) {
-    margin-bottom: 15px;
-    text-decoration: none;
-  }
-
-  .footer-col ul li a {
-    font-size: 15px;
-  }
-
-  .footer-colt p {
-    font-size: 15px;
-  }
-
   .footer-colt {
-    min-width: 110px;
+    min-width: 200px;
   }
 
-  .footer-services {
-    min-width: fit-content;
+  .footer-icons {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    margin-top: 25px;
   }
+
   .footer-copyright {
     font-size: 0.8rem;
     margin-top: 50px;
@@ -268,8 +252,13 @@
 }
 
 @media (max-width: 800px) {
-  .footerSection {
-    padding: 40px 40px;
+  :root {
+    --pd-foo-c: 50px 60px 60px; /*container padding*/
+    --fs-foo-h: 1.3rem; /* heading font size */
+    --fs-foo-cn: 1.3rem; /* company name font size */
+    --fs-foo-p: 0.875rem; /* paragraph font size*/
+    --mb-foo-p: 7px; /* margin bottom for links */
+    --fs-foo-lg: 1.7rem; /* social icons font size */
   }
 
   .footer-col1 {
@@ -288,7 +277,7 @@
   }
 
   .footer-col1 h4 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .footer-col1 h4 .footer-companyName {
@@ -296,50 +285,34 @@
   }
 
   .footer-col1 p {
-    font-size: 0.85rem;
     line-height: 24px;
     max-width: 240px;
   }
 
   .footer-col h4 {
-    font-size: 1.3rem;
     margin-bottom: 10px;
-  }
-
-  .footer-col ul li:not(:last-child) {
-    margin-bottom: 7px;
-    text-decoration: none;
-  }
-
-  .footer-col ul li a {
-    font-size: 0.8rem;
   }
 
   .footer-colt {
     min-width: 250px;
   }
 
-  .footer-colt p {
-    font-size: 0.85rem;
-    margin-bottom: 5px;
-  }
-  .footer-icons .twitter,
-  .footer-icons .instagram,
-  .footer-icons .facebook,
-  .footer-icons .linkedin {
-    font-size: 1.4rem;
-  }
   .footer-icons {
     display: flex;
     justify-content: start;
-    gap: 20px;
+    gap: 25px;
     margin-top: 25px;
   }
 }
 
 @media (max-width: 400px) {
-  .footerSection {
-    padding: 25px 35px;
+  :root {
+    --pd-foo-c: 30px 25px 40px; /*container padding*/
+    --fs-foo-h: 1.3rem; /* heading font size */
+    --fs-foo-cn: 1.3rem; /* company name font size */
+    --fs-foo-p: 0.9rem; /* paragraph font size*/
+    --mb-foo-p: 10px; /* margin bottom for links */
+    --fs-foo-lg: 1.9rem; /* social icons font size */
   }
 
   .footer-col1 {
@@ -355,9 +328,6 @@
   }
 
   .footer-col1 p {
-    font-size: 0.9rem;
-    line-height: 25px;
-    max-width: 240px;
     margin-top: 14px;
     font-weight: 600;
   }
@@ -367,38 +337,23 @@
     margin-bottom: 10px;
   }
 
-  .footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
-  }
-
-  .footer-col ul li a {
-    font-size: 0.9rem;
-  }
-
-  .footer-colt p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  .footer-icons .twitter,
-  .footer-icons .instagram,
-  .footer-icons .facebook,
-  .footer-icons .linkedin {
-    font-size: 1.9rem;
-  }
-
   .footer-colt {
     max-width: 200px;
   }
 
   .footer-icons {
-    display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 }
 @media (max-width: 350px) {
-  .footerSection {
-    padding: 25px 35px;
+  :root {
+    --pd-foo-c: 30px 25px 40px; /*container padding*/
+    --fs-foo-h: 1.3rem; /* heading font size */
+    --fs-foo-cn: 1.3rem; /* company name font size */
+    --fs-foo-p: 0.8rem; /* paragraph font size*/
+    --mb-foo-p: 5px; /* margin bottom for links */
+    --fs-foo-lg: 1.5rem; /* social icons font size */
   }
 
   .footer-col1 {
@@ -415,7 +370,6 @@
   }
 
   .footer-col1 p {
-    font-size: 0.8rem;
     line-height: 20px;
     max-width: 230px;
     margin-top: 14px;
@@ -433,19 +387,7 @@
   }
 
   .footer-col ul li a {
-    font-size: 0.8rem;
     font-weight: 500;
-  }
-
-  .footer-colt p {
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-  }
-  .footer-icons .twitter,
-  .footer-icons .instagram,
-  .footer-icons .facebook,
-  .footer-icons .linkedin {
-    font-size: 1.4rem;
   }
 
   .footer-colt {
@@ -454,9 +396,6 @@
   }
 
   .footer-icons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
     max-width: 200px;
   }
 }
