@@ -1,6 +1,5 @@
 :root {
   --pd-c: 80px 140px; /*container padding*/
-  --fs-xl: 4.5rem; /* main heading size */
   --fs-h: 2.6rem; /* heading font size */
   --fs-p: 1.3rem; /* paragraph font size*/
   --fs-bt: 1.15rem; /* button font size */
@@ -9,15 +8,6 @@
 
 .portfolio-container {
   padding: var(--pd-c);
-}
-
-.portfolio-mainHeading {
-  text-align: center;
-  font-family: "Exo 2";
-  font-size: var(--fs-xl);
-  letter-spacing: 0.075em;
-  margin-bottom: 90px;
-  color: #2f2f2f;
 }
 
 .portfolioRow {
@@ -113,7 +103,6 @@
 
 @media all and (max-width: 1500px) {
   :root {
-    --fs-xl: 4rem; /* main heading size */
     --fs-h: 1.8rem; /* heading font size */
     --fs-p: 1rem; /* paragraph font size*/
     --fs-bt: 0.95rem; /* button font size */
@@ -138,15 +127,11 @@
 @media all and (max-width: 1200px) {
   :root {
     --pd-c: 50px 60px; /*container padding*/
-    --fs-xl: 3.5rem; /* main heading size */
+
     --fs-h: 1.8rem; /* heading font size */
     --fs-p: 0.95rem; /* paragraph font size*/
     --fs-bt: 0.97rem; /* button font size */
     --fh-p: 27px; /* paragraph line height */
-  }
-
-  .portfolio-mainHeading {
-    margin-bottom: 55px;
   }
 
   .portfolioRow {
@@ -165,7 +150,6 @@
 
 @media all and (max-width: 960px) {
   :root {
-    --fs-xl: 3rem; /* main heading size */
     --fs-h: 2rem; /* heading font size */
     --fs-p: 1.05rem; /* paragraph font size*/
     --fs-bt: 1rem; /* button font size */
@@ -181,10 +165,6 @@
   .portfolio-imgContainer,
   .portfolio-content {
     width: 90%;
-  }
-
-  .portfolio-mainHeading {
-    margin-bottom: 40px;
   }
 
   .portfolioRow {
@@ -220,10 +200,6 @@
     align-items: center;
   }
 
-  .portfolio-mainHeading {
-    margin-bottom: 20px;
-  }
-
   .portfolioRow {
     gap: 1.3rem;
     margin-bottom: 40px;
@@ -240,7 +216,6 @@
 @media all and (max-width: 400px) {
   :root {
     --pd-c: 30px 25px; /*container padding*/
-    --fs-xl: 1.8rem; /* main heading size */
     --fs-h: 1.4rem; /* heading font size */
     --fs-p: 0.875rem; /* paragraph font size*/
     --fs-bt: 0.8rem; /* button font size */
@@ -250,10 +225,6 @@
   .portfolio-imgContainer,
   .portfolio-content {
     width: 100%;
-  }
-
-  .portfolio-mainHeading {
-    margin-bottom: 25px;
   }
 
   .portfolioRow {

@@ -6,10 +6,12 @@ import { ServiceCard, MoreCard } from "../ServiceCard.jsx";
 import ServicesCSS from "../CSSmodules/Services.module.css";
 import DomainSearch from "../DomainSearch.jsx";
 import serviceData from "../../serviceData";
+import MainHeading from "../MainHeading";
+
 function Services() {
   return (
     <div className={ServicesCSS["ServicesPage"]}>
-      <h1 className={ServicesCSS["services-mainHeading"]}>Our Services</h1>
+      <MainHeading headingName="Our Services" />
       <DomainSearch />
 
       <div className={ServicesCSS["services-container"]}>

@@ -1,0 +1,47 @@
+:root {
+  --fs-xl: 4.5rem; /* main heading size */
+  --mb-xl: 90px; /*margin bottom of main heading*/
+}
+
+.mainHeading {
+  text-align: center;
+  font-family: "Exo 2";
+  font-size: var(--fs-xl);
+  letter-spacing: 0.075em;
+  margin-bottom: var(--mb-xl);
+  color: #2f2f2f;
+}
+
+@media all and (max-width: 1500px) {
+  :root {
+    --fs-xl: 4rem; /* main heading size */
+  }
+}
+
+@media all and (max-width: 1200px) {
+  :root {
+    --fs-xl: 3.5rem; /* main heading size */
+    --mb-xl: 55px; /*margin bottom of main heading*/
+  }
+}
+
+@media all and (max-width: 960px) {
+  :root {
+    --fs-xl: 3rem; /* main heading size */
+    --mb-xl: 40px; /*margin bottom of main heading*/
+  }
+}
+
+@media all and (max-width: 600px) {
+  :root {
+    --fs-xl: 2.5rem; /* main heading size */
+    --mb-xl: 20px; /*margin bottom of main heading*/
+  }
+}
+
+@media all and (max-width: 400px) {
+  :root {
+    --fs-xl: 1.8rem; /* main heading size */
+    --mb-xl: 25px; /*margin bottom of main heading*/
+  }
+}

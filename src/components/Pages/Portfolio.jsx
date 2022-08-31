@@ -2,13 +2,12 @@ import React from "react";
 import portfolioCSS from "../CSSmodules/portfolio.module.css";
 import portfolioData from "../../portfolioData";
 import PortfolioSection from "../PortfolioSection";
+import MainHeading from "../MainHeading";
 
 export const Portfolio = () => {
   return (
     <div className={portfolioCSS["portfolio-container"]}>
-      <h1 className={portfolioCSS["portfolio-mainHeading"]}>
-        Our Recent Works
-      </h1>
+      <MainHeading headingName="Our Recent Works" />
       {portfolioData.map((portfolio) => {
         return (
           <PortfolioSection

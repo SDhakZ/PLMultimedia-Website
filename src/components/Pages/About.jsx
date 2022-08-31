@@ -2,11 +2,11 @@ import React from "react";
 import meeting from "../../images/meeting.png";
 import writing from "../../images/writing.png";
 import AboutCSS from "../CSSmodules/aboutUs.module.css";
-
+import MainHeading from "../MainHeading";
 function About() {
   return (
     <div className={AboutCSS["aboutUs-Container"]}>
-      <h1 className={AboutCSS["aboutUs-mainHeading"]}>About Us</h1>
+      <MainHeading headingName="About Us" />
       <div className={AboutCSS["aboutUs-WhoAreWe"]}>
         <figure>
           <img
