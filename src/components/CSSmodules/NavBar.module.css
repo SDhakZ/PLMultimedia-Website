@@ -45,7 +45,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   position: relative;
-  margin-left: 1rem;
+  margin-left: 0.4rem;
   font-family: "Cabin", sans-serif;
   font-size: var(--fs-li);
   letter-spacing: 1px;
@@ -102,7 +102,7 @@
   }
 
   .nav-links {
-    margin-left: 0.8rem;
+    margin-left: 0rem;
   }
 }
 

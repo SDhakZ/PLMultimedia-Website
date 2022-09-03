@@ -16,10 +16,12 @@
   font-weight: 600;
   text-align: center;
 }
+
 .faqHeading {
   font-size: var(--fs-xl);
   margin-bottom: var(--mb-xl);
 }
+
 .stillHaveQuestion {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -82,7 +84,7 @@
 }
 
 /*color for links*/
-a {
+.faqContact a {
   text-decoration: none;
   color: #3ec1ee;
 }
@@ -91,6 +93,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .faqContact {

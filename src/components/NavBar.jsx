@@ -57,6 +57,17 @@ function NavBar() {
             <li className={NavbarCSS["nav-item"]}>
               <NavLink
                 exact
+                to="/interns"
+                activeClassName={NavbarCSS.active}
+                className={NavbarCSS["nav-links"]}
+                onClick={handleClick}
+              >
+                Interns
+              </NavLink>
+            </li>
+            <li className={NavbarCSS["nav-item"]}>
+              <NavLink
+                exact
                 to="/about"
                 activeClassName={NavbarCSS.active}
                 className={NavbarCSS["nav-links"]}

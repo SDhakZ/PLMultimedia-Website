@@ -6,10 +6,12 @@ import { Home } from "./components/Pages/Home.jsx";
 import About from "./components/Pages/About";
 import { Blog } from "./components/Pages/Blog";
 import Services from "./components/Pages/Services.jsx";
+import Interns from "./components/Pages/Interns";
 import { Portfolio } from "./components/Pages/Portfolio";
 import { FAQpage } from "./components/Pages/FAQ";
 import Footer from "./components/Footer";
 import Contact from "./components/Pages/contact";
+
 function App() {
   return (
     <>
@@ -25,6 +27,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
+            <Route path="/interns" component={Interns} />
           </Switch>
         </div>
       </Router>
