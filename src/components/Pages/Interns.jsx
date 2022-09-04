@@ -1,8 +1,8 @@
 import React from "react";
 import MainHeading from "../MainHeading";
-import InternsCSS from "../CSSmodules/Interns.module.css";
+import InternsCSS from "../CSSmodules/interns.module.css";
 import InternCard from "../InternCard";
-import internsData from "../../Datas/InternsData";
+import internsData from "../../Datas/internsData";
 
 function Interns() {
   return (

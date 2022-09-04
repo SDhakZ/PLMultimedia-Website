@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FAQCSS from "./CSSmodules/FAQCSS.module.css";
+import FAQCSS from "./CSSmodules/FAQ.module.css";
 import { Link } from "react-router-dom";
 import { getAllByDisplayValue } from "@testing-library/react";
 

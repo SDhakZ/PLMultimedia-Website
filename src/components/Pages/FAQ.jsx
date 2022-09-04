@@ -1,12 +1,12 @@
 import React from "react";
 import { FAQcard, FAQHeading, StillHaveQuestion } from "../FAQcard";
-import FAQdata from "../../Datas/FAQData";
-import FAQCSS from "../CSSmodules/FAQCSS.module.css";
+import faqData from "../../Datas/faqData";
+import FAQCSS from "../CSSmodules/FAQ.module.css";
 export const FAQpage = () => {
   return (
     <div className={FAQCSS["FAQ-container"]}>
       <FAQHeading />
-      {FAQdata.map(({ id, question, answer }) => {
+      {faqData.map(({ id, question, answer }) => {
         return <FAQcard key={id} question={question} answer={answer} />;
       })}
 

@@ -3,9 +3,9 @@ Service components to form the Services page for PL Multimedia*/
 
 import React from "react";
 import { ServiceCard, MoreCard } from "../ServiceCard.jsx";
-import ServicesCSS from "../CSSmodules/Services.module.css";
+import ServicesCSS from "../CSSmodules/services.module.css";
 import DomainSearch from "../DomainSearch.jsx";
-import serviceData from "../../Datas/serviceData";
+import servicesData from "../../Datas/servicesData";
 import MainHeading from "../MainHeading";
 
 function Services() {
@@ -16,7 +16,7 @@ function Services() {
 
       <div className={ServicesCSS["services-container"]}>
         <div className={ServicesCSS.serviceCardSection}>
-          {serviceData.map((service) => {
+          {servicesData.map((service) => {
             return (
               <ServiceCard
                 key={service.id}

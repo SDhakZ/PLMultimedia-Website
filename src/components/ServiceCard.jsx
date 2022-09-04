@@ -2,7 +2,7 @@
 // it is basically a function which takes logo,title,& description parameters to generate a service card.
 
 import React from "react";
-import ServicesCSS from "../components/CSSmodules/Services.module.css";
+import ServicesCSS from "../components/CSSmodules/services.module.css";
 
 function ServiceCard(props) {
   return (

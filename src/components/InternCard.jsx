@@ -1,5 +1,5 @@
 import React from "react";
-import InternsCSS from "../components/CSSmodules/Interns.module.css";
+import InternsCSS from "../components/CSSmodules/interns.module.css";
 function InternCard(props) {
   return (
     <>
