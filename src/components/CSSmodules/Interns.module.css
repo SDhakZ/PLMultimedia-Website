@@ -1,7 +1,7 @@
 :root {
   --fs-I-h: 1.35rem; /* heading name font size */
   --fs-I-p: 1rem; /* paragraph font size*/
-  --fs-I-d: 1rem; /* date font size */
+  --fs-I-d: 0.9rem; /* date font size */
   --gap-I-intern-card: 28px; /* paragraph line height */
   --img-I-wh: 100px; /* logo width */
   --br-I-c: 20px; /* Border radius for container */
@@ -16,7 +16,37 @@
   display: flex;
   gap: 40px 40px;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.intern-categories {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: 2F2F2F;
+  margin-bottom: 30px;
+}
+
+.intern-fieldDropdown {
+  padding: 12px 15px;
+  display: inline-block;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-size: 1.1rem;
+  transition: all 0.4s;
+}
+
+.intern-fieldDropdown:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.intern-fieldDropdown option {
+  padding: 10px;
 }
 
 .intern-lft {
@@ -25,13 +55,12 @@
 }
 
 .intern-card {
-  max-width: 600px;
+  max-width: 550px;
   min-width: 445px;
   height: fit-content;
   background-color: rgb(255, 255, 255);
   border-radius: var(--br-I-c);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   justify-content: space-between;
   padding: 18px;
@@ -44,9 +73,10 @@
 }
 
 .intern-card:hover {
-  box-shadow: rgba(0, 46, 196, 0.1) 0px 15px 20px -3px,
-    rgba(0, 0, 0, 0.05) 0px 8px 12px -2px;
+  filter: drop-shadow(1px 2px 8px var(--shadow-color));
+  --shadow-color: rgba(57, 112, 223, 0.705);
   transform: translateY(-2px);
+  box-shadow: none;
 }
 
 .interns-picContainer {
@@ -55,8 +85,12 @@
   overflow: hidden;
   border-radius: var(--br-I-pc);
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: all 0.4s;
 }
-
+.intern-card:hover .interns-picContainer {
+  box-shadow: rgba(54, 108, 224, 0.568) 0px 5px 15px 0px;
+}
 .interns-detailsContainer {
   display: flex;
   flex-direction: column;
@@ -105,7 +139,7 @@
   :root {
     --fs-I-h: 1.15rem; /* heading name font size */
     --fs-I-p: 0.95rem; /* paragraph font size*/
-    --fs-I-d: 0.95rem; /* date font size */
+    --fs-I-d: 0.9rem; /* date font size */
     --gap-I-intern-card: 28px; /* paragraph line height */
     --img-I-wh: 80px; /* logo width */
   }
@@ -115,17 +149,28 @@
   }
 
   .intern-card {
-    max-width: 600px;
+    max-width: 45%;
     min-width: 360px;
     padding: 13px;
+  }
+
+  .intern-categories {
+    gap: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .intern-fieldDropdown {
+    padding: 10px 13px;
+    font-size: 1rem;
   }
 }
 
 @media all and (max-width: 1200px) {
   :root {
-    --fs-I-h: 1.1rem; /* heading name font size */
-    --fs-I-p: 0.95rem; /* paragraph font size*/
-    --fs-I-d: 0.95rem; /* date font size */
+    --fs-I-h: 1.05rem; /* heading name font size */
+    --fs-I-p: 0.9rem; /* paragraph font size*/
+    --fs-I-d: 0.8rem; /* date font size */
     --gap-I-intern-card: 28px; /* paragraph line height */
     --img-I-wh: 80px; /* logo width */
     --br-I-c: 18px; /* Border radius for container */
@@ -137,8 +182,8 @@
   }
 
   .intern-card {
-    max-width: 480px;
-    min-width: 360px;
+    max-width: 45%;
+    min-width: 380px;
     padding: 13px;
   }
 }
@@ -153,13 +198,23 @@
     --br-I-c: 18px; /* Border radius for container */
     --br-I-pc: 18px; /* Border radius for picture container */
   }
+  .intern-categories {
+    gap: 20px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .intern-fieldDropdown {
+    padding: 8px 9px;
+    font-size: 0.98rem;
+  }
   .interns-flexbox {
-    gap: 25px 25px;
+    gap: 20px 20px;
     justify-content: space-evenly;
   }
 
   .intern-card {
-    max-width: 380px;
+    max-width: 45%;
     min-width: 340px;
     padding: 15px;
     gap: 5px;
@@ -170,7 +225,7 @@
   }
 }
 
-@media all and (max-width: 870px) {
+@media all and (max-width: 890px) {
   :root {
     --fs-I-h: 1.2rem; /* heading name font size */
     --fs-I-p: 0.9rem; /* paragraph font size*/

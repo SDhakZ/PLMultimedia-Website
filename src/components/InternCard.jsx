@@ -8,7 +8,7 @@ function InternCard(props) {
           <img
             className={InternsCSS["interns-picture"]}
             src={props.img}
-            alt="image"
+            alt="../"
           ></img>
         </figure>
         <div className={InternsCSS["interns-detailsContainer"]}>
