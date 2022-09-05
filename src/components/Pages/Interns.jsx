@@ -4,7 +4,7 @@ import InternsCSS from "../CSSmodules/interns.module.css";
 import InternCard from "../InternCard";
 import internsData from "../../Datas/internsData";
 import useFetch from "../../hooks/useFetch";
-
+// http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
 function Interns() {
   const { loading, error, data } = useFetch(
     "http://localhost:1338/api/interns?populate=*"
