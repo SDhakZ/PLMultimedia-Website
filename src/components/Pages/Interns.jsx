@@ -35,9 +35,7 @@ function Interns() {
       <div className={InternsCSS["interns-container"]}>
         <MainHeading headingName="Interns Through Us" />
         <div className={InternsCSS["intern-categories"]}>
-          <label for="fields" classname={InternsCSS["intern-label"]}>
-            Sort By:
-          </label>
+          <label for="fields">Sort By:</label>
 
           <select
             className={InternsCSS["intern-fieldDropdown"]}
