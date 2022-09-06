@@ -67,6 +67,7 @@ function Interns() {
                 field={intern.attributes.field}
                 position={intern.attributes.position}
                 year={intern.attributes.date}
+                email={intern.attributes.email}
               />
             );
           })}

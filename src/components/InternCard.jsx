@@ -1,8 +1,9 @@
 import React from "react";
 import InternsCSS from "../components/CSSmodules/interns.module.css";
 function InternCard(props) {
+  var mail = "mailto:" + props.email;
   return (
-    <div className={InternsCSS["intern-card"]}>
+    <div className={InternsCSS["intern-card"]} href={mail}>
       <div className={InternsCSS["intern-lft"]}>
         <figure className={InternsCSS["interns-picContainer"]}>
           <img
@@ -20,7 +21,12 @@ function InternCard(props) {
           </div>
         </div>
       </div>
-      <h3 className={InternsCSS["intern-date"]}>Year: {props.year}</h3>
+      <div className={InternsCSS["interns-rt"]}>
+        <h3 className={InternsCSS["intern-date"]}>Date: {props.year}</h3>
+        <a className={InternsCSS["interns-mail"]} href={mail}>
+          <i className={`${InternsCSS.mail} fa-solid fa-envelope`} />
+        </a>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@
   --fs-I-p: 1rem; /* paragraph font size*/
   --fs-I-d: 0.9rem; /* date font size */
   --gap-I-intern-card: 28px; /* paragraph line height */
-  --img-I-wh: 100px; /* logo width */
+  --img-I-wh: 95px; /* logo width */
   --br-I-c: 20px; /* Border radius for container */
   --br-I-pc: 20px; /* Border radius for picture container */
 }
@@ -16,6 +16,7 @@
   display: flex;
   gap: 40px 40px;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .intern-categories {
@@ -25,7 +26,7 @@
   font-family: "Roboto";
   font-size: 1.2rem;
   font-weight: 500;
-  color: 2F2F2F;
+  color: #2f2f2f;
   margin-bottom: 30px;
 }
 
@@ -45,18 +46,14 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.intern-fieldDropdown option {
-  padding: 10px;
-}
-
 .intern-lft {
   display: flex;
   gap: 20px;
 }
 
 .intern-card {
-  max-width: 550px;
-  min-width: 445px;
+  max-width: 30%;
+  min-width: 400px;
   height: fit-content;
   background-color: rgb(255, 255, 255);
   border-radius: var(--br-I-c);
@@ -68,7 +65,6 @@
   position: relative;
   font-family: "Roboto";
   flex: content;
-  cursor: pointer;
   transition: all 0.5s;
 }
 
@@ -102,8 +98,9 @@
 }
 
 .intern-name {
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--fs-I-h);
+  color: #00026e;
 }
 
 .interns-detail {
@@ -111,6 +108,27 @@
   display: flex;
   flex-direction: column;
   gap: 2.5px 0;
+  font-weight: 400;
+}
+
+.interns-rt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.interns-mail {
+  align-self: flex-end;
+}
+
+.mail {
+  font-size: calc(var(--fs-I-p) + 0.6rem);
+  color: #3ec1ee;
+  transition: all 0.5s;
+  margin-right: 5px;
+}
+.mail:hover {
+  color: #3e76ee;
 }
 
 .intern-date {
@@ -125,10 +143,11 @@
   }
   .interns-flexbox {
     gap: 30px 30px;
+    justify-content: space-evenly;
   }
 
   .intern-card {
-    max-width: 635px;
+    max-width: 45%;
     min-width: 455px;
     padding: 13px;
     gap: 20px;
@@ -144,7 +163,6 @@
     --img-I-wh: 80px; /* logo width */
   }
   .interns-flexbox {
-    gap: 30px 30px;
     justify-content: space-evenly;
   }
 
@@ -274,6 +292,10 @@
   .interns-detail {
     gap: 1px 0;
   }
+  .intern-fieldDropdown {
+    padding: 8px 8px;
+    font-size: 0.9rem;
+  }
 }
 
 @media all and (max-width: 400px) {
@@ -292,8 +314,9 @@
   }
 
   .intern-card {
-    padding: 10px;
-    min-width: fit-content;
+    padding: 20px 10px;
+    min-width: 50%;
+    max-width: 90%;
     gap: 5px;
     justify-content: center;
     flex-direction: column;
@@ -306,5 +329,13 @@
 
   .interns-detail {
     gap: 1px 0;
+  }
+  .interns-rt {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mail {
+    font-size: 1rem;
   }
 }
