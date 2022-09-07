@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import ContactCSS from "../CSSmodules/contact.module.css";
 import emailjs from "@emailjs/browser";
+import swal from "sweetalert";
 import MainHeading from "../MainHeading";
 
 function Contact() {
@@ -11,6 +12,7 @@ function Contact() {
     contact: "",
     message: "",
   });
+
   const [formerror, setFormerror] = useState({});
   const [issubmit, setSubmit] = useState(false);
 
@@ -33,26 +35,22 @@ function Contact() {
     const phonePattern =
       /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
     if (!value.name) {
-      errors.name = "Please Enter Name!!";
+      return errors.name;
     } else if (!namePattern.test(value.name)) {
-      errors.name =
-        "Please Enter Your Full Name without Numbers or Special Characters.";
+      return errors.name;
     }
-
     if (!value.email) {
-      errors.email = "Please Enter Email!!";
+      return errors.email;
     } else if (!emailPattern.test(value.email)) {
-      errors.email = "Please Enter a Valid Email.";
+      return errors.email;
     }
     if (!value.contact) {
-      errors.contact = "Please Enter Phone Number!!";
+      return errors.contact;
     } else if (!phonePattern.test(value.contact)) {
-      errors.contact = "Please Enter a Valid Phone Number.";
+      return errors.contact;
     }
     if (!value.message) {
-      errors.message = "Please Enter a Message.";
-    } else {
-      alert("Thank you. Your message has been sent.");
+      return errors.message;
     }
     return errors;
   };
@@ -77,6 +75,13 @@ function Contact() {
           }
         );
 
+      swal({
+        title: "Thank You",
+        text: "Your message has been submitted",
+        icon: "success",
+        button: "Ok",
+      });
+
       setTimeout(() => {
         setSubmit("");
         setFormvalue({
@@ -84,10 +89,22 @@ function Contact() {
           email: "",
           contact: "",
           message: "",
+          subject: "",
         });
       }, 10);
     }
   }, [formerror, formvalue, issubmit]);
+
+  const clear = (e) => {
+    e.preventDefault();
+    setFormvalue({
+      name: "",
+      email: "",
+      contact: "",
+      message: "",
+      subject: "",
+    });
+  };
 
   return (
     <React.Fragment>
@@ -95,17 +112,22 @@ function Contact() {
         <MainHeading headingName="Contact Us" />
         <div className={ContactCSS["contact-Column"]}>
           <div className={ContactCSS["contact-Column-left"]}>
-            <h1 className={ContactCSS["contact-Get-in-touch"]}>Get in touch</h1>
-            <p className={ContactCSS["contact-Paragraph"]}>
-              Want to get in touch? We’d love to hear from you. We’re here to
-              help and answer any questions you might have. We often personally
-              meet with clients; Drop us a line, or give us a heads up if
-              you'reinterested in visiting us.
-            </p>
-            <h2 className={ContactCSS["contact-find-Us-At"]}>
-              You can also find us at
-            </h2>
+            <div>
+              <h1 className={ContactCSS["contact-Get-in-touch"]}>
+                Get in touch
+              </h1>
+              <p className={ContactCSS["contact-Paragraph"]}>
+                Want to get in touch? We’d love to hear from you. We’re here to
+                help and answer any questions you might have. We often
+                personally meet with clients; Drop us a line, or give us a heads
+                up if you're interested in visiting us.
+              </p>
+            </div>
+
             <div className={ContactCSS["contact-socials"]}>
+              <h2 className={ContactCSS["contact-find-Us-At"]}>
+                You can also find us at
+              </h2>
               <div className={ContactCSS["links"]}>
                 <div className={ContactCSS["icons"]}>
                   <i
@@ -138,7 +160,7 @@ function Contact() {
                   />
                 </div>
                 <a href="https://www.linkedin.com/feed/" target="_blank">
-                  PL Multimedia Service
+                  PLMultimedia Linked In
                 </a>
               </div>
 
@@ -156,7 +178,7 @@ function Contact() {
                   />
                 </div>
                 <a href="https://www.instagram.com/instagram/" target="_blank">
-                  PLMultimediaService
+                  @plmultimediaig
                 </a>
               </div>
 
@@ -170,7 +192,7 @@ function Contact() {
                   href="https://www.facebook.com/plmultimediaservice"
                   target="_blank"
                 >
-                  PL Multimedia Service
+                  @Plmultimedia_fb
                 </a>
               </div>
 
@@ -179,7 +201,7 @@ function Contact() {
                   <i className={`${ContactCSS.twitter} fa-brands fa-twitter`} />
                 </div>
                 <a href="https://twitter.com/" target="_blank">
-                  PL Multimedia Service
+                  @Plmultimedia_twt
                 </a>
               </div>
             </div>
@@ -195,7 +217,19 @@ function Contact() {
                 <select
                   className={ContactCSS["contact-Drop-down"]}
                   name="subject"
+                  required="true"
+                  value={formvalue.subject}
+                  onChange={handlevalidation}
                 >
+                  <option value="" disabled selected hidden>
+                    --Choose the Subject--
+                  </option>
+                  <option
+                    value="Job and Internship"
+                    className={ContactCSS["contact-Options"]}
+                  >
+                    Job and Internship
+                  </option>
                   <option
                     value="Advertisement"
                     className={ContactCSS["contact-Options"]}
@@ -238,63 +272,59 @@ function Contact() {
                   >
                     Media Production
                   </option>
+                  <option
+                    value="Other"
+                    className={ContactCSS["contact-Options"]}
+                  >
+                    Other
+                  </option>
                 </select>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    name="name"
-                    value={formvalue.name}
-                    onChange={handlevalidation}
-                    required="true"
-                  />
-                  <div className={ContactCSS["text-danger"]}>
-                    {formerror.name}{" "}
-                  </div>
-                </div>
+
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  name="name"
+                  value={formvalue.name}
+                  pattern="([A-Z][a-z]{3,} )([A-Z][a-z]{3,} )?([A-Z][a-z]{3,})"
+                  onChange={handlevalidation}
+                  title="Please insert letters only"
+                  required="true"
+                />
+
                 <div className={ContactCSS["contact-Form-email-phone"]}>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      name="email"
-                      value={formvalue.email}
-                      onChange={handlevalidation}
-                      required="true"
-                    />
-                    <span className={ContactCSS["text-danger"]}>
-                      {formerror.email}{" "}
-                    </span>
-                  </div>
-                  <div>
-                    <input
-                      type="phone"
-                      placeholder="Phone Number"
-                      name="contact"
-                      value={formvalue.contact}
-                      onChange={handlevalidation}
-                      required="true"
-                    />
-                    <div className={ContactCSS["text-danger"]}>
-                      {formerror.contact}{" "}
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Message"
-                    className={ContactCSS["contact-Textarea"]}
-                    name="message"
-                    value={formvalue.message}
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    name="email"
+                    value={formvalue.email}
                     onChange={handlevalidation}
                     required="true"
                   />
-                  <span className={ContactCSS["text-danger"]}>
-                    {formerror.message}{" "}
-                  </span>
+
+                  <input
+                    type="phone"
+                    placeholder="Phone Number"
+                    name="contact"
+                    value={formvalue.contact}
+                    onChange={handlevalidation}
+                    pattern="[0-9]{10}"
+                    title="Please insert valid phone number, i.e. Phone number must be in number format, include 10 digits"
+                    required="true"
+                  />
                 </div>
+
+                <textarea
+                  placeholder="Message"
+                  className={ContactCSS["contact-Textarea"]}
+                  name="message"
+                  value={formvalue.message}
+                  onChange={handlevalidation}
+                  required="true"
+                />
+
                 <button
                   className={`${ContactCSS["contact-Message-Button"]} ${ContactCSS["color-Clear-Button"]}`}
+                  onClick={clear}
                 >
                   Clear
                 </button>

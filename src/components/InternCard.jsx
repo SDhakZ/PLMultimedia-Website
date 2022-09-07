@@ -22,10 +22,10 @@ function InternCard(props) {
         </div>
       </div>
       <div className={InternsCSS["interns-rt"]}>
-        <h3 className={InternsCSS["intern-date"]}>Date: {props.year}</h3>
         <a className={InternsCSS["interns-mail"]} href={mail}>
           <i className={`${InternsCSS.mail} fa-solid fa-envelope`} />
         </a>
+        <h3 className={InternsCSS["intern-date"]}>Date: {props.year}</h3>
       </div>
     </div>
   );
