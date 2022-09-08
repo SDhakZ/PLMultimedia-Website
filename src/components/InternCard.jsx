@@ -1,5 +1,6 @@
 import React from "react";
 import InternsCSS from "../components/CSSmodules/interns.module.css";
+
 function InternCard(props) {
   var mail = "mailto:" + props.email;
   return (

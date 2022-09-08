@@ -4,9 +4,9 @@ import { useSpring, animated, easings } from "react-spring";
 
 function MainHeading(props) {
   const style = useSpring({
-    from: { opacity: 0, marginLeft: -100 },
-    to: { opacity: 1, marginLeft: 0 },
-    config: { duration: 1000, easing: easings.easeOutBack },
+    from: { opacity: 0, scale: 0.5 },
+    to: { opacity: 1, scale: 1 },
+    config: { duration: 800, easing: easings.easeOutBack },
   });
 
   return (

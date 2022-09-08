@@ -7,12 +7,20 @@ import ServicesCSS from "../CSSmodules/services.module.css";
 import DomainSearch from "../DomainSearch.jsx";
 import servicesData from "../../Datas/servicesData";
 import MainHeading from "../MainHeading";
+import { useSpring, animated, easings } from "react-spring";
 
 function Services() {
+  const style = useSpring({
+    from: { opacity: 0, scale: 0 },
+    to: { opacity: 1, scale: 1 },
+    config: { duration: 700, easing: easings.easeOutBack },
+  });
   return (
     <div className={ServicesCSS["ServicesPage"]}>
       <MainHeading headingName="Our Services" />
-      <DomainSearch />
+      <animated.div style={style}>
+        <DomainSearch />
+      </animated.div>
 
       <div className={ServicesCSS["services-container"]}>
         <div className={ServicesCSS.serviceCardSection}>

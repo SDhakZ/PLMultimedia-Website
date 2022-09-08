@@ -4,9 +4,14 @@ import InternsCSS from "../CSSmodules/interns.module.css";
 import InternCard from "../InternCard";
 import internsData from "../../Datas/internsData";
 import useFetch from "../../hooks/useFetch";
-
+import { useSpring, animated, easings } from "react-spring";
 // http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
 function Interns() {
+  const style = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1000, easing: easings.easeInOutQuad },
+  });
   //Sorting According to dropdown
   const getInitialState = () => {
     const value = "All";
@@ -32,45 +37,48 @@ function Interns() {
 
   return (
     <React.Fragment>
-      <div className={InternsCSS["interns-container"]}>
-        <MainHeading headingName="Interns Through Us" />
-        <div className={InternsCSS["intern-categories"]}>
-          <label for="fields">Sort By:</label>
+      <animated.div style={style}>
+        {" "}
+        <div className={InternsCSS["interns-container"]}>
+          <MainHeading headingName="Interns Through Us" />
+          <div className={InternsCSS["intern-categories"]}>
+            <label for="fields">Sort By:</label>
 
-          <select
-            className={InternsCSS["intern-fieldDropdown"]}
-            name="fields"
-            id="field-names"
-            value={value}
-            onChange={handleChange}
-          >
-            <option value="All">Field: All</option>
-            <option value="Web Development">Web Development</option>
-            <option value="App Development">App Development</option>
-            <option value="Multimedia">Multimedia</option>
-            <option value="Networking">Networking</option>
-            <option value="Business">Business</option>
-          </select>
+            <select
+              className={InternsCSS["intern-fieldDropdown"]}
+              name="fields"
+              id="field-names"
+              value={value}
+              onChange={handleChange}
+            >
+              <option value="All">Field: All</option>
+              <option value="Web Development">Web Development</option>
+              <option value="App Development">App Development</option>
+              <option value="Multimedia">Multimedia</option>
+              <option value="Networking">Networking</option>
+              <option value="Business">Business</option>
+            </select>
+          </div>
+          <div className={InternsCSS["interns-flexbox"]}>
+            {data.data.map((intern) => {
+              const url = intern.attributes.img.data.attributes.url;
+              const image = "http://localhost:1338" + url;
+              return (
+                <InternCard
+                  key={intern.attributes.id}
+                  img={image}
+                  name={intern.attributes.name}
+                  company={intern.attributes.company}
+                  field={intern.attributes.field}
+                  position={intern.attributes.position}
+                  year={intern.attributes.date}
+                  email={intern.attributes.email}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className={InternsCSS["interns-flexbox"]}>
-          {data.data.map((intern) => {
-            const url = intern.attributes.img.data.attributes.url;
-            const image = "http://localhost:1338" + url;
-            return (
-              <InternCard
-                key={intern.attributes.id}
-                img={image}
-                name={intern.attributes.name}
-                company={intern.attributes.company}
-                field={intern.attributes.field}
-                position={intern.attributes.position}
-                year={intern.attributes.date}
-                email={intern.attributes.email}
-              />
-            );
-          })}
-        </div>
-      </div>
+      </animated.div>
     </React.Fragment>
   );
 }
