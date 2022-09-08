@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 :root {
-  --pd-foo-c: 60px 140px 70px; /*container padding*/
+  --pd-foo-c: 60px 140px 30px; /*container padding*/
   --fs-foo-h: 1.8rem; /* heading font size */
   --fs-foo-cn: 2rem; /* company name font size */
   --fs-foo-p: 1.15rem; /* paragraph font size*/
@@ -161,6 +161,7 @@
   display: flex;
   align-items: center;
   margin-top: 50px;
+  justify-content: center;
 }
 
 .footer-copyrightSymbol {
@@ -170,7 +171,7 @@
 
 @media (max-width: 1200px) {
   :root {
-    --pd-foo-c: 50px 60px 60px; /*container padding*/
+    --pd-foo-c: 50px 60px 20px; /*container padding*/
     --fs-foo-h: 1.6rem; /* heading font size */
     --fs-foo-cn: 2rem; /* company name font size */
     --mb-foo-p: 12px; /* margin bottom for links */
@@ -198,7 +199,7 @@
 
 @media (max-width: 1000px) {
   :root {
-    --pd-foo-c: 50px 60px 60px; /*container padding*/
+    --pd-foo-c: 50px 60px 20px; /*container padding*/
     --fs-foo-h: 1.375rem; /* heading font size */
     --fs-foo-cn: 1.3rem; /* company name font size */
     --fs-foo-p: 0.9rem; /* paragraph font size*/
@@ -253,7 +254,7 @@
 
 @media (max-width: 800px) {
   :root {
-    --pd-foo-c: 50px 60px 60px; /*container padding*/
+    --pd-foo-c: 50px 60px 20px; /*container padding*/
     --fs-foo-h: 1.3rem; /* heading font size */
     --fs-foo-cn: 1.3rem; /* company name font size */
     --fs-foo-p: 0.875rem; /* paragraph font size*/
@@ -307,7 +308,7 @@
 
 @media (max-width: 400px) {
   :root {
-    --pd-foo-c: 30px 25px 40px; /*container padding*/
+    --pd-foo-c: 30px 25px 10px; /*container padding*/
     --fs-foo-h: 1.3rem; /* heading font size */
     --fs-foo-cn: 1.3rem; /* company name font size */
     --fs-foo-p: 0.9rem; /* paragraph font size*/
@@ -348,7 +349,7 @@
 }
 @media (max-width: 350px) {
   :root {
-    --pd-foo-c: 30px 25px 40px; /*container padding*/
+    --pd-foo-c: 30px 25px 10px; /*container padding*/
     --fs-foo-h: 1.3rem; /* heading font size */
     --fs-foo-cn: 1.3rem; /* company name font size */
     --fs-foo-p: 0.8rem; /* paragraph font size*/

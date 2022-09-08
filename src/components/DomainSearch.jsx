@@ -61,7 +61,7 @@ function DomainSearch() {
       <div className={DomainCSS.domHeader}>
         <img
           className={DomainCSS.domHeadImg}
-          src={require("../logo/www.png").default}
+          src={require("../logo/www.png")}
           alt="logo here"
         />
         <h1 className={DomainCSS.domHeadTitle}>
