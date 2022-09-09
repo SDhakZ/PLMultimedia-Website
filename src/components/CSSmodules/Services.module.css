@@ -3,8 +3,8 @@
 
 :root {
   --pd-c: 80px 140px; /*container padding*/
-  --fs-S-h: 1.8rem; /* heading font size */
-  --fs-S-p: 1.3rem; /* paragraph font size*/
+  --fs-S-h: 1.6rem; /* heading font size */
+  --fs-S-p: 1.25rem; /* paragraph font size*/
   --fs-S-bt: 1.05rem; /* button font size */
   --fh-S-p: 28px; /* paragraph line height */
   --lg-S-w: 130px; /* logo width */

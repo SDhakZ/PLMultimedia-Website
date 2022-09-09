@@ -11,6 +11,7 @@ import { Portfolio } from "./components/Pages/Portfolio";
 import { FAQpage } from "./components/Pages/FAQ";
 import Footer from "./components/Footer";
 import Contact from "./components/Pages/Contact";
+import IndividualService from "./components/IndividualService";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/interns" component={Interns} />
+            <Route path="/individualService" component={IndividualService} />
           </Switch>
         </div>
       </Router>

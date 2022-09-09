@@ -1,0 +1,118 @@
+.indService-container {
+  padding: var(--pd-c);
+}
+
+.indService-flexbox {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.indService-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.indService-lft {
+  width: 30%;
+}
+
+.indService-rt {
+  width: 63%;
+}
+
+.indService-img {
+  width: 100%;
+}
+
+.indService-img img {
+  width: 100%;
+}
+
+.indService-otherServices {
+  font-family: "Roboto";
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+}
+
+.indService-contactButton {
+  border-radius: 26px;
+  font-family: "Roboto";
+  font-size: var(--fs-S-bt);
+  font-weight: 600;
+  padding: 13px 25px;
+  color: #2f2f2f;
+  border: solid 2px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #c091fc);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fbfbfd inset;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  align-self: center;
+}
+
+.indService-contactButton:hover {
+  border: solid 2px white;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
+    rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+  color: white;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #c091fc);
+  transform: translateY(-2px);
+}
+
+.indService-link {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #fbfbfd;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+}
+
+.indService-link:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.indService-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.indService-needHelp {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.indService-contactpara {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 300px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.indService-para {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  line-height: 26px;
+}

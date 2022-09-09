@@ -55,7 +55,7 @@ class Footer extends Component {
             <h4>Company</h4>
             <ul>
               <li>
-                <a href="#">Our team</a>
+                <a href="/individualservice">Test</a>
               </li>
               <li>
                 <a href="#">Partner with us</a>

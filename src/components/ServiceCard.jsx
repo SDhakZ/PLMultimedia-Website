@@ -18,7 +18,7 @@ function ServiceCard(props) {
         </p>
         <p className={ServicesCSS.cardDescription}>{props.description}</p>
       </div>
-      <button className={ServicesCSS.contactButton}>Click to Contact</button>
+      <button className={ServicesCSS.contactButton}>View Details</button>
     </div>
   );
 }

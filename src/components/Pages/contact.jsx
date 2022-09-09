@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import swal from "sweetalert";
 import MainHeading from "../MainHeading";
 import { useSpring, animated, easings } from "react-spring";
+
 function Contact() {
   const formRef = useRef(null);
   const [formvalue, setFormvalue] = useState({
@@ -106,6 +107,15 @@ function Contact() {
     });
   };
 
+  const handleEnter = (event) => {
+    if (event.key.toLowerCase() === "enter") {
+      const form = event.target.form;
+      const index = [...form].indexOf(event.target);
+      form.elements[index + 1].focus();
+      event.preventDefault();
+    }
+  };
+
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -117,25 +127,21 @@ function Contact() {
       <div className={ContactCSS["contact-Container"]}>
         <MainHeading headingName="Contact Us" />
         <animated.div style={style}>
-          {" "}
           <div className={ContactCSS["contact-Column"]}>
             <div className={ContactCSS["contact-Column-left"]}>
-              <div>
-                <h1 className={ContactCSS["contact-Get-in-touch"]}>
-                  Get in touch
-                </h1>
-                <p className={ContactCSS["contact-Paragraph"]}>
-                  Want to get in touch? We’d love to hear from you. We’re here
-                  to help and answer any questions you might have. We often
-                  personally meet with clients; Drop us a line, or give us a
-                  heads up if you're interested in visiting us.
-                </p>
-              </div>
-
+              <h1 className={ContactCSS["contact-Get-in-touch"]}>
+                Get in touch
+              </h1>
+              <p className={ContactCSS["contact-Paragraph"]}>
+                Want to get in touch? We’d love to hear from you. We’re here to
+                help and answer any questions you might have. We often
+                personally meet with clients; Drop us a line, or give us a heads
+                up if you'reinterested in visiting us.
+              </p>
+              <h2 className={ContactCSS["contact-find-Us-At"]}>
+                You can also find us at
+              </h2>
               <div className={ContactCSS["contact-socials"]}>
-                <h2 className={ContactCSS["contact-find-Us-At"]}>
-                  You can also find us at
-                </h2>
                 <div className={ContactCSS["links"]}>
                   <div className={ContactCSS["icons"]}>
                     <i
@@ -171,7 +177,7 @@ function Contact() {
                     />
                   </div>
                   <a href="https://www.linkedin.com/feed/" target="_blank">
-                    PLMultimedia Linked In
+                    PL Multimedia Service
                   </a>
                 </div>
 
@@ -192,7 +198,7 @@ function Contact() {
                     href="https://www.instagram.com/instagram/"
                     target="_blank"
                   >
-                    @plmultimediaig
+                    PLMultimediaService
                   </a>
                 </div>
 
@@ -206,7 +212,7 @@ function Contact() {
                     href="https://www.facebook.com/plmultimediaservice"
                     target="_blank"
                   >
-                    @Plmultimedia_fb
+                    PL Multimedia Service
                   </a>
                 </div>
 
@@ -217,7 +223,7 @@ function Contact() {
                     />
                   </div>
                   <a href="https://twitter.com/" target="_blank">
-                    @Plmultimedia_twt
+                    PL Multimedia Service
                   </a>
                 </div>
               </div>
@@ -236,6 +242,7 @@ function Contact() {
                     required="true"
                     value={formvalue.subject}
                     onChange={handlevalidation}
+                    onKeyDown={handleEnter}
                   >
                     <option value="" disabled selected hidden>
                       --Choose the Subject--
@@ -303,8 +310,9 @@ function Contact() {
                     value={formvalue.name}
                     pattern="([A-Z][a-z]{3,} )([A-Z][a-z]{3,} )?([A-Z][a-z]{3,})"
                     onChange={handlevalidation}
-                    title="Please insert letters only"
+                    title="Please insert your full name using only letters"
                     required="true"
+                    onKeyDown={handleEnter}
                   />
 
                   <div className={ContactCSS["contact-Form-email-phone"]}>
@@ -315,6 +323,7 @@ function Contact() {
                       value={formvalue.email}
                       onChange={handlevalidation}
                       required="true"
+                      onKeyDown={handleEnter}
                     />
 
                     <input
@@ -326,6 +335,7 @@ function Contact() {
                       pattern="[0-9]{10}"
                       title="Please insert valid phone number, i.e. Phone number must be in number format, include 10 digits"
                       required="true"
+                      onKeyDown={handleEnter}
                     />
                   </div>
 

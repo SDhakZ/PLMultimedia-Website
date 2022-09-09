@@ -38,7 +38,6 @@ function Interns() {
   return (
     <React.Fragment>
       <animated.div style={style}>
-        {" "}
         <div className={InternsCSS["interns-container"]}>
           <MainHeading headingName="Interns Through Us" />
           <div className={InternsCSS["intern-categories"]}>
