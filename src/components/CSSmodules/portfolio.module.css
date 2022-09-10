@@ -181,7 +181,7 @@
 @media all and (max-width: 600px) {
   :root {
     --pd-c: 20px 30px 40px; /*container padding*/
-    --fs-xl: 2.5rem; /* main heading size */
+
     --fs-h: 1.5rem; /* heading font size */
     --fs-p: 0.9rem; /* paragraph font size*/
     --fs-bt: 0.85rem; /* button font size */

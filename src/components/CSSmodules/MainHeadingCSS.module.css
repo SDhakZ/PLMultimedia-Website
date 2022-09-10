@@ -1,6 +1,6 @@
 :root {
   --fs-xl: 4.5rem; /* main heading size */
-  --mb-xl: 90px; /*margin bottom of main heading*/
+  --mb-xl: 80px; /*margin bottom of main heading*/
 }
 
 .mainHeading {
