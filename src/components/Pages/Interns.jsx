@@ -4,6 +4,8 @@ import InternsCSS from "../CSSmodules/interns.module.css";
 import InternCard from "../InternCard";
 import internsData from "../../Datas/internsData";
 import useFetch from "../../hooks/useFetch";
+import ErrorPage from "../ErrorPage";
+import LoadingPage from "../LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
 // http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
 function Interns() {
@@ -32,8 +34,8 @@ function Interns() {
   }
 
   const { loading, error, data } = useFetch(path);
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error</p>;
+  if (loading) return <LoadingPage />;
+  if (error) return <ErrorPage />;
 
   return (
     <React.Fragment>
