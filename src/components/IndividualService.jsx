@@ -1,6 +1,7 @@
 import React from "react";
 import IndividualServiceCSS from "./CSSmodules/individualService.module.css";
 import MainHeading from "./MainHeading";
+import serviceData from "../Datas/servicesData";
 
 function IndividualService() {
   return (

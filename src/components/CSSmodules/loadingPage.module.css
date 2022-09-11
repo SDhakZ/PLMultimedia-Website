@@ -32,6 +32,7 @@
     transform: rotate(360deg);
   }
 }
+
 @media all and (max-width: 1200px) {
   .LoadingPage-Container {
     font-size: 45px;
