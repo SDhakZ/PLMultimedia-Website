@@ -10,7 +10,7 @@ import Interns from "./components/Pages/Interns";
 import { Portfolio } from "./components/Pages/Portfolio";
 import { FAQpage } from "./components/Pages/FAQ";
 import Footer from "./components/Footer";
-import Contact from "./components/Pages/Contact";
+import Contact from "./components/Pages/Contat";
 import IndividualService from "./components/IndividualService";
 
 function App() {
