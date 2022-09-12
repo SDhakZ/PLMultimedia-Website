@@ -1,0 +1,71 @@
+:root {
+  --vw-HT-homeTop: 40vw;
+  --iw-HT-rocket: 10%;
+  --iw-HT-planet: 8%;
+  --iw-HT-man: 25%;
+  --iw-HT-bg: 26%;
+}
+
+.Home-top {
+  height: var(--vw-HT-homeTop);
+  overflow: hidden;
+  display: relative;
+}
+.Home-img-collection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.leftbg {
+  width: var(--iw-HT-bg);
+  position: absolute;
+}
+
+.rightbg {
+  width: var(--iw-HT-bg);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.floatingman {
+  width: var(--iw-HT-man);
+  position: absolute;
+  bottom: 2%;
+  left: 7%;
+}
+
+.planet {
+  width: var(--iw-HT-planet);
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
+.rocket {
+  width: var(--iw-HT-rocket);
+  position: absolute;
+  left: 16%;
+  top: 10%;
+}
+
+@media all and (max-width: 1200px) {
+  :root {
+    --vw-HT-homeTop: 43vw;
+    --iw-HT-rocket: 10%;
+    --iw-HT-planet: 9%;
+    --iw-HT-man: 24%;
+    --iw-HT-bg: 29%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  :root {
+    --vw-HT-homeTop: 50vw;
+    --iw-HT-rocket: 14%;
+    --iw-HT-planet: 11%;
+    --iw-HT-man: 28%;
+    --iw-HT-bg: 33%;
+  }
+}
