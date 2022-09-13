@@ -2,3 +2,8 @@
   background-image: linear-gradient(#71b2ff, #fbfbfd);
   padding: var(--pd-Home-c);
 }
+
+.Home-what-ppl-think {
+  background-image: linear-gradient(180deg, #fbfbfd 15.43%, #d0d4f9 100%);
+  padding: var(--pd-c);
+}
