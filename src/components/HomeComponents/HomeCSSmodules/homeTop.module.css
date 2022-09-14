@@ -17,7 +17,7 @@
 }
 .Home-text {
   position: absolute;
-  left: 38%;
+  left: 36%;
   top: 20%;
   font-size: var(--fs-HT-staticText);
   font-family: "Baloo 2";
@@ -151,7 +151,7 @@
   }
   .Home-text {
     left: 35%;
-    top: 30%;
+    top: 25%;
   }
 }
 
@@ -167,7 +167,7 @@
   }
   .Home-text {
     left: 35%;
-    top: 20%;
+    top: 30%;
   }
   .rightbg {
     right: -5%;
@@ -176,8 +176,8 @@
 
 @media all and (max-width: 960px) {
   :root {
-    --fs-HT-staticText: 2rem;
-    --fs-HT-text: 3rem;
+    --fs-HT-staticText: 2.3rem;
+    --fs-HT-text: 3.3rem;
     --vw-HT-homeTop: 50vw;
     --iw-HT-rocket: 14%;
     --iw-HT-planet: 11%;
@@ -185,16 +185,16 @@
     --iw-HT-bg: 33%;
   }
   .Home-text {
-    left: 40%;
-    top: 28%;
+    left: 37%;
+    top: 27%;
     max-width: 320px;
   }
 }
 
 @media all and (max-width: 800px) {
   :root {
-    --fs-HT-text: 2.5rem;
-    --fs-HT-staticText: 1.5rem;
+    --fs-HT-text: 2.6rem;
+    --fs-HT-staticText: 1.6rem;
     --vw-HT-homeTop: 50vw;
     --iw-HT-rocket: 14%;
     --iw-HT-planet: 11%;
@@ -202,8 +202,8 @@
     --iw-HT-bg: 35%;
   }
   .Home-text {
-    left: 37%;
-    top: 20%;
+    left: 34%;
+    top: 32%;
     max-width: 300px;
   }
   .leftbg {
@@ -213,45 +213,79 @@
 
 @media all and (max-width: 600px) {
   :root {
+    --fs-HT-text: 2.3rem;
+    --fs-HT-staticText: 1.3rem;
     --vw-HT-homeTop: 60vw;
     --iw-HT-rocket: 14%;
-    --iw-HT-planet: 11%;
-    --iw-HT-man: 28%;
+    --iw-HT-planet: 9%;
+    --iw-HT-man: 23%;
     --iw-HT-bg: 50%;
   }
 
+  .Home-text {
+    left: 27%;
+    top: 32%;
+    max-width: 300px;
+  }
+
   .leftbg {
-    left: -20%;
+    left: -25%;
   }
 
   .rightbg {
     right: -10%;
+  }
+
+  .floatingman {
+    bottom: 10%;
+    left: 5%;
+  }
+
+  .planet {
+    left: 2%;
+  }
+
+  .rocket {
+    left: 10%;
   }
 }
 
 @media all and (max-width: 400px) {
   :root {
+    --fs-HT-text: 1.8rem;
+    --fs-HT-staticText: 1rem;
     --vw-HT-homeTop: 50vw;
-    --iw-HT-rocket: 16%;
-    --iw-HT-planet: 11%;
+    --iw-HT-rocket: 13%;
+    --iw-HT-planet: 8%;
     --iw-HT-man: 26%;
     --iw-HT-bg: 50%;
   }
 
+  .Home-text {
+    left: 20%;
+    top: 30%;
+    max-width: 200px;
+  }
+
+  .floatingman {
+    bottom: 1%;
+    left: 73%;
+  }
+
   .leftbg {
-    left: -20%;
+    left: -30%;
   }
 
   .rightbg {
-    right: -10%;
+    right: -20%;
   }
   .planet {
     top: 7%;
-    left: 5%;
+    left: 1%;
   }
 
   .rocket {
-    left: 16%;
+    left: 7%;
     top: 15%;
   }
 }
