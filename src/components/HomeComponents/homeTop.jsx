@@ -26,9 +26,9 @@ function HomeTop() {
           <TypeAnimation
             sequence={[
               "Accelerate Your Growth",
-              2000, // Waits 3s
+              2000, // Waits 2s
               "Create Your Dreams",
-              2000, // Waits 3s
+              2000, // Waits 2s
               "I like to move it move it",
               2500,
             ]}
