@@ -1,3 +1,7 @@
+.Home-Container {
+  overflow-x: hidden;
+}
+
 .Home-aboutUs {
   background-image: linear-gradient(#71b2ff, #fbfbfd);
   padding: var(--pd-Home-c);

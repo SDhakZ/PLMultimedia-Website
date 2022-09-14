@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import MainHeading from "../MainHeading";
 import InternsCSS from "../CSSmodules/interns.module.css";
 import InternCard from "../InternCard";
-import internsData from "../../Datas/internsData";
 import useFetch from "../../hooks/useFetch";
 import ErrorPage from "../ErrorPage";
 import LoadingPage from "../LoadingPage";

@@ -1,10 +1,56 @@
 :root {
-  --vw-HT-homeTop: 40vw;
-  --iw-HT-rocket: 10%;
-  --iw-HT-planet: 8%;
+  --fs-HT-staticText: 4.5rem;
+  --fs-HT-text: 6.5rem;
+  --vw-HT-homeTop: 43vw;
+  --iw-HT-rocket: 13%;
+  --iw-HT-planet: 9%;
   --iw-HT-man: 25%;
-  --iw-HT-bg: 28%;
+  --iw-HT-bg: 29%;
 }
+
+/*Text*/
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&display=swap");
+.Home-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.Home-text {
+  position: absolute;
+  left: 38%;
+  top: 20%;
+  font-size: var(--fs-HT-staticText);
+  font-family: "Baloo 2";
+  max-width: 650px;
+  line-height: 1;
+  font-weight: 700;
+  background: linear-gradient(45deg, #f65cff, #ab36fd, #a289ff, #0047fd);
+  background-size: 300%;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 7s ease-in-out infinite;
+  -moz-animation: animated_text 7s ease-in-out infinite;
+  -webkit-animation: animated_text 7s ease-in-out infinite;
+  animation-timing-function: ease;
+}
+
+.Home-text h1 {
+  font-size: var(--fs-HT-text);
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
+  }
+}
+/*Text*/
 
 .Home-top {
   height: var(--vw-HT-homeTop);
@@ -32,8 +78,12 @@
 .floatingman {
   width: var(--iw-HT-man);
   position: absolute;
-  bottom: 2%;
+  bottom: 3%;
   left: 7%;
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .planet {
@@ -41,6 +91,10 @@
   position: absolute;
   top: 7%;
   left: 5%;
+  animation-name: planet;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
 }
 
 .rocket {
@@ -48,24 +102,156 @@
   position: absolute;
   left: 16%;
   top: 10%;
+  animation-name: rocket;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes rocket {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  60% {
+    transform: translate(-5px, 10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes planet {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(5px, 3px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@media all and (max-width: 1400px) {
+  :root {
+    --fs-HT-staticText: 3.5rem;
+    --fs-HT-text: 5rem;
+  }
+  .Home-text {
+    left: 35%;
+    top: 30%;
+  }
 }
 
 @media all and (max-width: 1200px) {
   :root {
-    --vw-HT-homeTop: 43vw;
-    --iw-HT-rocket: 10%;
-    --iw-HT-planet: 9%;
-    --iw-HT-man: 24%;
-    --iw-HT-bg: 29%;
+    --fs-HT-staticText: 3rem;
+    --fs-HT-text: 4rem;
+    --vw-HT-homeTop: 45vw;
+    --iw-HT-rocket: 11%;
+    --iw-HT-planet: 10%;
+    --iw-HT-man: 26%;
+    --iw-HT-bg: 31%;
+  }
+  .Home-text {
+    left: 35%;
+    top: 20%;
+  }
+  .rightbg {
+    right: -5%;
   }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 960px) {
   :root {
+    --fs-HT-staticText: 2rem;
+    --fs-HT-text: 3rem;
     --vw-HT-homeTop: 50vw;
     --iw-HT-rocket: 14%;
     --iw-HT-planet: 11%;
     --iw-HT-man: 28%;
     --iw-HT-bg: 33%;
+  }
+  .Home-text {
+    left: 40%;
+    top: 28%;
+    max-width: 320px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  :root {
+    --fs-HT-text: 2.5rem;
+    --fs-HT-staticText: 1.5rem;
+    --vw-HT-homeTop: 50vw;
+    --iw-HT-rocket: 14%;
+    --iw-HT-planet: 11%;
+    --iw-HT-man: 25%;
+    --iw-HT-bg: 35%;
+  }
+  .Home-text {
+    left: 37%;
+    top: 20%;
+    max-width: 300px;
+  }
+  .leftbg {
+    left: -5%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  :root {
+    --vw-HT-homeTop: 60vw;
+    --iw-HT-rocket: 14%;
+    --iw-HT-planet: 11%;
+    --iw-HT-man: 28%;
+    --iw-HT-bg: 50%;
+  }
+
+  .leftbg {
+    left: -20%;
+  }
+
+  .rightbg {
+    right: -10%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  :root {
+    --vw-HT-homeTop: 50vw;
+    --iw-HT-rocket: 16%;
+    --iw-HT-planet: 11%;
+    --iw-HT-man: 26%;
+    --iw-HT-bg: 50%;
+  }
+
+  .leftbg {
+    left: -20%;
+  }
+
+  .rightbg {
+    right: -10%;
+  }
+  .planet {
+    top: 7%;
+    left: 5%;
+  }
+
+  .rocket {
+    left: 16%;
+    top: 15%;
   }
 }

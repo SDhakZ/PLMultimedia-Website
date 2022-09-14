@@ -12,7 +12,7 @@
 .Home-aboutUs-WhoAreWe {
   display: flex;
   flex-direction: row;
-  gap: 230px;
+  gap: 250px;
   margin-bottom: 100px;
 }
 
@@ -22,7 +22,7 @@
 
 .leftgirl,
 .rightgroup {
-  width: 240px;
+  width: 300px;
 }
 
 .rightgroup {
@@ -30,15 +30,14 @@
   top: 155px;
   left: 155px;
 }
-
 .Home-aboutUs-Title {
   color: #2f2f2f;
   font-family: "Bahnschrift";
-  font-size: 77px;
+  font-size: 3.2rem;
   letter-spacing: 0.05em;
-  margin-bottom: 20px;
   font-weight: 600;
-  line-height: 92.42px;
+  line-height: 85px;
+  margin-top: 3px;
 }
 
 .Home-aboutUs-Paragraph {
@@ -47,22 +46,23 @@
   font-size: var(--fs-Home-p);
   line-height: var(--fh-Home-p);
   text-align: justify;
+  margin-top: 15px;
 }
 
 @media all and (max-width: 1200px) {
   :root {
     --pd-Home-c: 50px 60px 70px;
-    --fs-Home-p: 1.1rem;
-    --fh-Home-p: 27px;
+    --fs-Home-p: 1.2rem;
+    --fh-Home-p: 32px;
   }
 
   .Home-aboutUs-WhoAreWe {
-    gap: 210px;
+    gap: 200px;
   }
 
   .leftgirl,
   .rightgroup {
-    width: 220px;
+    width: 230px;
   }
 
   .rightgroup {
@@ -70,22 +70,30 @@
   }
 
   .Home-aboutUs-Title {
-    font-size: 60px;
+    font-size: 3rem;
     letter-spacing: 0.04em;
-    margin-bottom: 12px;
-    line-height: 70px;
+    margin-bottom: 0px;
+    line-height: 50px;
+    margin-top: 15px;
   }
 }
-
+@media all and (max-width: 1000px) {
+  :root {
+    --fh-Home-p: 29px;
+  }
+  .Home-aboutUs-Paragraph {
+    margin-top: 5px;
+  }
+}
 @media all and (max-width: 960px) {
   :root {
     --pd-Home-c: 50px 60px 70px;
-    --fs-Home-p: 1.05rem;
+    --fs-Home-p: 1.08rem;
     --fh-Home-p: 25px;
   }
 
   .Home-aboutUs-WhoAreWe {
-    gap: 190px;
+    gap: 170px;
   }
 
   .leftgirl,
@@ -99,17 +107,17 @@
   }
 
   .Home-aboutUs-Title {
-    font-size: 50px;
+    font-size: 2.3rem;
     letter-spacing: 0em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     line-height: 50px;
+    margin-top: 9px;
   }
 }
 
 @media all and (max-width: 800px) {
   :root {
     --pd-Home-c: 50px 60px 70px;
-    --fs-Home-p: 1.05rem;
     --fh-Home-p: 25px;
   }
 
@@ -118,19 +126,24 @@
   }
 
   .Home-aboutUs-WhoAreWe {
-    gap: 30px;
+    gap: 25px;
   }
 
   .Home-aboutUs-images {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 30px;
+    gap: 0px;
+  }
+
+  .Home-aboutUs-Title {
+    font-size: 2.2rem;
+    margin-top: 5px;
   }
 
   .leftgirl,
   .rightgroup {
-    width: 100%;
+    width: 45%;
   }
 
   .rightgroup {
@@ -141,8 +154,8 @@
 @media all and (max-width: 600px) {
   :root {
     --pd-Home-c: 20px 30px 40px;
-    --fs-Home-p: 0.9rem;
-    --fh-Home-p: 25px;
+    --fs-Home-p: 1rem;
+    --fh-Home-p: 27px;
   }
 
   .Home-aboutUs-WhoAreWe {
@@ -150,18 +163,19 @@
   }
 
   .Home-aboutUs-Title {
-    font-size: 43px;
+    font-size: 2.1rem;
   }
 
   .Home-aboutUs-images {
     gap: 17px;
+    margin-top: 15px;
   }
 }
 @media all and (max-width: 400px) {
   :root {
     --pd-Home-c: 30px 25px 50px;
     --fs-Home-p: 0.9rem;
-    --fh-Home-p: 22px;
+    --fh-Home-p: 21px;
   }
 
   .Home-aboutUs-WhoAreWe {
@@ -169,10 +183,11 @@
   }
 
   .Home-aboutUs-Title {
-    font-size: 43px;
+    font-size: 2rem;
   }
 
   .Home-aboutUs-images {
     gap: 17px;
+    margin-top: 7px;
   }
 }
