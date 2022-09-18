@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import meeting from "../../images/meeting.png";
 import writing from "../../images/writing.png";
 import AboutCSS from "../CSSmodules/aboutUs.module.css";
 import MainHeading from "../MainHeading";
 import { useSpring, animated, easings } from "react-spring";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 function About() {
+  useEffect(() => {
+    Aos.init({
+      offset: "50",
+      Delay: "200",
+      duration: "1000",
+      easing: "ease-in-out",
+      anchorPlacement: "top",
+      once: true,
+    });
+  }, []);
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -17,12 +30,13 @@ function About() {
         <div className={AboutCSS["aboutUs-WhoAreWe"]}>
           <figure>
             <img
+              data-aos="fade-in"
               src={meeting}
               className={AboutCSS["aboutUs-WhoAreWeImg"]}
               alt="meeting"
             />
           </figure>
-          <div className={AboutCSS["aboutUs-Text"]}>
+          <div data-aos="flip-down" className={AboutCSS["aboutUs-Text"]}>
             <h2 className={AboutCSS["aboutUs-Title"]}>Who Are We?</h2>
             <p className={AboutCSS["aboutUs-Paragraph"]}>
               We are a dedicated team of IT and multimedia professionals based
@@ -41,7 +55,11 @@ function About() {
         </div>
 
         <div className={AboutCSS["aboutUs-Aim"]}>
-          <div className={AboutCSS["aboutUs-Text"]}>
+          <div
+            data-aos="flip-down"
+            data-aos-offset="200"
+            className={AboutCSS["aboutUs-Text"]}
+          >
             <h2 className={AboutCSS["aboutUs-Title"]}>What we aim for?</h2>
             <p className={AboutCSS["aboutUs-Paragraph"]}>
               lets ask what we should write in this section because its their
@@ -60,6 +78,8 @@ function About() {
           </div>
           <figure>
             <img
+              data-aos="fade-in"
+              data-aos-offset="200"
               src={writing}
               className={AboutCSS["aboutUs-AimImg"]}
               alt="writing"

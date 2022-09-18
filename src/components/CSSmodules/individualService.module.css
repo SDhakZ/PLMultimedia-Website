@@ -64,6 +64,7 @@
   transition: all 0.4s ease;
   cursor: pointer;
   align-self: center;
+  text-decoration: none;
 }
 
 .indService-contactButton:hover {
@@ -89,6 +90,12 @@
   background-color: #fbfbfd;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.indService-link:hover {
+  color: #1b83fd;
 }
 
 .active {

@@ -110,6 +110,7 @@
   box-shadow: 2px 1000px 1px #fbfbfd inset;
   transition: all 0.4s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .serviceCard:hover .contactButton:hover {

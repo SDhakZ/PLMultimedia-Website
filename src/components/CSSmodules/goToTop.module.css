@@ -1,0 +1,43 @@
+.goToTop {
+  color: #2f2f2f;
+  border-radius: 50%;
+  width: 41px;
+  position: fixed;
+  bottom: 35px;
+  right: 50px;
+  font-size: 1.2rem;
+  padding: 8px;
+  cursor: pointer;
+  color: #2f2f2f;
+  border: solid 2px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #c091fc);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fbfbfd inset;
+  transition: all 0.4s ease;
+}
+
+.goToTop:hover {
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
+    rgba(49, 49, 49, 0.3) 0px 8px 16px -8px;
+  color: white;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(90deg, #62cff5, #c091fc);
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 600px) {
+  .goToTop {
+    width: 27px;
+    padding: 4px;
+    font-size: 0.8rem;
+    right: 20px;
+  }
+}

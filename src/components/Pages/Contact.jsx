@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import ContactCSS from "../CSSmodules/contact.module.css";
 import emailjs from "@emailjs/browser";
 import swal from "sweetalert";
@@ -6,6 +7,8 @@ import MainHeading from "../MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 
 function Contact() {
+  const location = useLocation();
+  const { toLoadNumber } = location.state || 0;
   const formRef = useRef(null);
   const [formvalue, setFormvalue] = useState({
     name: "",
@@ -54,6 +57,19 @@ function Contact() {
       return errors.message;
     }
     return errors;
+  };
+
+  const mapNumberToValue = {
+    1: "Advertisement",
+    2: "WebDevelopment",
+    3: "WebHosting",
+    4: "MobileAppDevelopment",
+    5: "SEO Optimization",
+    6: "Digital Marketting",
+    7: "Media Production",
+    8: "Job and Internship",
+    9: "Problems",
+    10: "Other",
   };
 
   useEffect(() => {
@@ -240,7 +256,8 @@ function Contact() {
                     className={ContactCSS["contact-Drop-down"]}
                     name="subject"
                     required="true"
-                    value={formvalue.subject}
+                    // value={formvalue.subject}
+                    value={mapNumberToValue[toLoadNumber]}
                     onChange={handlevalidation}
                     onKeyDown={handleEnter}
                   >
@@ -248,14 +265,9 @@ function Contact() {
                       --Choose the Subject--
                     </option>
                     <option
-                      value="Job and Internship"
-                      className={ContactCSS["contact-Options"]}
-                    >
-                      Job and Internship
-                    </option>
-                    <option
                       value="Advertisement"
                       className={ContactCSS["contact-Options"]}
+                      selected
                     >
                       Advertisement
                     </option>
@@ -294,6 +306,18 @@ function Contact() {
                       className={ContactCSS["contact-Options"]}
                     >
                       Media Production
+                    </option>
+                    <option
+                      value="Job and Internship"
+                      className={ContactCSS["contact-Options"]}
+                    >
+                      Job and Internship
+                    </option>
+                    <option
+                      value="Problems"
+                      className={ContactCSS["contact-Options"]}
+                    >
+                      Problems
                     </option>
                     <option
                       value="Other"

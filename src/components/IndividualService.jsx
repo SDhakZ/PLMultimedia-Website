@@ -1,64 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import IndividualServiceCSS from "./CSSmodules/individualService.module.css";
 import MainHeading from "./MainHeading";
-import serviceData from "../Datas/servicesData";
+import internalServiceData from "../Datas/servicesData";
 
 function IndividualService() {
+  const clickedLink = (toLoad) => {
+    setInfo(internalServiceData[toLoad]);
+    setClickNumber(toLoad + 1);
+  };
+  const location = useLocation();
+  const { blogDetails } = location.state;
+  const [info, setInfo] = useState({
+    id: blogDetails.id,
+    logo: blogDetails.logo,
+    title: blogDetails.title,
+    description: blogDetails.description,
+  });
+  const [clickNumber, setClickNumber] = useState(blogDetails.id);
   return (
     <div className={IndividualServiceCSS["indService-container"]}>
-      <MainHeading headingName="Web Development" />
+      <MainHeading headingName={info.title} />
       <div className={IndividualServiceCSS["indService-flexbox"]}>
         <div className={IndividualServiceCSS["indService-lft"]}>
           <div className={IndividualServiceCSS["indService-links"]}>
             <h1 className={IndividualServiceCSS["indService-otherServices"]}>
-              Other Services
+              Our Services
             </h1>
-            <a className={IndividualServiceCSS["indService-link"]}>
-              Advertisement
+            <a
+              className={`${
+                clickNumber === 1 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink(0)}
+            >
+              Advertisment
             </a>
             <a
-              className={`${IndividualServiceCSS.active} ${IndividualServiceCSS["indService-link"]}`}
+              className={`${
+                clickNumber === 2 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink(1)}
             >
               Web Development
             </a>
-            <a className={IndividualServiceCSS["indService-link"]}>
+            <a
+              className={`${
+                clickNumber === 3 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink(2)}
+            >
               Web Hosting
             </a>
-            <a className={IndividualServiceCSS["indService-link"]}>
+            <a
+              className={`${
+                clickNumber === 4 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink(3)}
+            >
               App Development
             </a>
-            <a className={IndividualServiceCSS["indService-link"]}>
+            <a
+              className={`${
+                clickNumber === 5 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink(4)}
+            >
               SEO Optimization
             </a>
-            <a className={IndividualServiceCSS["indService-link"]}>
+            <a
+              className={`${
+                clickNumber === 6 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink(5)}
+            >
               Digital Marketing
             </a>
-            <a className={IndividualServiceCSS["indService-link"]}>
-              Medial Production
+            <a
+              className={`${
+                clickNumber === 7 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink(6)}
+            >
+              Media Production
             </a>
           </div>
           <div className={IndividualServiceCSS["indService-contact"]}>
             <h2 className={IndividualServiceCSS["indService-needHelp"]}>
-              Need Any Help?
+              Want this service?
             </h2>
             <p className={IndividualServiceCSS["indService-contactpara"]}>
               We are always ready to help you if you have any problems or
-              enquiries.
+              enquiries regarding the service.
             </p>
-            <button
+            <Link
+              to={{
+                pathname: "/contact",
+                state: { toLoadNumber: clickNumber },
+              }}
               className={IndividualServiceCSS["indService-contactButton"]}
             >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
 
         <div className={IndividualServiceCSS["indService-rt"]}>
           <figure className={IndividualServiceCSS["indService-img"]}>
-            <img src={require("../images/soundBeamprj.png")} />
+            <img src={info.logo} />
           </figure>
           <p className={IndividualServiceCSS["indService-para"]}>
-            It is a known fact that Website Development has the power to take an
+            {/* It is a known fact that Website Development has the power to take an
             individual business higher. It will help any business of an
             organization or individual become available through the help of
             desktops, laptops, and smartphones. In addition to that, the
@@ -85,7 +136,8 @@ function IndividualService() {
             and perform much better than their competitors. We also provide
             services that will help our clients to perform direct communication
             with their customers. It will help them boost their brand in the
-            fastest way possible.
+            fastest way possible. */}
+            {info.description}
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@
 // it is basically a function which takes logo,title,& description parameters to generate a service card.
 
 import React from "react";
+import { Link } from "react-router-dom";
 import ServicesCSS from "../components/CSSmodules/services.module.css";
 
 function ServiceCard(props) {
@@ -18,7 +19,15 @@ function ServiceCard(props) {
         </p>
         <p className={ServicesCSS.cardDescription}>{props.description}</p>
       </div>
-      <button className={ServicesCSS.contactButton}>View Details</button>
+      <Link
+        className={ServicesCSS.contactButton}
+        to={{
+          pathname: "/individualService",
+          state: { blogDetails: props.serviceDetails },
+        }}
+      >
+        View Details
+      </Link>
     </div>
   );
 }

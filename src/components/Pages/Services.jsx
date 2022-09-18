@@ -31,6 +31,7 @@ function Services() {
                 logo={service.logo}
                 title={service.title}
                 description={service.description}
+                serviceDetails={service}
               />
             );
           })}

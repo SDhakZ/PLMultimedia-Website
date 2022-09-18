@@ -1,7 +1,21 @@
 import React from "react";
 import portfolioCSS from "./CSSmodules/portfolio.module.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import GoToTop from "./GoToTop";
 
 function PortfolioSection(props) {
+  useEffect(() => {
+    Aos.init({
+      offset: "50",
+      Delay: "200",
+      duration: "1000",
+      easing: "ease-in-out",
+      anchorPlacement: "top",
+      once: true,
+    });
+  }, []);
   return (
     <React.Fragment>
       <section
@@ -9,14 +23,23 @@ function PortfolioSection(props) {
           portfolioCSS[props.addClass]
         }`}
       >
-        <figure className={portfolioCSS["portfolio-imgContainer"]}>
+        <figure
+          data-aos="fade-right"
+          data-aos-delay="400"
+          data-aos-offset="200"
+          className={portfolioCSS["portfolio-imgContainer"]}
+        >
           <img
             src={props.img}
             alt="image1"
             className={portfolioCSS["portfolio-image"]}
           />
         </figure>
-        <div className={portfolioCSS["portfolio-content"]}>
+        <div
+          data-aos="fade-left"
+          data-aos-offset="200"
+          className={portfolioCSS["portfolio-content"]}
+        >
           <div className={portfolioCSS["portfolio-heading-para"]}>
             <h2 className={portfolioCSS["portfolio-heading"]}>
               {props.Heading}
@@ -30,6 +53,7 @@ function PortfolioSection(props) {
           </button>
         </div>
       </section>
+      <GoToTop />
     </React.Fragment>
   );
 }

@@ -25,13 +25,13 @@ function HomeTop() {
           Let Us
           <TypeAnimation
             sequence={[
-              "I like to move it move it",
+              "Solve Your Problems",
               2500,
               "Accelerate Your Growth",
               2000, // Waits 2s
               "Create Your Dreams",
               2000, // Waits 2s
-              "I like to move it move it",
+              "Make you move it move it",
               2500,
             ]}
             wrapper="h1"

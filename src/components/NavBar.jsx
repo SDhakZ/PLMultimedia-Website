@@ -5,7 +5,10 @@ import NavbarCSS from "./CSSmodules/navBar.module.css";
 function NavBar() {
   const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
+  function handleClick() {
+    setClick(!click);
+    window.scrollTo({ top: 0, let: 0 });
+  }
   return (
     <React.Fragment>
       <nav className={NavbarCSS.navbar}>
