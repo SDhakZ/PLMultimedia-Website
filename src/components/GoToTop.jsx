@@ -25,7 +25,7 @@ function GoToTop() {
         <button
           className={goToTopCSS["goToTop"]}
           onClick={() => {
-            window.scrollTo({ top: 0, let: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           {" "}

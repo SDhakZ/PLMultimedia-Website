@@ -16,7 +16,12 @@ function ErrorPage(props) {
           </p>
         </p>
         <div className={ErrorPageCSS["ErrorPage-buttons"]}>
-          <button className={ErrorPageCSS["Return-Home-Button"]}>
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, let: 0 });
+            }}
+            className={ErrorPageCSS["Return-Home-Button"]}
+          >
             Return Home
           </button>
           <button

@@ -7,7 +7,7 @@ function NavBar() {
 
   function handleClick() {
     setClick(!click);
-    window.scrollTo({ top: 0, let: 0 });
+    window.scrollTo({ top: 0 });
   }
   return (
     <React.Fragment>

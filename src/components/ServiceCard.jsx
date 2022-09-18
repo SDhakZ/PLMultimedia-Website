@@ -21,6 +21,9 @@ function ServiceCard(props) {
       </div>
       <Link
         className={ServicesCSS.contactButton}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+        }}
         to={{
           pathname: "/individualService",
           state: { blogDetails: props.serviceDetails },
