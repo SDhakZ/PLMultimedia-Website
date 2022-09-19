@@ -1,4 +1,3 @@
-import { style } from "jade/lib/runtime";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DomainCSS from "../components/CSSmodules/domainSearch.module.css";
@@ -33,28 +32,36 @@ function DomainSearch() {
         console.log(response);
         if (valid === false) {
           setInformUser(
-            <p className={DomainCSS.informUser} style={{ color: 'red' }}>
+            <p className={DomainCSS.informUser} style={{ color: "red" }}>
               The domain you have entered is invalid! please try again.
             </p>
-          ); 
+          );
         } else {
           if (available === false) {
             setInformUser(
-              <p className={DomainCSS.informUser} style={{ color: 'red' }}>
-                The domain you have entered is already taken! try another domain.
-              </p> 
+              <p className={DomainCSS.informUser} style={{ color: "red" }}>
+                The domain you have entered is already taken! try another
+                domain.
+              </p>
             );
           } else if (available === true) {
             setInformUser(
-              <p className={DomainCSS.informUser} style={{ color: 'green' }}>
-                The domain you have entered is available!!! " <Link to="/contact" style={{color: '#0e63e3', textDecoration:'none'}}>Contact us</Link> " to register your domain.
-              </p> 
+              <p className={DomainCSS.informUser} style={{ color: "green" }}>
+                The domain you have entered is available!!! "{" "}
+                <Link
+                  to="/contact"
+                  style={{ color: "#0e63e3", textDecoration: "none" }}
+                >
+                  Contact us
+                </Link>{" "}
+                " to register your domain.
+              </p>
             );
           } else {
             setInformUser(
-              <p className={DomainCSS.informUser} style={{ color: 'red' }}>
+              <p className={DomainCSS.informUser} style={{ color: "red" }}>
                 Some unexpected error has occured please try again.
-              </p> 
+              </p>
             );
           }
         }
