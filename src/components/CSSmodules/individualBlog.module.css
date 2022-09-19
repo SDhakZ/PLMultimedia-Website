@@ -1,26 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Roboto:wght@500&display=swap");
 
+:root {
+  --fs-IB-title: 3.2rem;
+  --fs-IB-author: 1.2rem;
+}
 .individualBlogPage {
   padding: var(--pd-c);
 }
 
 .blogTitle {
-  font-family: "Roboto";
-  font-size: 56px;
-  padding-bottom: 40px;
+  font-family: "Bahnschrift";
+  font-size: var(--fs-IB-title);
 }
 
-.author {
+.blog-headerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 10px;
+  margin-left: 200px;
+}
+.auth_date-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-bottom: 50px;
 }
 
 .authorPP {
-  border-radius: 50%;
-  height: 56px;
-  width: 56px;
+  width: 53px;
+  clip-path: circle();
 }
 
 .authorName,
@@ -28,7 +35,7 @@
   font-family: "Mulish";
   margin: 15px 0px 15px 15px;
   color: #6d7d8b;
-  font-size: 14px;
+  font-size: var(--fs-IB-author);
 }
 
 .authorName {
@@ -36,14 +43,18 @@
   border-right: 1px solid #6d7d8b;
 }
 
+.ind-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .blogImage {
-  width: 100%;
+  width: 65%;
 }
 
 .blogBody {
   font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 169.2%;
   letter-spacing: 0.04em;
@@ -51,11 +62,18 @@
   color: #2f2f2f;
   padding: 50px 0 80px 0;
   white-space: pre-line;
+  max-width: 1200px;
 }
 
-/*formating*/
-.blogBody,
-.author,
-.blogTitle {
-  margin: 0 40px 0 40px;
+@media all and (max-width: 1200px) {
+  :root {
+    --fs-IB-title: 4rem;
+    --fs-IB-author: 1.2rem;
+  }
+  .blogImage {
+    width: 70%;
+  }
+  .blog-headerContainer {
+    margin-left: 100px;
+  }
 }
