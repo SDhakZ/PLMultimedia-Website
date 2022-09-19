@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Roboto:wght@500&display=swap');
+
+.individualBlogPage{
+    padding: var(--pd-c);
+}
+
+.blogTitle{
+    font-family: "Roboto";
+    font-size: 56px;
+    padding-bottom: 40px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 50px;
+}
+
+.authorPP{
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+}
+
+.authorName, .uploadDate{
+    font-family: "Mulish";
+    margin: 15px 0px 15px 15px;
+    color: #6D7D8B;
+    font-size: 14px;
+}
+
+.authorName{
+    padding-right: 15px;
+    border-right: 1px solid #6D7D8B;
+}
+
+.blogImage{
+    width: 100%;
+}
+
+.blogBody{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 169.2%;
+    letter-spacing: 0.04em;
+    text-align: justify;
+    color: #2F2F2F;
+    padding: 50px 0 80px 0;
+}
+
+/*formating*/
+.blogBody, .author, .blogTitle{
+    margin: 0 40px 0 40px;
+}
