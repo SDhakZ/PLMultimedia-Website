@@ -34,6 +34,7 @@
 .serviceCard {
   padding: 30px 0px;
   max-width: 370px;
+  max-height: 509px;
   background-color: #bcebfc;
   border-radius: 20px;
   display: flex;
@@ -41,6 +42,7 @@
   align-items: center;
   justify-content: center;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
   box-shadow: rgba(69, 69, 87, 0.25) 0px 8px 20px -5px,
     rgba(134, 134, 134, 0.3) 0px 4px 8px -4px;
 }
@@ -109,7 +111,6 @@
   box-shadow: 2px 1000px 1px #fbfbfd inset;
   transition: all 0.4s ease;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .serviceCard:hover .contactButton:hover {
