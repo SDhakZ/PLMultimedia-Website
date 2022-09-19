@@ -12,6 +12,7 @@ import { FAQpage } from "./components/Pages/FAQ";
 import Footer from "./components/Footer";
 import Contact from "./components/Pages/Contact";
 import IndividualService from "./components/IndividualService";
+import { IndividualBlog } from "./components/Pages/IndividualBlog";
 
 function App() {
   return (
@@ -23,13 +24,14 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/blog" component={Blog} />
+            <Route exact path="/blog" component={Blog} />
             <Route path="/FAQpage" component={FAQpage} />
             <Route path="/contact" component={Contact} />
             <Route path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/interns" component={Interns} />
             <Route path="/individualService" component={IndividualService} />
+            <Route exact path="/blog/:id/:slug" component={IndividualBlog} />
           </Switch>
         </div>
       </Router>
