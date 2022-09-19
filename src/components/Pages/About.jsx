@@ -79,7 +79,7 @@ function About() {
           <figure>
             <img
               data-aos="fade-in"
-              data-aos-offset="200"
+              data-aos-offset="300"
               src={writing}
               className={AboutCSS["aboutUs-AimImg"]}
               alt="writing"
