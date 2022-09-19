@@ -1,4 +1,3 @@
-import { style } from "jade/lib/runtime";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DomainCSS from "../components/CSSmodules/domainSearch.module.css";
@@ -6,7 +5,7 @@ import DomainCSS from "../components/CSSmodules/domainSearch.module.css";
 function DomainSearch() {
   const [domain, updateDomain] = useState("");
   const [informUser, setInformUser] = useState(
-    <p className={DomainCSS.informUser}></p>
+    <p className={DomainCSS.informUser}>
       Enter your domain to check if its available
     </p>
   );
