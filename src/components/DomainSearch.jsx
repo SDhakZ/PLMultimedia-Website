@@ -1,12 +1,15 @@
+import { style } from "jade/lib/runtime";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DomainCSS from "../components/CSSmodules/domainSearch.module.css";
 
 function DomainSearch() {
   const [domain, updateDomain] = useState("");
   const [informUser, setInformUser] = useState(
-    "Enter your domain to check if it is available"
+    <p className={DomainCSS.informUser}>
+      Enter your domain to check if its available
+    </p>
   );
-  const [infoColor, setInfoColor] = useState("black");
 
   //Domain information is fetched here
   const getData = () => {
@@ -30,25 +33,29 @@ function DomainSearch() {
         console.log(response);
         if (valid === false) {
           setInformUser(
-            "The domain you have entered is invalid! please try again."
-          );
-          setInfoColor("red");
+            <p className={DomainCSS.informUser} style={{ color: 'red' }}>
+              The domain you have entered is invalid! please try again.
+            </p>
+          ); 
         } else {
           if (available === false) {
             setInformUser(
-              "The domain you have entered is already taken! try another domain."
+              <p className={DomainCSS.informUser} style={{ color: 'red' }}>
+                The domain you have entered is already taken! try another domain.
+              </p> 
             );
-            setInfoColor("red");
           } else if (available === true) {
             setInformUser(
-              "The domain you have entered is available!!! Contact us to register your domain."
+              <p className={DomainCSS.informUser} style={{ color: 'green' }}>
+                The domain you have entered is available!!! " <Link to="/contact" style={{color: '#0e63e3', textDecoration:'none'}}>Contact us</Link> " to register your domain.
+              </p> 
             );
-            setInfoColor("green");
           } else {
             setInformUser(
-              "Some unexpected error has occured please try again."
+              <p className={DomainCSS.informUser} style={{ color: 'red' }}>
+                Some unexpected error has occured please try again.
+              </p> 
             );
-            setInfoColor("red");
           }
         }
       })
@@ -69,9 +76,7 @@ function DomainSearch() {
         </h1>
       </div>
 
-      <p className={DomainCSS.informUser} style={{ color: infoColor }}>
-        {informUser}
-      </p>
+      {informUser}
 
       <div className={DomainCSS.domFooter}>
         <input
