@@ -1,5 +1,6 @@
 import React from "react";
 import ErrorPageCSS from "../components/CSSmodules/errorPage.module.css";
+import { Link } from "react-router-dom";
 
 function ErrorPage(props) {
   return (
@@ -16,19 +17,18 @@ function ErrorPage(props) {
           </p>
         </p>
         <div className={ErrorPageCSS["ErrorPage-buttons"]}>
-          <button
-            onClick={() => {
-              window.scrollTo({ top: 0, let: 0 });
-            }}
+          <Link
+            to={{ pathname: "/" }}
             className={ErrorPageCSS["Return-Home-Button"]}
           >
             Return Home
-          </button>
-          <button
+          </Link>
+          <Link
+            to={{ pathname: "/contact", state: { toLoadNumber: 9 } }}
             className={`${ErrorPageCSS["Report-Button"]} ${ErrorPageCSS["color-Report-Button"]}`}
           >
             Report Problem
-          </button>
+          </Link>
         </div>
       </div>
     </div>

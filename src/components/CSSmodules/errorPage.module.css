@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
-:root{
+:root {
   --pd-EP-c: 80px 0px; /*container padding*/
   --fs-EP-btn: 1.15rem; /* button font size */
-  }
+}
 .ErrorPage-Container {
-  background-image: linear-gradient(rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)),
-    linear-gradient(320deg, #005af5, white, #ff0202);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(140deg, #12c2e9, #c471ed, #f64f59);
+
   height: 61vh;
   display: flex;
   align-items: center;
@@ -25,16 +28,15 @@
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(2px);
   border-radius: 10px;
-  line-height: 70px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .ErrorPage-503 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   text-transform: uppercase;
   font-size: 3.8rem;
   letter-spacing: 0.075em;
-  background: -webkit-linear-gradient(150deg, #F50019, #FF029C);
+  background: -webkit-linear-gradient(150deg, #f50019, #ff029c);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -42,10 +44,10 @@
 }
 
 .ErrorPage-message {
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-size: 1.2rem;
   font-weight: 600;
-  line-height: 35px;  
+  line-height: 35px;
   text-align: center;
 }
 
@@ -55,7 +57,7 @@
   font-weight: 500;
 }
 
-.ErrorPage-buttons{
+.ErrorPage-buttons {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -64,26 +66,32 @@
 
 .Report-Button,
 .Return-Home-Button {
+  line-height: normal;
   border-radius: 35px;
   font-family: "Roboto";
   font-size: var(--fs-EP-btn);
   font-weight: 700;
-  padding: 13px 30px;
+  padding: 15px 20px;
   color: #2f2f2f;
   border: solid 2px transparent;
-  background-image: linear-gradient(rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
     linear-gradient(90deg, #62cff5, #c091fc);
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fbfbfd inset;
   transition: all 0.4s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .color-Report-Button {
-  background-image: linear-gradient(rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
     linear-gradient(300deg, #f46262, #a91f1f);
 }
 
@@ -92,27 +100,31 @@
   box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
     rgba(49, 49, 49, 0.3) 0px 8px 16px -8px;
   color: white;
-  background-image: linear-gradient(rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
     linear-gradient(90deg, #62cff5, #c091fc);
   transform: translateY(-2px);
 }
 
 .color-Report-Button:hover {
-  background-image: linear-gradient(rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
     linear-gradient(90deg, #f46262, rgb(169, 31, 31));
   transform: translateY(-2px);
 }
 
 @media all and (max-width: 1200px) {
-  :root { 
-    --fs-EP-btn: 1.1rem; /* button font size */   
+  :root {
+    --fs-EP-btn: 1.1rem; /* button font size */
   }
 }
 @media (max-width: 960px) {
   :root {
-    --fs-EP-btn: 1rem; /* button font size */   
+    --fs-EP-btn: 1rem; /* button font size */
   }
   .ErrorPage-Container {
     height: 63vh;
@@ -124,7 +136,7 @@
   .Return-Home-Button {
     padding: 8px 17px;
   }
-  .ErrorPage-buttons{
+  .ErrorPage-buttons {
     gap: 14px;
   }
 }
@@ -152,15 +164,15 @@
   .ErrorPage-report {
     margin-top: 10px;
   }
-  .ErrorPage-buttons{
+  .ErrorPage-buttons {
     gap: 12px;
   }
 }
 
 @media (max-width: 600px) {
-    :root {
+  :root {
     --fs-EP-btn: 1.15rem; /* button font size */
-    }
+  }
 
   .ErrorPage-box {
     line-height: 60px;
@@ -182,24 +194,22 @@
     margin-top: 7px;
   }
 
-  .ErrorPage-buttons{
+  .ErrorPage-buttons {
     flex-direction: column;
     gap: 14px;
   }
 }
 
-@media(max-width: 464px) {
+@media (max-width: 464px) {
   .ErrorPage-box {
     border-radius: 0px;
   }
-
 }
 @media (max-width: 400px) {
-    :root {
-    --fs-EP-btn: 0.9rem; /* button font size */  
-    }
-    .ErrorPage-503 {
-        font-size: 2.5rem;
-    }
-  
+  :root {
+    --fs-EP-btn: 0.9rem; /* button font size */
+  }
+  .ErrorPage-503 {
+    font-size: 2.5rem;
+  }
 }

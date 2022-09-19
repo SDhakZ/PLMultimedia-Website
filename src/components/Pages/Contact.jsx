@@ -7,8 +7,15 @@ import MainHeading from "../MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 
 function Contact() {
+  useEffect(() => {
+    // Anything in here is fired on component mount.
+    return () => {
+      // Anything in here is fired on component unmount.
+      toLoadNumber = 0;
+    };
+  }, []);
   const location = useLocation();
-  const { toLoadNumber } = location.state || 0;
+  let { toLoadNumber } = location.state || 0;
   const formRef = useRef(null);
   const [formvalue, setFormvalue] = useState({
     name: "",
@@ -257,7 +264,7 @@ function Contact() {
                     name="subject"
                     required="true"
                     // value={formvalue.subject}
-                    value={mapNumberToValue[toLoadNumber]}
+                    // value="webHosting"
                     onChange={handlevalidation}
                     onKeyDown={handleEnter}
                   >
@@ -267,61 +274,70 @@ function Contact() {
                     <option
                       value="Advertisement"
                       className={ContactCSS["contact-Options"]}
-                      selected
+                      selected={toLoadNumber === 1 ? true : false}
                     >
                       Advertisement
                     </option>
                     <option
                       value="WebDevelopment"
                       className={ContactCSS["contact-WebDevelopment"]}
+                      selected={toLoadNumber === 2 ? true : false}
                     >
                       Web Development
                     </option>
                     <option
                       value="WebHosting"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 3 ? true : false}
                     >
                       Web Hosting
                     </option>
                     <option
                       value="MobileAppDevelopment"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 4 ? true : false}
                     >
                       Mobile App Development
                     </option>
                     <option
                       value="SEO Optimization"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 5 ? true : false}
                     >
                       SEO Optimization
                     </option>
                     <option
                       value="Digital Marketting"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 6 ? true : false}
                     >
                       Digital Marketting
                     </option>
                     <option
                       value="Media Production"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 7 ? true : false}
                     >
                       Media Production
                     </option>
                     <option
                       value="Job and Internship"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 8 ? true : false}
                     >
                       Job and Internship
                     </option>
                     <option
                       value="Problems"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 9 ? true : false}
                     >
                       Problems
                     </option>
                     <option
                       value="Other"
                       className={ContactCSS["contact-Options"]}
+                      selected={toLoadNumber === 10 ? true : false}
                     >
                       Other
                     </option>
