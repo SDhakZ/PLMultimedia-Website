@@ -33,7 +33,9 @@ export const Home = () => {
       ></section>
       <section className={HomeCSS["Home-recent-works"]}></section>
       <section className={HomeCSS["Home-blogs"]}></section>
-      <section className={HomeCSS["Home-what-ppl-think"]}></section>
+      <section className={HomeCSS["Home-what-ppl-think"]}>
+        <HomeReview />
+      </section>
       <GoToTop />
     </div>
   );
