@@ -5,6 +5,19 @@
   --fs-IB-author: 1.2rem;
   --fs-IB-para: 1.1rem;
 }
+
+.back-button-container {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  color: #3e90ee;
+  text-decoration: none;
+}
+
 .individualBlogPage {
   padding: var(--pd-c);
 }
@@ -118,6 +131,12 @@
     --fs-IB-author: 1rem;
     --fs-IB-para: 1rem;
   }
+
+  .back-button-container {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
   .blogImage {
     width: 90%;
   }
@@ -176,6 +195,11 @@
     --fs-IB-para: 0.95rem;
   }
 
+  .back-button-container {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
   .blog-headerContainer {
     gap: 10px;
     margin-bottom: 15px;
@@ -197,6 +221,10 @@
     --fs-IB-author: 0.89rem;
     --fs-IB-para: 0.875rem;
   }
+  .back-button-container {
+    font-size: 1rem;
+  }
+
   .blogTitle {
     line-height: 26px;
   }
