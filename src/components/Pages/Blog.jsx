@@ -27,8 +27,8 @@ export const Blog = () => {
         <MainHeading headingName={"Our Blogs"} />
         <div className={BlogsCSS["blogCardContainer"]}>
           {data.data.map((blog) => {
-            const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.formats.medium.url}`;
-            const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.formats.thumbnail.url}`;
+            const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.url}`;
+            const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.url}`;
             return (
               <BlogCard
                 key={blog.attributes.id}

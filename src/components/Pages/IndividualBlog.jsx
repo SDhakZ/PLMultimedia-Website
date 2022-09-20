@@ -54,9 +54,9 @@ export const IndividualBlog = () => {
             className={INDBLG["blogImage"]}
             alt="blog"
           ></img>
-          <p className={INDBLG["blogBody"]}>
+          <div className={INDBLG["blogBody"]}>
             <ReactMarkdown>{data.data.attributes.blogBody}</ReactMarkdown>
-          </p>
+          </div>
         </div>
       </div>
     </>
