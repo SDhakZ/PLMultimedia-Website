@@ -4,7 +4,7 @@ import InternsCSS from "../components/CSSmodules/interns.module.css";
 function InternCard(props) {
   var mail = "mailto:" + props.email;
   return (
-    <div className={InternsCSS["intern-card"]} href={mail}>
+    <div className={InternsCSS["intern-card"]}>
       <div className={InternsCSS["intern-lft"]}>
         <figure className={InternsCSS["interns-picContainer"]}>
           <img

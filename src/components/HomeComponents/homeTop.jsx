@@ -31,8 +31,6 @@ function HomeTop() {
               2000, // Waits 2s
               "Create Your Dreams",
               2000, // Waits 2s
-              "Make you move it move it",
-              2500,
             ]}
             wrapper="h1"
             cursor={true}
