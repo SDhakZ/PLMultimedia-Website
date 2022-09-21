@@ -6,6 +6,7 @@ import ErrorPage from "../ErrorPage";
 import INDBLG from "../CSSmodules/individualBlog.module.css";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
+
 export const IndividualBlog = () => {
   //change this according to where the strapi admin is hosted
   const host = "http://localhost:1338";
@@ -36,7 +37,7 @@ export const IndividualBlog = () => {
           </h1>
           <div className={INDBLG["auth_date-container"]}>
             <img
-              src={`${host}${data.data.attributes.authorInfo.profilePic.data.attributes.formats.thumbnail.url}`}
+              src={`${host}${data.data.attributes.authorInfo.profilePic.data.attributes.url}`}
               className={INDBLG["authorPP"]}
               alt="author"
             ></img>

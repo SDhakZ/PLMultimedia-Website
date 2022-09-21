@@ -3,6 +3,7 @@ import HomeCSS from "../CSSmodules/home.module.css";
 import HomeTop from "../HomeComponents/homeTop";
 import HomeAboutUs from "../HomeComponents/homeAboutUs";
 import HomeReview from "../HomeComponents/homeReview";
+import { HomeBlogs } from "../HomeComponents/homeBlogs";
 import GoToTop from "../GoToTop";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -32,7 +33,9 @@ export const Home = () => {
         className={HomeCSS["Home-services"]}
       ></section>
       <section className={HomeCSS["Home-recent-works"]}></section>
-      <section className={HomeCSS["Home-blogs"]}></section>
+      <section className={HomeCSS["Home-blogs"]}>
+        <HomeBlogs />
+      </section>
       <section className={HomeCSS["Home-what-ppl-think"]}>
         <HomeReview />
       </section>

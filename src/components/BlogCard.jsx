@@ -21,9 +21,9 @@ export const BlogCard = (props) => {
       <img className={BlogsCSS["blogHeadImage"]} src={props.image} alt="blog" />
       <div className={BlogsCSS["blogBodySection"]}>
         <h1 className={BlogsCSS["blogTitle"]}>{props.title.toUpperCase()}</h1>
-        <p className={BlogsCSS["blogBody"]}>
+        <div className={BlogsCSS["blogBody"]}>
           <ReactMarkdown>{props.body}</ReactMarkdown>
-        </p>
+        </div>
       </div>
 
       <div className={BlogsCSS["authorSection"]}>
