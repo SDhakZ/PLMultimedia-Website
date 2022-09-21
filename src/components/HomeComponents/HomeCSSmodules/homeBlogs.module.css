@@ -8,14 +8,34 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 40px;
+  gap: 3rem 1.5rem;
+  flex-wrap: wrap;
 }
 
 .viewMore {
+  font-family: "Roboto";
   text-decoration: none;
   color: "#0e63e3";
   align-self: flex-end;
   padding: 1rem;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0e63e3;
+  margin-top: 20px;
+  transition: all 0.4s ease;
+}
+.viewMore:hover {
+  color: #62cff5;
+}
+
+@media screen and (max-width: 1400px) {
+  .blogCardsContainer {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .viewMore {
+    font-size: 1rem;
+  }
 }
