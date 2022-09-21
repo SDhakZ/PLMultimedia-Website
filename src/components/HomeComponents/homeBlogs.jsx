@@ -18,7 +18,12 @@ export const HomeBlogs = () => {
   return (
     <div className={HomeBlog["homeBlogComponent"]}>
       <MainHeading headingName="Tune in into our blogs" />
-      <div className={HomeBlog["blogCardsContainer"]}>
+      <div
+        className={HomeBlog["blogCardsContainer"]}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+        }}
+      >
         {data.data.slice(0, 3).map((blog) => {
           const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.url}`;
           const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.url}`;
