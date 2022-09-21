@@ -25,7 +25,12 @@ export const Blog = () => {
     <React.Fragment>
       <div className={BlogsCSS["blogPage"]}>
         <MainHeading headingName={"Our Blogs"} />
-        <div className={BlogsCSS["blogCardContainer"]}>
+        <div
+          className={BlogsCSS["blogCardContainer"]}
+          onClick={() => {
+            window.scrollTo({ top: 0 });
+          }}
+        >
           {data.data.map((blog) => {
             const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.url}`;
             const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.url}`;
@@ -48,3 +53,4 @@ export const Blog = () => {
     </React.Fragment>
   );
 };
+
