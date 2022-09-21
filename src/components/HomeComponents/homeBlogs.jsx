@@ -37,8 +37,14 @@ export const HomeBlogs = () => {
           );
         })}
       </div>
-      <Link to={"/blog"} className={HomeBlog["viewMore"]}>
-        View More Blogs..
+      <Link
+        to={"/blog"}
+        className={HomeBlog["viewMore"]}
+        onClick={() => {
+          window.scrollTo({ top: 0 });
+        }}
+      >
+        View More Blogs...
       </Link>
     </div>
   );
