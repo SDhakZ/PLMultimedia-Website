@@ -20,8 +20,8 @@ export const HomeBlogs = () => {
       <MainHeading headingName="Tune in into our blogs" />
       <div className={HomeBlog["blogCardsContainer"]}>
         {data.data.slice(0, 3).map((blog) => {
-          const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.formats.medium.url}`;
-          const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.formats.thumbnail.url}`;
+          const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.url}`;
+          const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.url}`;
           return (
             <BlogCard
               key={blog.attributes.id}
