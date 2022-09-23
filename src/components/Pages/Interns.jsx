@@ -13,7 +13,7 @@ function Interns() {
     to: { opacity: 1 },
     config: { duration: 1000, easing: easings.easeInOutQuad },
   });
-  //Sorting According to dropdown
+  //Sorting According to dropdown while fetching Strapi data
   const getInitialState = () => {
     const value = "All";
     return value;
