@@ -28,8 +28,7 @@ function GoToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          {" "}
-          <i class="fa-solid fa-arrow-up" />
+          <i className="fa-solid fa-arrow-up" />
         </button>
       ) : (
         ""

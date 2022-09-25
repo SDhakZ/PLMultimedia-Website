@@ -6,7 +6,7 @@ import ErrorPage from "../ErrorPage";
 import HomeBlog from "./HomeCSSmodules/homeBlogs.module.css";
 import { Link } from "react-router-dom";
 import MainHeading from "../MainHeading";
-export const HomeBlogs = () => {
+function HomeBlogs() {
   const host = "http://localhost:1338";
   const { loading, data, error } = useFetch(
     `${host}/api/blogs?populate=blogImage,authorInfo.profilePic`
@@ -53,4 +53,6 @@ export const HomeBlogs = () => {
       </Link>
     </div>
   );
-};
+}
+
+export default HomeBlogs;

@@ -3,7 +3,7 @@ import HomeCSS from "../CSSmodules/home.module.css";
 import HomeTop from "../HomeComponents/homeTop";
 import HomeAboutUs from "../HomeComponents/homeAboutUs";
 import HomeReview from "../HomeComponents/homeReview";
-import { HomeBlogs } from "../HomeComponents/homeBlogs";
+import HomeBlogs from "../HomeComponents/homeBlogs";
 import HomePortfolio from "../HomeComponents/homePortfolio";
 import GoToTop from "../GoToTop";
 import Aos from "aos";
