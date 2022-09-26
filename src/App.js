@@ -27,10 +27,44 @@ function App() {
             <Route exact path="/blog" component={Blog} />
             <Route path="/FAQpage" component={FAQpage} />
             <Route path="/contact" component={Contact} />
-            <Route path="/services" component={Services} />
+            <Route exact path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/interns" component={Interns} />
-            <Route path="/individualService" component={IndividualService} />
+            <Route
+              exact
+              path="/services/advertisement"
+              component={IndividualService}
+            />
+            <Route
+              exact
+              path="/services/webDevelopment"
+              component={IndividualService}
+            />
+            <Route
+              exact
+              path="/services/webHosting"
+              component={IndividualService}
+            />
+            <Route
+              exact
+              path="/services/appDevelopment"
+              component={IndividualService}
+            />
+            <Route
+              exact
+              path="/services/seoOptimization"
+              component={IndividualService}
+            />
+            <Route
+              exact
+              path="/services/digitalMarketing"
+              component={IndividualService}
+            />
+            <Route
+              exact
+              path="/services/mediaProduction"
+              component={IndividualService}
+            />
             <Route exact path="/blog/:id/:slug" component={IndividualBlog} />
           </Switch>
         </div>

@@ -1,17 +1,41 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import IndividualServiceCSS from "./individualService.module.css";
 import MainHeading from "../../components/MainHeading/MainHeading";
 import internalServiceData from "../../data/servicesData";
 
+function getDataFromPathType(path) {
+  if (path === "advertisement") {
+    return 0;
+  } else if (path === "webDevelopment") {
+    return 1;
+  } else if (path === "webHosting") {
+    return 2;
+  } else if (path === "appDevelopment") {
+    return 3;
+  } else if (path === "seoOptimization") {
+    return 4;
+  } else if (path === "digitalMarketing") {
+    return 5;
+  } else if (path === "mediaProduction") {
+    return 6;
+  }
+}
+
 function IndividualService() {
+  const history = useHistory();
   const clickedLink = (toLoad) => {
-    setInfo(internalServiceData[toLoad]);
-    setClickNumber(toLoad + 1);
+    history.push("/services/" + toLoad);
+    const toLoadFromDataArrayNumber = getDataFromPathType(toLoad);
+    setInfo(internalServiceData[toLoadFromDataArrayNumber]);
+    setClickNumber(toLoadFromDataArrayNumber + 1);
     window.scrollTo({ top: 60, behavior: "smooth" });
   };
   const location = useLocation();
-  const { blogDetails } = location.state;
+  const toLoadServiceArr = location.pathname.split("/");
+  const toLoadService = toLoadServiceArr[toLoadServiceArr.length - 1];
+  const blogDetails = internalServiceData[getDataFromPathType(toLoadService)];
+
   const [info, setInfo] = useState({
     id: blogDetails.id,
     image: blogDetails.image,
@@ -32,7 +56,7 @@ function IndividualService() {
               className={`${
                 clickNumber === 1 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
-              onClick={() => clickedLink(0)}
+              onClick={() => clickedLink("advertisement")}
             >
               Advertisement
             </a>
@@ -40,7 +64,7 @@ function IndividualService() {
               className={`${
                 clickNumber === 2 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
-              onClick={() => clickedLink(1)}
+              onClick={() => clickedLink("webDevelopment")}
             >
               Web Development
             </a>
@@ -48,7 +72,7 @@ function IndividualService() {
               className={`${
                 clickNumber === 3 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
-              onClick={() => clickedLink(2)}
+              onClick={() => clickedLink("webHosting")}
             >
               Web Hosting
             </a>
@@ -56,7 +80,7 @@ function IndividualService() {
               className={`${
                 clickNumber === 4 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
-              onClick={() => clickedLink(3)}
+              onClick={() => clickedLink("appDevelopment")}
             >
               App Development
             </a>
@@ -64,7 +88,7 @@ function IndividualService() {
               className={`${
                 clickNumber === 5 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
-              onClick={() => clickedLink(4)}
+              onClick={() => clickedLink("seoOptimization")}
             >
               SEO Optimization
             </a>
@@ -72,7 +96,7 @@ function IndividualService() {
               className={`${
                 clickNumber === 6 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
-              onClick={() => clickedLink(5)}
+              onClick={() => clickedLink("digitalMarketing")}
             >
               Digital Marketing
             </a>
@@ -80,7 +104,7 @@ function IndividualService() {
               className={`${
                 clickNumber === 7 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
-              onClick={() => clickedLink(6)}
+              onClick={() => clickedLink("mediaProduction")}
             >
               Media Production
             </a>
@@ -110,7 +134,7 @@ function IndividualService() {
 
         <div className={IndividualServiceCSS["indService-rt"]}>
           <figure className={IndividualServiceCSS["indService-img"]}>
-            <img alt="Service" src={info.image} />
+            <img src={info.image} />
           </figure>
           <p className={IndividualServiceCSS["indService-para"]}>
             {info.moreDetails}

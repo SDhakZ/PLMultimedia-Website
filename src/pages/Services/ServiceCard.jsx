@@ -5,6 +5,28 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ServicesCSS from "./services.module.css";
 
+function getPathSuffix(serviceNumber) {
+  let path = "/services/";
+  if (serviceNumber === 1) {
+    path += "advertisement";
+  } else if (serviceNumber === 2) {
+    path += "webDevelopment";
+  } else if (serviceNumber === 3) {
+    path += "webHosting";
+  } else if (serviceNumber === 4) {
+    path += "mobileAppDevelopment";
+  } else if (serviceNumber === 5) {
+    path += "seoOptimization";
+  } else if (serviceNumber === 6) {
+    path += "digitalMarketing";
+  } else if (serviceNumber === 7) {
+    path += "mediaProduction";
+  } else {
+    path = "/";
+  }
+  return path;
+}
+
 function ServiceCard(props) {
   return (
     <div className={ServicesCSS.serviceCard}>
@@ -25,8 +47,7 @@ function ServiceCard(props) {
           window.scrollTo({ top: 0 });
         }}
         to={{
-          pathname: "/individualService",
-          state: { blogDetails: props.serviceDetails },
+          pathname: getPathSuffix(props.serviceDetails.id),
         }}
       >
         View Details
