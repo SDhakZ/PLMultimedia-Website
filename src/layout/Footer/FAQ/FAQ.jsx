@@ -1,6 +1,6 @@
 import React from "react";
 import { FAQcard, FAQHeading, StillHaveQuestion } from "./FAQcard";
-import faqData from "../../../datas/faqData";
+import faqData from "../../../data/faqData";
 import FAQCSS from "./FAQ.module.css";
 export const FAQpage = () => {
   return (
