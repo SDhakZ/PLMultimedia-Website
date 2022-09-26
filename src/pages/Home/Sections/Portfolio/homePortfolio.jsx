@@ -6,11 +6,10 @@ import { Link } from "react-router-dom";
 function HomePortfolioCard(props) {
   return (
     <button className={HomePortfolioCSS["Home-Portfolio-Card"]}>
-      <img
-        className={HomePortfolioCSS["Home-Portfolio-Image"]}
-        src={props.img}
-        alt="image1"
-      />
+      <figure className={HomePortfolioCSS["Home-Portfolio-Image"]}>
+        <img src={props.img} alt="image1" />
+      </figure>
+
       <div className={HomePortfolioCSS["Home-Portfolio-body"]}>
         <div className={HomePortfolioCSS["Home-Portfolio-Title"]}>
           {props.Heading}
