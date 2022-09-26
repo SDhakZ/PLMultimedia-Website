@@ -1,0 +1,35 @@
+.Home-Container {
+  overflow-x: hidden;
+}
+
+.Home-aboutUs {
+  background-image: linear-gradient(#77b5ff, #fbfbfd);
+  padding: var(--pd-Home-c);
+}
+
+.Home-recent-works {
+  background: transparent;
+  height: 410px;
+  padding: var(--pd-c);
+}
+
+.Home-what-ppl-think {
+  background-image: linear-gradient(180deg, #fbfbfd 15.43%, #d0d4f9 100%);
+  padding: var(--pd-c);
+}
+
+@media all and (max-width: 1425px) {
+  .Home-recent-works {
+    height: 720px;
+  }
+}
+@media all and (max-width: 700px) {
+  .Home-recent-works {
+    height: 1100px;
+  }
+}
+@media all and (max-width: 600px) {
+  .Home-recent-works {
+    height: 1010px;
+  }
+}

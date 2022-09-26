@@ -1,7 +1,7 @@
 const portfolioData = [
   {
     id: 1,
-    img: require("../images/soundBeamprj.png"),
+    img: require("../assets/Images/Portfolio-Image/soundBeamPrj.png"),
     Heading: "Sound Beam Project",
     brief:
       "Website for a technology company that creates technology that bring the sensation of sound.",
@@ -10,7 +10,7 @@ const portfolioData = [
   },
   {
     id: 2,
-    img: require("../images/binanceprj.png"),
+    img: require("../assets/Images/Portfolio-Image/binancePrj.png"),
     addClass: "RL",
     Heading: "Binance Project",
     brief:
@@ -20,7 +20,7 @@ const portfolioData = [
   },
   {
     id: 3,
-    img: require("../images/autonoprj.png"),
+    img: require("../assets/Images/Portfolio-Image/autonoPrj.png"),
     Heading: "Autono Project",
     brief:
       "Website for a technology company that creates technology that bring the sensation of sound.",
@@ -29,7 +29,7 @@ const portfolioData = [
   },
   {
     id: 4,
-    img: require("../images/brwprj.png"),
+    img: require("../assets/Images/Portfolio-Image/barPrj.png"),
     addClass: "RL",
     Heading: "BAR Project",
     brief:

@@ -1,18 +1,18 @@
-import "./App.css";
-import NavBar from "./components/NavBar";
-import Topbar from "./components/Topbar";
+import "./assets/Global.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home } from "./components/Pages/Home.jsx";
-import About from "./components/Pages/About";
-import { Blog } from "./components/Pages/Blog";
-import Services from "./components/Pages/Services.jsx";
-import Interns from "./components/Pages/Interns";
-import { Portfolio } from "./components/Pages/Portfolio";
-import { FAQpage } from "./components/Pages/FAQ";
-import Footer from "./components/Footer";
-import Contact from "./components/Pages/Contact";
-import IndividualService from "./components/IndividualService";
-import { IndividualBlog } from "./components/Pages/IndividualBlog";
+import NavBar from "./layout/NavBar/NavBar";
+import Topbar from "./layout/TopBar/Topbar";
+import { Home } from "./pages/Home/Home.jsx";
+import About from "./pages/About/About";
+import { Blog } from "./pages/Blog/Blog";
+import Services from "./pages/Services/Services";
+import Interns from "./pages/Interns/Interns";
+import { Portfolio } from "./pages/Portfolio/Portfolio";
+import { FAQpage } from "./layout/Footer/FAQ/FAQ";
+import Contact from "./pages/Contact/Contact";
+import IndividualService from "./pages/Services/IndividualService";
+import { IndividualBlog } from "./pages/Blog/IndividualBlog";
+import Footer from "./layout/Footer/Footer";
 
 function App() {
   return (
