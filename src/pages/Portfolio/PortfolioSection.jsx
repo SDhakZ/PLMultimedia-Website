@@ -31,7 +31,7 @@ function PortfolioSection(props) {
         >
           <img
             src={props.img}
-            alt="image1"
+            alt="project"
             className={portfolioCSS["portfolio-image"]}
           />
         </figure>

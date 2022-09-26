@@ -76,7 +76,7 @@ function DomainSearch() {
         <img
           className={DomainCSS.domHeadImg}
           src={require("../../assets/Logo/www.png")}
-          alt="logo here"
+          alt="Search logo"
         />
         <h1 className={DomainCSS.domHeadTitle}>
           Search The Availability of Your Domain

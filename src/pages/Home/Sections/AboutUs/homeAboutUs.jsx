@@ -23,12 +23,14 @@ function HomeAboutUs() {
           data-aos-delay="600"
           className={HomeAboutUsCSS["leftgirl"]}
           src={require("../../../../assets/Images/Home-Image/leftGirl.png")}
+          alt="girl"
         />
         <img
           data-aos="zoom-out-up"
           data-aos-delay="1100"
           className={HomeAboutUsCSS["rightgroup"]}
           src={require("../../../../assets/Images/Home-Image/rightGroup.png")}
+          alt="group"
         />
       </div>
       <div data-aos="fade-left" className={HomeAboutUsCSS["Home-aboutUs-Text"]}>

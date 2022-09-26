@@ -42,27 +42,32 @@ function HomeTop() {
           <img
             className={HomeTopCSS["leftbg"]}
             src={require("../../../../assets/Images/Home-Image/leftBg.png")}
+            alt="background"
           />
           <img
             className={HomeTopCSS["rightbg"]}
             src={require("../../../../assets/Images/Home-Image/rightBg.png")}
+            alt="background"
           />
           <animated.div style={floatingManEnter}>
             <img
               className={HomeTopCSS["floatingman"]}
               src={require("../../../../assets/Images/Home-Image/floatingMan.png")}
+              alt="floating man"
             />
           </animated.div>
           <animated.div style={planetEnter}>
             <img
               className={HomeTopCSS["planet"]}
               src={require("../../../../assets/Images/Home-Image/planet.png")}
+              alt="planet"
             />
           </animated.div>
           <animated.div style={rocketEnter}>
             <img
               className={HomeTopCSS["rocket"]}
               src={require("../../../../assets/Images/Home-Image/rocket.png")}
+              alt="rocket"
             />
           </animated.div>
         </figure>

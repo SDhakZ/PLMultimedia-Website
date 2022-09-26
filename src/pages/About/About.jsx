@@ -31,7 +31,7 @@ function About() {
               data-aos="fade-in"
               src={require("../../assets/Images/AboutUs-Image/meeting.png")}
               className={AboutCSS["aboutUs-WhoAreWeImg"]}
-              alt="meeting"
+              alt="people in meeting"
             />
           </figure>
           <div data-aos="flip-down" className={AboutCSS["aboutUs-Text"]}>

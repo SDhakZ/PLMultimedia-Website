@@ -7,7 +7,7 @@ function HomePortfolioCard(props) {
   return (
     <button className={HomePortfolioCSS["Home-Portfolio-Card"]}>
       <figure className={HomePortfolioCSS["Home-Portfolio-Image"]}>
-        <img src={props.img} alt="image1" />
+        <img src={props.img} alt="Project" />
       </figure>
 
       <div className={HomePortfolioCSS["Home-Portfolio-body"]}>

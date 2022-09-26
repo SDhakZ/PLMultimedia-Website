@@ -7,7 +7,11 @@ function HomeReviewCard(props) {
   return (
     <div className={HomeReviewCSS["Home-comments-card"]}>
       <div className={HomeReviewCSS["Home-comment-profile"]}>
-        <img className={HomeReviewCSS["profile-Image"]} src={props.img} />
+        <img
+          className={HomeReviewCSS["profile-Image"]}
+          src={props.img}
+          alt="reviewer"
+        />
         <div className={HomeReviewCSS["ratings"]}>
           <div className={HomeReviewCSS["profile-Name"]}>{props.name}</div>
           <div className={HomeReviewCSS["rate-us"]}>

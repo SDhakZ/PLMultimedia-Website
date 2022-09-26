@@ -110,7 +110,7 @@ function IndividualService() {
 
         <div className={IndividualServiceCSS["indService-rt"]}>
           <figure className={IndividualServiceCSS["indService-img"]}>
-            <img src={info.image} />
+            <img alt="Service" src={info.image} />
           </figure>
           <p className={IndividualServiceCSS["indService-para"]}>
             {info.moreDetails}
