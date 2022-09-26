@@ -1,5 +1,5 @@
 import React from "react";
-import MainHeadingCSS from "./MainHeadingCSS.module.css";
+import MainHeadingCSS from "./mainHeadingCSS.module.css";
 import { useSpring, animated, easings } from "react-spring";
 
 function MainHeading(props) {

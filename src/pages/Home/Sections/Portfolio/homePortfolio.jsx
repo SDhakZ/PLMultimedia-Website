@@ -1,7 +1,7 @@
 import React from "react";
 import HomePortfolioCSS from "./homePortfolio.module.css";
 import MainHeading from "../../../../components/MainHeading/MainHeading";
-import portfolioData from "../../../../datas/portfolioData";
+import portfolioData from "../../../../data/portfolioData";
 import { Link } from "react-router-dom";
 function HomePortfolioCard(props) {
   return (

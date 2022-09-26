@@ -5,7 +5,7 @@ import React from "react";
 import { ServiceCard, MoreCard } from "./ServiceCard";
 import ServicesCSS from "./services.module.css";
 import DomainSearch from "./DomainSearch";
-import servicesData from "../../datas/servicesData";
+import servicesData from "../../data/servicesData";
 import MainHeading from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 

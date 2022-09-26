@@ -1,7 +1,7 @@
 import React from "react";
 import HomeReviewCSS from "./homeReview.module.css";
 import MainHeading from "../../../../components/MainHeading/MainHeading";
-import HomeReviewData from "../../../../datas/homeReviewData";
+import HomeReviewData from "../../../../data/homeReviewData";
 
 function HomeReviewCard(props) {
   return (

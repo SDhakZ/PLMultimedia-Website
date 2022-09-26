@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import HomeCSS from "./home.module.css";
-import HomeTop from "./Sections/Top/homeTop";
-import HomeAboutUs from "./Sections/AboutUs/homeAboutUs";
-import HomeReview from "./Sections/Review/homeReview";
-import HomeBlogs from "./Sections/Blog/homeBlogs";
-import HomePortfolio from "./Sections/Portfolio/homePortfolio";
+import HomeTop from "./Sections/Top/HomeTop";
+import HomeAboutUs from "./Sections/AboutUs/HomeAboutUs";
+import HomeReview from "./Sections/Review/HomeReview";
+import HomeBlogs from "./Sections/Blog/HomeBlogs";
+import HomePortfolio from "./Sections/Portfolio/HomePortfolio";
 import GoToTop from "../../components/GoToTop/GoToTop";
 import Aos from "aos";
 import "aos/dist/aos.css";

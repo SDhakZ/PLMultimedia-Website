@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import IndividualServiceCSS from "./individualService.module.css";
 import MainHeading from "../../components/MainHeading/MainHeading";
-import internalServiceData from "../../datas/servicesData";
+import internalServiceData from "../../data/servicesData";
 
 function IndividualService() {
   const clickedLink = (toLoad) => {
