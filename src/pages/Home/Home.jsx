@@ -4,6 +4,7 @@ import HomeTop from "./Sections/Top/HomeTop";
 import HomeAboutUs from "./Sections/AboutUs/HomeAboutUs";
 import HomeReview from "./Sections/Review/HomeReview";
 import HomeBlogs from "./Sections/Blog/HomeBlogs";
+import { HomeServiceSlider } from "./Sections/Service/HomeServiceSlider";
 import HomePortfolio from "./Sections/Portfolio/HomePortfolio";
 import GoToTop from "../../components/GoToTop/GoToTop";
 import Aos from "aos";
@@ -29,10 +30,9 @@ export const Home = () => {
       <section data-aos="fade" className={HomeCSS["Home-aboutUs"]}>
         <HomeAboutUs />
       </section>
-      <section
-        data-aos="zoom-in"
-        className={HomeCSS["Home-services"]}
-      ></section>
+      <section data-aos="zoom-in" className={HomeCSS["Home-services"]}>
+        <HomeServiceSlider/>
+      </section>
       <section data-aos="zoom-in" className={HomeCSS["Home-recent-works"]}>
         <HomePortfolio />
       </section>
