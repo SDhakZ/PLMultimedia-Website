@@ -33,15 +33,15 @@
 
 .serviceCard {
   padding: 30px 0px;
-  max-width: 370px;
-  max-height: 509px;
+  width: 370px;
+  height: 430px;
   background-color: #bcebfc;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: 0.35s ease-in-out;
+  transition: 0.5s ease-in-out;
   box-shadow: rgba(69, 69, 87, 0.25) 0px 8px 20px -5px,
     rgba(134, 134, 134, 0.3) 0px 4px 8px -4px;
 }
@@ -50,6 +50,7 @@
   color: white;
   background-color: #3fbfe9;
   transform: translateY(-5px);
+  border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -57,6 +58,12 @@
 .logo {
   width: var(--lg-S-w);
   transition: 0.5s ease-in;
+}
+
+.serviceCard:hover .logo,
+.serviceCard:hover .cardName,
+.serviceCard:hover .cardDescription {
+  transform: translateY(-5px);
 }
 
 .aboutLogo {
@@ -83,8 +90,6 @@
   margin-top: 5px;
   transition: transform 0.5s ease-in;
   line-height: var(--fh-S-p);
-  white-space: pre-line;
-  vertical-align: bottom;
 }
 
 .contactButton {
@@ -139,6 +144,7 @@
   .serviceCard {
     padding: 28px 0px;
     width: 285px;
+    height: 400px;
   }
 
   .cardName {
@@ -173,8 +179,9 @@
   }
 
   .serviceCard {
-    padding: 34px 0px;
+    padding: 24px 0px;
     width: 290px;
+
   }
   .contactButton {
     padding: 9px 25px;
@@ -197,8 +204,9 @@
   }
 
   .serviceCard {
-    padding: 30px 0px;
+    padding: 24px 0px;
     width: 250px;
+    height: 375px;
   }
   .cardName {
     margin-top: 0px;
@@ -214,7 +222,7 @@
   }
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 680px) {
   :root {
     --fs-S-h: 1.3rem; /* heading font size */
     --fs-S-p: 1rem; /* paragraph font size*/
