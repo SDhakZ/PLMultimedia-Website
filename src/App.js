@@ -65,6 +65,11 @@ function App() {
               path="/services/mediaProduction"
               component={IndividualService}
             />
+            <Route
+              exact
+              path="/services/eventManagement"
+              component={IndividualService}
+            />
             <Route exact path="/blog/:id/:slug" component={IndividualBlog} />
           </Switch>
         </div>

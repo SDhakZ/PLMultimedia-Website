@@ -41,7 +41,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: 0.5s ease-in-out;
+  transition: 0.35s ease-in-out;
   box-shadow: rgba(69, 69, 87, 0.25) 0px 8px 20px -5px,
     rgba(134, 134, 134, 0.3) 0px 4px 8px -4px;
 }
@@ -50,7 +50,6 @@
   color: white;
   background-color: #3fbfe9;
   transform: translateY(-5px);
-  border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -58,12 +57,6 @@
 .logo {
   width: var(--lg-S-w);
   transition: 0.5s ease-in;
-}
-
-.serviceCard:hover .logo,
-.serviceCard:hover .cardName,
-.serviceCard:hover .cardDescription {
-  transform: translateY(-5px);
 }
 
 .aboutLogo {
@@ -90,6 +83,8 @@
   margin-top: 5px;
   transition: transform 0.5s ease-in;
   line-height: var(--fh-S-p);
+  white-space: pre-line;
+  vertical-align: bottom;
 }
 
 .contactButton {

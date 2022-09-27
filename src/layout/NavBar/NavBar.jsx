@@ -14,7 +14,8 @@ function NavBar() {
       <nav className={NavbarCSS.navbar}>
         <div className={NavbarCSS["nav-container"]}>
           <NavLink exact to="/" className={NavbarCSS["nav-logo"]}>
-            PLMultimedia
+            <img src={require("../../assets/Logo/companyLogo.png")} />
+            Multimedia
           </NavLink>
 
           <ul

@@ -19,6 +19,8 @@ function getDataFromPathType(path) {
     return 5;
   } else if (path === "mediaProduction") {
     return 6;
+  } else if (path === "eventManagement") {
+    return 7;
   }
 }
 
@@ -41,10 +43,20 @@ function IndividualService() {
     image: blogDetails.image,
     title: blogDetails.title,
     moreDetails: blogDetails.moreDetails,
+    credit: blogDetails.credit,
+    creditLink: blogDetails.creditLink,
   });
   const [clickNumber, setClickNumber] = useState(blogDetails.id);
   return (
     <div className={IndividualServiceCSS["indService-container"]}>
+      <div className={IndividualServiceCSS["indService-back-container"]}>
+        <Link
+          to={{ pathname: "/services" }}
+          className={IndividualServiceCSS["indService-backBtn"]}
+        >
+          <i className="fa-sharp fa-solid fa-arrow-left"></i> Go Back
+        </Link>
+      </div>
       <MainHeading headingName={info.title} />
       <div className={IndividualServiceCSS["indService-flexbox"]}>
         <div className={IndividualServiceCSS["indService-lft"]}>
@@ -108,6 +120,14 @@ function IndividualService() {
             >
               Media Production
             </a>
+            <a
+              className={`${
+                clickNumber === 8 ? IndividualServiceCSS.active : ""
+              } ${IndividualServiceCSS["indService-link"]}`}
+              onClick={() => clickedLink("eventManagement")}
+            >
+              Event Management
+            </a>
           </div>
           <div className={IndividualServiceCSS["indService-contact"]}>
             <h2 className={IndividualServiceCSS["indService-needHelp"]}>
@@ -135,6 +155,12 @@ function IndividualService() {
         <div className={IndividualServiceCSS["indService-rt"]}>
           <figure className={IndividualServiceCSS["indService-img"]}>
             <img src={info.image} />
+            <a
+              href={info.creditLink}
+              className={IndividualServiceCSS["indService-attribution"]}
+            >
+              {info.credit}
+            </a>
           </figure>
           <p className={IndividualServiceCSS["indService-para"]}>
             {info.moreDetails}

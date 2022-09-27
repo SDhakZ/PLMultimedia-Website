@@ -36,7 +36,7 @@ function Services() {
             );
           })}
 
-          <MoreCard moreDetails="AND MANY MORE ..." />
+          <MoreCard moreDetails="AND MORE To Come ..." />
         </div>
       </div>
     </div>

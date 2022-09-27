@@ -6,6 +6,7 @@
   --fs-foo-p: 1.15rem; /* paragraph font size*/
   --mb-foo-p: 15px; /* margin bottom for links */
   --fs-foo-lg: 2.5rem; /* social icons font size */
+  --w-foo-lg-img: 70px; /* company logo width */
 }
 
 .footerSection {
@@ -29,7 +30,7 @@
   min-width: 300px;
 }
 
-.footer-col1 h4 {
+.footer-companyName {
   font-size: 3rem;
   font-family: "Great Vibes", cursive;
   color: #454444;
@@ -37,14 +38,18 @@
   font-weight: 400;
   position: relative;
 }
-.footer-companyName {
+.footer-companyName img {
+  width: var(--w-foo-lg-img);
+}
+
+.footer-Name {
   font-size: var(--fs-foo-cn);
   font-family: "Cabin", sans-serif;
-  color: #454444;
+  color: #000;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 600;
   position: relative;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 .footer-col1 p {
   font-size: var(--fs-foo-p);
@@ -168,7 +173,34 @@
   font-size: 1.5rem;
   margin-right: 10px;
 }
+.footer-payment {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  color: #636363;
+  font-size: 1.25rem;
+  font-family: "Roboto";
+  font-weight: 600;
+  position: relative;
+  line-height: 33px;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 10px;
+}
+.footer-khaltiLogo,
+.footer-esewaLogo {
+  width: 110px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
 
+.footer-khaltiLogo:hover,
+.footer-esewaLogo:hover {
+  transform: translateY(-5px);
+}
 @media (max-width: 1200px) {
   :root {
     --pd-foo-c: 50px 60px 20px; /*container padding*/
@@ -177,6 +209,7 @@
     --mb-foo-p: 12px; /* margin bottom for links */
     --fs-foo-p: 1rem; /* paragraph font size*/
     --fs-foo-lg: 1.7rem; /* social icons font size */
+    --w-foo-lg-img: 60px; /* company logo width */
   }
 
   .footer-col1 p {
@@ -189,11 +222,23 @@
   }
 
   .footer-colt {
-    min-width: 110px;
+    min-width: 130px;
   }
 
   .footer-services {
     min-width: fit-content;
+  }
+  .footer-payment {
+    font-size: 1.17rem;
+    font-weight: 500;
+    line-height: 27px;
+  }
+  .footer-logo {
+    gap: 20px;
+  }
+  .footer-khaltiLogo,
+  .footer-esewaLogo {
+    width: 90px;
   }
 }
 
@@ -205,6 +250,7 @@
     --fs-foo-p: 0.9rem; /* paragraph font size*/
     --mb-foo-p: 15px; /* margin bottom for links */
     --fs-foo-lg: 1.7rem; /* social icons font size */
+    --w-foo-lg-img: 45px; /* company logo width */
   }
 
   .footer-row {
@@ -217,7 +263,7 @@
     min-width: 240px;
   }
 
-  .footer-col1 h4 {
+  .footer-companyName {
     font-size: 2rem;
   }
 
@@ -252,6 +298,12 @@
   }
 }
 
+@media (max-width: 900px) {
+  .footer-payment {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 800px) {
   :root {
     --pd-foo-c: 50px 60px 20px; /*container padding*/
@@ -260,6 +312,7 @@
     --fs-foo-p: 0.875rem; /* paragraph font size*/
     --mb-foo-p: 7px; /* margin bottom for links */
     --fs-foo-lg: 1.7rem; /* social icons font size */
+    --w-foo-lg-img: 40px; /* company logo width */
   }
 
   .footer-col1 {
@@ -277,11 +330,11 @@
     flex-direction: column;
   }
 
-  .footer-col1 h4 {
+  .footer-companyName {
     font-size: 2rem;
   }
 
-  .footer-col1 h4 .footer-companyName {
+  .footer-companyName .footer-Name {
     font-size: 1.3rem;
   }
 
@@ -314,22 +367,23 @@
     --fs-foo-p: 0.9rem; /* paragraph font size*/
     --mb-foo-p: 10px; /* margin bottom for links */
     --fs-foo-lg: 1.9rem; /* social icons font size */
+    --w-foo-lg-img: 40px; /* company logo width */
   }
 
   .footer-col1 {
     margin-right: 0px;
   }
 
-  .footer-col1 h4 {
+  .footer-companyName {
     font-size: 2rem;
   }
 
-  .footer-col1 h4 .footer-companyName {
+  .footer-companyName .footer-Name {
     font-size: 1.5rem;
   }
 
   .footer-col1 p {
-    margin-top: 14px;
+    margin-top: 0px;
     font-weight: 600;
   }
 
@@ -345,6 +399,10 @@
   .footer-icons {
     justify-content: space-between;
     margin-top: 20px;
+  }
+
+  .footer-payment {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 350px) {
@@ -362,19 +420,19 @@
     min-width: fit-content;
   }
 
-  .footer-col1 h4 {
+  .footer-companyName {
     font-size: 1.8rem;
   }
 
-  .footer-col1 h4 .footer-companyName {
+  .footer-companyName .footer-Name {
     font-size: 1.4rem;
   }
 
   .footer-col1 p {
     line-height: 20px;
     max-width: 230px;
-    margin-top: 14px;
-    font-weight: 600;
+
+    font-weight: 500;
   }
 
   .footer-col h4 {

@@ -13,7 +13,7 @@
 }
 
 .Home-Portfolio-Card {
-  height: 253px;
+  height: 250px;
   width: 350px;
   cursor: pointer;
   border-radius: 18px;
@@ -36,7 +36,7 @@
 }
 
 .Home-Portfolio-body {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .Home-Portfolio-Image {

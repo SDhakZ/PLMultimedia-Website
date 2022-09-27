@@ -2,18 +2,22 @@ import React, { Component } from "react";
 import FooterCSS from "./footer.module.css";
 
 function Footer() {
+  function goToKhalti() {
+    return;
+  }
+  function goToEsewa() {
+    return;
+  }
   return (
     // start of footersection//
     <div className={FooterCSS.footerSection}>
       <div className={FooterCSS["footer-row"]}>
         {/* for columns of footer */}
         <div className={FooterCSS["footer-col1"]}>
-          <h4>
-            PL
-            <span className={FooterCSS["footer-companyName"]}>
-              Pl Multimedia
-            </span>
-          </h4>
+          <div className={FooterCSS["footer-companyName"]}>
+            <img src={require("../../assets/Logo/companyLogoBlack.png")}></img>
+            <span className={FooterCSS["footer-Name"]}>Multimedia</span>
+          </div>
 
           <p>
             Changing the way, we work, live, play and learn.The Network Works.
@@ -94,6 +98,25 @@ function Footer() {
                 className={`${FooterCSS.facebook} fa-brands fa-facebook-f`}
               ></i>
             </a>
+          </div>
+          <div className={FooterCSS["footer-payment"]}>
+            We also accept payment through:
+            <div className={FooterCSS["footer-logo"]}>
+              <a onClick={goToKhalti}>
+                <img
+                  src={require("../../assets/Logo/khaltiLogo.png")}
+                  className={FooterCSS["footer-khaltiLogo"]}
+                  alt="Khalti Logo"
+                />
+              </a>
+              <a onClick={goToEsewa}>
+                <img
+                  src={require("../../assets/Logo/esewaLogo.png")}
+                  className={FooterCSS["footer-esewaLogo"]}
+                  alt="esewa Logo"
+                />
+              </a>
+            </div>
           </div>
         </div>
 

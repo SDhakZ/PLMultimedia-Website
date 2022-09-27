@@ -7,6 +7,18 @@
   --lh-IS-p: 30px; /* paragraph line height */
 }
 
+.indService-back-container {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.indService-backBtn {
+  color: #3e90ee;
+  text-decoration: none;
+}
+
 .indService-container {
   padding: var(--pd-c);
 }
@@ -42,6 +54,13 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 15px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.indService-attribution {
+  font-family: "Roboto";
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #3e90ee;
 }
 
 .indService-otherServices {

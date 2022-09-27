@@ -21,6 +21,10 @@ function getPathSuffix(serviceNumber) {
     path += "digitalMarketing";
   } else if (serviceNumber === 7) {
     path += "mediaProduction";
+  } else if (serviceNumber === 8) {
+    path += "socialMediaMarketing";
+  } else if (serviceNumber === 9) {
+    path += "eventManagement";
   } else {
     path = "/";
   }
