@@ -3,13 +3,20 @@
 }
 
 .Home-aboutUs {
-  background-image: linear-gradient(#77b5ff, #fbfbfd);
+  background-image: linear-gradient(#77b5ff, #fff);
   padding: var(--pd-Home-c);
+}
+
+.Home-services {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Home-recent-works {
   background: transparent;
-  height: 410px;
+  height: 500px;
   padding: var(--pd-c);
 }
 

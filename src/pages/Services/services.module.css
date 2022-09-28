@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,500;1,700&display=swap");
 
 :root {
-  --pd-c: 80px 140px; /*container padding*/
   --fs-S-h: 1.6rem; /* heading font size */
   --fs-S-p: 1.15rem; /* paragraph font size*/
   --fs-S-bt: 1.2rem; /* button font size */
@@ -34,14 +33,14 @@
 .serviceCard {
   padding: 30px 0px;
   width: 370px;
-  height: 430px;
+  height: 410px;
   background-color: #bcebfc;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: 0.5s ease-in-out;
+  justify-content: space-evenly;
+  transition: 0.35s ease-in-out;
   box-shadow: rgba(69, 69, 87, 0.25) 0px 8px 20px -5px,
     rgba(134, 134, 134, 0.3) 0px 4px 8px -4px;
 }
@@ -60,14 +59,8 @@
   transition: 0.5s ease-in;
 }
 
-.serviceCard:hover .logo,
-.serviceCard:hover .cardName,
-.serviceCard:hover .cardDescription {
-  transform: translateY(-5px);
-}
-
 .aboutLogo {
-  margin: 20px;
+  margin: 15px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -78,16 +71,14 @@
   font-family: "Inter";
   font-size: var(--fs-S-h);
   font-weight: 700;
-  margin-top: 10px;
   transition: transform 0.5s ease-in;
 }
 
 .cardDescription {
   font-family: "Roboto";
-  padding: 10px;
+  padding: 8px 10px;
   font-weight: 400;
   font-size: var(--fs-S-p);
-  margin-top: 5px;
   transition: transform 0.5s ease-in;
   line-height: var(--fh-S-p);
 }
@@ -108,7 +99,7 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fbfbfd inset;
-  transition: all 0.4s ease;
+  transition: 0.35s ease-in-out;
   cursor: pointer;
   text-decoration: none;
 }
@@ -128,11 +119,11 @@
 
 @media all and (max-width: 1500px) {
   :root {
-    --fs-S-h: 1.4rem; /* heading font size */
-    --fs-S-p: 1rem; /* paragraph font size*/
-    --fs-S-bt: 1rem; /* button font size */
-    --fh-S-p: 23px; /* paragraph line height */
-    --lg-S-w: 95px; /* logo width */
+    --fs-S-h: 1.3rem; /* heading font size */
+    --fs-S-p: 0.95rem; /* paragraph font size*/
+    --fs-S-bt: 0.95rem; /* button font size */
+    --fh-S-p: 20px; /* paragraph line height */
+    --lg-S-w: 100px; /* logo width */
   }
   .serviceCardSection {
     display: flex;
@@ -144,33 +135,24 @@
   .serviceCard {
     padding: 28px 0px;
     width: 285px;
-    height: 400px;
-  }
-
-  .cardName {
-    margin-top: 0px;
+    height: 330px;
   }
 
   .cardDescription {
-    margin-top: 5px;
-    padding: 5px;
+    padding: 7px 5px;
   }
 
   .contactButton {
-    padding: 10px 35px;
+    padding: 10px 45px;
   }
 }
 @media all and (max-width: 1200px) {
   :root {
-    --fs-S-h: 1.3rem; /* heading font size */
-    --fs-S-p: 0.95rem; /* paragraph font size*/
-    --fs-S-bt: 0.95rem; /* button font size */
+    --fs-S-h: 1.2rem; /* heading font size */
+    --fs-S-p: 0.9rem; /* paragraph font size*/
+    --fs-S-bt: 0.9rem; /* button font size */
     --fh-S-p: 20px; /* paragraph line height */
-    --lg-S-w: 90px; /* logo width */
-  }
-
-  .cardDescription {
-    margin-top: 4px;
+    --lg-S-w: 85px; /* logo width */
   }
 
   .serviceCardSection {
@@ -180,8 +162,8 @@
 
   .serviceCard {
     padding: 24px 0px;
-    width: 290px;
-
+    width: 260px;
+    height: 300px;
   }
   .contactButton {
     padding: 9px 25px;
@@ -196,7 +178,7 @@
     --fs-S-p: 0.9rem; /* paragraph font size*/
     --fs-S-bt: 0.9rem; /* button font size */
     --fh-S-p: 20px; /* paragraph line height */
-    --lg-S-w: 75px; /* logo width */
+    --lg-S-w: 90px; /* logo width */
   }
 
   .serviceCardSection {
@@ -206,19 +188,15 @@
   .serviceCard {
     padding: 24px 0px;
     width: 250px;
-    height: 375px;
-  }
-  .cardName {
-    margin-top: 0px;
+    height: 305px;
   }
 
   .cardDescription {
-    padding: 0px;
-    margin-top: 5px;
+    padding: 4px 2px;
   }
 
   .contactButton {
-    padding: 10px 30px;
+    padding: 8px 28px;
   }
 }
 
@@ -228,7 +206,7 @@
     --fs-S-p: 1rem; /* paragraph font size*/
     --fs-S-bt: 1rem; /* button font size */
     --fh-S-p: 23px; /* paragraph line height */
-    --lg-S-w: 100px; /* logo width */
+    --lg-S-w: 105px; /* logo width */
   }
 
   .serviceCardSection {
@@ -240,12 +218,9 @@
     padding: 35px 0px;
     width: 320px;
   }
-  .cardName {
-    margin-top: 0px;
-  }
 
   .cardDescription {
-    padding: 5px;
+    padding: 4px 4px;
   }
 
   .contactButton {

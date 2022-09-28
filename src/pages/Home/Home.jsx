@@ -31,7 +31,7 @@ export const Home = () => {
         <HomeAboutUs />
       </section>
       <section data-aos="zoom-in" className={HomeCSS["Home-services"]}>
-        <HomeServiceSlider/>
+        <HomeServiceSlider />
       </section>
       <section data-aos="zoom-in" className={HomeCSS["Home-recent-works"]}>
         <HomePortfolio />
