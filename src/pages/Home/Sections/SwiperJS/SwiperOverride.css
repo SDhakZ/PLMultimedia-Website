@@ -8,7 +8,7 @@
 
 .swiper {
   height: 570px;
-  width: 90%;
+  width: 95%;
 }
 
 .swiper-slide {
@@ -21,11 +21,11 @@
 @media all and (max-width: 1500px) {
   .swiper {
     height: 490px;
-    width: 100%;
+    width: 90%;
   }
 }
 
-@media all and (max-width: 1150px) {
+@media all and (max-width: 1200px) {
   .swiper {
     height: 490px;
     width: 100%;
