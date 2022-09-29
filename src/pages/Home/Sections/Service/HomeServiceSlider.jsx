@@ -19,7 +19,7 @@ export const HomeServiceSlider = () => {
         spaceBetween={5}
         navigation
         autoplay={{
-          delay: 3500,
+          delay: 2500,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
