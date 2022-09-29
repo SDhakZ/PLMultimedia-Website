@@ -18,6 +18,13 @@
   align-items: center;
 }
 
+@media all and (max-width: 1500px) {
+  .swiper {
+    height: 490px;
+    width: 100%;
+  }
+}
+
 @media all and (max-width: 1150px) {
   .swiper {
     height: 490px;
