@@ -89,13 +89,16 @@
     --IB-fs-author: 1.1rem;
     --IB-w-blogImage: 70%;
   }
+
   .indBlg-headerContainer {
     margin-left: 0%;
   }
+
   .indBlg-headerContainer {
     gap: 10px;
     margin-bottom: 20px;
   }
+
   .indBlg-author-img {
     width: 40px;
   }
@@ -110,12 +113,15 @@
     --IB-fs--title: 2.6rem;
     --IB-w-blogImage: 80%;
   }
+
   .indBlg-headerContainer {
     margin-left: 3%;
   }
+
   .indBlg-author-img {
     width: 48px;
   }
+
   .indBlg-blogBody {
     max-width: 1000px;
   }
@@ -128,20 +134,25 @@
     --IB-fs-paragraph: 1rem;
     --IB-w-blogImage: 90%;
   }
+
   .indBlg-backButton-container {
     font-size: 1.3rem;
     margin-bottom: 15px;
   }
+
   .indBlg-headerContainer {
     margin-left: 1%;
   }
+
   .indBlg-headerContainer {
     gap: 5px;
     margin-bottom: 15px;
   }
+
   .indBlg-author-img {
     width: 40px;
   }
+
   .indBlg-blogBody {
     line-height: 150.2%;
     letter-spacing: 0.04em;
@@ -154,9 +165,11 @@
     --IB-fs--title: 2.1rem;
     --IB-w-blogImage: 100%;
   }
+
   .indBlg-headerContainer {
     margin-left: 0%;
   }
+
   .indBlg-headerContainer {
     gap: 10px;
     margin-bottom: 20px;
