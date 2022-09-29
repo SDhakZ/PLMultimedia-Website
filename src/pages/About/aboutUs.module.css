@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,500;1,700&display=swap");
 
 :root {
-  --pd-c: 80px 140px; /*container padding*/
   --fs-AU-h: 3.5rem; /* heading font size */
   --fs-AU-p: 1.3rem; /* paragraph font size*/
   --fh-AU-p: 40px; /* paragraph line height */
