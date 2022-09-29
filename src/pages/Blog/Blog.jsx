@@ -23,10 +23,10 @@ export const Blog = () => {
   //maping Blog card with strapi blogs data
   return (
     <React.Fragment>
-      <div className={BlogsCSS["blogPage"]}>
+      <div className={BlogsCSS["blog-page"]}>
         <MainHeading headingName={"Our Blogs"} />
         <div
-          className={BlogsCSS["blogCardContainer"]}
+          className={BlogsCSS["blogCard-container"]}
           onClick={() => {
             window.scrollTo({ top: 0 });
           }}

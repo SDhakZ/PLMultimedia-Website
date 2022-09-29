@@ -6,7 +6,7 @@ import swal from "sweetalert";
 import MainHeading from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 
-function Contact() {
+export const Contact = () => {
   useEffect(() => {
     // Anything in here is fired on component mount.
     return () => {
@@ -147,26 +147,26 @@ function Contact() {
 
   return (
     <React.Fragment>
-      <div className={ContactCSS["contact-Container"]}>
+      <div className={ContactCSS["contactPage"]}>
         <MainHeading headingName="Contact Us" />
         <animated.div style={style}>
-          <div className={ContactCSS["contact-Column"]}>
-            <div className={ContactCSS["contact-Column-left"]}>
-              <h1 className={ContactCSS["contact-Get-in-touch"]}>
+          <div className={ContactCSS["contact-container"]}>
+            <div className={ContactCSS["contact-column-left"]}>
+              <h1 className={ContactCSS["contact-get-in-touch"]}>
                 Get in touch
               </h1>
-              <p className={ContactCSS["contact-Paragraph"]}>
+              <p className={ContactCSS["contact-paragraph"]}>
                 Want to get in touch? We’d love to hear from you. We’re here to
                 help and answer any questions you might have. We often
                 personally meet with clients; Drop us a line, or give us a heads
                 up if you'reinterested in visiting us.
               </p>
-              <h2 className={ContactCSS["contact-find-Us-At"]}>
+              <h2 className={ContactCSS["contact-findUsAt"]}>
                 You can also find us at
               </h2>
               <div className={ContactCSS["contact-socials"]}>
-                <div className={ContactCSS["links"]}>
-                  <div className={ContactCSS["icons"]}>
+                <div className={ContactCSS["contact-links"]}>
+                  <div className={ContactCSS["contact-icons"]}>
                     <i
                       className={`${ContactCSS.envelope} fa-solid fa-envelope`}
                     />
@@ -174,13 +174,12 @@ function Contact() {
                   <a
                     href="mailto:internships@plmultimediaservice.com"
                     target="_blank"
-                    className={ContactCSS["text"]}
                   >
                     plmultimediaservice@gmail.com
                   </a>
                 </div>
-                <div className={ContactCSS["links"]}>
-                  <div className={ContactCSS["icons"]}>
+                <div className={ContactCSS["contact-links"]}>
+                  <div className={ContactCSS["contact-icons"]}>
                     <i
                       className={`${ContactCSS.location} fa-solid fa-location-dot`}
                     />
@@ -193,8 +192,8 @@ function Contact() {
                   </a>
                 </div>
 
-                <div className={ContactCSS["links"]}>
-                  <div className={ContactCSS["icons"]}>
+                <div className={ContactCSS["contact-links"]}>
+                  <div className={ContactCSS["contact-icons"]}>
                     <i
                       className={`${ContactCSS.linkedin} fa-brands fa-linkedin-in`}
                     />
@@ -204,15 +203,15 @@ function Contact() {
                   </a>
                 </div>
 
-                <div className={ContactCSS["links"]}>
-                  <div className={ContactCSS["icons"]}>
+                <div className={ContactCSS["contact-links"]}>
+                  <div className={ContactCSS["contact-icons"]}>
                     <i className={`${ContactCSS.phone} fa-solid fa-phone`} />
                   </div>
                   <a href="tel:+9779860283950">9860283950</a>
                 </div>
 
-                <div className={ContactCSS["links"]}>
-                  <div className={ContactCSS["icons"]}>
+                <div className={ContactCSS["contact-links"]}>
+                  <div className={ContactCSS["contact-icons"]}>
                     <i
                       className={`${ContactCSS.instagram} fa-brands fa-instagram `}
                     />
@@ -225,8 +224,8 @@ function Contact() {
                   </a>
                 </div>
 
-                <div className={ContactCSS["links"]}>
-                  <div className={ContactCSS["icons"]}>
+                <div className={ContactCSS["contact-links"]}>
+                  <div className={ContactCSS["contact-icons"]}>
                     <i
                       className={`${ContactCSS.facebook} fa-brands fa-facebook-f`}
                     />
@@ -239,8 +238,8 @@ function Contact() {
                   </a>
                 </div>
 
-                <div className={ContactCSS["links"]}>
-                  <div className={ContactCSS["icons"]}>
+                <div className={ContactCSS["contact-links"]}>
+                  <div className={ContactCSS["contact-icons"]}>
                     <i
                       className={`${ContactCSS.twitter} fa-brands fa-twitter`}
                     />
@@ -252,15 +251,15 @@ function Contact() {
               </div>
             </div>
 
-            <div className={ContactCSS["contact-Column-right"]}>
-              <div className={ContactCSS["contact-Content"]}>
+            <div className={ContactCSS["contact-column-right"]}>
+              <div className={ContactCSS["contact-content"]}>
                 <form ref={formRef} onSubmit={handleSubmit}>
-                  <h2 className={ContactCSS["contact-SendMessage"]}>
+                  <h2 className={ContactCSS["contact-sendMessage"]}>
                     Send message
                   </h2>
-                  <div className={ContactCSS["contact-Line"]}></div>
+                  <div className={ContactCSS["contact-line"]}></div>
                   <select
-                    className={ContactCSS["contact-Drop-down"]}
+                    className={ContactCSS["contact-drop-down"]}
                     name="subject"
                     required="true"
                     // value={formvalue.subject}
@@ -273,70 +272,70 @@ function Contact() {
                     </option>
                     <option
                       value="Advertisement"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 1 ? true : false}
                     >
                       Advertisement
                     </option>
                     <option
                       value="WebDevelopment"
-                      className={ContactCSS["contact-WebDevelopment"]}
+                      className={ContactCSS["contact-webDevelopment"]}
                       selected={toLoadNumber === 2 ? true : false}
                     >
                       Web Development
                     </option>
                     <option
                       value="WebHosting"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 3 ? true : false}
                     >
                       Web Hosting
                     </option>
                     <option
                       value="MobileAppDevelopment"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 4 ? true : false}
                     >
                       Mobile App Development
                     </option>
                     <option
                       value="SEO Optimization"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 5 ? true : false}
                     >
                       SEO Optimization
                     </option>
                     <option
                       value="Digital Marketting"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 6 ? true : false}
                     >
                       Digital Marketting
                     </option>
                     <option
                       value="Media Production"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 7 ? true : false}
                     >
                       Media Production
                     </option>
                     <option
                       value="Job and Internship"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 8 ? true : false}
                     >
                       Job and Internship
                     </option>
                     <option
                       value="Problems"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 9 ? true : false}
                     >
                       Problems
                     </option>
                     <option
                       value="Other"
-                      className={ContactCSS["contact-Options"]}
+                      className={ContactCSS["contact-options"]}
                       selected={toLoadNumber === 10 ? true : false}
                     >
                       Other
@@ -355,7 +354,7 @@ function Contact() {
                     onKeyDown={handleEnter}
                   />
 
-                  <div className={ContactCSS["contact-Form-email-phone"]}>
+                  <div className={ContactCSS["contact-form-email-phone"]}>
                     <input
                       type="email"
                       placeholder="Email Address"
@@ -381,7 +380,7 @@ function Contact() {
 
                   <textarea
                     placeholder="Message"
-                    className={ContactCSS["contact-Textarea"]}
+                    className={ContactCSS["contact-textarea"]}
                     name="message"
                     value={formvalue.message}
                     onChange={handlevalidation}
@@ -389,12 +388,12 @@ function Contact() {
                   />
 
                   <button
-                    className={`${ContactCSS["contact-Message-Button"]} ${ContactCSS["color-Clear-Button"]}`}
+                    className={`${ContactCSS["contact-message-button"]} ${ContactCSS["color-clear-button"]}`}
                     onClick={clear}
                   >
                     Clear
                   </button>
-                  <button className={ContactCSS["contact-Message-Button"]}>
+                  <button className={ContactCSS["contact-message-button"]}>
                     Send Message
                   </button>
                 </form>
@@ -405,5 +404,4 @@ function Contact() {
       </div>
     </React.Fragment>
   );
-}
-export default Contact;
+};

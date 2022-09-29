@@ -18,24 +18,28 @@ export const BlogCard = (props) => {
         routeChange();
       }}
     >
-      <img className={BlogsCSS["blogHeadImage"]} src={props.image} alt="blog" />
-      <div className={BlogsCSS["blogBodySection"]}>
-        <h1 className={BlogsCSS["blogTitle"]}>{props.title.toUpperCase()}</h1>
-        <div className={BlogsCSS["blogBody"]}>
+      <img
+        className={BlogsCSS["blog-headImage"]}
+        src={props.image}
+        alt="blog"
+      />
+      <div className={BlogsCSS["blog-bodySection"]}>
+        <h1 className={BlogsCSS["blog-title"]}>{props.title.toUpperCase()}</h1>
+        <div className={BlogsCSS["blog-body"]}>
           <ReactMarkdown>{props.body}</ReactMarkdown>
         </div>
       </div>
 
-      <div className={BlogsCSS["authorSection"]}>
+      <div className={BlogsCSS["blog-authorSection"]}>
         <img
-          className={BlogsCSS["authorImage"]}
+          className={BlogsCSS["blog-authorImage"]}
           src={props.authorPP}
           alt="author"
         />
-        <div className={BlogsCSS["authorBlog"]}>
-          <h6 className={BlogsCSS["authorName"]}>{props.authorName}</h6>
+        <div className={BlogsCSS["blog-authorBlog"]}>
+          <h6 className={BlogsCSS["blog-authorName"]}>{props.authorName}</h6>
           <hr />
-          <h6 className={BlogsCSS["publishDate"]}>{props.publishDate}</h6>
+          <h6 className={BlogsCSS["blog-publishDate"]}>{props.publishDate}</h6>
         </div>
       </div>
     </button>

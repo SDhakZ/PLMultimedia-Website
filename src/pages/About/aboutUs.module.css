@@ -2,144 +2,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,500;1,700&display=swap");
 
 :root {
-  --fs-AU-h: 3.5rem; /* heading font size */
-  --fs-AU-p: 1.3rem; /* paragraph font size*/
-  --fh-AU-p: 40px; /* paragraph line height */
+  --AU-fs-heading: 3.5rem; /* heading font size */
+  --AU-fs-paragraph: 1.3rem; /* paragraph font size*/
+  --AU-lh-paragraph: 40px; /* paragraph line height */
 }
 
-.aboutUs-Container {
+.aboutUs-container {
   background-color: #fbfbfd;
   padding: var(--pd-c);
   color: #2f2f2f;
 }
 
-.aboutUs-WhoAreWe {
+.aboutUs-text {
+  font-family: "Bahnschrift";
+}
+
+.aboutUs-section1 {
   display: flex;
-  flex-direction: row;
   gap: 100px;
   margin-bottom: 100px;
 }
 
-.aboutUs-WhoAreWeImg {
+.aboutUs-section1-img {
   margin-left: -25px;
 }
 
-.aboutUs-Paragraph {
-  font-family: "Bahnschrift";
-  font-weight: 400;
-  font-size: var(--fs-AU-p);
-  line-height: var(--fh-AU-p);
-  text-align: justify;
-}
-
-.aboutUs-Title {
-  font-family: "Bahnschrift";
-  font-style: normal;
+.aboutUs-title {
   font-weight: 700;
-  font-size: var(--fs-AU-h);
+  font-size: var(--AU-fs-heading);
   letter-spacing: 0.05em;
   margin-bottom: 20px;
 }
 
-.aboutUs-Aim {
+.aboutUs-paragraph {
+  font-weight: 400;
+  font-size: var(--AU-fs-paragraph);
+  line-height: var(--AU-lh-paragraph);
+  text-align: justify;
+}
+
+.aboutUs-section2 {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   gap: 100px;
 }
 
-.aboutUs-AimImg {
+.aboutUs-section2-img {
   margin-right: -30px;
 }
-/*Responsive settings*/
 
+/*Responsive settings*/
 @media (max-width: 1400px) {
   :root {
-    --fs-AU-h: 3rem; /* heading font size */
-    --fs-AU-p: 1.2rem; /* paragraph font size*/
-    --fh-AU-p: 30px; /* paragraph line height */
+    --AU-fs-heading: 3rem; /* heading font size */
+    --AU-fs-paragraph: 1.2rem; /* paragraph font size*/
+    --AU-lh-paragraph: 30px; /* paragraph line height */
   }
-  .aboutUs-WhoAreWe {
+  .aboutUs-section1 {
     gap: 60px;
     margin-bottom: 70px;
   }
-
-  .aboutUs-Title {
+  .aboutUs-title {
     margin-bottom: 10px;
   }
-
-  .aboutUs-Aim {
+  .aboutUs-section2 {
     gap: 60px;
   }
-  .aboutUs-WhoAreWeImg,
-  .aboutUs-AimImg {
+  .aboutUs-section1-img,
+  .aboutUs-section2-img {
     width: 500px;
   }
 }
 
 @media (max-width: 1200px) {
   :root {
-    --fs-AU-h: 2.3rem; /* heading font size */
-    --fs-AU-p: 1rem; /* paragraph font size*/
-    --fh-AU-p: 30px; /* paragraph line height */
+    --AU-fs-heading: 2.3rem; /* heading font size */
+    --AU-fs-paragraph: 1rem; /* paragraph font size*/
+    --AU-lh-paragraph: 30px; /* paragraph line height */
   }
-
-  .aboutUs-WhoAreWe {
-    gap: 60px;
-    margin-bottom: 70px;
-  }
-  .aboutUs-WhoAreWeImg,
-  .aboutUs-AimImg {
+  .aboutUs-section1-img,
+  .aboutUs-section2-img {
     width: 450px;
   }
 }
 
 @media (max-width: 960px) {
   :root {
-    --fs-AU-h: 2rem; /* heading font size */
-    --fs-AU-p: 1.1rem; /* paragraph font size*/
-    --fh-AU-p: 25px; /* paragraph line height */
+    --AU-fs-heading: 2rem; /* heading font size */
+    --AU-fs-paragraph: 1.1rem; /* paragraph font size*/
+    --AU-lh-paragraph: 25px; /* paragraph line height */
   }
-  .aboutUs-WhoAreWe {
+  .aboutUs-section1 {
     gap: 40px;
   }
-  .aboutUs-WhoAreWeImg,
-  .aboutUs-AimImg {
+  .aboutUs-section1-img,
+  .aboutUs-section2-img {
     width: 420px;
   }
 }
 
 @media (max-width: 900px) {
   :root {
-    --fs-AU-h: 2.4rem; /* heading font size */
-    --fs-AU-p: 1.1rem; /* paragraph font size*/
-    --fh-AU-p: 30px; /* paragraph line height */
+    --AU-fs-heading: 2.4rem; /* heading font size */
+    --AU-fs-paragraph: 1.1rem; /* paragraph font size*/
+    --AU-lh-paragraph: 30px; /* paragraph line height */
   }
   .aboutUs-figureContainer {
     display: flex;
     justify-content: center;
   }
-
-  .aboutUs-WhoAreWeImg,
-  .aboutUs-AimImg {
+  .aboutUs-section1-img,
+  .aboutUs-section2-img {
     width: 90%;
     margin: 0px 0px;
   }
-
-  .aboutUs-AimImg {
+  .aboutUs-section2-img {
     margin-right: 0px;
   }
-  .aboutUs-Title {
+  .aboutUs-title {
     margin-bottom: 10px;
   }
-  .aboutUs-WhoAreWe {
-    display: flex;
+  .aboutUs-section1 {
     flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
   }
-
-  .aboutUs-Aim {
+  .aboutUs-section2 {
     flex-direction: column-reverse;
     gap: 20px;
   }
@@ -147,40 +135,33 @@
 
 @media (max-width: 600px) {
   :root {
-    --fs-AU-h: 2.5rem; /* heading font size */
-    --fs-AU-p: 1.1rem; /* paragraph font size*/
-    --fh-AU-p: 30px; /* paragraph line height */
+    --AU-fs-heading: 2.5rem; /* heading font size */
+    --AU-fs-paragraph: 1.1rem; /* paragraph font size*/
+    --AU-lh-paragraph: 30px; /* paragraph line height */
   }
-  .aboutUs-WhoAreWeImg,
-  .aboutUs-AimImg {
+  .aboutUs-section1-img,
+  .aboutUs-section2-img {
     width: 100%;
-    margin: 0 auto 0 auto;
   }
-
-  .aboutUs-WhoAreWe {
+  .aboutUs-section1 {
     margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
   }
 }
 
 @media (max-width: 400px) {
   :root {
-    --fs-AU-h: 1.8rem; /* heading font size */
-    --fs-AU-p: 0.875rem; /* paragraph font size*/
-    --fh-AU-p: 23px; /* paragraph line height */
+    --AU-fs-heading: 1.8rem; /* heading font size */
+    --AU-fs-paragraph: 0.875rem; /* paragraph font size*/
+    --AU-lh-paragraph: 23px; /* paragraph line height */
   }
-
-  .aboutUs-Title {
+  .aboutUs-title {
     margin-bottom: 5px;
   }
-
-  .aboutUs-WhoAreWe {
+  .aboutUs-section1 {
     margin-bottom: 20px;
     gap: 10px;
   }
-
-  .aboutUs-Aim {
+  .aboutUs-section2 {
     gap: 10px;
   }
 }
