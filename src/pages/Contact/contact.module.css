@@ -20,6 +20,7 @@
   position: relative;
   gap: 50px;
 }
+
 .contact-column-left {
   width: 50%;
   display: flex;
@@ -60,7 +61,6 @@
 }
 
 /* -----------contact info hover settings----------- */
-
 /* social contact-links styles */
 .contact-links {
   display: flex;
@@ -236,6 +236,7 @@ textarea:focus {
   align-self: baseline;
   margin-top: 20px;
 }
+
 .color-clear-button {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
@@ -257,6 +258,7 @@ textarea:focus {
     linear-gradient(90deg, #62cff5, #c091fc);
   transform: translateY(-2px);
 }
+
 .color-clear-button:hover {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
@@ -305,6 +307,7 @@ textarea:focus {
   .contact-content {
     padding: 15px 25px;
   }
+
   .contact-get-in-touch {
     margin-left: -1px;
   }
@@ -321,9 +324,11 @@ textarea:focus {
   .contact-sendMessage {
     font-size: 1.24rem;
   }
+
   .contact-line {
     margin-top: 0px;
   }
+
   input[type="text"],
   .contact-drop-down {
     margin-top: 20px;
@@ -331,27 +336,33 @@ textarea:focus {
     height: 30px;
     padding: 6px 10px;
   }
+
   .contact-form-email-phone {
     margin-top: 20px;
     padding: 15px;
   }
+
   input[type="email"],
   input[type="phone"] {
     font-size: 0.62rem;
     height: 30px;
     padding: 6px 10px;
   }
+
   input[type="phone"] {
     margin-top: 20px;
   }
+
   .textarea {
     margin-top: 20px;
     height: 130px;
     padding: 6px 10px;
   }
+
   textarea[placeholder="Message"] {
     font-size: 0.875rem;
   }
+
   .contact-message-button {
     padding: 8px 17px;
   }
@@ -416,6 +427,7 @@ textarea:focus {
   .contact-column-left {
     width: 100%;
   }
+
   .contact-paragraph {
     margin-top: 10px;
   }
@@ -494,6 +506,7 @@ textarea:focus {
     padding: 15px;
     margin-top: 15px;
   }
+
   .contact-sendMessage {
     font-size: 1.4rem;
   }
@@ -519,6 +532,7 @@ textarea:focus {
   input[type="phone"] {
     margin-top: 15px;
   }
+
   .contact-extarea {
     padding: 12px 10px;
     margin-top: 15px;

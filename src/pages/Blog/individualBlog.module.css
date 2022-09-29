@@ -191,6 +191,7 @@
   .indBlg-headerContainer {
     margin-bottom: 15px;
   }
+
   .indBlg-author-img {
     width: 38px;
   }
@@ -207,6 +208,7 @@
     --IB-fs-author: 0.89rem;
     --IB-fs-paragraph: 0.875rem;
   }
+
   .indBlg-backButton-container {
     font-size: 1rem;
   }
@@ -214,10 +216,12 @@
   .indBlg-blogTitle {
     line-height: 26px;
   }
+
   .indBlg-headerContainer {
     gap: 5px;
     margin-bottom: 10px;
   }
+
   .indBlg-author-img {
     width: 35px;
   }
