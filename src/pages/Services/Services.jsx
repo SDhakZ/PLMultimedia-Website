@@ -9,21 +9,21 @@ import servicesData from "../../data/servicesData";
 import MainHeading from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 
-function Services() {
+export const Services = () => {
   const style = useSpring({
     from: { opacity: 0, scale: 0 },
     to: { opacity: 1, scale: 1 },
     config: { duration: 700, easing: easings.easeOutBack },
   });
   return (
-    <div className={ServicesCSS["ServicesPage"]}>
+    <div className={ServicesCSS["servicePage"]}>
       <MainHeading headingName="Our Services" />
       <animated.div style={style}>
         <DomainSearch />
       </animated.div>
 
       <div className={ServicesCSS["services-container"]}>
-        <div className={ServicesCSS.serviceCardSection}>
+        <div className={ServicesCSS["services-cardSection"]}>
           {servicesData.map((service) => {
             return (
               <ServiceCard
@@ -41,6 +41,4 @@ function Services() {
       </div>
     </div>
   );
-}
-
-export default Services;
+};

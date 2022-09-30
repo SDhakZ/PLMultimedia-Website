@@ -19,9 +19,9 @@ function HomeTop() {
     config: { duration: 2000, easing: easings.easeInOutBack },
   });
   return (
-    <div className={HomeTopCSS["Home-top"]}>
-      <div className={HomeTopCSS["Home-main"]}>
-        <div className={HomeTopCSS["Home-text"]}>
+    <div className={HomeTopCSS["home-top"]}>
+      <div className={HomeTopCSS["home-top-main"]}>
+        <div className={HomeTopCSS["home-top-text"]}>
           Let Us
           <TypeAnimation
             sequence={[
@@ -38,34 +38,34 @@ function HomeTop() {
             speed={15}
           />
         </div>
-        <figure className={HomeTopCSS["Home-img-collection"]}>
+        <figure className={HomeTopCSS["home-top-imgCollection"]}>
           <img
-            className={HomeTopCSS["leftbg"]}
+            className={HomeTopCSS["home-top-leftbg"]}
             src={require("../../../../assets/Images/Home-Image/leftBg.png")}
             alt="background"
           />
           <img
-            className={HomeTopCSS["rightbg"]}
+            className={HomeTopCSS["home-top-rightbg"]}
             src={require("../../../../assets/Images/Home-Image/rightBg.png")}
             alt="background"
           />
           <animated.div style={floatingManEnter}>
             <img
-              className={HomeTopCSS["floatingman"]}
+              className={HomeTopCSS["home-top-floatingman"]}
               src={require("../../../../assets/Images/Home-Image/floatingMan.png")}
               alt="floating man"
             />
           </animated.div>
           <animated.div style={planetEnter}>
             <img
-              className={HomeTopCSS["planet"]}
+              className={HomeTopCSS["home-top-planet"]}
               src={require("../../../../assets/Images/Home-Image/planet.png")}
               alt="planet"
             />
           </animated.div>
           <animated.div style={rocketEnter}>
             <img
-              className={HomeTopCSS["rocket"]}
+              className={HomeTopCSS["home-top-rocket"]}
               src={require("../../../../assets/Images/Home-Image/rocket.png")}
               alt="rocket"
             />

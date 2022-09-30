@@ -1,38 +1,40 @@
 :root {
-  --pd-Home-c: 80px 140px 100px;
-  /*container padding*/
-  --fs-Home-p: 1.3rem;
-  /* paragraph font size*/
-  --fh-Home-p: 35px;
-  /* paragraph line height */
+  --H-AU-pd-container: 80px 140px 100px; /*container padding*/
+  --H-AU-fs-paragraph: 1.3rem; /* paragraph font size*/
+  --H-AU-lh-paragraph: 35px; /* paragraph line height */
 }
 
 /* About us section */
 
-.Home-aboutUs-WhoAreWe {
+.home-aboutUs-WhoAreWe {
   display: flex;
   flex-direction: row;
   gap: 250px;
   margin-bottom: 100px;
 }
 
-.Home-aboutUs-images {
+.home-aboutUs-images {
   position: relative;
 }
 
-.leftgirl,
-.rightgroup {
+.home-aboutUs-leftgirl,
+.home-aboutUs-rightgroup {
   width: 300px;
 }
 
-.rightgroup {
+.home-aboutUs-rightgroup {
   position: absolute;
   top: 155px;
   left: 155px;
 }
-.Home-aboutUs-Title {
+
+.home-aboutUs-title,
+.home-aboutUs-paragraph {
   color: #2f2f2f;
   font-family: "Bahnschrift";
+}
+
+.home-aboutUs-title {
   font-size: 3.2rem;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -40,36 +42,35 @@
   margin-top: 3px;
 }
 
-.Home-aboutUs-Paragraph {
-  font-family: "Bahnschrift";
+.home-aboutUs-paragraph {
   font-weight: 400;
-  font-size: var(--fs-Home-p);
-  line-height: var(--fh-Home-p);
+  font-size: var(--H-AU-fs-paragraph);
+  line-height: var(--H-AU-lh-paragraph);
   text-align: justify;
   margin-top: 15px;
 }
 
 @media all and (max-width: 1200px) {
   :root {
-    --pd-Home-c: 50px 60px 70px;
-    --fs-Home-p: 1.2rem;
-    --fh-Home-p: 32px;
+    --H-AU-pd-container: 50px 60px 70px;
+    --H-AU-fs-paragraph: 1.2rem;
+    --H-AU-lh-paragraph: 32px;
   }
 
-  .Home-aboutUs-WhoAreWe {
+  .home-aboutUs-WhoAreWe {
     gap: 200px;
   }
 
-  .leftgirl,
-  .rightgroup {
+  .home-aboutUs-leftgirl,
+  .home-aboutUs-rightgroup {
     width: 230px;
   }
 
-  .rightgroup {
+  .home-aboutUs-rightgroup {
     left: 145px;
   }
 
-  .Home-aboutUs-Title {
+  .home-aboutUs-title {
     font-size: 3rem;
     letter-spacing: 0.04em;
     margin-bottom: 0px;
@@ -77,117 +78,106 @@
     margin-top: 15px;
   }
 }
+
 @media all and (max-width: 1000px) {
   :root {
-    --fh-Home-p: 29px;
+    --H-AU-lh-paragraph: 29px;
   }
-  .Home-aboutUs-Paragraph {
+  .home-aboutUs-paragraph {
     margin-top: 5px;
   }
 }
 @media all and (max-width: 960px) {
   :root {
-    --pd-Home-c: 50px 60px 70px;
-    --fs-Home-p: 1.08rem;
-    --fh-Home-p: 25px;
+    --H-AU-fs-paragraph: 1.08rem;
+    --H-AU-lh-paragraph: 25px;
   }
 
-  .Home-aboutUs-WhoAreWe {
+  .home-aboutUs-WhoAreWe {
     gap: 170px;
   }
 
-  .leftgirl,
-  .rightgroup {
+  .home-aboutUs-leftgirl,
+  .home-aboutUs-rightgroup {
     width: 200px;
   }
 
-  .rightgroup {
+  .home-aboutUs-rightgroup {
     top: 120px;
     left: 135px;
   }
 
-  .Home-aboutUs-Title {
+  .home-aboutUs-title {
     font-size: 2.3rem;
     letter-spacing: 0em;
     margin-bottom: 5px;
-    line-height: 50px;
     margin-top: 9px;
   }
 }
 
 @media all and (max-width: 800px) {
-  :root {
-    --pd-Home-c: 50px 60px 70px;
-    --fh-Home-p: 25px;
-  }
-
-  .Home-aboutUs-WhoAreWe {
+  .home-aboutUs-WhoAreWe {
     flex-direction: column-reverse;
   }
 
-  .Home-aboutUs-WhoAreWe {
+  .home-aboutUs-WhoAreWe {
     gap: 25px;
   }
 
-  .Home-aboutUs-images {
+  .home-aboutUs-images {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 0px;
   }
 
-  .Home-aboutUs-Title {
+  .home-aboutUs-title {
     font-size: 2.2rem;
     margin-top: 5px;
   }
 
-  .leftgirl,
-  .rightgroup {
+  .home-aboutUs-leftgirl,
+  .home-aboutUs-rightgroup {
     width: 45%;
   }
 
-  .rightgroup {
+  .home-aboutUs-rightgroup {
     position: static;
   }
 }
 
 @media all and (max-width: 600px) {
   :root {
-    --pd-Home-c: 20px 30px 40px;
-    --fs-Home-p: 1rem;
-    --fh-Home-p: 27px;
+    --H-AU-pd-container: 20px 30px 40px;
+    --H-AU-fs-paragraph: 1rem;
+    --H-AU-lh-paragraph: 27px;
   }
 
-  .Home-aboutUs-WhoAreWe {
+  .home-aboutUs-WhoAreWe {
     gap: 10px;
   }
 
-  .Home-aboutUs-Title {
+  .home-aboutUs-title {
     font-size: 2.1rem;
   }
 
-  .Home-aboutUs-images {
+  .home-aboutUs-images {
     gap: 17px;
     margin-top: 15px;
   }
 }
 @media all and (max-width: 400px) {
   :root {
-    --pd-Home-c: 30px 25px 50px;
-    --fs-Home-p: 0.9rem;
-    --fh-Home-p: 21px;
+    --H-AU-pd-container: 30px 25px 50px;
+    --H-AU-fs-paragraph: 0.9rem;
+    --H-AU-lh-paragraph: 21px;
   }
 
-  .Home-aboutUs-WhoAreWe {
-    gap: 10px;
-  }
-
-  .Home-aboutUs-Title {
+  .home-aboutUs-title {
     font-size: 2rem;
   }
 
-  .Home-aboutUs-images {
-    gap: 17px;
+  .home-aboutUs-images {
     margin-top: 7px;
   }
 }

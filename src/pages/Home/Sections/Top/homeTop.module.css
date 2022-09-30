@@ -1,25 +1,27 @@
-:root {
-  --fs-HT-staticText: 4.5rem;
-  --fs-HT-text: 6.5rem;
-  --vw-HT-homeTop: 43vw;
-  --iw-HT-rocket: 13%;
-  --iw-HT-planet: 9%;
-  --iw-HT-man: 25%;
-  --iw-HT-bg: 29%;
-}
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&display=swap");
-.Home-main {
+
+:root {
+  --H-T-fs-staticText: 4.5rem;
+  --H-T-fs-text: 6.5rem;
+  --H-T-vw-homeTop: 43vw;
+  --H-T-w-rocket: 13%;
+  --H-T-w-planet: 9%;
+  --H-T-w-man: 25%;
+  --H-T-w-background: 29%;
+}
+
+.home-top-main {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
 /*Text*/
-.Home-text {
+.home-top-text {
   position: absolute;
   left: 36%;
   top: 23%;
-  font-size: var(--fs-HT-staticText);
+  font-size: var(--H-T-fs-staticText);
   font-family: "Baloo 2";
   max-width: 650px;
   line-height: 1;
@@ -35,8 +37,8 @@
   animation-timing-function: ease;
 }
 
-.Home-text h1 {
-  font-size: var(--fs-HT-text);
+.home-top-text h1 {
+  font-size: var(--H-T-fs-text);
 }
 
 @keyframes animated_text {
@@ -52,31 +54,31 @@
 }
 /*Text*/
 
-.Home-top {
-  height: var(--vw-HT-homeTop);
+.home-top {
+  height: var(--H-T-vw-homeTop);
   overflow: hidden;
   display: relative;
 }
-.Home-img-collection {
+.home-top-imgCollection {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.leftbg {
-  width: var(--iw-HT-bg);
+.home-top-leftbg {
+  width: var(--H-T-w-background);
   position: absolute;
 }
 
-.rightbg {
-  width: var(--iw-HT-bg);
+.home-top-rightbg {
+  width: var(--H-T-w-background);
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.floatingman {
-  width: var(--iw-HT-man);
+.home-top-floatingman {
+  width: var(--H-T-w-man);
   position: absolute;
   bottom: 3%;
   left: 7%;
@@ -86,8 +88,8 @@
   animation-timing-function: ease-in-out;
 }
 
-.planet {
-  width: var(--iw-HT-planet);
+.home-top-planet {
+  width: var(--H-T-w-planet);
   position: absolute;
   top: 7%;
   left: 5%;
@@ -97,8 +99,8 @@
   animation-timing-function: ease;
 }
 
-.rocket {
-  width: var(--iw-HT-rocket);
+.home-top-rocket {
+  width: var(--H-T-w-rocket);
   position: absolute;
   left: 16%;
   top: 10%;
@@ -146,10 +148,10 @@
 
 @media all and (max-width: 1400px) {
   :root {
-    --fs-HT-staticText: 3.5rem;
-    --fs-HT-text: 5rem;
+    --H-T-fs-staticText: 3.5rem;
+    --H-T-fs-text: 5rem;
   }
-  .Home-text {
+  .home-top-text {
     left: 35%;
     top: 25%;
   }
@@ -157,34 +159,33 @@
 
 @media all and (max-width: 1200px) {
   :root {
-    --fs-HT-staticText: 3rem;
-    --fs-HT-text: 4rem;
-    --vw-HT-homeTop: 45vw;
-    --iw-HT-rocket: 11%;
-    --iw-HT-planet: 10%;
-    --iw-HT-man: 26%;
-    --iw-HT-bg: 31%;
+    --H-T-fs-staticText: 3rem;
+    --H-T-fs-text: 4rem;
+    --H-T-vw-homeTop: 45vw;
+    --H-T-w-rocket: 11%;
+    --H-T-w-planet: 10%;
+    --H-T-w-man: 26%;
+    --H-T-w-background: 31%;
   }
-  .Home-text {
-    left: 35%;
+  .home-top-text {
     top: 30%;
   }
-  .rightbg {
+  .home-top-rightbg {
     right: -5%;
   }
 }
 
 @media all and (max-width: 960px) {
   :root {
-    --fs-HT-staticText: 2.3rem;
-    --fs-HT-text: 3.3rem;
-    --vw-HT-homeTop: 50vw;
-    --iw-HT-rocket: 14%;
-    --iw-HT-planet: 11%;
-    --iw-HT-man: 28%;
-    --iw-HT-bg: 33%;
+    --H-T-fs-staticText: 2.3rem;
+    --H-T-fs-text: 3.3rem;
+    --H-T-vw-homeTop: 50vw;
+    --H-T-w-rocket: 14%;
+    --H-T-w-planet: 11%;
+    --H-T-w-man: 28%;
+    --H-T-w-background: 33%;
   }
-  .Home-text {
+  .home-top-text {
     left: 37%;
     top: 27%;
     max-width: 320px;
@@ -193,98 +194,93 @@
 
 @media all and (max-width: 800px) {
   :root {
-    --fs-HT-text: 2.6rem;
-    --fs-HT-staticText: 1.6rem;
-    --vw-HT-homeTop: 50vw;
-    --iw-HT-rocket: 14%;
-    --iw-HT-planet: 11%;
-    --iw-HT-man: 25%;
-    --iw-HT-bg: 35%;
+    --H-T-fs-text: 2.6rem;
+    --H-T-fs-staticText: 1.6rem;
+    --H-T-w-man: 25%;
+    --H-T-w-background: 35%;
   }
-  .Home-text {
+  .home-top-text {
     left: 34%;
     top: 32%;
     max-width: 300px;
   }
-  .leftbg {
+  .home-top-leftbg {
     left: -5%;
   }
 }
 
 @media all and (max-width: 600px) {
   :root {
-    --fs-HT-text: 2.3rem;
-    --fs-HT-staticText: 1.3rem;
-    --vw-HT-homeTop: 60vw;
-    --iw-HT-rocket: 14%;
-    --iw-HT-planet: 9%;
-    --iw-HT-man: 23%;
-    --iw-HT-bg: 50%;
+    --H-T-fs-text: 2.3rem;
+    --H-T-fs-staticText: 1.3rem;
+    --H-T-vw-homeTop: 60vw;
+    --H-T-w-rocket: 12%;
+    --H-T-w-planet: 9%;
+    --H-T-w-man: 23%;
+    --H-T-w-background: 50%;
   }
 
-  .Home-text {
+  .home-top-text {
     left: 27%;
     top: 32%;
-    max-width: 300px;
   }
 
-  .leftbg {
+  .home-top-leftbg {
     left: -25%;
   }
 
-  .rightbg {
+  .home-top-rightbg {
     right: -10%;
   }
 
-  .floatingman {
+  .home-top-floatingman {
     bottom: 10%;
     left: 5%;
   }
 
-  .planet {
+  .home-top-planet {
     left: 2%;
   }
 
-  .rocket {
+  .home-top-rocket {
     left: 10%;
   }
 }
 
 @media all and (max-width: 400px) {
   :root {
-    --fs-HT-text: 1.8rem;
-    --fs-HT-staticText: 1rem;
-    --vw-HT-homeTop: 50vw;
-    --iw-HT-rocket: 13%;
-    --iw-HT-planet: 8%;
-    --iw-HT-man: 26%;
-    --iw-HT-bg: 50%;
+    --H-T-fs-text: 1.8rem;
+    --H-T-fs-staticText: 1rem;
+    --H-T-vw-homeTop: 50vw;
+    --H-T-w-rocket: 13%;
+    --H-T-w-planet: 8%;
+    --H-T-w-man: 26%;
   }
 
-  .Home-text {
+  .home-top-text {
     left: 20%;
     top: 30%;
     max-width: 200px;
   }
 
-  .floatingman {
+  .home-top-floatingman {
     bottom: 1%;
     left: 73%;
   }
 
-  .leftbg {
+  .home-top-leftbg {
     left: -30%;
   }
 
-  .rightbg {
+  .home-top-rightbg {
     right: -20%;
   }
-  .planet {
+  .home-top-planet {
     top: 7%;
     left: 1%;
   }
 
-  .rocket {
+  .home-top-rocket {
     left: 7%;
     top: 15%;
   }

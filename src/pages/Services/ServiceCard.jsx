@@ -29,22 +29,24 @@ function getPathSuffix(serviceNumber) {
   return path;
 }
 
-function ServiceCard(props) {
+export const ServiceCard = (props) => {
   return (
-    <div className={ServicesCSS.serviceCard}>
+    <div className={ServicesCSS["serviceCard"]}>
       <img
-        className={ServicesCSS.logo}
+        className={ServicesCSS["services-logo"]}
         src={props.logo}
         alt="services logo"
       ></img>
-      <div className={ServicesCSS.aboutLogo}>
-        <p className={ServicesCSS.cardName}>
+      <div className={ServicesCSS["services-aboutLogo"]}>
+        <p className={ServicesCSS["services-cardName"]}>
           <b>{props.title}</b>
         </p>
-        <p className={ServicesCSS.cardDescription}>{props.description}</p>
+        <p className={ServicesCSS["services-cardDescription"]}>
+          {props.description}
+        </p>
       </div>
       <Link
-        className={ServicesCSS.contactButton}
+        className={ServicesCSS["services-contactButton"]}
         onClick={() => {
           window.scrollTo({ top: 0 });
         }}
@@ -56,14 +58,12 @@ function ServiceCard(props) {
       </Link>
     </div>
   );
-}
+};
 
-function MoreCard(props) {
+export const MoreCard = (props) => {
   return (
-    <div className={ServicesCSS.serviceCard}>
-      <p className={ServicesCSS.moreDetails}>{props.moreDetails}</p>
+    <div className={ServicesCSS["serviceCard"]}>
+      <p className={ServicesCSS["services-moreDetails"]}>{props.moreDetails}</p>
     </div>
   );
-}
-
-export { ServiceCard, MoreCard };
+};

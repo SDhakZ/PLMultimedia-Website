@@ -6,7 +6,8 @@ import ErrorPage from "../../../../components/ErrorPage/ErrorPage";
 import HomeBlog from "./homeBlogs.module.css";
 import { Link } from "react-router-dom";
 import MainHeading from "../../../../components/MainHeading/MainHeading";
-function HomeBlogs() {
+
+export const HomeBlogs = () => {
   const host = "http://localhost:1338";
   const { loading, data, error } = useFetch(
     `${host}/api/blogs?populate=blogImage,authorInfo.profilePic`
@@ -16,10 +17,10 @@ function HomeBlogs() {
   if (error) return ErrorPage;
 
   return (
-    <div className={HomeBlog["homeBlogComponent"]}>
+    <div className={HomeBlog["home-blogComponent"]}>
       <MainHeading headingName="Tune in into our blogs" />
       <div
-        className={HomeBlog["blogCardsContainer"]}
+        className={HomeBlog["home-blog-cardsContainer"]}
         onClick={() => {
           window.scrollTo({ top: 0 });
         }}
@@ -44,7 +45,7 @@ function HomeBlogs() {
       </div>
       <Link
         to={"/blog"}
-        className={HomeBlog["viewMore"]}
+        className={HomeBlog["home-blog-viewMore"]}
         onClick={() => {
           window.scrollTo({ top: 0 });
         }}
@@ -53,6 +54,4 @@ function HomeBlogs() {
       </Link>
     </div>
   );
-}
-
-export default HomeBlogs;
+};

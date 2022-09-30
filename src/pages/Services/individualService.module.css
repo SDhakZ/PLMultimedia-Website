@@ -1,10 +1,10 @@
 :root {
-  --fs-IS-h1: 2.8rem; /* heading font size for other Services*/
-  --fs-IS-h2: 2.3rem; /* heading font size for need help*/
-  --fs-IS-p: 1.25rem; /* paragraph font size*/
-  --fs-IS-nl: 1.2rem; /* navlinks font size*/
-  --fs-IS-bt: 1.2rem; /* button font size */
-  --lh-IS-p: 30px; /* paragraph line height */
+  --IS-fs-heading1: 2.8rem; /* heading font size for Our Service*/
+  --IS-fs-heading2: 2.3rem; /* heading font size for nWant This Service*/
+  --IS-fs-paragraph: 1.25rem; /* paragraph font size*/
+  --IS-fs-navlink: 1.2rem; /* navlinks font size*/
+  --IS-fs-btn: 1.2rem; /* button font size */
+  --IS-lh-paragraph: 30px; /* paragraph line height */
 }
 
 .indService-back-container {
@@ -34,11 +34,11 @@
   flex-direction: column;
 }
 
-.indService-lft {
+.indService-left {
   width: 30%;
 }
 
-.indService-rt {
+.indService-right {
   width: 63%;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@
 
 .indService-otherServices {
   font-family: "Roboto";
-  font-size: var(--fs-IS-h1);
+  font-size: var(--IS-fs-heading1);
   margin-bottom: 25px;
   text-align: center;
 }
@@ -73,7 +73,7 @@
 .indService-contactButton {
   border-radius: 26px;
   font-family: "Roboto";
-  font-size: var(--fs-IS-bt);
+  font-size: var(--IS-fs-btn);
   font-weight: 600;
   padding: 13px 35px;
   color: #2f2f2f;
@@ -110,7 +110,7 @@
   font-family: "Roboto";
   font-weight: 500;
   color: #2f2f2f;
-  font-size: var(--fs-IS-nl);
+  font-size: var(--IS-fs-navlink);
   text-align: center;
   background-color: #fbfbfd;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -142,27 +142,27 @@
 .indService-needHelp {
   font-family: "Roboto";
   font-weight: 700;
-  font-size: var(--fs-IS-h2);
+  font-size: var(--IS-fs-heading2);
   margin-bottom: 10px;
   margin-top: 40px;
 }
 
-.indService-contactpara {
+.indService-contactParagraph {
   font-family: "Roboto";
   font-weight: 500;
-  font-size: var(--fs-IS-p);
+  font-size: var(--IS-fs-paragraph);
   margin-bottom: 20px;
   max-width: 300px;
   text-align: center;
-  line-height: var(--lh-IS-p);
+  line-height: var(--IS-lh-paragraph);
 }
 
-.indService-para {
+.indService-paragraph {
   font-family: "Roboto";
   font-weight: 400;
-  font-size: var(--fs-IS-p);
+  font-size: var(--IS-fs-paragraph);
   margin-top: 25px;
-  line-height: var(--lh-IS-p);
+  line-height: var(--IS-lh-paragraph);
   white-space: pre-line;
   vertical-align: bottom;
   text-align: justify;
@@ -170,95 +170,82 @@
 
 @media all and (max-width: 1400px) {
   :root {
-    --fs-IS-h1: 2.4rem; /* heading font size for other Services*/
-    --fs-IS-h2: 2rem; /* heading font size for need help*/
-    --fs-IS-p: 1.1rem; /* paragraph font size*/
-    --fs-IS-nl: 1.1rem; /* navlinks font size*/
-    --fs-IS-bt: 1.1rem; /* button font size */
-    --lh-IS-p: 28px; /* paragraph line height */
+    --IS-fs-heading1: 2.4rem;
+    --IS-fs-heading2: 2rem;
+    --IS-fs-paragraph: 1.1rem;
+    --IS-fs-navlink: 1.1rem;
+    --IS-fs-btn: 1.1rem;
+    --IS-lh-paragraph: 28px;
   }
 }
 
 @media all and (max-width: 1200px) {
   :root {
-    --fs-IS-h1: 2.3rem; /* heading font size for other Services*/
-    --fs-IS-h2: 1.9rem; /* heading font size for need help*/
-    --fs-IS-p: 1.05rem; /* paragraph font size*/
-    --fs-IS-nl: 1.05rem; /* navlinks font size*/
-    --fs-IS-bt: 1rem; /* button font size */
-    --lh-IS-p: 27px; /* paragraph line height */
+    --IS-fs-heading1: 2.3rem;
+    --IS-fs-heading2: 1.9rem;
+    --IS-fs-paragraph: 1.05rem;
+    --IS-fs-navlink: 1.05rem;
+    --IS-fs-btn: 1rem;
+    --IS-lh-paragraph: 27px;
   }
 }
 
 @media all and (max-width: 960px) {
   :root {
-    --fs-IS-h1: 1.8rem; /* heading font size for other Services*/
-    --fs-IS-h2: 1.4rem; /* heading font size for need help*/
-    --fs-IS-p: 1rem; /* paragraph font size*/
-    --fs-IS-nl: 1rem; /* navlinks font size*/
-    --fs-IS-bt: 1rem; /* button font size */
-    --lh-IS-p: 27px; /* paragraph line height */
+    --IS-fs-heading1: 1.8rem;
+    --IS-fs-heading2: 1.4rem;
+    --IS-fs-paragraph: 1rem;
+    --IS-fs-navlink: 1rem;
   }
+
   .indService-link {
-    font-weight: 500;
     padding: 6px;
   }
+
   .indService-link:not(:last-child) {
     margin-bottom: 10px;
   }
 
-  .indService-lft {
+  .indService-left {
     width: 35%;
   }
 
-  .indService-rt {
+  .indService-right {
     width: 60%;
   }
+
   .indService-otherServices {
     margin-bottom: 20px;
   }
 
-  .indService-contactpara {
-    font-family: "Roboto";
-    font-weight: 500;
-    font-size: var(--fs-IS-p);
-    margin-bottom: 20px;
-    max-width: 300px;
-    text-align: center;
-    line-height: var(--lh-IS-p);
-  }
-
-  .indService-para {
+  .indService-paragraph {
     margin-top: 10px;
   }
+
   .indService-needHelp {
     margin-bottom: 5px;
     margin-top: 25px;
   }
 
-  .indService-contactpara {
+  .indService-contactParagraph {
     font-weight: 400;
     max-width: 250px;
-    margin-bottom: 20px;
-    line-height: 25px;
   }
+
   .indService-contactButton {
-    border-radius: 26px;
     padding: 9px 20px;
   }
 }
 @media all and (max-width: 600px) {
   :root {
-    --fs-IS-h1: 2.2rem; /* heading font size for other Services*/
-    --fs-IS-h2: 1.7rem; /* heading font size for need help*/
-    --fs-IS-p: 1rem; /* paragraph font size*/
-    --fs-IS-nl: 1.05rem; /* navlinks font size*/
-    --fs-IS-bt: 1rem; /* button font size */
-    --lh-IS-p: 25px; /* paragraph line height */
+    --IS-fs-heading1: 2.2rem;
+    --IS-fs-heading2: 1.7rem;
+    --IS-fs-navlink: 1.05rem;
+    --IS-fs-btn: 1rem;
+    --IS-lh-paragraph: 25px;
   }
 
   .indService-flexbox {
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px 0px;
@@ -266,75 +253,61 @@
   }
   .indService-link {
     font-weight: 600;
-    padding: 10px;
   }
 
-  .indService-lft {
+  .indService-left {
     width: 100%;
   }
-  .indService-rt {
+
+  .indService-right {
     width: 100%;
   }
+
   .indService-otherServices {
     margin-bottom: 15px;
   }
 
-  .indService-para {
+  .indService-paragraph {
     margin-top: 10px;
   }
+
   .indService-needHelp {
     margin-top: 30px;
-    margin-bottom: 10px;
   }
 
-  .indService-contactpara {
-    max-width: 300px;
+  .indService-contactParagraph {
     margin-bottom: 15px;
-    line-height: 23px;
   }
+
   .indService-contactButton {
-    border-radius: 26px;
     padding: 10px 30px;
   }
 }
 
 @media all and (max-width: 400px) {
   :root {
-    --fs-IS-h1: 1.6rem; /* heading font size for other Services*/
-    --fs-IS-h2: 1.4rem; /* heading font size for need help*/
-    --fs-IS-p: 0.875rem; /* paragraph font size*/
-    --fs-IS-nl: 1rem; /* navlinks font size*/
-    --fs-IS-bt: 0.95rem; /* button font size */
-    --lh-IS-p: 23px; /* paragraph line height */
+    --IS-fs-heading1: 1.6rem;
+    --IS-fs-heading2: 1.4rem;
+    --IS-fs-paragraph: 0.875rem;
+    --IS-fs-navlink: 1rem;
+    --IS-fs-btn: 0.95rem;
+    --IS-lh-paragraph: 23px;
   }
 
-  .indService-flexbox {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
   .indService-link {
     font-weight: 500;
-    padding: 6px;
   }
 
-  .indService-otherServices {
-    margin-bottom: 15px;
-  }
-
-  .indService-para {
-    margin-top: 10px;
-  }
   .indService-needHelp {
-    margin-top: 30px;
     margin-bottom: 10px;
   }
 
-  .indService-contactpara {
+  .indService-contactParagraph {
     max-width: 250px;
     margin-bottom: 13px;
     line-height: 23px;
   }
+
   .indService-contactButton {
     border-radius: 26px;
     padding: 9px 28px;

@@ -5,12 +5,12 @@ import Topbar from "./layout/TopBar/Topbar";
 import { Home } from "./pages/Home/Home.jsx";
 import { About } from "./pages/About/About";
 import { Blog } from "./pages/Blog/Blog";
-import Services from "./pages/Services/Services";
+import { Services } from "./pages/Services/Services";
 import { Interns } from "./pages/Interns/Interns";
 import { Portfolio } from "./pages/Portfolio/Portfolio";
 import { FAQpage } from "./layout/Footer/FAQ/FAQ";
 import { Contact } from "./pages/Contact/Contact";
-import IndividualService from "./pages/Services/IndividualService";
+import { IndividualService } from "./pages/Services/IndividualService";
 import { IndividualBlog } from "./pages/Blog/IndividualBlog";
 import Footer from "./layout/Footer/Footer";
 

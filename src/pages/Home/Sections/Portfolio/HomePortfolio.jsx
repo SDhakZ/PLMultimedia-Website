@@ -5,16 +5,16 @@ import portfolioData from "../../../../data/portfolioData";
 import { Link } from "react-router-dom";
 function HomePortfolioCard(props) {
   return (
-    <button className={HomePortfolioCSS["Home-Portfolio-Card"]}>
-      <figure className={HomePortfolioCSS["Home-Portfolio-Image"]}>
+    <button className={HomePortfolioCSS["home-portfolio-card"]}>
+      <figure className={HomePortfolioCSS["home-portfolio-image"]}>
         <img src={props.img} alt="Project" />
       </figure>
 
-      <div className={HomePortfolioCSS["Home-Portfolio-body"]}>
-        <div className={HomePortfolioCSS["Home-Portfolio-Title"]}>
+      <div className={HomePortfolioCSS["home-portfolio-body"]}>
+        <div className={HomePortfolioCSS["home-portfolio-title"]}>
           {props.Heading}
         </div>
-        <div className={HomePortfolioCSS["Home-Portfolio-Brief"]}>
+        <div className={HomePortfolioCSS["home-portfolio-brief"]}>
           {props.brief}
         </div>
       </div>
@@ -22,11 +22,11 @@ function HomePortfolioCard(props) {
   );
 }
 
-function HomePortfolio() {
+export const HomePortfolio = () => {
   return (
-    <div className={HomePortfolioCSS["Home-Portfolio-Container"]}>
+    <div className={HomePortfolioCSS["home-portfolio-container"]}>
       <MainHeading headingName="Our Recent Works" />
-      <div className={HomePortfolioCSS["Home-Portfolio-Data"]}>
+      <div className={HomePortfolioCSS["home-portfolio-data"]}>
         {portfolioData.slice(0, 3).map((portfolio) => {
           return (
             <HomePortfolioCard
@@ -40,7 +40,7 @@ function HomePortfolio() {
       </div>
       <Link
         to={"/portfolio"}
-        className={HomePortfolioCSS["moreDetails"]}
+        className={HomePortfolioCSS["home-portfolio-moreDetails"]}
         onClick={() => {
           window.scrollTo({ top: 0 });
         }}
@@ -49,6 +49,6 @@ function HomePortfolio() {
       </Link>
     </div>
   );
-}
+};
 
 export default HomePortfolio;

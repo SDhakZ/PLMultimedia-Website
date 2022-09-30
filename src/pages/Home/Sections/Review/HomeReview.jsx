@@ -11,16 +11,18 @@ import "../SwiperJS/SwiperOverride.css";
 
 function HomeReviewCard(props) {
   return (
-    <div className={HomeReviewCSS["Home-comments-card"]}>
-      <div className={HomeReviewCSS["Home-comment-profile"]}>
+    <div className={HomeReviewCSS["home-review-card"]}>
+      <div className={HomeReviewCSS["home-review-profile"]}>
         <img
-          className={HomeReviewCSS["profile-Image"]}
+          className={HomeReviewCSS["home-review-profileImg"]}
           src={props.img}
           alt="reviewer"
         />
-        <div className={HomeReviewCSS["ratings"]}>
-          <div className={HomeReviewCSS["profile-Name"]}>{props.name}</div>
-          <div className={HomeReviewCSS["rate-us"]}>
+        <div className={HomeReviewCSS["home-review-ratings"]}>
+          <div className={HomeReviewCSS["home-review-profileName"]}>
+            {props.name}
+          </div>
+          <div className={HomeReviewCSS["home-review-rateUs"]}>
             <i className={`${HomeReviewCSS.star} fa-solid fa-star`} />
             <i className={`${HomeReviewCSS.star} fa-solid fa-star`} />
             <i className={`${HomeReviewCSS.star} fa-solid fa-star`} />
@@ -29,15 +31,15 @@ function HomeReviewCard(props) {
           </div>
         </div>
       </div>
-      <div className={HomeReviewCSS["review"]}>
+      <div className={HomeReviewCSS["home-review-container"]}>
         <i className={`${HomeReviewCSS.quote} fa-solid fa-quote-left`} />
-        <p className={HomeReviewCSS["review-text"]}>{props.comment}</p>
+        <p className={HomeReviewCSS["home-review-text"]}>{props.comment}</p>
       </div>
     </div>
   );
 }
 
-function HomeReview() {
+export const HomeReview = () => {
   return (
     <>
       <MainHeading headingName="What people think about us" />
@@ -49,7 +51,7 @@ function HomeReview() {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
         }}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -70,10 +72,10 @@ function HomeReview() {
           return (
             <SwiperSlide>
               <HomeReviewCard
-              key={review.id}
-              img={review.img}
-              name={review.name}
-              comment={review.comment}
+                key={review.id}
+                img={review.img}
+                name={review.name}
+                comment={review.comment}
               />
             </SwiperSlide>
           );
@@ -81,6 +83,4 @@ function HomeReview() {
       </Swiper>
     </>
   );
-}
-
-export default HomeReview;
+};

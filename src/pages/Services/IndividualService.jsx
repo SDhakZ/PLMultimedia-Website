@@ -24,7 +24,7 @@ function getDataFromPathType(path) {
   }
 }
 
-function IndividualService() {
+export const IndividualService = () => {
   const history = useHistory();
   const clickedLink = (toLoad) => {
     history.push("/services/" + toLoad);
@@ -59,7 +59,7 @@ function IndividualService() {
       </div>
       <MainHeading headingName={info.title} />
       <div className={IndividualServiceCSS["indService-flexbox"]}>
-        <div className={IndividualServiceCSS["indService-lft"]}>
+        <div className={IndividualServiceCSS["indService-left"]}>
           <div className={IndividualServiceCSS["indService-links"]}>
             <h1 className={IndividualServiceCSS["indService-otherServices"]}>
               Our Services
@@ -133,7 +133,7 @@ function IndividualService() {
             <h2 className={IndividualServiceCSS["indService-needHelp"]}>
               Want this service?
             </h2>
-            <p className={IndividualServiceCSS["indService-contactpara"]}>
+            <p className={IndividualServiceCSS["indService-contactParagraph"]}>
               We are always ready to help you if you have any problems or
               enquiries regarding the service.
             </p>
@@ -152,7 +152,7 @@ function IndividualService() {
           </div>
         </div>
 
-        <div className={IndividualServiceCSS["indService-rt"]}>
+        <div className={IndividualServiceCSS["indService-right"]}>
           <figure className={IndividualServiceCSS["indService-img"]}>
             <img src={info.image} />
             <a
@@ -162,13 +162,11 @@ function IndividualService() {
               {info.credit}
             </a>
           </figure>
-          <p className={IndividualServiceCSS["indService-para"]}>
+          <p className={IndividualServiceCSS["indService-paragraph"]}>
             {info.moreDetails}
           </p>
         </div>
       </div>
     </div>
   );
-}
-
-export default IndividualService;
+};

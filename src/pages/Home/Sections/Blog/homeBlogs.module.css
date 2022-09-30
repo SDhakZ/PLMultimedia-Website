@@ -1,10 +1,10 @@
-.homeBlogComponent {
+.home-blogComponent {
   display: flex;
   flex-direction: column;
   padding: var(--pd-c);
 }
 
-.blogCardsContainer {
+.home-blog-cardsContainer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -12,7 +12,7 @@
   flex-wrap: wrap;
 }
 
-.viewMore {
+.home-blog-viewMore {
   font-family: "Roboto";
   text-decoration: none;
   color: "#0e63e3";
@@ -24,18 +24,18 @@
   margin-top: 20px;
   transition: all 0.4s ease;
 }
-.viewMore:hover {
+.home-blog-viewMore:hover {
   color: #62cff5;
 }
 
 @media screen and (max-width: 1400px) {
-  .blogCardsContainer {
+  .home-blog-cardsContainer {
     justify-content: space-evenly;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .viewMore {
+  .home-blog-viewMore {
     font-size: 1rem;
   }
 }

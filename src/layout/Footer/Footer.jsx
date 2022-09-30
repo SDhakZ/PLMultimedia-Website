@@ -81,20 +81,26 @@ function Footer() {
           <p>Question or Feedback</p>
           <p>We would love to hear suggestions from you</p>
           <div className={FooterCSS["footer-icons"]}>
-            <a href="mailto: info@plmultimediaservice.com">
+            <a href="mailto: info@plmultimediaservice.com" target="_blank">
               <i className={`${FooterCSS.envelope} fa-solid fa-envelope`}></i>
             </a>
-            <a href="https://www.linkedin.com/feed/">
+            <a
+              href="https://www.linkedin.com/in/pl-multimedia-service-pvt-ltd-b06636251/"
+              target="_blank"
+            >
               <i
                 className={`${FooterCSS.linkedin} fa-brands fa-linkedin-in`}
               ></i>
             </a>
-            <a href="https://www.instagram.com/instagram/">
+            <a href="https://www.instagram.com/instagram/" target="_blank">
               <i
                 className={`${FooterCSS.instagram} fa-brands fa-instagram`}
               ></i>
             </a>
-            <a href="https://www.facebook.com/plmultimediaservice">
+            <a
+              href="https://www.facebook.com/plmultimediaservice"
+              target="_blank"
+            >
               <i
                 className={`${FooterCSS.facebook} fa-brands fa-facebook-f`}
               ></i>

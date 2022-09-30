@@ -1,27 +1,27 @@
-.Home-Container {
+.home-container {
   overflow-x: hidden;
 }
 
-.Home-aboutUs {
+.home-aboutUs {
   background-image: linear-gradient(#77b5ff, #fff);
-  padding: var(--pd-Home-c);
+  padding: var(--H-AU-pd-container);
 }
 
-.Home-services {
+.home-services {
   height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.Home-recent-works {
+.home-recentWorks {
   background: transparent;
   height: 500px;
   padding: var(--pd-c);
 }
 
-.Home-what-ppl-think {
-  background-image: linear-gradient(180deg, #fbfbfd 15.43%, #d0d4f9 100%);
+.home-review {
+  background-image: linear-gradient(180deg, #fff 15.43%, #d0d4f9 100%);
   height: 700px;
   display: flex;
   flex-direction: column;
@@ -30,26 +30,26 @@
 }
 
 @media all and (max-width: 1425px) {
-  .Home-recent-works {
+  .home-recentWorks {
     height: 720px;
   }
 }
 
-@media all and (max-width:1200px){
-  .Home-what-ppl-think{
+@media all and (max-width: 1200px) {
+  .home-review {
     padding-bottom: 10px;
   }
 }
 @media all and (max-width: 700px) {
-  .Home-recent-works {
+  .home-recentWorks {
     height: 1100px;
   }
 }
 @media all and (max-width: 600px) {
-  .Home-recent-works {
+  .home-recentWorks {
     height: 1010px;
   }
-  .Home-services {
+  .home-services {
     height: 600px;
   }
 }
