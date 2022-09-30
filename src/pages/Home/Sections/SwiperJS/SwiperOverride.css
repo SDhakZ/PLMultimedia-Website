@@ -9,6 +9,7 @@
 .swiper {
   height: 570px;
   width: 95%;
+  z-index: 0;
 }
 
 .swiper-slide {

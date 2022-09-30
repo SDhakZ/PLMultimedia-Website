@@ -39,7 +39,9 @@ export const Home = () => {
       <section data-aos="zoom-in" className={HomeCSS["Home-blogs"]}>
         <HomeBlogs />
       </section>
-      <section className={HomeCSS["Home-what-ppl-think"]}></section>
+      <section className={HomeCSS["Home-what-ppl-think"]}>
+        <HomeReview />
+      </section>
       <GoToTop />
     </div>
   );
