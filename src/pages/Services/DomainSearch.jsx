@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DomainCSS from "./domainSearch.module.css";
 
-function DomainSearch() {
+export const DomainSearch = () => {
   const [domain, updateDomain] = useState("");
   const [informUser, setInformUser] = useState(
-    <p className={DomainCSS.informUser}>
+    <p className={DomainCSS["domain-informUser"]}>
       Enter your domain to check if its available
     </p>
   );
@@ -32,34 +32,46 @@ function DomainSearch() {
         console.log(response);
         if (valid === false) {
           setInformUser(
-            <p className={DomainCSS.informUser} style={{ color: "red" }}>
+            <p
+              className={DomainCSS["domain-informUser"]}
+              style={{ color: "red" }}
+            >
               The domain you have entered is invalid! please try again.
             </p>
           );
         } else {
           if (available === false) {
             setInformUser(
-              <p className={DomainCSS.informUser} style={{ color: "red" }}>
+              <p
+                className={DomainCSS["domain-informUser"]}
+                style={{ color: "red" }}
+              >
                 The domain you have entered is already taken! try another
                 domain.
               </p>
             );
           } else if (available === true) {
             setInformUser(
-              <p className={DomainCSS.informUser} style={{ color: "green" }}>
-                The domain you have entered is available!!! "{" "}
+              <p
+                className={DomainCSS["domain-informUser"]}
+                style={{ color: "green" }}
+              >
+                The domain you have entered is available!!! "
                 <Link
                   to="/contact"
                   style={{ color: "#0e63e3", textDecoration: "none" }}
                 >
                   Contact us
-                </Link>{" "}
+                </Link>
                 " to register your domain.
               </p>
             );
           } else {
             setInformUser(
-              <p className={DomainCSS.informUser} style={{ color: "red" }}>
+              <p
+                className={DomainCSS["domain-informUser"]}
+                style={{ color: "red" }}
+              >
                 Some unexpected error has occured please try again.
               </p>
             );
@@ -71,32 +83,33 @@ function DomainSearch() {
 
   return (
     //This is the domain search component
-    <div className={DomainCSS.domainSearchSection}>
-      <div className={DomainCSS.domHeader}>
+    <div className={DomainCSS["domain-searchSection"]}>
+      <div className={DomainCSS["domain-header"]}>
         <img
-          className={DomainCSS.domHeadImg}
+          className={DomainCSS["domain-headImg"]}
           src={require("../../assets/Logo/www.png")}
           alt="Search logo"
         />
-        <h1 className={DomainCSS.domHeadTitle}>
+        <h1 className={DomainCSS["domain-headTitle"]}>
           Search The Availability of Your Domain
         </h1>
       </div>
 
       {informUser}
 
-      <div className={DomainCSS.domFooter}>
+      <div className={DomainCSS["domain-footer"]}>
         <input
-          className={DomainCSS.textField}
+          className={DomainCSS["domain-textField"]}
           onChange={(text) => updateDomain(text.target.value)}
           placeholder="Enter domain name..."
         ></input>
-        <button className={DomainCSS.searchButton} onClick={() => getData()}>
+        <button
+          className={DomainCSS["domain-searchButton"]}
+          onClick={() => getData()}
+        >
           Search
         </button>
       </div>
     </div>
   );
-}
-
-export default DomainSearch;
+};

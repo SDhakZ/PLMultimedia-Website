@@ -8,9 +8,9 @@ function Topbar() {
         <a href="#">
           <i className="fa-solid fa-phone"></i>+977 9860283950
         </a>
-        <a href="mailto:internships@plmultimediaservice.com">
+        <a href="mailto: info@plmultimediaservice.com">
           <i className="fa-solid fa-envelope"></i>
-          internships@plmultimediaservice.com
+          info@plmultimediaservice.com
         </a>
         <a href="https://goo.gl/maps/47BJnRvNCWqCdfkQ6">
           <i className="fa-solid fa-location-dot"></i>Chitwan, Nepal

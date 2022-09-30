@@ -1,11 +1,11 @@
 :root {
-  --fs-I-h: 1.35rem; /* heading name font size */
-  --fs-I-p: 1rem; /* paragraph font size*/
-  --fs-I-d: 0.9rem; /* date font size */
-  --gap-I-intern-card: 28px; /* paragraph line height */
-  --img-I-wh: 95px; /* logo width */
-  --br-I-c: 20px; /* Border radius for container */
-  --br-I-pc: 20px; /* Border radius for picture container */
+  --I-fs-heading: 1.35rem; /* heading name font size */
+  --I-fs-paragraph: 1rem; /* paragraph font size*/
+  --I-fs-date: 0.9rem; /* date font size */
+  --I-gap-internDetails: 2.5px 0; /*intern details gap*/
+  --I-w-image: 95px; /* image width */
+  --I-br-container: 20px; /* Border radius for container */
+  --I-br-picture: 20px; /* Border radius for picture container */
 }
 
 .interns-container {
@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-.intern-categories {
+.interns-categories {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -30,32 +30,32 @@
   margin-bottom: 30px;
 }
 
-.intern-fieldDropdown {
+.interns-fieldDropdown {
   padding: 12px 15px;
   display: inline-block;
   border-radius: 10px;
   box-sizing: border-box;
-  border: 0px;
+  border: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1.1rem;
   transition: all 0.4s;
 }
 
-.intern-fieldDropdown:focus {
+.interns-fieldDropdown:focus {
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.intern-lft {
+.interns-left {
   display: flex;
   gap: 20px;
 }
 
-.intern-card {
+.interns-card {
   max-width: 480px;
   min-width: 420px;
   background-color: rgb(255, 255, 255);
-  border-radius: var(--br-I-c);
+  border-radius: var(--I-br-container);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   justify-content: space-between;
@@ -67,7 +67,7 @@
   transition: all 0.5s;
 }
 
-.intern-card:hover {
+.interns-card:hover {
   filter: drop-shadow(1px 2px 8px var(--shadow-color));
   --shadow-color: rgba(57, 112, 223, 0.705);
   transform: translateY(-2px);
@@ -75,17 +75,18 @@
 }
 
 .interns-picContainer {
-  width: var(--img-I-wh);
-  height: var(--img-I-wh);
+  width: var(--I-w-image);
+  height: var(--I-w-image);
   overflow: hidden;
-  border-radius: var(--br-I-pc);
+  border-radius: var(--I-br-picture);
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   transition: all 0.4s;
 }
-.intern-card:hover .interns-picContainer {
+.interns-card:hover .interns-picContainer {
   box-shadow: rgba(54, 108, 224, 0.568) 0px 5px 15px 0px;
 }
+
 .interns-detailsContainer {
   display: flex;
   flex-direction: column;
@@ -96,21 +97,21 @@
   width: 100%;
 }
 
-.intern-name {
+.interns-name {
   font-weight: 600;
-  font-size: var(--fs-I-h);
+  font-size: var(--I-fs-heading);
   color: #2f2f2f;
 }
 
 .interns-detail {
-  font-size: var(--fs-I-p);
+  font-size: var(--I-fs-paragraph);
   display: flex;
   flex-direction: column;
-  gap: 2.5px 0;
+  gap: var(--I-gap-internDetails);
   font-weight: 400;
 }
 
-.interns-rt {
+.interns-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -121,31 +122,33 @@
 }
 
 .mail {
-  font-size: calc(var(--fs-I-p) + 0.6rem);
+  font-size: calc(var(--I-fs-paragraph) + 0.6rem);
   color: #3ec1ee;
   transition: all 0.5s;
   margin-right: 5px;
 }
+
 .mail:hover {
   color: #3e76ee;
 }
 
-.intern-date {
-  font-size: var(--fs-I-d);
+.interns-date {
+  font-size: var(--I-fs-date);
   font-weight: 500;
   color: #676767;
 }
 
 @media all and (max-width: 1765px) {
   :root {
-    --img-I-wh: 85px; /* logo width */
+    --I-w-image: 85px;
   }
+
   .interns-flexbox {
     gap: 30px 30px;
     justify-content: space-evenly;
   }
 
-  .intern-card {
+  .interns-card {
     max-width: 45%;
     min-width: 455px;
     padding: 13px;
@@ -155,29 +158,23 @@
 
 @media all and (max-width: 1400px) {
   :root {
-    --fs-I-h: 1.15rem; /* heading name font size */
-    --fs-I-p: 0.95rem; /* paragraph font size*/
-    --fs-I-d: 0.9rem; /* date font size */
-    --gap-I-intern-card: 28px; /* paragraph line height */
-    --img-I-wh: 80px; /* logo width */
-  }
-  .interns-flexbox {
-    justify-content: space-evenly;
+    --I-fs-heading: 1.15rem;
+    --I-fs-paragraph: 0.95rem;
+    --I-fs-date: 0.9rem;
+    --I-w-image: 80px;
   }
 
-  .intern-card {
-    max-width: 45%;
+  .interns-card {
     min-width: 360px;
-    padding: 13px;
   }
 
-  .intern-categories {
+  .interns-categories {
     gap: 20px;
     font-size: 1.1rem;
     margin-bottom: 30px;
   }
 
-  .intern-fieldDropdown {
+  .interns-fieldDropdown {
     padding: 10px 13px;
     font-size: 1rem;
   }
@@ -185,120 +182,104 @@
 
 @media all and (max-width: 1200px) {
   :root {
-    --fs-I-h: 1.05rem; /* heading name font size */
-    --fs-I-p: 0.9rem; /* paragraph font size*/
-    --fs-I-d: 0.8rem; /* date font size */
-    --gap-I-intern-card: 28px; /* paragraph line height */
-    --img-I-wh: 80px; /* logo width */
-    --br-I-c: 18px; /* Border radius for container */
-    --br-I-pc: 18px; /* Border radius for picture container */
-  }
-  .interns-flexbox {
-    gap: 25px 25px;
-    justify-content: space-evenly;
+    --I-fs-heading: 1.05rem;
+    --I-fs-paragraph: 0.9rem;
+    --I-fs-date: 0.8rem;
+    --I-br-container: 18px;
+    --I-br-picture: 18px;
   }
 
-  .intern-card {
-    max-width: 45%;
+  .interns-flexbox {
+    gap: 25px 25px;
+  }
+
+  .interns-card {
     min-width: 380px;
-    padding: 13px;
   }
 }
 
 @media all and (max-width: 960px) {
   :root {
-    --fs-I-h: 1rem; /* heading name font size */
-    --fs-I-p: 0.85rem; /* paragraph font size*/
-    --fs-I-d: 0.75rem; /* date font size */
-    --gap-I-intern-card: 28px; /* paragraph line height */
-    --img-I-wh: 70px; /* logo width */
-    --br-I-c: 18px; /* Border radius for container */
-    --br-I-pc: 18px; /* Border radius for picture container */
+    --I-fs-heading: 1rem;
+    --I-fs-paragraph: 0.85rem;
+    --I-fs-date: 0.75rem;
+    --I-w-image: 70px;
+    --I-br-container: 18px;
+    --I-br-picture: 18px;
+    --I-gap-internDetails: 1px 0;
   }
-  .intern-categories {
+
+  .interns-categories {
     gap: 20px;
     font-size: 1rem;
     margin-bottom: 30px;
   }
 
-  .intern-fieldDropdown {
+  .interns-fieldDropdown {
     padding: 8px 9px;
     font-size: 0.98rem;
   }
 
-  .intern-label {
+  .interns-label {
     font-size: 1rem;
   }
+
   .interns-flexbox {
     gap: 20px 20px;
     justify-content: space-evenly;
   }
 
-  .intern-card {
-    max-width: 45%;
+  .interns-card {
     min-width: 340px;
     padding: 15px;
     gap: 5px;
-  }
-
-  .interns-detail {
-    gap: 1px 0;
   }
 }
 
 @media all and (max-width: 890px) {
   :root {
-    --fs-I-h: 1.2rem; /* heading name font size */
-    --fs-I-p: 0.9rem; /* paragraph font size*/
-    --fs-I-d: 0.75rem; /* date font size */
-    --gap-I-intern-card: 28px; /* paragraph line height */
-    --img-I-wh: 80px; /* logo width */
-  }
-  .interns-flexbox {
-    gap: 25px 25px;
-    justify-content: space-evenly;
+    --I-fs-heading: 1.2rem;
+    --I-fs-paragraph: 0.9rem;
+    --I-fs-date: 0.75rem;
+    --I-w-image: 80px;
   }
 
-  .intern-card {
+  .interns-flexbox {
+    gap: 25px 25px;
+  }
+
+  .interns-card {
     max-width: 100%;
     min-width: 340px;
     padding: 13px;
     gap: 5px;
   }
-
-  .interns-detail {
-    gap: 1px 0;
-  }
 }
 
 @media all and (max-width: 600px) {
   :root {
-    --fs-I-h: 1rem; /* heading name font size */
-    --fs-I-p: 0.8rem; /* paragraph font size*/
-    --fs-I-d: 0.7rem; /* date font size */
-    --gap-I-intern-card: 28px; /* paragraph line height */
-    --img-I-wh: 65px; /* logo width */
-    --br-I-c: 18px; /* Border radius for container */
-    --br-I-pc: 18px; /* Border radius for picture container */
+    --I-fs-heading: 1rem;
+    --I-fs-paragraph: 0.8rem;
+    --I-fs-date: 0.7rem;
+    --I-w-image: 65px;
+    --I-br-container: 18px;
+    --I-br-picture: 18px;
   }
+
   .interns-flexbox {
     gap: 25px 25px;
-    justify-content: space-evenly;
   }
 
-  .intern-card {
+  .interns-card {
     padding: 10px;
     min-width: 320px;
-    gap: 5px;
   }
 
-  .interns-detail {
-    gap: 1px 0;
-  }
-  .intern-categories {
+  .interns-categories {
     font-size: 1rem;
   }
-  .intern-fieldDropdown {
+
+  .interns-fieldDropdown {
     padding: 8px 8px;
     font-size: 0.9rem;
   }
@@ -306,33 +287,21 @@
 
 @media all and (max-width: 400px) {
   :root {
-    --fs-I-h: 1rem; /* heading name font size */
-    --fs-I-p: 0.8rem; /* paragraph font size*/
-    --fs-I-d: 0.7rem; /* date font size */
-    --gap-I-intern-card: 28px; /* paragraph line height */
-    --img-I-wh: 65px; /* logo width */
-    --br-I-c: 18px; /* Border radius for container */
-    --br-I-pc: 18px; /* Border radius for picture container */
+    --I-gap-internDetails: 4px;
   }
-  .interns-flexbox {
-    gap: 25px 25px;
-    justify-content: space-evenly;
-  }
-  .intern-categories {
+
+  .interns-categories {
     font-size: 0.9rem;
     justify-content: center;
   }
 
-  .intern-name,
+  .interns-name,
   .interns-detail {
     text-align: center;
     margin-bottom: 5px;
   }
 
-  .interns-detail {
-    gap: 4px;
-  }
-  .intern-card {
+  .interns-card {
     padding: 20px 10px;
     min-width: 50%;
     max-width: 80%;
@@ -341,18 +310,18 @@
     flex-direction: column;
   }
 
-  .intern-lft {
+  .interns-left {
     flex-direction: column;
     align-items: center;
   }
 
-  .interns-rt {
+  .interns-right {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     gap: 10px;
   }
+
   .mail {
     font-size: 1rem;
   }

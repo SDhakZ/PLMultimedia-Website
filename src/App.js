@@ -6,7 +6,7 @@ import { Home } from "./pages/Home/Home.jsx";
 import { About } from "./pages/About/About";
 import { Blog } from "./pages/Blog/Blog";
 import Services from "./pages/Services/Services";
-import Interns from "./pages/Interns/Interns";
+import { Interns } from "./pages/Interns/Interns";
 import { Portfolio } from "./pages/Portfolio/Portfolio";
 import { FAQpage } from "./layout/Footer/FAQ/FAQ";
 import { Contact } from "./pages/Contact/Contact";

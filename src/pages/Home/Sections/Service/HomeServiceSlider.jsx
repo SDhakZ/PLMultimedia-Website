@@ -21,7 +21,7 @@ export const HomeServiceSlider = () => {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
         }}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}

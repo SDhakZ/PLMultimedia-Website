@@ -20,8 +20,9 @@ function Footer() {
           </div>
 
           <p>
-            Changing the way, we work, live, play and learn.The Network Works.
-            No Excuses Tomorrow Starts Here
+            We are a complete Multimedia and IT Service provider agency. We are
+            collaborating with various service providers to meet the requirement
+            of our esteemed clients. We work from digital to outdoor marketing.
           </p>
         </div>
 
@@ -80,8 +81,8 @@ function Footer() {
           <p>Question or Feedback</p>
           <p>We would love to hear suggestions from you</p>
           <div className={FooterCSS["footer-icons"]}>
-            <a href="#">
-              <i className={`${FooterCSS.twitter} fa-brands fa-twitter`}></i>
+            <a href="mailto: info@plmultimediaservice.com">
+              <i className={`${FooterCSS.envelope} fa-solid fa-envelope`}></i>
             </a>
             <a href="https://www.linkedin.com/feed/">
               <i

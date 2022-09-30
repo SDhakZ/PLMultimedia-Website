@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import MainHeading from "../../components/MainHeading/MainHeading";
 import InternsCSS from "./interns.module.css";
-import InternCard from "./InternCard";
+import { InternCard } from "./InternCard";
 import useFetch from "../../hooks/useFetch";
 import ErrorPage from "../../components/ErrorPage/ErrorPage";
 import LoadingPage from "../../components/LoadingPage/LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
+
 // http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
-function Interns() {
+export const Interns = () => {
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -40,11 +41,11 @@ function Interns() {
     <animated.div style={style}>
       <div className={InternsCSS["interns-container"]}>
         <MainHeading headingName="Interns Through Us" />
-        <div className={InternsCSS["intern-categories"]}>
+        <div className={InternsCSS["interns-categories"]}>
           <label for="fields">Sort By:</label>
 
           <select
-            className={InternsCSS["intern-fieldDropdown"]}
+            className={InternsCSS["interns-fieldDropdown"]}
             name="fields"
             id="field-names"
             value={value}
@@ -79,5 +80,4 @@ function Interns() {
       </div>
     </animated.div>
   );
-}
-export default Interns;
+};

@@ -118,7 +118,7 @@
 }
 
 /*footer icons selector*/
-.footer-icons .twitter,
+.footer-icons .envelope,
 .footer-icons .instagram,
 .footer-icons .facebook,
 .footer-icons .linkedin {
@@ -135,7 +135,7 @@
   transition: all 0.3s;
 }
 /*footer icons hover effects*/
-.footer-icons .twitter:hover {
+.footer-icons .envelope:hover {
   color: #00acee;
 }
 .footer-icons .linkedin:hover {

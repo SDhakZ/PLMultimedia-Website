@@ -1,11 +1,11 @@
 import React from "react";
 import InternsCSS from "./interns.module.css";
 
-function InternCard(props) {
+export const InternCard = (props) => {
   var mail = "mailto:" + props.email;
   return (
-    <div className={InternsCSS["intern-card"]}>
-      <div className={InternsCSS["intern-lft"]}>
+    <div className={InternsCSS["interns-card"]}>
+      <div className={InternsCSS["interns-left"]}>
         <figure className={InternsCSS["interns-picContainer"]}>
           <img
             className={InternsCSS["interns-picture"]}
@@ -14,7 +14,7 @@ function InternCard(props) {
           ></img>
         </figure>
         <div className={InternsCSS["interns-detailsContainer"]}>
-          <h2 className={InternsCSS["intern-name"]}>{props.name}</h2>
+          <h2 className={InternsCSS["interns-name"]}>{props.name}</h2>
           <div className={InternsCSS["interns-detail"]}>
             <p>Company: {props.company}</p>
             <p>Field: {props.field}</p>
@@ -22,14 +22,12 @@ function InternCard(props) {
           </div>
         </div>
       </div>
-      <div className={InternsCSS["interns-rt"]}>
+      <div className={InternsCSS["interns-right"]}>
         <a className={InternsCSS["interns-mail"]} href={mail}>
           <i className={`${InternsCSS.mail} fa-solid fa-envelope`} />
         </a>
-        <h3 className={InternsCSS["intern-date"]}>Date: {props.year}</h3>
+        <h3 className={InternsCSS["interns-date"]}>Date: {props.year}</h3>
       </div>
     </div>
   );
-}
-
-export default InternCard;
+};

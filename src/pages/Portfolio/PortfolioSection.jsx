@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import GoToTop from "../../components/GoToTop/GoToTop";
 
-function PortfolioSection(props) {
+export const PortfolioSection = (props) => {
   useEffect(() => {
     Aos.init({
       offset: "50",
@@ -40,7 +40,7 @@ function PortfolioSection(props) {
           data-aos-offset="200"
           className={portfolioCSS["portfolio-content"]}
         >
-          <div className={portfolioCSS["portfolio-heading-para"]}>
+          <div className={portfolioCSS["portfolio-details"]}>
             <h2 className={portfolioCSS["portfolio-heading"]}>
               {props.Heading}
             </h2>
@@ -56,5 +56,4 @@ function PortfolioSection(props) {
       <GoToTop />
     </React.Fragment>
   );
-}
-export default PortfolioSection;
+};
