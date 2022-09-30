@@ -1,0 +1,86 @@
+.Home-comments-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.Home-comment-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Home-comments-card {
+  width: 367.32px;
+  height: 360px;
+  left: 142px;
+  top: 5096px;
+  background: #fffcff;
+  box-shadow: 2px 7px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 22px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-Image {
+  width: 59px;
+  clip-path: circle();
+}
+
+.profile-Name {
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: #6d7d8b;
+  font-family: "Roboto";
+  margin-top: -10px;
+}
+
+.rate-us {
+  display: flex;
+  gap: 7px;
+  margin-top: 7px;
+}
+
+.star {
+  color: #ffe234;
+}
+
+.review {
+  line-height: 30px;
+}
+
+.quote {
+  color: #6d7d8b;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.review-text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #6d7d8b;
+  line-height: 35px;
+}
+
+@media all and (max-width: 1200px) {
+  .profile-Name {
+    font-size: 1.28rem;
+    line-height: 25px;
+    margin-top: -7px;
+  }
+
+  .rate-us {
+    display: flex;
+    gap: 7px;
+    margin-top: 3px;
+  }
+  .quote {
+    margin-top: 15px;
+    font-size: 30px;
+  }
+  .review-text {
+    line-height: 32px;
+  }
+}

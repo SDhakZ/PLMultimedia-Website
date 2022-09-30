@@ -1,0 +1,51 @@
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper {
+  height: 570px;
+  width: 95%;
+}
+
+.swiper-slide {
+  margin: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media all and (max-width: 1500px) {
+  .swiper {
+    height: 490px;
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .swiper {
+    height: 490px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 950px) {
+  .swiper {
+    height: 490px;
+  }
+}
+
+@media all and (max-width: 680px) {
+  .swiper {
+    height: 470px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
