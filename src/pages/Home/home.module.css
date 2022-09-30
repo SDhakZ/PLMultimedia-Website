@@ -22,12 +22,22 @@
 
 .Home-what-ppl-think {
   background-image: linear-gradient(180deg, #fbfbfd 15.43%, #d0d4f9 100%);
-  padding: var(--pd-c);
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 70px;
 }
 
 @media all and (max-width: 1425px) {
   .Home-recent-works {
     height: 720px;
+  }
+}
+
+@media all and (max-width:1200px){
+  .Home-what-ppl-think{
+    padding-bottom: 10px;
   }
 }
 @media all and (max-width: 700px) {
