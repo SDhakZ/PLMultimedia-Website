@@ -1,7 +1,7 @@
 import react, { useState, useEffect } from "react";
 import goToTopCSS from "./goToTop.module.css";
 
-function GoToTop() {
+export const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -35,6 +35,6 @@ function GoToTop() {
       )}
     </div>
   );
-}
+};
 
 export default GoToTop;

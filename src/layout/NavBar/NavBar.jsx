@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavbarCSS from "./navBar.module.css";
 
-function NavBar() {
+export const NavBar = () => {
   const [click, setClick] = useState(false);
 
   function handleClick() {
@@ -116,6 +116,4 @@ function NavBar() {
       </nav>
     </React.Fragment>
   );
-}
-
-export default NavBar;
+};

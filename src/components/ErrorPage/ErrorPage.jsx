@@ -2,30 +2,30 @@ import React from "react";
 import ErrorPageCSS from "./errorPage.module.css";
 import { Link } from "react-router-dom";
 
-function ErrorPage(props) {
+export const ErrorPage = (props) => {
   return (
-    <div className={ErrorPageCSS["ErrorPage-Container"]}>
-      <div className={ErrorPageCSS["ErrorPage-box"]}>
-        <h1 className={ErrorPageCSS["ErrorPage-503"]}>
+    <div className={ErrorPageCSS["errorPage"]}>
+      <div className={ErrorPageCSS["errorPage-container"]}>
+        <h1 className={ErrorPageCSS["errorPage-errorCode"]}>
           {props.code} <br />
           error!
         </h1>
-        <p className={ErrorPageCSS["ErrorPage-message"]}>
+        <p className={ErrorPageCSS["errorPage-message"]}>
           {props.errorMessage}
-          <p className={ErrorPageCSS["ErrorPage-report"]}>
+          <p className={ErrorPageCSS["errorPage-report"]}>
             If the problem persists, you can report a problem.
           </p>
         </p>
-        <div className={ErrorPageCSS["ErrorPage-buttons"]}>
+        <div className={ErrorPageCSS["errorPage-buttons"]}>
           <Link
             to={{ pathname: "/" }}
-            className={ErrorPageCSS["Return-Home-Button"]}
+            className={ErrorPageCSS["errorPage-returnHomeButton"]}
           >
             Return Home
           </Link>
           <Link
             to={{ pathname: "/contact", state: { toLoadNumber: 9 } }}
-            className={`${ErrorPageCSS["Report-Button"]} ${ErrorPageCSS["color-Report-Button"]}`}
+            className={`${ErrorPageCSS["errorPage-reportButton"]} ${ErrorPageCSS["errorPage-color-reportButton"]}`}
           >
             Report Problem
           </Link>
@@ -33,5 +33,4 @@ function ErrorPage(props) {
       </div>
     </div>
   );
-}
-export default ErrorPage;
+};

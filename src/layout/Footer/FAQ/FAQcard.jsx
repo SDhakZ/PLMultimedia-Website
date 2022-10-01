@@ -6,39 +6,37 @@ export function FAQcard({ question, answer }) {
   const [expanded, setExpand] = useState(false);
 
   return (
-    <button className={FAQCSS.faqCard} onClick={() => setExpand(!expanded)}>
+    <button className={FAQCSS["FAQ-card"]} onClick={() => setExpand(!expanded)}>
       <div
         className={
           expanded
-            ? `${FAQCSS.faqQuestion} ${FAQCSS.active}`
-            : FAQCSS.faqQuestion
+            ? `${FAQCSS["FAQ-faqQuestion"]} ${FAQCSS["FAQ-active"]}`
+            : FAQCSS["FAQ-faqQuestion"]
         }
       >
         {question}{" "}
         {expanded ? (
-          <div className={FAQCSS.minus}>-</div>
+          <div className={FAQCSS["FAQ-minus"]}>-</div>
         ) : (
-          <div className={FAQCSS.plus}>+</div>
+          <div className={FAQCSS["FAQ-plus"]}>+</div>
         )}
       </div>
-      {expanded ? <div className={FAQCSS.faqAnswer}>{answer}</div> : null}
+      {expanded ? (
+        <div className={FAQCSS["FAQ-faqAnswer"]}>{answer}</div>
+      ) : null}
     </button>
   );
 }
 
 export function StillHaveQuestion() {
   return (
-    <div className={FAQCSS.MoreQuestionsContainer}>
-      <h1 className={FAQCSS.stillHaveQuestion}>Still Have Question?</h1>
-      <p className={FAQCSS.faqContact}>
+    <div className={FAQCSS["FAQ-moreQuestionsContainer"]}>
+      <h1 className={FAQCSS["FAQ-stillHaveQuestion"]}>Still Have Question?</h1>
+      <p className={FAQCSS["FAQ-faqContact"]}>
         If you cannot find the answer for your question in the FAQ page you can
         always contact us through our <Link to="/contact">Contact Us</Link>{" "}
         page.
       </p>
     </div>
   );
-}
-
-export function FAQHeading() {
-  return <h1 className={FAQCSS.faqHeading}>Frequently Asked Questions</h1>;
 }

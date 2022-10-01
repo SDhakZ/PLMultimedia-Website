@@ -1,7 +1,7 @@
 import React from "react";
 import TopbarCSS from "./topBar.module.css";
 
-function Topbar() {
+export const Topbar = () => {
   return (
     <div className={TopbarCSS["topbar"]}>
       <div className={TopbarCSS["topbar-contactInfo"]}>
@@ -16,7 +16,7 @@ function Topbar() {
           <i className="fa-solid fa-location-dot"></i>Chitwan, Nepal
         </a>
       </div>
-      <div className={TopbarCSS["social-icons"]}>
+      <div className={TopbarCSS["topbar-socialIcons"]}>
         <a href="https://twitter.com/MultimediaPvt" target="_blank">
           <i className={`${TopbarCSS.twitter} fa-brands fa-twitter`}></i>
         </a>
@@ -35,6 +35,4 @@ function Topbar() {
       </div>
     </div>
   );
-}
-
-export default Topbar;
+};

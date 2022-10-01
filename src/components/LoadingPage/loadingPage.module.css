@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
-.LoadingPage-Container {
+.loadingPage {
   height: 82vh;
   display: flex;
   flex-direction: row;
@@ -12,7 +12,7 @@
   color: #2f2f2f;
 }
 
-.LoadingPage-loader {
+.loadingPage-loader {
   border: 7.5px solid #2f2f2f;
   border-radius: 50%;
   border-top: 7.5px solid #1771cb;
@@ -34,10 +34,10 @@
 }
 
 @media all and (max-width: 1200px) {
-  .LoadingPage-Container {
+  .loadingPage {
     font-size: 45px;
   }
-  .LoadingPage-loader {
+  .loadingPage-loader {
     border: 6px solid #2f2f2f;
     border-top: 6px solid #1771cb;
     width: 23px;
@@ -46,10 +46,10 @@
 }
 
 @media all and (max-width: 600px) {
-  .LoadingPage-Container {
+  .loadingPage {
     font-size: 40px;
   }
-  .LoadingPage-loader {
+  .loadingPage-loader {
     border: 5px solid #2f2f2f;
     border-top: 5px solid #1771cb;
     width: 19px;
@@ -58,10 +58,10 @@
 }
 
 @media all and (max-width: 400px) {
-  .LoadingPage-Container {
+  .loadingPage {
     font-size: 35px;
   }
-  .LoadingPage-loader {
+  .loadingPage-loader {
     border: 4.5px solid #2f2f2f;
     border-top: 4.5px solid #1771cb;
     width: 17px;

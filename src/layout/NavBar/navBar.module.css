@@ -1,23 +1,23 @@
 @import "https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap";
 
 :root {
-  --p-nc: 0 140px; /* Nav container padding */
-  --fs-li: 1.2rem; /* Nav links size */
-  --fs-ali: 1.3rem; /* active nav link size */
-  --fs-lg: 1.8rem; /* nav logo size */
-  --fs-img-lg: 50px; /* nav img logo size */
-  --h-nav: 5rem; /* nav height */
+  --nav-pd-container: 0 140px; /* Nav container padding */
+  --nav-fs-links: 1.2rem; /* Nav links size */
+  --nav-fs-activeLinks: 1.3rem; /* active nav link size */
+  --nav-fs-logoName: 1.8rem; /* nav logo name size */
+  --nav-fs-logo: 50px; /* nav img logo size */
+  --nav-h-container: 5rem; /* nav height */
 }
 
 .navbar {
   background-color: #0e63e3;
-  height: var(--h-nav);
+  height: var(--nav-h-container);
   display: flex;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 2;
-  padding: var(--p-nc);
+  padding: var(--nav-pd-container);
 }
 
 .nav-container {
@@ -32,11 +32,11 @@
   color: #ffffff;
   cursor: pointer;
   text-decoration: none;
-  font-size: var(--fs-lg);
+  font-size: var(--nav-fs-logoName);
   font-family: "Cabin";
 }
 .nav-logo img {
-  width: var(--fs-img-lg);
+  width: var(--nav-fs-logo);
   margin-right: 7px;
 }
 
@@ -53,20 +53,20 @@
   position: relative;
   margin-left: 0.4rem;
   font-family: "Cabin", sans-serif;
-  font-size: var(--fs-li);
+  font-size: var(--nav-fs-links);
   letter-spacing: 1px;
   transition: all 0.5s;
   bottom: 0;
 }
 /* Navigation li tag class hover effect */
 .nav-links:hover {
-  font-size: var(--fs-ali);
+  font-size: var(--nav-fs-activeLinks);
 }
 
 /* Active nav link styles */
 .nav-item .active {
   border-bottom: 3px solid white;
-  font-size: var(--fs-ali);
+  font-size: var(--nav-fs-activeLinks);
   font-weight: bold;
   bottom: 5px;
 }
@@ -100,12 +100,11 @@
 /*Responsive settings*/
 @media screen and (max-width: 1200px) {
   :root {
-    --p-nc: 0 60px; /* Nav container padding */
-    --fs-li: 1.15rem; /* Nav links size */
-    --fs-ali: 1.2rem; /* active nav link size */
-    --fs-lg: 1.5rem; /* nav logo size */
-    --fs-img-lg: 50px; /* nav img logo size */
-    --h-nav: 4.8rem; /* nav height */
+    --nav-pd-container: 0 60px;
+    --nav-fs-links: 1.15rem;
+    --nav-fs-activeLinks: 1.2rem;
+    --nav-fs-logoName: 1.5rem;
+    --nav-h-container: 4.8rem;
   }
 
   .nav-links {
@@ -116,12 +115,11 @@
 /* Menu toggle responsiveness */
 @media screen and (max-width: 960px) {
   :root {
-    --fs-lg: 1.6rem; /* nav logo size */
-    --fs-img-lg: 48px; /* nav img logo size */
-    --h-nav: 4rem; /* nav height */
+    --nav-fs-logoName: 1.6rem;
+    --nav-fs-logo: 48px;
+    --nav-h-container: 4rem;
   }
   .navMenu {
-    display: flex;
     flex-direction: column;
     width: 100%;
     border-top: 1px solid #858585;
@@ -182,23 +180,21 @@
 
 @media screen and (max-width: 600px) {
   :root {
-    --p-nc: 0 30px; /* Nav container padding */
-    --fs-li: 1.1rem; /* Nav links size */
-    --fs-ali: 1.2rem; /* active nav link size */
-    --fs-lg: 1.6rem; /* nav logo size */
-    --fs-img-lg: 45px; /* nav img logo size */
-    --h-nav: 4rem; /* nav height */
+    --nav-pd-container: 0 30px;
+    --nav-fs-links: 1.1rem;
+    --nav-fs-logoName: 1.6rem;
+    --nav-fs-logo: 45px;
   }
 }
 
 @media screen and (max-width: 400px) {
   :root {
-    --p-nc: 0 25px; /* Nav container padding */
-    --fs-li: 1rem; /* Nav links size */
-    --fs-ali: 1.05rem; /* active nav link size */
-    --fs-lg: 1.4rem; /* nav logo size */
-    --fs-img-lg: 35px; /* nav img logo size */
-    --h-nav: 3.3rem; /* nav height */
+    --nav-pd-container: 0 25px;
+    --nav-fs-links: 1rem;
+    --nav-fs-activeLinks: 1.05rem;
+    --nav-fs-logoName: 1.2rem;
+    --nav-fs-logo: 30px;
+    --nav-h-container: 3.3rem;
   }
 
   .nav-icon {

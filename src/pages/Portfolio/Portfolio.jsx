@@ -2,7 +2,7 @@ import React from "react";
 import portfolioCSS from "./portfolio.module.css";
 import portfolioData from "../../data/portfolioData";
 import { PortfolioSection } from "./PortfolioSection";
-import MainHeading from "../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 
 export const Portfolio = () => {

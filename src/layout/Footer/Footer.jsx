@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FooterCSS from "./footer.module.css";
 
-function Footer() {
+export const Footer = () => {
   function goToKhalti() {
     return;
   }
@@ -10,15 +10,14 @@ function Footer() {
   }
   return (
     // start of footersection//
-    <div className={FooterCSS.footerSection}>
+    <div className={FooterCSS.footer}>
       <div className={FooterCSS["footer-row"]}>
         {/* for columns of footer */}
-        <div className={FooterCSS["footer-col1"]}>
-          <div className={FooterCSS["footer-companyName"]}>
+        <div className={FooterCSS["footer-companyDetail-container"]}>
+          <div className={FooterCSS["footer-companyName-container"]}>
             <img src={require("../../assets/Logo/companyLogoBlack.png")}></img>
-            <span className={FooterCSS["footer-Name"]}>Multimedia</span>
+            <span className={FooterCSS["footer-companyName"]}>Multimedia</span>
           </div>
-
           <p>
             We are a complete Multimedia and IT Service provider agency. We are
             collaborating with various service providers to meet the requirement
@@ -27,7 +26,7 @@ function Footer() {
         </div>
 
         <div
-          className={`${FooterCSS["footer-col"]} ${FooterCSS["footer-services"]}`}
+          className={`${FooterCSS["footer-column"]} ${FooterCSS["footer-services"]}`}
         >
           <h4>Our services</h4>
           <ul>
@@ -55,7 +54,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className={FooterCSS["footer-col"]}>
+        <div className={FooterCSS["footer-column"]}>
           <h4>Company</h4>
           <ul>
             <li>
@@ -75,7 +74,7 @@ function Footer() {
 
         {/* start of touch column */}
         <div
-          className={`${FooterCSS["footer-col"]} ${FooterCSS["footer-colt"]}`}
+          className={`${FooterCSS["footer-column"]} ${FooterCSS["footer-getInTouch"]}`}
         >
           <h4>Get In Touch</h4>
           <p>Question or Feedback</p>
@@ -135,6 +134,4 @@ function Footer() {
       </div>
     </div>
   );
-}
-
-export default Footer;
+};

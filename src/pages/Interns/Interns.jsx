@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import MainHeading from "../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../components/MainHeading/MainHeading";
 import InternsCSS from "./interns.module.css";
 import { InternCard } from "./InternCard";
 import useFetch from "../../hooks/useFetch";
-import ErrorPage from "../../components/ErrorPage/ErrorPage";
-import LoadingPage from "../../components/LoadingPage/LoadingPage";
+import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
+import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
 
 // http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
@@ -35,7 +35,13 @@ export const Interns = () => {
 
   const { loading, error, data } = useFetch(path);
   if (loading) return <LoadingPage />;
-  if (error) return <ErrorPage />;
+  if (error)
+    return (
+      <ErrorPage
+        code="503"
+        errorMessage="Server is temporarily unable to respond to your request"
+      />
+    );
 
   return (
     <animated.div style={style}>

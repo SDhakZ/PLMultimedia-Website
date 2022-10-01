@@ -1,7 +1,7 @@
 import "./assets/Global.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavBar from "./layout/NavBar/NavBar";
-import Topbar from "./layout/TopBar/Topbar";
+import { NavBar } from "./layout/NavBar/NavBar";
+import { Topbar } from "./layout/TopBar/Topbar";
 import { Home } from "./pages/Home/Home.jsx";
 import { About } from "./pages/About/About";
 import { Blog } from "./pages/Blog/Blog";
@@ -12,7 +12,7 @@ import { FAQpage } from "./layout/Footer/FAQ/FAQ";
 import { Contact } from "./pages/Contact/Contact";
 import { IndividualService } from "./pages/Services/IndividualService";
 import { IndividualBlog } from "./pages/Blog/IndividualBlog";
-import Footer from "./layout/Footer/Footer";
+import { Footer } from "./layout/Footer/Footer";
 
 function App() {
   return (

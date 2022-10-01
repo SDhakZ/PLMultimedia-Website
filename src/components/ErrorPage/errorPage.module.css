@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
 :root {
-  --pd-EP-c: 80px 0px; /*container padding*/
-  --fs-EP-btn: 1.15rem; /* button font size */
+  --EP-pd-container: 80px 0px; /*container padding*/
+  --EP-fs-btn: 1.15rem; /* button font size */
 }
-.ErrorPage-Container {
+.errorPage {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -15,10 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--pd-EP-c);
+  padding: var(--EP-pd-container);
 }
 
-.ErrorPage-box {
+.errorPage-container {
   padding: 80px;
   width: fit-content;
   display: flex;
@@ -31,7 +31,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.ErrorPage-503 {
+.errorPage-errorCode {
   font-family: "Roboto";
   text-transform: uppercase;
   font-size: 3.8rem;
@@ -43,7 +43,7 @@
   margin-bottom: 20px;
 }
 
-.ErrorPage-message {
+.errorPage-message {
   font-family: "Mulish";
   font-size: 1.2rem;
   font-weight: 600;
@@ -51,25 +51,25 @@
   text-align: center;
 }
 
-.ErrorPage-report {
+.errorPage-report {
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.ErrorPage-buttons {
+.errorPage-buttons {
   display: flex;
   flex-direction: row;
   gap: 20px;
   margin-top: 27px;
 }
 
-.Report-Button,
-.Return-Home-Button {
+.errorPage-reportButton,
+.errorPage-returnHomeButton {
   line-height: normal;
   border-radius: 35px;
   font-family: "Roboto";
-  font-size: var(--fs-EP-btn);
+  font-size: var(--EP-fs-btn);
   font-weight: 700;
   padding: 15px 20px;
   color: #2f2f2f;
@@ -87,7 +87,7 @@
   text-decoration: none;
 }
 
-.color-Report-Button {
+.errorPage-reportButton {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -95,8 +95,8 @@
     linear-gradient(300deg, #f46262, #a91f1f);
 }
 
-.Report-Button:hover,
-.Return-Home-Button:hover {
+.errorPage-reportButton:hover,
+.errorPage-returnHomeButton:hover {
   box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
     rgba(49, 49, 49, 0.3) 0px 8px 16px -8px;
   color: white;
@@ -108,7 +108,7 @@
   transform: translateY(-2px);
 }
 
-.color-Report-Button:hover {
+.errorPage-color-reportButton:hover {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -119,97 +119,97 @@
 
 @media all and (max-width: 1200px) {
   :root {
-    --fs-EP-btn: 1.1rem; /* button font size */
+    --EP-fs-btn: 1.1rem; /* button font size */
   }
 }
 @media (max-width: 960px) {
   :root {
-    --fs-EP-btn: 1rem; /* button font size */
+    --EP-fs-btn: 1rem; /* button font size */
   }
-  .ErrorPage-Container {
+  .errorPage {
     height: 63vh;
   }
-  .ErrorPage-box {
+  .errorPage-container {
     padding: 70px;
   }
-  .Report-Button,
-  .Return-Home-Button {
+  .errorPage-reportButton,
+  .errorPage-returnHomeButton {
     padding: 8px 17px;
   }
-  .ErrorPage-buttons {
+  .errorPage-buttons {
     gap: 14px;
   }
 }
 
 @media (max-width: 800px) {
-  .ErrorPage-Container {
+  .errorPage {
     height: 71vh;
   }
-  .ErrorPage-box {
+  .errorPage-container {
     line-height: 65px;
     padding: 55px;
   }
 
-  .ErrorPage-503 {
-    font-size: 3.2rem;
+  .errorPage-errorCode {
+    font-size: 3rem;
     letter-spacing: 0.04em;
     margin-bottom: 15px;
   }
 
-  .ErrorPage-message {
+  .errorPage-message {
     font-size: 1.2rem;
     line-height: 30px;
   }
 
-  .ErrorPage-report {
+  .errorPage-report {
     margin-top: 10px;
   }
-  .ErrorPage-buttons {
+  .errorPage-buttons {
     gap: 12px;
   }
 }
 
 @media (max-width: 600px) {
   :root {
-    --fs-EP-btn: 1.15rem; /* button font size */
+    --EP-fs-btn: 1.15rem; /* button font size */
   }
 
-  .ErrorPage-box {
+  .errorPage-container {
     line-height: 60px;
     padding: 30px;
   }
 
-  .ErrorPage-503 {
+  .errorPage-errorCode {
     font-size: 3rem;
     letter-spacing: 0.04em;
     margin-bottom: 15px;
   }
 
-  .ErrorPage-message {
+  .errorPage-message {
     font-size: 1.1rem;
     line-height: 25px;
   }
 
-  .ErrorPage-report {
+  .errorPage-report {
     margin-top: 7px;
   }
 
-  .ErrorPage-buttons {
+  .errorPage-buttons {
     flex-direction: column;
     gap: 14px;
   }
 }
 
 @media (max-width: 464px) {
-  .ErrorPage-box {
+  .errorPage-container {
     border-radius: 0px;
   }
 }
 @media (max-width: 400px) {
   :root {
-    --fs-EP-btn: 0.9rem; /* button font size */
+    --EP-fs-btn: 1rem; /* button font size */
   }
-  .ErrorPage-503 {
+  .errorPage-errorCode {
     font-size: 2.5rem;
   }
 }

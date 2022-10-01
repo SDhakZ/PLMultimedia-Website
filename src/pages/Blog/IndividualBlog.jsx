@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import LoadingPage from "../../components/LoadingPage/LoadingPage";
-import ErrorPage from "../../components/ErrorPage/ErrorPage";
+import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
+import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
 import INDBLG from "./individualBlog.module.css";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";

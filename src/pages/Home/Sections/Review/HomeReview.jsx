@@ -1,6 +1,6 @@
 import React from "react";
 import HomeReviewCSS from "./homeReview.module.css";
-import MainHeading from "../../../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../../../components/MainHeading/MainHeading";
 import HomeReviewData from "../../../../data/homeReviewData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";

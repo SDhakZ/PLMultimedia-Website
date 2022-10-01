@@ -12,19 +12,20 @@ body {
 }
 @media all and (max-width: 1200px) {
   :root {
-    --pd-c: 50px 60px 70px; /*container padding*/
+    --pd-c: 50px 60px 70px;
   }
 }
 @media all and (max-width: 600px) {
   :root {
-    --pd-c: 20px 30px 40px; /*container padding*/
+    --pd-c: 20px 30px 40px;
   }
 }
 @media all and (max-width: 400px) {
   :root {
-    --pd-c: 30px 25px 50px; /*container padding*/
+    --pd-c: 30px 25px 50px;
   }
 }
+
 /* .container {
   position: relative;
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import AboutCSS from "./aboutUs.module.css";
-import MainHeading from "../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 import Aos from "aos";
 import "aos/dist/aos.css";

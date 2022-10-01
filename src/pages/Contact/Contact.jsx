@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import ContactCSS from "./contact.module.css";
 import emailjs from "@emailjs/browser";
 import swal from "sweetalert";
-import MainHeading from "../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 
 export const Contact = () => {

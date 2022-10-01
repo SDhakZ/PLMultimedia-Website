@@ -1,7 +1,7 @@
 import React from "react";
 import { ServiceCard } from "../../../Services/ServiceCard";
 import serviceData from "../../../../data/servicesData";
-import MainHeading from "../../../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../../../components/MainHeading/MainHeading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";

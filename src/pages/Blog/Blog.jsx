@@ -1,10 +1,10 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
-import LoadingPage from "../../components/LoadingPage/LoadingPage";
-import ErrorPage from "../../components/ErrorPage/ErrorPage";
+import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
+import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
 import { BlogCard } from "./BlogCard";
 import BlogsCSS from "./blogs.module.css";
-import MainHeading from "../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../components/MainHeading/MainHeading";
 
 export const Blog = () => {
   //change this according to where the strapi admin is hosted
@@ -15,7 +15,13 @@ export const Blog = () => {
 
   //loading and error displays
   if (loading) return <LoadingPage />;
-  if (error) return <ErrorPage />;
+  if (error)
+    return (
+      <ErrorPage
+        code="503"
+        errorMessage="Server is temporarily unable to respond to your request"
+      />
+    );
 
   //testing (remove if seen)
   console.log({ data });

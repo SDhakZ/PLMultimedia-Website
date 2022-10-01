@@ -2,7 +2,8 @@ import { React } from "react";
 import HomeTopCSS from "./homeTop.module.css";
 import { TypeAnimation } from "react-type-animation";
 import { useSpring, animated, easings } from "react-spring";
-function HomeTop() {
+
+export const HomeTop = () => {
   const rocketEnter = useSpring({
     from: { opacity: 0.3, x: -550, y: 600 },
     to: { opacity: 1, x: -20, y: 80 },
@@ -74,6 +75,4 @@ function HomeTop() {
       </div>
     </div>
   );
-}
-
-export default HomeTop;
+};

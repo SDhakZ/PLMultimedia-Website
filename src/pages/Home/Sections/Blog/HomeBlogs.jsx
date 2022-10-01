@@ -1,11 +1,11 @@
 import React from "react";
 import { BlogCard } from "../../../Blog/BlogCard";
 import useFetch from "../../../../hooks/useFetch";
-import LoadingPage from "../../../../components/LoadingPage/LoadingPage";
-import ErrorPage from "../../../../components/ErrorPage/ErrorPage";
+import { LoadingPage } from "../../../../components/LoadingPage/LoadingPage";
+import { ErrorPage } from "../../../../components/ErrorPage/ErrorPage";
 import HomeBlog from "./homeBlogs.module.css";
 import { Link } from "react-router-dom";
-import MainHeading from "../../../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../../../components/MainHeading/MainHeading";
 
 export const HomeBlogs = () => {
   const host = "http://localhost:1338";

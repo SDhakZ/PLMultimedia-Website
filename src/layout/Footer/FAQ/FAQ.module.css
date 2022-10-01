@@ -1,34 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,500;1,700&display=swap");
 
 :root {
-  --fs-faq-q: 1.4rem; /* question font size*/
-  --fs-faq-a: 1.3rem; /* answer font size */
-  --w-faq-plus: 2rem; /* plus sign width */
-  --w-faq-minus: 2.5rem; /* plus sign width */
+  --faq-fs-question: 1.4rem; /* question font size*/
+  --faq-fs-answer: 1.3rem; /* answer font size */
+  --faq-lh-answer: 32px; /* answer line heighyt */
+  --faq-w-plus: 2rem; /* FAQ-plus sign width */
+  --faq-w-minus: 2.5rem; /* FAQ-plus sign width */
 }
-.FAQ-container {
+.FAQ {
   padding: var(--pd-c);
 }
 
-.stillHaveQuestion,
-.faqHeading {
+.FAQ-stillHaveQuestion {
   font-family: "Roboto";
   font-weight: 600;
   text-align: center;
-}
-
-.faqHeading {
-  font-size: var(--fs-xl);
-  margin-bottom: var(--mb-xl);
-}
-
-.stillHaveQuestion {
   font-size: 3.5rem;
   margin-bottom: 20px;
   font-family: "Bahnschrift";
 }
 
-.faqCard {
+.FAQ-card {
   display: flex;
   height: auto;
   flex-direction: column;
@@ -42,61 +34,63 @@
   cursor: pointer;
 }
 
-.faqQuestion {
+.FAQ-faqQuestion {
   color: #2f2f2f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: var(--fs-faq-q);
+  font-size: var(--faq-fs-question);
   font-weight: 600;
   width: 100%;
   transition: all 0.2s ease-in-out;
 }
 
-.faqCard:hover .faqQuestion {
+.FAQ-card:hover .FAQ-faqQuestion {
   color: #1b83fd;
 }
 
-.active {
+.FAQ-active {
   color: #1b83fd;
 }
 
-.plus {
+.FAQ-plus,
+.FAQ-minus {
   color: #6d6d6d;
-  font-size: var(--w-faq-plus);
+  font-family: "Inter";
+}
+.FAQ-plus {
+  font-size: var(--faq-w-plus);
   display: block;
 }
 
-.minus {
-  font-family: "Inter";
-  color: #6d6d6d;
-  font-size: var(--w-faq-minus);
+.FAQ-minus {
+  font-size: var(--faq-w-minus);
 }
 
-.faqAnswer {
+.FAQ-faqAnswer {
   color: #808080;
   display: block;
   text-align: justify;
-  font-size: var(--fs-faq-a);
+  font-size: var(--faq-fs-answer);
   margin-top: 10px;
   max-width: 90%;
-  line-height: 32px;
+  line-height: var(--faq-lh-answer);
 }
 
 /*color for links*/
-.faqContact a {
+.FAQ-faqContact a {
   text-decoration: none;
   color: #3ec1ee;
 }
 
-.MoreQuestionsContainer {
+.FAQ-moreQuestionsContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.faqContact {
+.FAQ-faqContact {
   text-align: center;
   font-family: "Roboto";
   display: block;
@@ -108,33 +102,33 @@
 
 @media all and (max-width: 1200px) {
   :root {
-    --fs-faq-q: 1.15rem; /* question font size*/
-    --fs-faq-a: 1.05rem; /* answer font size */
-    --w-faq-plus: 1.5rem; /* plus sign width */
-    --w-faq-minus: 2rem; /* plus sign width */
+    --faq-fs-question: 1.15rem;
+    --faq-fs-answer: 1.05rem;
+    --w-faq-FAQ-plus: 1.5rem;
+    --w-faq-FAQ-minus: 2rem;
+    --faq-lh-answer: 24px;
   }
 
-  .faqCard {
+  .FAQ-card {
     padding: 22px 20px;
   }
 
-  .faqAnswer {
-    line-height: 24px;
+  .FAQ-faqAnswer {
     margin-top: 0px;
   }
 
-  .stillHaveQuestion {
+  .FAQ-stillHaveQuestion {
     margin-bottom: 5px;
     margin-top: 25px;
     font-size: 2.5em;
   }
 
-  .faqContact {
+  .FAQ-faqContact {
     font-size: 1.2rem;
     line-height: 23px;
   }
 
-  .faqCard {
+  .FAQ-card {
     margin-bottom: 20px;
     padding: 15px 20px;
   }
@@ -142,32 +136,27 @@
 
 @media all and (max-width: 850px) {
   :root {
-    --fs-faq-q: 1.2rem; /* question font size*/
-    --fs-faq-a: 1.05rem; /* answer font size */
-    --w-faq-plus: 1.7rem; /* plus sign width */
-    --w-faq-minus: 2.3rem; /* plus sign width */
+    --faq-fs-question: 1.2rem;
+    --faq-fs-answer: 1.05rem;
+    --w-faq-FAQ-plus: 1.7rem;
+    --w-faq-FAQ-minus: 2.3rem;
   }
 
-  .faqCard {
+  .FAQ-card {
     padding: 20px 20px;
   }
 
-  .faqAnswer {
-    line-height: 24px;
-  }
-
-  .stillHaveQuestion {
+  .FAQ-stillHaveQuestion {
     margin-bottom: 10px;
     margin-top: 30px;
     font-size: 2.8rem;
   }
 
-  .faqContact {
-    font-size: 16px;
-    line-height: 23px;
+  .FAQ-faqContact {
+    font-size: 1rem;
   }
 
-  .faqCard {
+  .FAQ-card {
     margin-bottom: 20px;
     padding: 15px 20px;
   }
@@ -175,31 +164,28 @@
 
 @media all and (max-width: 550px) {
   :root {
-    --fs-faq-q: 1rem; /* question font size*/
-    --fs-faq-a: 0.9m; /* answer font size */
-    --w-faq-plus: 1rem; /* plus sign width */
-    --w-faq-minus: 1.5rem; /* plus sign width */
+    --faq-fs-question: 1rem;
+    --faq-fs-answer: 0.9rem;
+    --w-faq-FAQ-plus: 1rem;
+    --w-faq-FAQ-minus: 1.5rem;
+    --faq-lh-answer: 20px;
   }
-  .faqQuestion {
-    font-size: 14px;
+  .FAQ-faqQuestion {
+    font-size: 0.875rem;
     text-align: left;
   }
 
-  .faqAnswer {
-    line-height: 20px;
-  }
-
-  .stillHaveQuestion {
+  .FAQ-stillHaveQuestion {
     font-size: 1.8rem;
     margin-top: 5px;
   }
 
-  .faqContact {
+  .FAQ-faqContact {
     font-size: 0.875rem;
     max-width: 300px;
   }
 
-  .faqCard {
+  .FAQ-card {
     margin-bottom: 16px;
     padding: 10px 15px;
   }

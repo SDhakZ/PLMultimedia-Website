@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import IndividualServiceCSS from "./individualService.module.css";
-import MainHeading from "../../components/MainHeading/MainHeading";
+import { MainHeading } from "../../components/MainHeading/MainHeading";
 import internalServiceData from "../../data/servicesData";
 
 function getDataFromPathType(path) {

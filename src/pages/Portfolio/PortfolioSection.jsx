@@ -3,7 +3,7 @@ import portfolioCSS from "./portfolio.module.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import GoToTop from "../../components/GoToTop/GoToTop";
+import { GoToTop } from "../../components/GoToTop/GoToTop";
 
 export const PortfolioSection = (props) => {
   useEffect(() => {
