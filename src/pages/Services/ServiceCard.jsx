@@ -52,6 +52,7 @@ export const ServiceCard = (props) => {
         }}
         to={{
           pathname: getPathSuffix(props.serviceDetails.id),
+          state: { loadedFrom: props.loadedFrom },
         }}
       >
         View Details

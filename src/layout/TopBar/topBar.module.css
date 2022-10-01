@@ -7,6 +7,9 @@
   height: 57px;
   padding: 0 58px;
   font-family: "Roboto", "Helvetica Neue";
+  z-index: 1;
+  position: relative;
+  background-color: #fff;
 }
 
 .topbar a {

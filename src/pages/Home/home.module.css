@@ -2,8 +2,14 @@
   overflow-x: hidden;
 }
 
+.home-first {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.993);
+}
+
 .home-aboutUs {
-  background-image: linear-gradient(#77b5ff, #fff);
+  position: relative;
+  background-image: linear-gradient(#77b5ff, rgba(255, 255, 255, 0));
   padding: var(--H-AU-pd-container);
 }
 
@@ -21,12 +27,17 @@
 }
 
 .home-review {
-  background-image: linear-gradient(180deg, #fff 15.43%, #d0d4f9 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 15.43%,
+    #d0d4f9 100%
+  );
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 70px;
+  position: relative;
 }
 
 @media all and (max-width: 1425px) {

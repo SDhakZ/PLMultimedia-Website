@@ -32,6 +32,7 @@ export const Services = () => {
                 title={service.title}
                 description={service.description}
                 serviceDetails={service}
+                loadedFrom="service"
               />
             );
           })}

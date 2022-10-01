@@ -47,6 +47,7 @@ export const HomeServiceSlider = () => {
                 title={data.title}
                 description={data.description}
                 serviceDetails={data}
+                loadedFrom="home"
               />
             </SwiperSlide>
           );

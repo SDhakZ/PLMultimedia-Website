@@ -9,6 +9,7 @@ import { HomePortfolio } from "./Sections/Portfolio/HomePortfolio";
 import { GoToTop } from "../../components/GoToTop/GoToTop";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Particle } from "../../components/Particles/Particle";
 
 export const Home = () => {
   useEffect(() => {
@@ -24,24 +25,28 @@ export const Home = () => {
 
   return (
     <div className={HomeCSS["home-container"]}>
+      <Particle />
       <section className={HomeCSS["home-first"]}>
         <HomeTop />
       </section>
-      <section data-aos="fade" className={HomeCSS["home-aboutUs"]}>
-        <HomeAboutUs />
-      </section>
-      <section data-aos="zoom-in" className={HomeCSS["home-services"]}>
-        <HomeServiceSlider />
-      </section>
-      <section data-aos="zoom-in" className={HomeCSS["home-recentWorks"]}>
-        <HomePortfolio />
-      </section>
-      <section data-aos="zoom-in" className={HomeCSS["home-blogs"]}>
-        <HomeBlogs />
-      </section>
-      <section className={HomeCSS["home-review"]}>
-        <HomeReview />
-      </section>
+      <div className="container">
+        <section data-aos="fade" className={HomeCSS["home-aboutUs"]}>
+          <HomeAboutUs />
+        </section>
+        <section data-aos="zoom-in" className={HomeCSS["home-services"]}>
+          <HomeServiceSlider />
+        </section>
+        <section data-aos="zoom-in" className={HomeCSS["home-recentWorks"]}>
+          <HomePortfolio />
+        </section>
+        <section data-aos="zoom-in" className={HomeCSS["home-blogs"]}>
+          <HomeBlogs />
+        </section>
+        <section className={HomeCSS["home-review"]}>
+          <HomeReview />
+        </section>
+      </div>
+
       <GoToTop />
     </div>
   );

@@ -26,14 +26,29 @@ function getDataFromPathType(path) {
 
 export const IndividualService = () => {
   const history = useHistory();
+  const location = useLocation();
+  let { loadedFrom } = location.state;
   const clickedLink = (toLoad) => {
-    history.push("/services/" + toLoad);
+    history.push({
+      pathname: "/services/" + toLoad,
+      state: { loadedFrom: loadedFrom },
+    });
     const toLoadFromDataArrayNumber = getDataFromPathType(toLoad);
     setInfo(internalServiceData[toLoadFromDataArrayNumber]);
     setClickNumber(toLoadFromDataArrayNumber + 1);
     window.scrollTo({ top: 60, behavior: "smooth" });
   };
-  const location = useLocation();
+
+  const goBackMethod = () => {
+    // history.goBack();
+    if (loadedFrom === "home") {
+      return "/";
+    } else if (loadedFrom === "service") {
+      return "/services";
+    }
+
+    return "/";
+  };
   const toLoadServiceArr = location.pathname.split("/");
   const toLoadService = toLoadServiceArr[toLoadServiceArr.length - 1];
   const blogDetails = internalServiceData[getDataFromPathType(toLoadService)];
@@ -51,7 +66,7 @@ export const IndividualService = () => {
     <div className={IndividualServiceCSS["indService-container"]}>
       <div className={IndividualServiceCSS["indService-back-container"]}>
         <Link
-          to={{ pathname: "/services" }}
+          to={{ pathname: goBackMethod() }}
           className={IndividualServiceCSS["indService-backBtn"]}
         >
           <i className="fa-sharp fa-solid fa-arrow-left"></i> Go Back
