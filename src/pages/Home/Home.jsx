@@ -15,7 +15,7 @@ export const Home = () => {
   useEffect(() => {
     Aos.init({
       offset: "50",
-      Delay: "300",
+      Delay: "100",
       duration: "1000",
       easing: "ease-in-out",
       anchorPlacement: "top",

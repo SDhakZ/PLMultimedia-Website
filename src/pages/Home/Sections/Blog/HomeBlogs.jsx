@@ -39,6 +39,7 @@ export const HomeBlogs = () => {
               authorPP={authorImgUrl}
               authorName={blog.attributes.authorInfo.nameOfAuthor}
               publishDate={blog.attributes.authorInfo.dateOfUpload}
+              loadedFrom="home"
             />
           );
         })}

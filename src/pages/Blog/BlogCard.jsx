@@ -8,7 +8,10 @@ export const BlogCard = (props) => {
   const history = useHistory();
   const routeChange = () => {
     let path = `blog/${props.id}/${props.slug}`;
-    history.push(path);
+    history.push({
+      pathname: path,
+      state: { loadedFrom: props.loadedFrom },
+    });
   };
 
   return (

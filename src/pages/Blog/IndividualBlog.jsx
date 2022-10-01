@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory, useLocation } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
@@ -9,12 +9,24 @@ import { Link } from "react-router-dom";
 
 export const IndividualBlog = () => {
   //change this according to where the strapi admin is hosted
+  const history = useHistory();
+  const location = useLocation();
+  let { loadedFrom } = location.state;
   const host = "http://localhost:1338";
   const { id } = useParams();
   const { loading, data, error } = useFetch(
     `${host}/api/blogs/${id}?populate=blogImage,authorInfo.profilePic`
   );
+  const goBackMethod = () => {
+    // history.goBack();
+    if (loadedFrom === "home") {
+      return "/";
+    } else if (loadedFrom === "blog") {
+      return "/blog";
+    }
 
+    return "/";
+  };
   //loading and error displays
   if (loading) return <LoadingPage />;
   if (error) return <ErrorPage />;
@@ -26,7 +38,7 @@ export const IndividualBlog = () => {
     <div className={INDBLG["individualBlogPage"]}>
       <div className={INDBLG["indBlg-backButton-container"]}>
         <Link
-          to={{ pathname: "/blog" }}
+          to={{ pathname: goBackMethod() }}
           className={INDBLG["indBlg-backButton"]}
         >
           <i class="fa-sharp fa-solid fa-arrow-left"></i> Go Back
