@@ -258,13 +258,13 @@
   }
 
   .home-top-text {
-    left: 20%;
-    top: 30%;
+    left: 23%;
+    top: 27%;
     max-width: 200px;
   }
 
   .home-top-floatingman {
-    bottom: 1%;
+    bottom: 7%;
     left: 73%;
   }
 
@@ -282,6 +282,5 @@
 
   .home-top-rocket {
     left: 7%;
-    top: 15%;
   }
 }
