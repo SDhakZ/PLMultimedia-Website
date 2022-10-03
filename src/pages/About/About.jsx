@@ -42,11 +42,10 @@ export const About = () => {
               company delivers custom fit products with ease of use and maximum
               return of value for both consumers and businesses in mind.
               <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              We communicate with our clients for their best suitable needs. We
+              also make sure that they get what they visioned for their company.
+              We will also make sure there is proper troubleshooting methods for
+              any problems that may arrise in the present changing world.
             </p>
           </div>
         </div>
@@ -59,17 +58,16 @@ export const About = () => {
           >
             <h2 className={AboutCSS["aboutUs-title"]}>What we aim for?</h2>
             <p className={AboutCSS["aboutUs-paragraph"]}>
-              lets ask what we should write in this section because its their
-              business. lLorem Ipsum is simply dummy text of the printing and
-              typesetting industry. when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting.
+              We aim to deliver complete and functional product for our clients
+              that has the latest trends and technologies involved. Our team
+              will ensure that our client is well satisfied from what we deliver
+              to them.
               <br />
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum.
+              We vision ourself to be a well rounded company that is able to
+              deliver quality product following the latest technological trends
+              to ensure that our client will have great business. We will solve
+              any problems and will also adapt to the changing world
+              accordingly.
             </p>
           </div>
           <figure>
