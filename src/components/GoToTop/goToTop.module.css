@@ -35,9 +35,9 @@
 
 @media screen and (max-width: 600px) {
   .goToTop {
-    width: 27px;
+    width: 35px;
     padding: 4px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     right: 20px;
   }
 }

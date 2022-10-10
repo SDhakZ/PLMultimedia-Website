@@ -23,6 +23,7 @@ export const GoToTop = () => {
     <div>
       {isVisible ? (
         <button
+          style={{ zIndex: 2 }}
           className={goToTopCSS["goToTop"]}
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
