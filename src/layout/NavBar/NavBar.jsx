@@ -14,7 +14,10 @@ export const NavBar = () => {
       <nav className={NavbarCSS.navbar}>
         <div className={NavbarCSS["nav-container"]}>
           <NavLink exact to="/" className={NavbarCSS["nav-logo"]}>
-            <img src={require("../../assets/Logo/companyLogo.png")} />
+            <img
+              src={require("../../assets/Logo/companyLogo.png")}
+              alt="company logo"
+            />
             Multimedia
           </NavLink>
 

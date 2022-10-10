@@ -42,9 +42,9 @@ export const Contact = () => {
     const errors = {};
     const namePattern = /([A-Z][a-z]{3,} )([A-Z][a-z]{3,} )?([A-Z][a-z]{3,})/;
     const emailPattern =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; /* eslint-disable-line */
     const phonePattern =
-      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; /* eslint-disable-line */
     if (!value.name) {
       return errors.name;
     } else if (!namePattern.test(value.name)) {
@@ -173,6 +173,7 @@ export const Contact = () => {
                   </div>
                   <a
                     href="mailto:internships@plmultimediaservice.com"
+                    rel="noreferrer"
                     target="_blank"
                   >
                     plmultimediaservice@gmail.com
@@ -186,6 +187,7 @@ export const Contact = () => {
                   </div>
                   <a
                     href="https://goo.gl/maps/fNcZiCUYHxBAE4nj6"
+                    rel="noreferrer"
                     target="_blank"
                   >
                     Bharatpur-20, Chitwan
@@ -198,7 +200,11 @@ export const Contact = () => {
                       className={`${ContactCSS.linkedin} fa-brands fa-linkedin-in`}
                     />
                   </div>
-                  <a href="https://www.linkedin.com/feed/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/feed/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     PL Multimedia Service
                   </a>
                 </div>
@@ -218,6 +224,7 @@ export const Contact = () => {
                   </div>
                   <a
                     href="https://www.instagram.com/instagram/"
+                    rel="noreferrer"
                     target="_blank"
                   >
                     PLMultimediaService
@@ -232,6 +239,7 @@ export const Contact = () => {
                   </div>
                   <a
                     href="https://www.facebook.com/plmultimediaservice"
+                    rel="noreferrer"
                     target="_blank"
                   >
                     PL Multimedia Service
@@ -244,7 +252,11 @@ export const Contact = () => {
                       className={`${ContactCSS.twitter} fa-brands fa-twitter`}
                     />
                   </div>
-                  <a href="https://twitter.com/" target="_blank">
+                  <a
+                    href="https://twitter.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     PL Multimedia Service
                   </a>
                 </div>

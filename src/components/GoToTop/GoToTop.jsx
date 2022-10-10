@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import goToTopCSS from "./goToTop.module.css";
 
 export const GoToTop = () => {

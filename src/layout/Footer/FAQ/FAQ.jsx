@@ -1,5 +1,5 @@
 import React from "react";
-import { FAQcard, FAQHeading, StillHaveQuestion } from "./FAQcard";
+import { FAQcard, StillHaveQuestion } from "./FAQcard";
 import faqData from "../../../data/faqData";
 import FAQCSS from "./FAQ.module.css";
 import { MainHeading } from "../../../components/MainHeading/MainHeading";

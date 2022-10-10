@@ -9,7 +9,6 @@ import { HomePortfolio } from "./Sections/Portfolio/HomePortfolio";
 import { GoToTop } from "../../components/GoToTop/GoToTop";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Particle } from "../../components/Particles/Particle";
 
 export const Home = () => {
   useEffect(() => {

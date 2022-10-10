@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import FooterCSS from "./footer.module.css";
 
 export const Footer = () => {
@@ -15,7 +15,10 @@ export const Footer = () => {
         {/* for columns of footer */}
         <div className={FooterCSS["footer-companyDetail-container"]}>
           <div className={FooterCSS["footer-companyName-container"]}>
-            <img src={require("../../assets/Logo/companyLogoBlack.png")}></img>
+            <img
+              src={require("../../assets/Logo/companyLogoBlack.png")}
+              alt="company logo"
+            />
             <span className={FooterCSS["footer-companyName"]}>Multimedia</span>
           </div>
           <p>
@@ -77,24 +80,34 @@ export const Footer = () => {
           <p>Question or Feedback</p>
           <p>We would love to hear suggestions from you</p>
           <div className={FooterCSS["footer-icons"]}>
-            <a href="mailto: info@plmultimediaservice.com" target="_blank">
+            <a
+              href="mailto: info@plmultimediaservice.com"
+              rel="noreferrer"
+              target="_blank"
+            >
               <i className={`${FooterCSS.envelope} fa-solid fa-envelope`}></i>
             </a>
             <a
               href="https://www.linkedin.com/in/pl-multimedia-service-pvt-ltd-b06636251/"
+              rel="noreferrer"
               target="_blank"
             >
               <i
                 className={`${FooterCSS.linkedin} fa-brands fa-linkedin-in`}
               ></i>
             </a>
-            <a href="https://www.instagram.com/instagram/" target="_blank">
+            <a
+              href="https://www.instagram.com/instagram/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <i
                 className={`${FooterCSS.instagram} fa-brands fa-instagram`}
               ></i>
             </a>
             <a
               href="https://www.facebook.com/plmultimediaservice"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -105,18 +118,19 @@ export const Footer = () => {
           <div className={FooterCSS["footer-payment"]}>
             We also accept payment through:
             <div className={FooterCSS["footer-logo"]}>
-              <a onClick={goToKhalti}>
+              <a onClick={goToKhalti} href="# ">
                 <img
                   src={require("../../assets/Logo/khaltiLogo.png")}
                   className={FooterCSS["footer-khaltiLogo"]}
                   alt="Khalti Logo"
                 />
               </a>
-              <a onClick={goToEsewa}>
+              <a onClick={goToEsewa} href="# ">
                 <img
                   src={require("../../assets/Logo/esewaLogo.png")}
                   className={FooterCSS["footer-esewaLogo"]}
                   alt="esewa Logo"
+                  href="# "
                 />
               </a>
             </div>
