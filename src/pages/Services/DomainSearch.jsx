@@ -16,8 +16,9 @@ export const DomainSearch = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "API",
-        "X-RapidAPI-Host": "HostKey",
+        "X-RapidAPI-Key": "40ee149ac5msh6703a39179f879ep1f99c6jsn382fa7ab1073",
+        "X-RapidAPI-Key": process.env.REACT_APP_DOMAIN_API_KEY,
+        "X-RapidAPI-Host": "domain-checker7.p.rapidapi.com",
       },
     };
 
