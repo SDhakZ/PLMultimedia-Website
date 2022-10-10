@@ -39,14 +39,13 @@ export const HomeAboutUs = () => {
           We are a dedicated team of IT and multimedia professionals based in
           Nepal delivering web-related services and customized media. Our
           company delivers custom fit products with ease of use and maximum
-          return of value for both consumers and businesses in mind. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do
+          return of value for both consumers and businesses in mind.
         </p>
         <p className={HomeAboutUsCSS["home-aboutUs-paragraph"]}>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          We communicate with our clients for their best suitable needs. We also
+          make sure that they get what they visioned for their company. We will
+          also make sure there is proper troubleshooting methods for any
+          problems that may arrise in the present changing world.
         </p>
       </div>
     </div>
