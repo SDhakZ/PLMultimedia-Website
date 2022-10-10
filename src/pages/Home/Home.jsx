@@ -15,7 +15,8 @@ export const Home = () => {
   useEffect(() => {
     Aos.init({
       offset: "10",
-      duration: "700",
+      Delay: "0",
+      duration: "1000",
       easing: "ease-in",
       anchorPlacement: "top",
       once: true,
@@ -24,7 +25,6 @@ export const Home = () => {
 
   return (
     <div className={HomeCSS["home-container"]}>
-      <Particle />
       <section className={HomeCSS["home-first"]}>
         <HomeTop />
       </section>

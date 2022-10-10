@@ -10,6 +10,7 @@
   align-items: center;
   gap: 3rem 1.5rem;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .home-blog-viewMore {
@@ -21,17 +22,11 @@
   font-size: 1.25rem;
   font-weight: 500;
   color: #0e63e3;
-  margin-top: 20px;
+  margin-top: 10px;
   transition: all 0.4s ease;
 }
 .home-blog-viewMore:hover {
   color: #62cff5;
-}
-
-@media screen and (max-width: 1400px) {
-  .home-blog-cardsContainer {
-    justify-content: space-evenly;
-  }
 }
 
 @media screen and (max-width: 400px) {

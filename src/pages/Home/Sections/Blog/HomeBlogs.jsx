@@ -5,7 +5,7 @@ import { LoadingPage } from "../../../../components/LoadingPage/LoadingPage";
 import { ErrorPage } from "../../../../components/ErrorPage/ErrorPage";
 import HomeBlog from "./homeBlogs.module.css";
 import { Link } from "react-router-dom";
-import { MainHeading } from "../../../../components/MainHeading/MainHeading";
+import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
 
 export const HomeBlogs = () => {
   const host = "http://localhost:1338";
@@ -18,7 +18,7 @@ export const HomeBlogs = () => {
 
   return (
     <div className={HomeBlog["home-blogComponent"]}>
-      <MainHeading headingName="Tune in into our blogs" />
+      <SectionHeading sectionName="Tune in into our blogs" />
       <div
         className={HomeBlog["home-blog-cardsContainer"]}
         onClick={() => {

@@ -1,0 +1,47 @@
+:root {
+  --SH-fs-heading: 3.5rem; /* section heading size */
+  --SH-mb-heading: 30px; /*margin bottom of section heading*/
+}
+
+.sectionHeading {
+  text-align: center;
+  font-family: "Exo 2";
+  font-size: var(--SH-fs-heading);
+  letter-spacing: 0.075em;
+  margin-bottom: var(--SH-mb-heading);
+  color: #2f2f2f;
+}
+
+@media all and (max-width: 1500px) {
+  :root {
+    --SH-fs-heading: 4rem;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  :root {
+    --SH-fs-heading: 3.5rem;
+    --SH-mb-heading: 55px;
+  }
+}
+
+@media all and (max-width: 960px) {
+  :root {
+    --SH-fs-heading: 3rem;
+    --SH-mb-heading: 40px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  :root {
+    --SH-fs-heading: 2.5rem;
+    --SH-mb-heading: 20px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  :root {
+    --SH-fs-heading: 1.8rem;
+    --SH-mb-heading: 25px;
+  }
+}

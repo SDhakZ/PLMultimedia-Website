@@ -14,7 +14,7 @@
 }
 
 .home-services {
-  height: 800px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,7 @@
 
 .home-recentWorks {
   background: transparent;
-  height: 500px;
+  height: 350px;
   padding: var(--pd-c);
 }
 
@@ -32,7 +32,7 @@
     rgba(255, 255, 255, 0) 15.43%,
     #d0d4f9 100%
   );
-  height: 700px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,10 +57,16 @@
   }
 }
 @media all and (max-width: 600px) {
-  .home-recentWorks {
-    height: 1010px;
+  .home-aboutUs {
+    height: 600px;
   }
   .home-services {
-    height: 500px;
+    height: 530px;
+  }
+  .home-recentWorks {
+    height: 1050px;
+  }
+  .home-blogs {
+    height: 1540px;
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { ServiceCard } from "../../../Services/ServiceCard";
 import serviceData from "../../../../data/servicesData";
-import { MainHeading } from "../../../../components/MainHeading/MainHeading";
+import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
@@ -12,7 +12,7 @@ import "../SwiperJS/SwiperOverride.css";
 export const HomeServiceSlider = () => {
   return (
     <>
-      <MainHeading headingName="Our Services" />
+      <SectionHeading sectionName="Our Services" />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={3}

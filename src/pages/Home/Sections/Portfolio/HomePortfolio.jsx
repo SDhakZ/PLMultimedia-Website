@@ -1,8 +1,9 @@
 import React from "react";
 import HomePortfolioCSS from "./homePortfolio.module.css";
-import { MainHeading } from "../../../../components/MainHeading/MainHeading";
+import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
 import portfolioData from "../../../../data/portfolioData";
 import { Link } from "react-router-dom";
+
 function HomePortfolioCard(props) {
   return (
     <button className={HomePortfolioCSS["home-portfolio-card"]}>
@@ -25,7 +26,7 @@ function HomePortfolioCard(props) {
 export const HomePortfolio = () => {
   return (
     <div className={HomePortfolioCSS["home-portfolio-container"]}>
-      <MainHeading headingName="Our Recent Works" />
+      <SectionHeading sectionName="Our Recent Works" />
       <div className={HomePortfolioCSS["home-portfolio-data"]}>
         {portfolioData.slice(0, 3).map((portfolio) => {
           return (

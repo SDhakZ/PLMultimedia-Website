@@ -1,6 +1,6 @@
 import React from "react";
 import HomeReviewCSS from "./homeReview.module.css";
-import { MainHeading } from "../../../../components/MainHeading/MainHeading";
+import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
 import HomeReviewData from "../../../../data/homeReviewData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
@@ -42,7 +42,7 @@ function HomeReviewCard(props) {
 export const HomeReview = () => {
   return (
     <>
-      <MainHeading headingName="What people think about us" />
+      <SectionHeading sectionName="What people think about us" />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={3}
