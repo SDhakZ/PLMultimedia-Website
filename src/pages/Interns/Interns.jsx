@@ -6,9 +6,14 @@ import useFetch from "../../hooks/useFetch";
 import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
 import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
+import Pagination from "./Pagination";
 
 // http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
 export const Interns = () => {
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const [pageIndex, setPageIndex] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(3);
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -26,7 +31,7 @@ export const Interns = () => {
 
   var path;
   if (value === "All") {
-    path = "http://localhost:1338/api/interns?populate=*";
+    path = `http://localhost:1338/api/interns?populate=*&pagination[page]=${currentPage}&pagination[pageSize]=3`;
   } else {
     path =
       "http://localhost:1338/api/interns?populate=*&filters[field][$eq]=" +
@@ -83,6 +88,27 @@ export const Interns = () => {
             );
           })}
         </div>
+        <button
+          disabled={pageIndex === 1}
+          onClick={() => setPageIndex(pageIndex - 1)}
+        >
+          prev
+        </button>
+        <button
+          disabled={pageIndex === (data && data.meta.pagination.pageCount)}
+          onClick={() => setPageIndex(pageIndex + 1)}
+        >
+          next
+        </button>
+        <span>
+          {`${pageIndex} of ${data && data.meta.pagination.pageCount}`}
+        </span>
+        <Pagination
+          currentPage={currentPage}
+          postsPerPage={3}
+          totalPage={data && data.meta.pagination.pageCount}
+          paginate={paginate}
+        />
       </div>
     </animated.div>
   );
