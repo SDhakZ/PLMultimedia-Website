@@ -6,12 +6,14 @@ import useFetch from "../../hooks/useFetch";
 import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
 import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
-import Pagination from "./Pagination";
+import Pagination from "../../components/Pagination/Pagination";
 
 // http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
 export const Interns = () => {
+  //pagination settings//
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [currentPage, setCurrentPage] = useState(1);
+  //pagination settings//
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },

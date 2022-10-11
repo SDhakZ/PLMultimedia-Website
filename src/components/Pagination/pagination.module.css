@@ -1,0 +1,9 @@
+.pagination-page-link {
+  text-decoration: none;
+}
+
+.pagination-page-activeLink {
+  color: green;
+  font-size: 20px;
+  text-decoration: none;
+}

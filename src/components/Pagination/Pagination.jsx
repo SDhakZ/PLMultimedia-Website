@@ -1,4 +1,4 @@
-import InternsCSS from "./interns.module.css";
+import PaginationCSS from "./pagination.module.css";
 const Pagination = ({ currentPage, totalPage, paginate }) => {
   const pageNumbers = [];
   for (let i = 1; i <= totalPage; i++) {
@@ -6,13 +6,17 @@ const Pagination = ({ currentPage, totalPage, paginate }) => {
   }
   return (
     <nav>
-      <ul className={InternsCSS["interns-pagination"]}>
+      <ul className={PaginationCSS["pagination-pagination"]}>
         {pageNumbers.map((number) => (
-          <li key={number} className={InternsCSS["interns-page-item"]}>
+          <li key={number} className={PaginationCSS["pagination-page-item"]}>
             <a
               onClick={() => paginate(number)}
               href="# "
-              className={InternsCSS["interns-page-link"]}
+              className={
+                number == currentPage
+                  ? `${PaginationCSS["pagination-page-activeLink"]}`
+                  : `${PaginationCSS["pagination-page-link"]}`
+              }
             >
               {number}
             </a>
