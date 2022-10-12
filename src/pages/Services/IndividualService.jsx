@@ -84,7 +84,7 @@ export const IndividualService = () => {
                 clickNumber === 1 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("advertisement")}
-              href="# "
+              href="javascript:;"
             >
               Advertisement
             </a>
@@ -93,7 +93,7 @@ export const IndividualService = () => {
                 clickNumber === 2 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("webDevelopment")}
-              href="# "
+              href="javascript:;"
             >
               Web Development
             </a>
@@ -102,7 +102,7 @@ export const IndividualService = () => {
                 clickNumber === 3 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("webHosting")}
-              href="# "
+              href="javascript:;"
             >
               Web Hosting
             </a>
@@ -111,7 +111,7 @@ export const IndividualService = () => {
                 clickNumber === 4 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("appDevelopment")}
-              href="# "
+              href="javascript:;"
             >
               App Development
             </a>
@@ -120,7 +120,7 @@ export const IndividualService = () => {
                 clickNumber === 5 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("seoOptimization")}
-              href="# "
+              href="javascript:;"
             >
               SEO Optimization
             </a>
@@ -129,7 +129,7 @@ export const IndividualService = () => {
                 clickNumber === 6 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("digitalMarketing")}
-              href="# "
+              href="javascript:;"
             >
               Digital Marketing
             </a>
@@ -138,7 +138,7 @@ export const IndividualService = () => {
                 clickNumber === 7 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("mediaProduction")}
-              href="# "
+              href="javascript:;"
             >
               Media Production
             </a>
@@ -147,7 +147,7 @@ export const IndividualService = () => {
                 clickNumber === 8 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("eventManagement")}
-              href="# "
+              href="javascript:;"
             >
               Event Management
             </a>

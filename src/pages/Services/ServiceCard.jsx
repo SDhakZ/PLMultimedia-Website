@@ -14,7 +14,7 @@ function getPathSuffix(serviceNumber) {
   } else if (serviceNumber === 3) {
     path += "webHosting";
   } else if (serviceNumber === 4) {
-    path += "mobileAppDevelopment";
+    path += "appDevelopment";
   } else if (serviceNumber === 5) {
     path += "seoOptimization";
   } else if (serviceNumber === 6) {

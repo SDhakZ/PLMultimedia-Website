@@ -39,6 +39,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-size: 1.1rem;
   transition: all 0.4s;
+  cursor: pointer;
 }
 
 .interns-fieldDropdown:focus {

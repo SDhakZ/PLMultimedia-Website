@@ -8,17 +8,17 @@ import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
 import Pagination from "../../components/Pagination/Pagination";
 
-// http://localhost:1338/api/interns?populate=*&filters[field][$eq]=App Development
 export const Interns = () => {
-  //pagination settings//
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  const [currentPage, setCurrentPage] = useState(1);
-  //pagination settings//
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
     config: { duration: 1000, easing: easings.easeInOutQuad },
   });
+  //pagination settings//
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const [currentPage, setCurrentPage] = useState(1);
+  //pagination settings//
+
   //Sorting According to dropdown while fetching Strapi data
   const getInitialState = () => {
     const value = "All";
@@ -28,14 +28,12 @@ export const Interns = () => {
   const handleChange = (dropdown) => {
     setValue(dropdown.target.value);
   };
-
+  const host = "http://localhost:1338";
   var path;
   if (value === "All") {
-    path = `http://localhost:1338/api/interns?populate=*&pagination[page]=${currentPage}&pagination[pageSize]=3`;
+    path = `${host}/api/interns?populate=*&pagination[page]=${currentPage}&pagination[pageSize]=9`;
   } else {
-    path =
-      "http://localhost:1338/api/interns?populate=*&filters[field][$eq]=" +
-      value;
+    path = `${host}/api/interns?populate=*&filters[field][$eq]=${value}&pagination[page]=${currentPage}&pagination[pageSize]=9`;
   }
 
   const { loading, error, data } = useFetch(path);
@@ -73,7 +71,7 @@ export const Interns = () => {
         <div className={InternsCSS["interns-flexbox"]}>
           {data.data.map((intern) => {
             const url = intern.attributes.img.data.attributes.url;
-            const image = "http://localhost:1338" + url;
+            const image = `${host}${url}`;
             return (
               <InternCard
                 key={intern.attributes.id}
@@ -90,7 +88,6 @@ export const Interns = () => {
         </div>
         <Pagination
           currentPage={currentPage}
-          postsPerPage={3}
           totalPage={data && data.meta.pagination.pageCount}
           paginate={paginate}
         />

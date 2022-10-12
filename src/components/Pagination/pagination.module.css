@@ -1,9 +1,96 @@
+:root {
+  --PG-fs-pageItem: 1.2rem;
+  --PG-wh-pageItemLink: 28px;
+  --PG-w-button: 30px;
+  --PG-h-button: 28px;
+  --PG-fs-button: 1.3rem;
+  --PG-mt-container: 37px;
+}
+
+.pagination-container,
+.pagination-list,
+.pagination-page-item,
 .pagination-page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-container {
+  gap: 10px;
+  margin-top: var(--PG-mt-container);
+}
+
+.pagination-list {
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pagination-page-item {
+  width: var(--PG-wh-pageItemLink);
+  height: var(--PG-wh-pageItemLink);
+  border-radius: 3px;
+  font-family: "Roboto";
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  font-size: var(--PG-fs-pageItem);
+}
+
+.pagination-page-link {
+  width: var(--PG-wh-pageItemLink);
+  height: var(--PG-wh-pageItemLink);
   text-decoration: none;
+  color: #636363;
 }
 
 .pagination-page-activeLink {
-  color: green;
-  font-size: 20px;
+  color: #3ec1ee;
   text-decoration: none;
+}
+
+.pagination-button {
+  color: #3ec1ee;
+  font-weight: 500;
+  font-size: var(--PG-fs-button);
+  min-width: var(--PG-w-button);
+  height: var(--PG-h-button);
+  cursor: pointer;
+  outline: unset;
+  border: none;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: none;
+  transition: all 0.3s;
+}
+
+.pagination-button:disabled {
+  color: #c3cacc;
+  cursor: not-allowed;
+}
+
+@media all and (max-width: 1200px) {
+  :root {
+    --PG-fs-pageItem: 1.1rem;
+    --PG-wh-pageItemLink: 25px;
+    --PG-w-button: 27px;
+    --PG-h-button: 25px;
+    --PG-fs-button: 1.2rem;
+    --PG-mt-container: 30px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  :root {
+    --PG-fs-pageItem: 0.95rem;
+    --PG-wh-pageItemLink: 20px;
+    --PG-w-button: 23px;
+    --PG-h-button: 23px;
+    --PG-fs-button: 1.1rem;
+    --PG-mt-container: 25px;
+  }
+  .pagination-list {
+    gap: 6px;
+  }
 }

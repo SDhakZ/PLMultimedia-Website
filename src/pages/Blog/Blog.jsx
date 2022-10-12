@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
 import { BlogCard } from "./BlogCard";
 import BlogsCSS from "./blogs.module.css";
 import { MainHeading } from "../../components/MainHeading/MainHeading";
-
+import Pagination from "../../components/Pagination/Pagination";
 export const Blog = () => {
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const [currentPage, setCurrentPage] = useState(1);
   //change this according to where the strapi admin is hosted
   const host = "http://localhost:1338";
   const { loading, data, error } = useFetch(
-    `${host}/api/blogs?populate=blogImage,authorInfo.profilePic`
+    `${host}/api/blogs?populate=blogImage,authorInfo.profilePic&pagination[page]=${currentPage}&pagination[pageSize]=6`
   );
 
   //loading and error displays
@@ -56,6 +58,11 @@ export const Blog = () => {
             );
           })}
         </div>
+        <Pagination
+          currentPage={currentPage}
+          totalPage={data && data.meta.pagination.pageCount}
+          paginate={paginate}
+        />
       </div>
     </React.Fragment>
   );

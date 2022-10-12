@@ -9,6 +9,7 @@ import { Services } from "./pages/Services/Services";
 import { Interns } from "./pages/Interns/Interns";
 import { Portfolio } from "./pages/Portfolio/Portfolio";
 import { FAQpage } from "./layout/Footer/FAQ/FAQ";
+import { Credentials } from "./layout/Footer/Credentials/Credentials";
 import { Contact } from "./pages/Contact/Contact";
 import { IndividualService } from "./pages/Services/IndividualService";
 import { IndividualBlog } from "./pages/Blog/IndividualBlog";
@@ -26,6 +27,7 @@ function App() {
             <Route path="/about" component={About} />
             <Route exact path="/blog" component={Blog} />
             <Route path="/FAQpage" component={FAQpage} />
+            <Route path="/credentials" component={Credentials} />
             <Route path="/contact" component={Contact} />
             <Route exact path="/services" component={Services} />
             <Route path="/portfolio" component={Portfolio} />
