@@ -151,7 +151,6 @@ input[type="text"]:focus {
   outline: none;
   box-shadow: rgba(59, 59, 59, 0.336) 0px 5px 15px 0px;
   transform: translateY(-2px);
-  margin-bottom: 2px;
 }
 
 .contact-form-email-phone {

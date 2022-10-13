@@ -1,11 +1,11 @@
 :root {
-  --SH-fs-heading: 3.5rem; /* section heading size */
+  --SH-fs-heading: 3.7rem; /* section heading size */
   --SH-mb-heading: 30px; /*margin bottom of section heading*/
 }
 
 .sectionHeading {
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "Inter";
   font-size: var(--SH-fs-heading);
   letter-spacing: 0.075em;
   margin-bottom: var(--SH-mb-heading);
