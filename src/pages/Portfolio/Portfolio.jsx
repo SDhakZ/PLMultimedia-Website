@@ -4,7 +4,7 @@ import portfolioData from "../../data/portfolioData";
 import { PortfolioSection } from "./PortfolioSection";
 import { MainHeading } from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
-import PortfolioPagination from "../../components/Pagination/PortfolioPagination";
+import PaginationRaw from "../../components/Pagination/PaginaionRaw.jsx";
 import { useState } from "react";
 
 export const Portfolio = () => {
@@ -13,8 +13,8 @@ export const Portfolio = () => {
     to: { opacity: 1 },
     config: { duration: 1000, easing: easings.easeInOutQuad },
   });
-  const [portData, setPortData] = useState(portfolioData);
-  const [showPerPage, setShowPerPage] = useState(3);
+  const [portData] = useState(portfolioData);
+  const [showPerPage] = useState(3);
   const [pagination, setPagination] = useState({
     start: 0,
     end: showPerPage,
@@ -38,7 +38,7 @@ export const Portfolio = () => {
           );
         })}
       </animated.div>
-      <PortfolioPagination
+      <PaginationRaw
         showPerPage={showPerPage}
         onPaginationChange={onPaginationChange}
         total={portData.length}
