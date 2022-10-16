@@ -10,7 +10,8 @@
 .pagination-container,
 .pagination-list,
 .pagination-page-item,
-.pagination-page-link {
+.pagination-page-link,
+.pagination-page-activeLink {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +47,8 @@
 }
 
 .pagination-page-activeLink {
+  width: var(--PG-wh-pageItemLink);
+  height: var(--PG-wh-pageItemLink);
   color: #3ec1ee;
   text-decoration: none;
 }

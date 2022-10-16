@@ -5,7 +5,7 @@ import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
 import { BlogCard } from "./BlogCard";
 import BlogsCSS from "./blogs.module.css";
 import { MainHeading } from "../../components/MainHeading/MainHeading";
-import Pagination from "../../components/Pagination/Pagination";
+import PaginationStrapi from "../../components/Pagination/PaginationStrapi";
 export const Blog = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,7 +58,7 @@ export const Blog = () => {
             );
           })}
         </div>
-        <Pagination
+        <PaginationStrapi
           currentPage={currentPage}
           totalPage={data && data.meta.pagination.pageCount}
           paginate={paginate}

@@ -1,15 +1,25 @@
+// This pagination component can be used for strapi mapped data //
+
 import PaginationCSS from "./pagination.module.css";
 const Pagination = ({ currentPage, totalPage, paginate }) => {
   const pageNumbers = [];
   for (let i = 1; i <= totalPage; i++) {
     pageNumbers.push(i);
   }
+  function clicked(type) {
+    window.scrollTo({ top: 0 });
+    if (type === "next") {
+      paginate(currentPage + 1);
+    } else if (type === "prev") {
+      paginate(currentPage - 1);
+    }
+  }
   return (
     <>
       <div className={PaginationCSS["pagination-container"]}>
         <button
           disabled={currentPage === 1}
-          onClick={() => paginate(currentPage - 1)}
+          onClick={() => clicked("prev")}
           className={PaginationCSS["pagination-button"]}
         >
           &lt;
@@ -34,7 +44,7 @@ const Pagination = ({ currentPage, totalPage, paginate }) => {
 
         <button
           disabled={currentPage === totalPage}
-          onClick={() => paginate(currentPage + 1)}
+          onClick={() => clicked("next")}
           className={PaginationCSS["pagination-button"]}
         >
           &gt;

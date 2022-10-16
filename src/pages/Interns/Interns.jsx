@@ -6,7 +6,7 @@ import useFetch from "../../hooks/useFetch";
 import { ErrorPage } from "../../components/ErrorPage/ErrorPage";
 import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
-import Pagination from "../../components/Pagination/Pagination";
+import PaginationStrapi from "../../components/Pagination/PaginationStrapi";
 
 export const Interns = () => {
   const style = useSpring({
@@ -86,7 +86,7 @@ export const Interns = () => {
             );
           })}
         </div>
-        <Pagination
+        <PaginationStrapi
           currentPage={currentPage}
           totalPage={data && data.meta.pagination.pageCount}
           paginate={paginate}
