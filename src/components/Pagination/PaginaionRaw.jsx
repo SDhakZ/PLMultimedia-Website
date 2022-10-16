@@ -36,7 +36,7 @@ const PaginationRaw = ({ showPerPage, onPaginationChange, total }) => {
                 onClick={() => setCounter(index + 1)}
                 href="# "
                 className={
-                  index + 1 == currentPage
+                  index + 1 === currentPage
                     ? `${PaginationCSS["pagination-page-activeLink"]}`
                     : `${PaginationCSS["pagination-page-link"]}`
                 }

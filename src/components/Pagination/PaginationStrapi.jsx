@@ -25,7 +25,7 @@ const Pagination = ({ currentPage, totalPage, paginate }) => {
                 onClick={() => paginate(number)}
                 href="# "
                 className={
-                  number == currentPage
+                  number === currentPage
                     ? `${PaginationCSS["pagination-page-activeLink"]}`
                     : `${PaginationCSS["pagination-page-link"]}`
                 }
