@@ -13,6 +13,7 @@ export const Portfolio = () => {
     to: { opacity: 1 },
     config: { duration: 1000, easing: easings.easeInOutQuad },
   });
+  const [currentPage, setCounter] = useState(1);
   const [portData] = useState(portfolioData);
   const [showPerPage] = useState(3);
   const [pagination, setPagination] = useState({
