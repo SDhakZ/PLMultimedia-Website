@@ -117,6 +117,7 @@
   padding: 10px;
   transition: all 0.2s ease;
   cursor: pointer;
+  border: 0px solid black;
 }
 
 .indService-link:hover {
@@ -129,7 +130,7 @@
 }
 
 .indService-link:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .indService-contact {

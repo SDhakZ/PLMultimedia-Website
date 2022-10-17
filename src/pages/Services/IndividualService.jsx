@@ -79,78 +79,70 @@ export const IndividualService = () => {
             <h1 className={IndividualServiceCSS["indService-otherServices"]}>
               Our Services
             </h1>
-            <a
+            <button
               className={`${
                 clickNumber === 1 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("advertisement")}
-              href="javascript:;"
             >
               Advertisement
-            </a>
-            <a
+            </button>
+            <button
               className={`${
                 clickNumber === 2 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("webDevelopment")}
-              href="javascript:;"
             >
               Web Development
-            </a>
-            <a
+            </button>
+            <button
               className={`${
                 clickNumber === 3 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("webHosting")}
-              href="javascript:;"
             >
               Web Hosting
-            </a>
-            <a
+            </button>
+            <button
               className={`${
                 clickNumber === 4 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("appDevelopment")}
-              href="javascript:;"
             >
               App Development
-            </a>
-            <a
+            </button>
+            <button
               className={`${
                 clickNumber === 5 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("seoOptimization")}
-              href="javascript:;"
             >
               SEO Optimization
-            </a>
-            <a
+            </button>
+            <button
               className={`${
                 clickNumber === 6 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("digitalMarketing")}
-              href="javascript:;"
             >
               Digital Marketing
-            </a>
-            <a
+            </button>
+            <button
               className={`${
                 clickNumber === 7 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("mediaProduction")}
-              href="javascript:;"
             >
               Media Production
-            </a>
-            <a
+            </button>
+            <button
               className={`${
                 clickNumber === 8 ? IndividualServiceCSS.active : ""
               } ${IndividualServiceCSS["indService-link"]}`}
               onClick={() => clickedLink("eventManagement")}
-              href="javascript:;"
             >
               Event Management
-            </a>
+            </button>
           </div>
           <div className={IndividualServiceCSS["indService-contact"]}>
             <h2 className={IndividualServiceCSS["indService-needHelp"]}>

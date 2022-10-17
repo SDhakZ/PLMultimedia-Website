@@ -5,15 +5,15 @@
   --AU-fs-heading: 3.5rem; /* heading font size */
   --AU-fs-paragraph: 1.3rem; /* paragraph font size*/
   --AU-lh-paragraph: 40px; /* paragraph line height */
+  --AU-fs-name: 1.625rem; /*font size memberName*/
+  --AU-fs-position: 1.25rem; /*font size position*/
+  --AU-fs-icon: 1.5rem; /*font size socialIcon*/
 }
 
 .aboutUs-container {
   background-color: #fbfbfd;
   padding: var(--pd-c);
   color: #2f2f2f;
-}
-
-.aboutUs-text {
   font-family: "Bahnschrift";
 }
 
@@ -30,7 +30,7 @@
 .aboutUs-title {
   font-weight: 700;
   font-size: var(--AU-fs-heading);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.8px;
   margin-bottom: 20px;
 }
 
@@ -51,6 +51,70 @@
   margin-right: -30px;
 }
 
+.aboutUs-ourTeam {
+  margin-top: 50px;
+}
+
+.aboutUs-teamMembers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.aboutUs-memberDetail {
+  box-shadow: 2px 4px 7px 8px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  text-align: center;
+  gap: 20px;
+  transition: all 0.5s ease;
+}
+
+.aboutUs-memberDetail:hover {
+  transform: translateY(-2px);
+}
+
+.aboutUs-membersImage {
+  clip-path: circle();
+}
+
+.aboutUs-socialIcon a:hover {
+  color: #3ec1ee;
+  scale: 1.2;
+}
+
+.aboutUS-memberName {
+  font-size: var(--AU-fs-name);
+  font-family: "Roboto";
+  letter-spacing: 2px;
+  color: #2f2f2f;
+}
+
+.aboutUS-memberPosition {
+  font-size: var(--AU-fs-position);
+  font-family: "Roboto";
+  color: #8b8b8b;
+}
+
+.aboutUs-socialIcon {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.aboutUs-socialIcon a {
+  color: rgb(0, 0, 0);
+  font-size: var(--AU-fs-icon);
+  transition: all 0.3s ease-in-out;
+}
+.aboutUs-advisor {
+  margin-top: 50px;
+}
+
 /*Responsive settings*/
 @media (max-width: 1400px) {
   :root {
@@ -58,16 +122,20 @@
     --AU-fs-paragraph: 1.2rem; /* paragraph font size*/
     --AU-lh-paragraph: 30px; /* paragraph line height */
   }
+
   .aboutUs-section1 {
     gap: 60px;
     margin-bottom: 70px;
   }
+
   .aboutUs-title {
     margin-bottom: 10px;
   }
+
   .aboutUs-section2 {
     gap: 60px;
   }
+
   .aboutUs-section1-img,
   .aboutUs-section2-img {
     width: 500px;
@@ -76,10 +144,14 @@
 
 @media (max-width: 1200px) {
   :root {
-    --AU-fs-heading: 2.3rem; /* heading font size */
-    --AU-fs-paragraph: 1rem; /* paragraph font size*/
-    --AU-lh-paragraph: 30px; /* paragraph line height */
+    --AU-fs-heading: 2.3rem;
+    --AU-fs-paragraph: 1rem;
+    --AU-lh-paragraph: 30px;
+    --AU-fs-name: 1.375rem;
+    --AU-fs-position: 1.125rem;
+    --AU-fs-icon: 1.375rem;
   }
+
   .aboutUs-section1-img,
   .aboutUs-section2-img {
     width: 450px;
@@ -88,13 +160,17 @@
 
 @media (max-width: 960px) {
   :root {
-    --AU-fs-heading: 2rem; /* heading font size */
-    --AU-fs-paragraph: 1.1rem; /* paragraph font size*/
-    --AU-lh-paragraph: 25px; /* paragraph line height */
+    --AU-fs-heading: 2rem;
+    --AU-fs-paragraph: 1.1rem;
+    --AU-lh-paragraph: 25px;
+    --AU-fs-name: 1.25rem;
+    --AU-fs-position: 1rem;
+    --AU-fs-icon: 1.25rem;
   }
   .aboutUs-section1 {
     gap: 40px;
   }
+
   .aboutUs-section1-img,
   .aboutUs-section2-img {
     width: 420px;
@@ -103,48 +179,79 @@
 
 @media (max-width: 900px) {
   :root {
-    --AU-fs-heading: 2.4rem; /* heading font size */
-    --AU-fs-paragraph: 1.1rem; /* paragraph font size*/
-    --AU-lh-paragraph: 30px; /* paragraph line height */
+    --AU-fs-heading: 2.4rem;
+    --AU-fs-paragraph: 1.1rem;
+    --AU-lh-paragraph: 30px;
   }
+
   .aboutUs-figureContainer {
     display: flex;
     justify-content: center;
   }
+
   .aboutUs-section1-img,
   .aboutUs-section2-img {
     width: 90%;
     margin: 0px 0px;
   }
+
   .aboutUs-section2-img {
     margin-right: 0px;
   }
+
   .aboutUs-title {
     margin-bottom: 10px;
   }
+
   .aboutUs-section1 {
     flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
   }
+
   .aboutUs-section2 {
     flex-direction: column-reverse;
     gap: 20px;
+  }
+
+  .aboutUs-memberDetail {
+    width: 173px;
+    gap: 20px;
+  }
+
+  .aboutUS-memberName {
+    letter-spacing: 1px;
+  }
+
+  .aboutUs-advisor .container {
+    font-size: 38px;
+    margin-left: 60px;
   }
 }
 
 @media (max-width: 600px) {
   :root {
-    --AU-fs-heading: 2.5rem; /* heading font size */
-    --AU-fs-paragraph: 1.1rem; /* paragraph font size*/
-    --AU-lh-paragraph: 30px; /* paragraph line height */
+    --AU-fs-heading: 2.5rem;
+    --AU-fs-paragraph: 1.1rem;
+    --AU-lh-paragraph: 30px;
+    --AU-fs-name: 1.375rem;
   }
+
   .aboutUs-section1-img,
   .aboutUs-section2-img {
     width: 100%;
   }
+
   .aboutUs-section1 {
     margin-bottom: 30px;
+  }
+
+  .aboutUs-memberDetail {
+    width: 80%;
+  }
+
+  .aboutUS-memberName {
+    letter-spacing: 2px;
   }
 }
 
@@ -154,13 +261,16 @@
     --AU-fs-paragraph: 0.875rem; /* paragraph font size*/
     --AU-lh-paragraph: 23px; /* paragraph line height */
   }
+
   .aboutUs-title {
     margin-bottom: 5px;
   }
+
   .aboutUs-section1 {
     margin-bottom: 20px;
     gap: 10px;
   }
+
   .aboutUs-section2 {
     gap: 10px;
   }

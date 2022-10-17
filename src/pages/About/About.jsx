@@ -4,7 +4,36 @@ import { MainHeading } from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import AboutUsData from "../../data/aboutUsData";
 
+function TeamMembers(props) {
+  return (
+    <div className={AboutCSS["aboutUs-memberDetail"]}>
+      <img
+        src={props.img}
+        className={AboutCSS["aboutUs-membersImage"]}
+        alt="team member's"
+      />
+
+      <h4 className={AboutCSS["aboutUS-memberName"]}>{props.name}</h4>
+      <h5 className={AboutCSS["aboutUS-memberPosition"]}>{props.position}</h5>
+      <div className={AboutCSS["aboutUs-socialIcon"]}>
+        <a href={props.facebookLink}>
+          <i className={`${AboutCSS.icons} fa fa-facebook`}></i>
+        </a>
+        <a href={props.gmailLink}>
+          <i className={`${AboutCSS.icons} fa fa-envelope`}></i>
+        </a>
+        <a href={props.twitterLink}>
+          <i className={`${AboutCSS.icons} fa fa-twitter`}></i>
+        </a>
+        <a href={props.linkedInLink}>
+          <i className={`${AboutCSS.icons} fa fa-linkedin`}></i>
+        </a>
+      </div>
+    </div>
+  );
+}
 export const About = () => {
   useEffect(() => {
     Aos.init({
@@ -79,6 +108,56 @@ export const About = () => {
               alt="writing"
             />
           </figure>
+        </div>
+
+        <div className={AboutCSS["aboutUs-ourTeam"]}>
+          <h2 className={AboutCSS["aboutUs-title"]}>Meet The Team</h2>
+
+          <div className={AboutCSS["aboutUs-teamMembers"]}>
+            {AboutUsData.map((aboutUs) => {
+              return (
+                <TeamMembers
+                  key={aboutUs.id}
+                  img={aboutUs.img}
+                  name={aboutUs.name}
+                  position={aboutUs.position}
+                  facebookLink={aboutUs.facebookLink}
+                  gmailLink={aboutUs.gmailLink}
+                  twitterLink={aboutUs.twitterLink}
+                  linkedInLink={aboutUs.linkedInLink}
+                />
+              );
+            })}
+          </div>
+        </div>
+        <div className={AboutCSS["aboutUs-advisor"]}>
+          <h2 className={AboutCSS["aboutUs-title"]}>Advisor</h2>
+
+          <div className={AboutCSS["aboutUs-teamMembers"]}>
+            <div className={AboutCSS["aboutUs-memberDetail"]}>
+              <img
+                src={require("../../assets/Images/AboutUs-Image/profile.jpg")}
+                className={AboutCSS["aboutUs-membersImage"]}
+                alt="Members"
+              />
+
+              <h4 className={AboutCSS["aboutUS-memberName"]}>Advisor</h4>
+              <div className={AboutCSS["aboutUs-socialIcon"]}>
+                <a href="https://www.facebook.com/madurai.boral">
+                  <i className={`${AboutCSS.icons} fa fa-facebook`}></i>
+                </a>
+                <a href="https://twitter.com/MultimediaPvt">
+                  <i className={`${AboutCSS.icons} fa fa-twitter`}></i>
+                </a>
+                <a href="mailto: info@plmultimediaservice.com">
+                  <i className={`${AboutCSS.icons} fa-solid fa-envelope`}></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pl-multimedia-service-pvt-ltd-b06636251/">
+                  <i className={`${AboutCSS.icons} fa fa-linkedin`}></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </animated.div>

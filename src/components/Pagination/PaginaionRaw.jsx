@@ -11,7 +11,7 @@ const PaginationRaw = ({ showPerPage, onPaginationChange, total }) => {
   useEffect(() => {
     const value = showPerPage * currentPage;
     onPaginationChange(value - showPerPage, value);
-  }, [currentPage]);
+  }, [currentPage, onPaginationChange, showPerPage]);
 
   const changePage = (type) => {
     //code
