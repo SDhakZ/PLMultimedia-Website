@@ -10,7 +10,7 @@ export const Blog = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [currentPage, setCurrentPage] = useState(1);
   //change this according to where the strapi admin is hosted
-  const host = "http://localhost:1338";
+  const host = process.env.REACT_APP_STRAPI_HOST;
   const { loading, data, error } = useFetch(
     `${host}/api/blogs?populate=blogImage,authorInfo.profilePic&pagination[page]=${currentPage}&pagination[pageSize]=6`
   );
@@ -40,8 +40,8 @@ export const Blog = () => {
           }}
         >
           {data.data.map((blog) => {
-            const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.url}`;
-            const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.url}`;
+            const blogImgUrl = blog.attributes.blogImage.data.attributes.url;
+            const authorImgUrl = blog.attributes.authorInfo.profilePic.data.attributes.url;
             return (
               <BlogCard
                 key={blog.attributes.id}

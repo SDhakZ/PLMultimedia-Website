@@ -28,7 +28,7 @@ export const Interns = () => {
   const handleChange = (dropdown) => {
     setValue(dropdown.target.value);
   };
-  const host = "http://localhost:1338";
+  const host = process.env.REACT_APP_STRAPI_HOST;
   var path;
   if (value === "All") {
     path = `${host}/api/interns?populate=*&pagination[page]=${currentPage}&pagination[pageSize]=9`;
@@ -70,8 +70,7 @@ export const Interns = () => {
         </div>
         <div className={InternsCSS["interns-flexbox"]}>
           {data.data.map((intern) => {
-            const url = intern.attributes.img.data.attributes.url;
-            const image = `${host}${url}`;
+            const image = intern.attributes.img.data.attributes.url;
             return (
               <InternCard
                 key={intern.attributes.id}

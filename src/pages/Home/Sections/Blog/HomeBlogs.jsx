@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
 
 export const HomeBlogs = () => {
-  const host = "http://localhost:1338";
+  const host = process.env.REACT_APP_STRAPI_HOST;
   const { loading, data, error } = useFetch(
     `${host}/api/blogs?populate=blogImage,authorInfo.profilePic`
   );
@@ -26,8 +26,8 @@ export const HomeBlogs = () => {
         }}
       >
         {data.data.slice(0, 3).map((blog) => {
-          const blogImgUrl = `${host}${blog.attributes.blogImage.data.attributes.url}`;
-          const authorImgUrl = `${host}${blog.attributes.authorInfo.profilePic.data.attributes.url}`;
+          const blogImgUrl = blog.attributes.blogImage.data.attributes.url
+          const authorImgUrl = blog.attributes.authorInfo.profilePic.data.attributes.url;
           return (
             <BlogCard
               key={blog.attributes.id}

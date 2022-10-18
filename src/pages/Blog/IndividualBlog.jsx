@@ -11,7 +11,7 @@ export const IndividualBlog = () => {
   //change this according to where the strapi admin is hosted
   const location = useLocation();
   let { loadedFrom } = location.state;
-  const host = "http://localhost:1338";
+  const host = process.env.REACT_APP_STRAPI_HOST;
   const { id } = useParams();
   const { loading, data, error } = useFetch(
     `${host}/api/blogs/${id}?populate=blogImage,authorInfo.profilePic`
@@ -49,7 +49,7 @@ export const IndividualBlog = () => {
         </h1>
         <div className={INDBLG["indBlg-auth_date-container"]}>
           <img
-            src={`${host}${data.data.attributes.authorInfo.profilePic.data.attributes.url}`}
+            src={data.data.attributes.authorInfo.profilePic.data.attributes.url}
             className={INDBLG["indBlg-author-img"]}
             alt="author"
           ></img>
@@ -63,7 +63,7 @@ export const IndividualBlog = () => {
       </div>
       <div className={INDBLG["indBlg-content"]}>
         <img
-          src={`${host}${data.data.attributes.blogImage.data.attributes.url}`}
+          src={data.data.attributes.blogImage.data.attributes.url}
           className={INDBLG["indBlg-blogImage"]}
           alt="blog"
         ></img>
