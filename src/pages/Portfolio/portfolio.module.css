@@ -16,7 +16,7 @@
   margin-bottom: 157px;
 }
 
-/*For reversing sections*/
+/*For reversing layout of the section*/
 .RL {
   flex-flow: row-reverse;
 }

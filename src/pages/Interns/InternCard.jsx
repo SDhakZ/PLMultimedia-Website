@@ -1,3 +1,5 @@
+/*Component for making cards for Interns page*/
+
 import React from "react";
 import InternsCSS from "./interns.module.css";
 

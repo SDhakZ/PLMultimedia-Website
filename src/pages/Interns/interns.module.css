@@ -139,6 +139,7 @@
   color: #676767;
 }
 
+/* responsive settings */
 @media all and (max-width: 1765px) {
   :root {
     --I-w-image: 85px;

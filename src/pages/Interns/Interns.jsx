@@ -8,6 +8,7 @@ import { LoadingPage } from "../../components/LoadingPage/LoadingPage";
 import { useSpring, animated, easings } from "react-spring";
 import PaginationStrapi from "../../components/Pagination/PaginationStrapi";
 
+//maps data of interns
 export const Interns = () => {
   const style = useSpring({
     from: { opacity: 0 },
@@ -17,7 +18,6 @@ export const Interns = () => {
   //pagination settings//
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [currentPage, setCurrentPage] = useState(1);
-  //pagination settings//
 
   //Sorting According to dropdown while fetching Strapi data
   const getInitialState = () => {
@@ -45,7 +45,7 @@ export const Interns = () => {
         errorMessage="Server is temporarily unable to respond to your request"
       />
     );
-
+  //returns intern cards with mmapped data
   return (
     <animated.div style={style}>
       <div className={InternsCSS["interns-container"]}>

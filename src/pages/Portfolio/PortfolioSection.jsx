@@ -1,3 +1,4 @@
+/* This is the component for skeleton structure of the section of portfolio page */
 import React from "react";
 import portfolioCSS from "./portfolio.module.css";
 import Aos from "aos";
@@ -5,7 +6,9 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { GoToTop } from "../../components/GoToTop/GoToTop";
 
+//Portfolio Section backbone
 export const PortfolioSection = (props) => {
+  //animation settings
   useEffect(() => {
     Aos.init({
       offset: "50",
@@ -16,6 +19,7 @@ export const PortfolioSection = (props) => {
       once: true,
     });
   }, []);
+  //returns the backbone structure of portfolio section where data can be mapped
   return (
     <React.Fragment>
       <section
