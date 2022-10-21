@@ -6,7 +6,7 @@ import portfolioData from "../../data/portfolioData";
 import { PortfolioSection } from "./PortfolioSection";
 import { MainHeading } from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
-import PaginationRaw from "../../components/Pagination/PaginaionRaw.jsx";
+import PaginationRaw from "../../components/Pagination/PaginationRaw.jsx";
 import { useState } from "react";
 
 //animation settings

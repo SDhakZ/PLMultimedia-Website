@@ -4,14 +4,17 @@
 }
 
 .sectionHeading {
+  /* display and box model */
+  margin-bottom: var(--SH-mb-heading);
+  /* other */
   text-align: center;
   font-family: "Inter";
   font-size: var(--SH-fs-heading);
   letter-spacing: 0.075em;
-  margin-bottom: var(--SH-mb-heading);
   color: #2f2f2f;
 }
 
+/* responsiveness settings */
 @media all and (max-width: 1500px) {
   :root {
     --SH-fs-heading: 4rem;

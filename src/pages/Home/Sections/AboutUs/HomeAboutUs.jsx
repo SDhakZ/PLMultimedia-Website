@@ -1,10 +1,12 @@
+/* jsx to create about us section of home page */
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import HomeAboutUsCSS from "./homeAboutUs.module.css";
 import Aos from "aos";
 
+// function to create structure for about us section
 export const HomeAboutUs = () => {
-  //animation for who are we
+  //animation for about us section
   useEffect(() => {
     Aos.init({
       offset: "50",

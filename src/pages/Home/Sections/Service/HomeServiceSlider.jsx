@@ -1,3 +1,4 @@
+/* jsx to create service section of home page */
 import React from "react";
 import { ServiceCard } from "../../../Services/ServiceCard";
 import serviceData from "../../../../data/servicesData";
@@ -9,10 +10,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../SwiperJS/SwiperOverride.css";
 
+// function to create structure for service section
 export const HomeServiceSlider = () => {
   return (
     <>
       <SectionHeading sectionName="Our Services" />
+      {/* using swiper component to create slider in service section */}
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={3}

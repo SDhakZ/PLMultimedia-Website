@@ -1,3 +1,4 @@
+/* jsx for home page of the website */
 import React, { useEffect } from "react";
 import HomeCSS from "./home.module.css";
 import { HomeTop } from "./Sections/Top/HomeTop";

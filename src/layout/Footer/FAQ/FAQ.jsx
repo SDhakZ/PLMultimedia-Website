@@ -1,9 +1,11 @@
+/* page to show the frequently asked questions */
 import React from "react";
 import { FAQcard, StillHaveQuestion } from "./FAQcard";
 import faqData from "../../../data/faqData";
 import FAQCSS from "./FAQ.module.css";
 import { MainHeading } from "../../../components/MainHeading/MainHeading";
 
+// function for the structure of the faq page
 export const FAQpage = () => {
   return (
     <div className={FAQCSS["FAQ"]}>

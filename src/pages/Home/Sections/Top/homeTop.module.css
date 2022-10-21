@@ -1,29 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&display=swap");
 
 :root {
-  --H-T-fs-staticText: 4.5rem;
-  --H-T-fs-text: 6.5rem;
-  --H-T-vw-homeTop: 43vw;
-  --H-T-w-rocket: 13%;
-  --H-T-w-planet: 9%;
-  --H-T-w-man: 25%;
-  --H-T-w-background: 30%;
+  --H-T-fs-staticText: 4.5rem; /* font size of static text */
+  --H-T-fs-text: 6.5rem; /* font size of text */
+  --H-T-vw-homeTop: 43vw; /* viewport width of home top */
+  --H-T-w-rocket: 13%; /* width of rocket */
+  --H-T-w-planet: 9%; /* width of planet */
+  --H-T-w-man: 25%; /* width of man */
+  --H-T-w-background: 30%; /* width of background */
 }
 
 .home-top-main {
-  position: relative;
+  /* display and box model */
   width: 100%;
   height: 100%;
+  /* positioning */
+  position: relative;
 }
 
 /*Text*/
 .home-top-text {
+  /* display and box model */
+  max-width: 650px;
+  /* positioning */
   position: absolute;
   left: 36%;
   top: 23%;
+  /* other */
   font-size: var(--H-T-fs-staticText);
   font-family: "Baloo 2";
-  max-width: 650px;
   line-height: 1;
   font-weight: 700;
   background: linear-gradient(45deg, #f65cff, #ab36fd, #a289ff, #0047fd);
@@ -52,36 +57,46 @@
     background-position: 0px 50%;
   }
 }
-/*Text*/
 
 .home-top {
+  /* display and box model */
   height: var(--H-T-vw-homeTop);
   overflow: hidden;
   display: relative;
 }
+
 .home-top-imgCollection {
-  position: relative;
+  /* display and box model */
   width: 100%;
   height: 100%;
+  /* positioning */
+  position: relative;
 }
 
 .home-top-leftbg {
+  /* display and box model */
   width: var(--H-T-w-background);
+  /* positioning */
   position: absolute;
 }
 
 .home-top-rightbg {
+  /* display and box model */
   width: var(--H-T-w-background);
+  /* positioning */
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
 .home-top-floatingman {
+  /* display and box model */
   width: var(--H-T-w-man);
+  /* positioning */
   position: absolute;
   bottom: 3%;
   left: 7%;
+  /* other */
   animation-name: floating;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -89,10 +104,13 @@
 }
 
 .home-top-planet {
+  /* display and box model */
   width: var(--H-T-w-planet);
+  /* positioning */
   position: absolute;
   top: 7%;
   left: 5%;
+  /* other */
   animation-name: planet;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -100,10 +118,13 @@
 }
 
 .home-top-rocket {
+  /* display and box model */
   width: var(--H-T-w-rocket);
+  /* positioning */
   position: absolute;
   left: 16%;
   top: 10%;
+  /* other */
   animation-name: rocket;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -146,11 +167,13 @@
   }
 }
 
+/* responsive settings */
 @media all and (max-width: 1400px) {
   :root {
     --H-T-fs-staticText: 3.5rem;
     --H-T-fs-text: 5rem;
   }
+
   .home-top-text {
     left: 35%;
     top: 25%;
@@ -167,9 +190,11 @@
     --H-T-w-man: 26%;
     --H-T-w-background: 31%;
   }
+
   .home-top-text {
     top: 30%;
   }
+
   .home-top-rightbg {
     right: -5%;
   }
@@ -185,6 +210,7 @@
     --H-T-w-man: 28%;
     --H-T-w-background: 33%;
   }
+
   .home-top-text {
     left: 37%;
     top: 27%;
@@ -199,11 +225,13 @@
     --H-T-w-man: 25%;
     --H-T-w-background: 35%;
   }
+
   .home-top-text {
     left: 34%;
     top: 32%;
     max-width: 300px;
   }
+
   .home-top-leftbg {
     left: -5%;
   }
@@ -275,6 +303,7 @@
   .home-top-rightbg {
     right: -20%;
   }
+
   .home-top-planet {
     top: 7%;
     left: 1%;

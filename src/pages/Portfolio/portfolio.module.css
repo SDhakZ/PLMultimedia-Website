@@ -1,15 +1,17 @@
 :root {
-  --P-fs-heading: 2.6rem; /* heading font size */
-  --P-fs-paragraph: 1.3rem; /* paragraph font size*/
-  --P-fs-btn: 1.15rem; /* button font size */
-  --P-lh-paragraph: 35px; /* paragraph line height */
+  --P-fs-heading: 2.6rem; /* font size of heading */
+  --P-fs-paragraph: 1.3rem; /* font size of paragraph */
+  --P-fs-btn: 1.15rem; /* font size of button */
+  --P-lh-paragraph: 35px; /* line height of paragraph */
 }
 
 .portfolio-container {
+  /* display and box model */
   padding: var(--pd-c);
 }
 
 .portfolioRow {
+  /* display and box model */
   display: flex;
   width: 100%;
   gap: 5rem;
@@ -18,62 +20,79 @@
 
 /*For reversing layout of the section*/
 .RL {
+  /* display and box model */
   flex-flow: row-reverse;
 }
 
 .portfolio-imgContainer,
 .portfolio-content {
+  /* display and box model */
   width: 50%;
 }
 
 .portfolio-image {
+  /* display and box model */
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  /* other */
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
 .portfolio-image:hover {
-  transform: translateY(-8px);
+  /* display and box model */
   box-shadow: rgba(46, 46, 46, 0.719) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.418) 0px 8px 20px -8px;
+  /* other */
+  transform: translateY(-8px);
 }
 
 .portfolio-content {
+  /* display and box model */
   display: flex;
   flex-direction: column;
+  /* positioning */
   position: relative;
   justify-content: space-evenly;
 }
 
 .portfolio-heading {
+  /* display and box model */
+  margin-bottom: 15px;
+  /* other */
   font-family: "Bahnschrift", sans-serif;
   font-size: var(--P-fs-heading);
   color: #3f3f3f;
   font-weight: 600;
-  margin-bottom: 15px;
 }
 
 .portfolio-paragraph {
+  /* for allowing line break in json */
+  white-space: pre-line;
+  vertical-align: bottom;
+  /* other */
+  text-align: justify;
   font-family: "Roboto", sans-serif;
   font-size: var(--P-fs-paragraph);
   line-height: var(--P-lh-paragraph);
   color: #4c565f;
-  /*For allowing line break in json*/
-  white-space: pre-line;
-  vertical-align: bottom;
-  text-align: justify;
 }
 
 .portfolio-button {
+  /* display and box model */
   border-radius: 35px;
+  border: solid 2px transparent;
+  box-shadow: 2px 1000px 1px #fbfbfd inset;
+  margin-top: 20px;
+  padding: 13px 30px;
+  /* positioning */
+  align-self: baseline;
+  /* other */
   font-family: "Roboto";
   font-size: var(--P-fs-btn);
   font-weight: 500;
-  padding: 13px 30px;
   color: #2f2f2f;
-  border: solid 2px transparent;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -81,16 +100,15 @@
     linear-gradient(90deg, #62cff5, #c091fc);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #fbfbfd inset;
   transition: all 0.4s ease;
   cursor: pointer;
-  align-self: baseline;
-  margin-top: 20px;
 }
 
 .portfolio-button:hover {
+  /* display and box model */
   box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
     rgba(49, 49, 49, 0.3) 0px 8px 16px -8px;
+  /* other */
   color: white;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
@@ -100,6 +118,7 @@
   transform: translateY(-2px);
 }
 
+/* responsive settings */
 @media all and (max-width: 1500px) {
   :root {
     --P-fs-heading: 1.8rem;
@@ -118,6 +137,7 @@
     padding: 11px 23px;
     margin-top: 15px;
   }
+
   .portfolio-heading {
     margin-bottom: 10px;
   }
@@ -133,6 +153,7 @@
   .portfolio-button {
     padding: 10px 23px;
   }
+
   .portfolio-heading {
     margin-bottom: 5px;
   }
@@ -162,6 +183,7 @@
   .portfolio-button {
     padding: 12px 30px;
   }
+
   .portfolio-heading {
     margin-bottom: 10px;
   }
@@ -184,10 +206,12 @@
     gap: 1.3rem;
     margin-bottom: 40px;
   }
+
   .portfolio-button {
     padding: 10px 22px;
     margin-top: 10px;
   }
+
   .portfolio-heading {
     margin-bottom: 5px;
   }
@@ -205,10 +229,12 @@
     gap: 1.1rem;
     margin-bottom: 30px;
   }
+
   .portfolio-button {
     padding: 8px 18px;
     margin-top: 13px;
   }
+
   .portfolio-heading {
     margin-bottom: 8px;
   }

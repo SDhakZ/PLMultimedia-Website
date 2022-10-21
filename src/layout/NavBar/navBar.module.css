@@ -1,8 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap";
 
 :root {
-  --nav-pd-container: 0 140px; /* Nav container padding */
-  --nav-fs-links: 1.2rem; /* Nav links size */
+  --nav-pd-container: 0 140px; /* nav container padding */
+  --nav-fs-links: 1.2rem; /* nav links size */
   --nav-fs-activeLinks: 1.3rem; /* active nav link size */
   --nav-fs-logoName: 1.8rem; /* nav logo name size */
   --nav-fs-logo: 50px; /* nav img logo size */
@@ -10,22 +10,27 @@
 }
 
 .navbar {
-  background-color: #0e63e3;
-  height: var(--nav-h-container);
+  /* display and box model */
   display: flex;
-  align-items: center;
+  height: var(--nav-h-container);
+  padding: var(--nav-pd-container);
+  /* positioning */
   position: sticky;
   top: 0;
   z-index: 2;
-  padding: var(--nav-pd-container);
+  align-items: center;
+  /* other */
+  background-color: #0e63e3;
 }
 
 .nav-container {
+  /* display and box model */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: 80px;
+  /* positioning */
+  justify-content: space-between;
+  align-items: center;
 }
 /* Navigation logo styles */
 .nav-logo {
@@ -36,27 +41,33 @@
   font-family: "Cabin";
 }
 .nav-logo img {
+  /* display and box model */
   width: var(--nav-fs-logo);
   margin-right: 7px;
 }
 
 /* Navigation ul tag class target */
 .navMenu {
+  /* display and box model */
   display: flex;
+  /* other */
   list-style: none;
 }
 /* Navigation li tag class target */
 .nav-links {
+  /* display and box model */
+  margin-left: 0.4rem;
+  padding: 0.5rem 1rem;
+  /* positioning */
+  position: relative;
+  bottom: 0;
+  /* other */
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  position: relative;
-  margin-left: 0.4rem;
   font-family: "Cabin", sans-serif;
   font-size: var(--nav-fs-links);
   letter-spacing: 1px;
   transition: all 0.5s;
-  bottom: 0;
 }
 /* Navigation li tag class hover effect */
 .nav-links:hover {
@@ -65,25 +76,31 @@
 
 /* Active nav link styles */
 .nav-item .active {
+  /* display and box model */
   border-bottom: 3px solid white;
+  /* positioning */
+  bottom: 5px;
+  /* other */
   font-size: var(--nav-fs-activeLinks);
   font-weight: bold;
-  bottom: 5px;
 }
 
 /* Nav link hover effect */
 .nav-links:before {
-  content: " ";
-  position: absolute;
+  /* display and box model */
   width: 100%;
-  border-bottom: 3px solid white;
-  background-color: rgb(255, 255, 255);
+
+  /* positioning */
+  position: absolute;
   z-index: -1;
   left: 0;
   bottom: -3.9px;
-  opacity: 0;
+  /* other */
+  content: " ";
+  border-bottom: 3px solid white;
+  background-color: rgb(255, 255, 255);
   transition: all 0.5s;
-  border-radius: 5px;
+  opacity: 0;
   transition-delay: 0.2s;
 }
 
@@ -94,6 +111,7 @@
 
 /* Hamburger icon style */
 .nav-icon {
+  /* display and box model */
   display: none;
 }
 

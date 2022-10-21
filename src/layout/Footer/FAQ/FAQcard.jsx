@@ -1,10 +1,11 @@
+/* component for the faq page */
 import React, { useState } from "react";
 import FAQCSS from "./FAQ.module.css";
 import { Link } from "react-router-dom";
 
+// structure for the faq questions and answer card
 export function FAQcard({ question, answer }) {
   const [expanded, setExpand] = useState(false);
-
   return (
     <button className={FAQCSS["FAQ-card"]} onClick={() => setExpand(!expanded)}>
       <div
@@ -28,6 +29,7 @@ export function FAQcard({ question, answer }) {
   );
 }
 
+// contact company for unanswered questions
 export function StillHaveQuestion() {
   return (
     <div className={FAQCSS["FAQ-moreQuestionsContainer"]}>

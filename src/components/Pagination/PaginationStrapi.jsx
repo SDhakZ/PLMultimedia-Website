@@ -1,11 +1,14 @@
-// This pagination component can be used for strapi mapped data //
+/* this pagination component can be used for strapi mapped data */
 import { PreviousButton, NextButton } from "./button";
 import PaginationCSS from "./pagination.module.css";
+
 const Pagination = ({ currentPage, totalPage, paginate }) => {
   const pageNumbers = [];
+  //creates number of pagination
   for (let i = 1; i <= totalPage; i++) {
     pageNumbers.push(i);
   }
+  //changes page when next or previous button is clicked and scrolls to top
   function changePage(type) {
     window.scrollTo({ top: 0 });
     if (type === "next") {
@@ -14,6 +17,7 @@ const Pagination = ({ currentPage, totalPage, paginate }) => {
       paginate(currentPage - 1);
     }
   }
+  //returns pagination structure design
   return (
     <>
       <div className={PaginationCSS["pagination-container"]}>

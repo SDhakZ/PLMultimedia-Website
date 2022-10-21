@@ -1,6 +1,8 @@
+// footer page to create the footer of the website
 import React from "react";
 import FooterCSS from "./footer.module.css";
 
+// function to create the structure of footer page
 export const Footer = () => {
   function goToKhalti() {
     return;
@@ -9,7 +11,7 @@ export const Footer = () => {
     return;
   }
   return (
-    // start of footersection//
+    // start of footersection
     <div className={FooterCSS.footer}>
       <div className={FooterCSS["footer-row"]}>
         {/* for columns of footer */}

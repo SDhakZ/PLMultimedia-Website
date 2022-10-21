@@ -1,19 +1,24 @@
+/* jsx to create the top section of home page */
 import { React } from "react";
 import HomeTopCSS from "./homeTop.module.css";
 import { TypeAnimation } from "react-type-animation";
 import { useSpring, animated, easings } from "react-spring";
 
+// function to create structure for top section
 export const HomeTop = () => {
+  //animation for the roctet in top section
   const rocketEnter = useSpring({
     from: { opacity: 0.3, x: -550, y: 600 },
     to: { opacity: 1, x: -20, y: 80 },
     config: { duration: 2000, easing: easings.easeInOutQuart },
   });
+  //animation for the planet in top section
   const planetEnter = useSpring({
     from: { opacity: 0.3, y: -200 },
     to: { opacity: 1, y: 40 },
     config: { duration: 2000, easing: easings.easeInOutCubic },
   });
+  //animation for the floatingman in top section
   const floatingManEnter = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },

@@ -1,6 +1,8 @@
+// topbar page to create the top bar for the website
 import React from "react";
 import TopbarCSS from "./topBar.module.css";
 
+// function to create structure for topbar
 export const Topbar = () => {
   return (
     <div className={TopbarCSS["topbar"]}>

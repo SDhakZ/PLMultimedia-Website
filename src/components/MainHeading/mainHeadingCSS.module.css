@@ -4,11 +4,13 @@
 }
 
 .mainHeading {
+  /* display and box model */
+  margin-bottom: var(--MH-mb-heading);
+  /* other */
   text-align: center;
   font-family: "Cabin";
   font-size: var(--MH-fs-heading);
   letter-spacing: 0.075em;
-  margin-bottom: var(--MH-mb-heading);
   color: #2f2f2f;
 }
 

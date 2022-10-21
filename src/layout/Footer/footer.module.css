@@ -10,14 +10,18 @@
 }
 
 .footer {
-  background-color: #ffffff;
+  /* display and box model */
+  box-shadow: 0px -5px 45px rgb(187, 187, 187);
+  /* positioning */
   padding: var(--F-pd-container);
   bottom: 0;
-  box-shadow: 0px -5px 45px rgb(187, 187, 187);
   position: relative;
+  /* other */
+  background-color: #ffffff;
 }
 
 .footer-row {
+  /* display and box model */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,49 +30,62 @@
 /* slogan section */
 
 .footer-companyDetail-container {
+  /* display and box model */
   flex: 1.2;
   margin-right: 30px;
   min-width: 300px;
 }
 
 .footer-companyName-container img {
+  /* display and box model */
   width: var(--F-w-logoImage);
 }
 
 .footer-companyName-container {
+  /* display and box model */
   margin-bottom: 10px;
 }
 
 .footer-companyName {
+  /* display and box model */
+  margin-left: 10px;
+  /* positioning */
+  position: relative;
+  /* other */
   font-size: var(--F-fs-companyName);
   font-family: "Cabin", sans-serif;
   color: #000;
   text-transform: capitalize;
   font-weight: 600;
-  position: relative;
-  margin-left: 10px;
 }
 .footer-companyDetail-container p {
+  /* display and box model */
+  max-width: 300px;
+  /* positioning */
+  position: relative;
+  /* other */
   font-size: var(--F-fs-paragraph);
   font-family: "Roboto";
   color: #2f2f2f;
   font-weight: 600;
-  position: relative;
-  max-width: 300px;
   line-height: 33px;
 }
 
 /*our services */
 .footer-column {
+  /* display and box model */
   flex: 1;
 }
 .footer-column h4 {
+  /* display and box model */
+  margin-bottom: 20px;
+  /* positioning */
+  position: relative;
+  /* other */
   font-size: var(--F-fs-heading);
   font-family: "Bahnschrift";
   color: #2f2f2f;
-  margin-bottom: 20px;
   font-weight: 700;
-  position: relative;
 }
 
 .footer-column ul {
@@ -76,26 +93,33 @@
 }
 
 .footer-column ul li:not(:last-child) {
+  /* display and box model */
   margin-bottom: var(--F-mb-paragraph);
+  /* other */
   text-decoration: none;
 }
 
 .footer-services {
+  /* display and box model */
   flex: 1;
 }
 
 .footer-column ul li a {
+  /* display and box model */
+  display: inline-block;
+  /* other */
   font-size: var(--F-fs-paragraph);
   font-family: "Roboto";
   color: #636363;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
   transition: all 0.3s ease;
 }
 .footer-column ul li a:hover {
-  color: #3d3d3d;
+  /* display and box model */
   margin-left: 4px;
+  /* other */
+  color: #3d3d3d;
 }
 
 /* get in touch section */
@@ -105,12 +129,15 @@
 }
 
 .footer-getInTouch p {
+  /* display and box model */
+  margin-bottom: var(--F-mb-paragraph);
+  /* postioning */
+  position: relative;
+  /* other */
   font-size: var(--F-fs-paragraph);
   font-family: "Roboto";
   color: #636363;
-  margin-bottom: var(--F-mb-paragraph);
   font-weight: 600;
-  position: relative;
   line-height: 24px;
 }
 
@@ -125,10 +152,13 @@
 }
 
 .footer-icons {
+  /* display and box model */
   display: flex;
-  justify-content: space-between;
   gap: 5px;
   margin-top: 25px;
+  /* positioning */
+  justify-content: space-between;
+  /* other */
   transition: all 0.3s;
 }
 /*footer icons hover effects*/
@@ -157,31 +187,40 @@
 }
 
 .footer-copyright {
+  /* display and box model */
+  display: flex;
+  margin-top: 50px;
+  /* positioning */
+  align-items: center;
+  justify-content: center;
+  /* other */
   font-family: "Roboto";
   font-weight: 400;
   font-size: 1rem;
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-  justify-content: center;
 }
 
 .footer-copyrightSymbol {
-  font-size: 1.5rem;
+  /* display and box model */
   margin-right: 10px;
+  /* other */
+  font-size: 1.5rem;
 }
 .footer-payment {
+  /* display and box model */
   display: flex;
-  flex-direction: column;
   margin-top: 20px;
+  /* positioning */
+  position: relative;
+  flex-direction: column;
+  /* other */
   color: #636363;
   font-size: 1.25rem;
   font-family: "Roboto";
   font-weight: 600;
-  position: relative;
   line-height: 33px;
 }
 .footer-logo {
+  /* display and box model */
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -189,7 +228,9 @@
 }
 .footer-khaltiLogo,
 .footer-esewaLogo {
+  /* display and box model */
   width: 110px;
+  /* other */
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }

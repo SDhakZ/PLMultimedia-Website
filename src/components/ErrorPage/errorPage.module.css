@@ -1,46 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
 :root {
-  --EP-pd-container: 80px 0px; /*container padding*/
+  --EP-pd-container: 80px 0px; /* container padding */
   --EP-fs-btn: 1.15rem; /* button font size */
 }
+
 .errorPage {
+  /* display and box model */
+  height: 61vh;
+  display: flex;
+  padding: var(--EP-pd-container);
+  /* positioning */
+  align-items: center;
+  justify-content: center;
+  /* other */
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
     linear-gradient(140deg, #12c2e9, #c471ed, #f64f59);
-
-  height: 61vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--EP-pd-container);
 }
 
 .errorPage-container {
+  /* display and box model */
   padding: 80px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: fit-content;
   display: flex;
   flex-direction: column;
+  /* positioning */
   align-items: center;
   justify-content: center;
+  /* other */
   background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(2px);
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .errorPage-errorCode {
-  font-family: "Roboto";
-  text-transform: uppercase;
-  font-size: 3.8rem;
-  letter-spacing: 0.075em;
-  background: -webkit-linear-gradient(150deg, #f50019, #ff029c);
-  background-clip: text;
+  /* display and box model */
   -webkit-text-fill-color: transparent;
   text-align: center;
   margin-bottom: 20px;
+  /* other */
+  background: -webkit-linear-gradient(150deg, #f50019, #ff029c);
+  background-clip: text;
+  font-size: 3.8rem;
+  letter-spacing: 0.075em;
+  font-family: "Roboto";
+  text-transform: uppercase;
 }
 
 .errorPage-message {
@@ -52,28 +60,32 @@
 }
 
 .errorPage-report {
-  text-align: center;
   font-size: 1rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .errorPage-buttons {
+  /* display and box model */
+  gap: 20px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
   margin-top: 27px;
 }
 
 .errorPage-reportButton,
 .errorPage-returnHomeButton {
-  line-height: normal;
+  /* display and box model */
   border-radius: 35px;
+  padding: 15px 20px;
+  border: solid 2px transparent;
+  box-shadow: 2px 1000px 1px #fbfbfd inset;
+  /* other */
+  line-height: normal;
   font-family: "Roboto";
   font-size: var(--EP-fs-btn);
   font-weight: 700;
-  padding: 15px 20px;
   color: #2f2f2f;
-  border: solid 2px transparent;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -81,7 +93,6 @@
     linear-gradient(90deg, #62cff5, #c091fc);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #fbfbfd inset;
   transition: all 0.4s ease;
   cursor: pointer;
   text-decoration: none;
@@ -117,25 +128,31 @@
   transform: translateY(-2px);
 }
 
+/* responsiveness settings */
 @media all and (max-width: 1200px) {
   :root {
-    --EP-fs-btn: 1.1rem; /* button font size */
+    --EP-fs-btn: 1.1rem;
   }
 }
+
 @media (max-width: 960px) {
   :root {
-    --EP-fs-btn: 1rem; /* button font size */
+    --EP-fs-btn: 1rem;
   }
+
   .errorPage {
     height: 63vh;
   }
+
   .errorPage-container {
     padding: 70px;
   }
+
   .errorPage-reportButton,
   .errorPage-returnHomeButton {
     padding: 8px 17px;
   }
+
   .errorPage-buttons {
     gap: 14px;
   }
@@ -145,6 +162,7 @@
   .errorPage {
     height: 71vh;
   }
+
   .errorPage-container {
     line-height: 65px;
     padding: 55px;
@@ -171,7 +189,7 @@
 
 @media (max-width: 600px) {
   :root {
-    --EP-fs-btn: 1.15rem; /* button font size */
+    --EP-fs-btn: 1.15rem;
   }
 
   .errorPage-container {
@@ -205,10 +223,12 @@
     border-radius: 0px;
   }
 }
+
 @media (max-width: 400px) {
   :root {
-    --EP-fs-btn: 1rem; /* button font size */
+    --EP-fs-btn: 1rem;
   }
+
   .errorPage-errorCode {
     font-size: 2.5rem;
   }

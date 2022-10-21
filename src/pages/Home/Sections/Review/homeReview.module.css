@@ -1,42 +1,50 @@
 :root {
-  --H-R-w-image: 59px;
-  --H-R-fs-profileName: 1.35rem;
-  --H-R-fs-quote: 40px;
-  --H-R-fs-text: 1.1rem;
-  --H-R-lh-text: 35px;
+  --H-R-w-image: 59px; /* width of image */
+  --H-R-fs-profileName: 1.35rem; /* font size of profile name */
+  --H-R-fs-quote: 40px; /* fonst size of quote */
+  --H-R-fs-text: 1.1rem; /* font size of text */
+  --H-R-lh-text: 35px; /* line height of text */
 }
 
 .home-review-profile {
+  /* display and box model */
   display: flex;
-  align-items: center;
   gap: 20px;
+  /* positioning */
+  align-items: center;
 }
 
 .home-review-card {
+  /* display and box model */
   width: 320px;
   height: 360px;
-  background: #fffcff;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 22px;
   padding: 34px;
   display: flex;
   flex-direction: column;
+  /* other */
+  background: #fffcff;
 }
 
 .home-review-profileImg {
+  /* display and box model */
   width: var(--H-R-w-image);
   clip-path: circle();
 }
 
 .home-review-profileName {
+  /* display and box model */
+  margin-top: -10px;
+  /* other */
   font-weight: 600;
   font-size: var(--H-R-fs-profileName);
   color: #6d7d8b;
   font-family: "Roboto";
-  margin-top: -10px;
 }
 
 .home-review-rateUs {
+  /* display and box model */
   display: flex;
   gap: 7px;
   margin-top: 7px;
@@ -51,8 +59,10 @@
 }
 
 .quote {
-  color: #6d7d8b;
+  /* display and box model */
   margin-top: 15px;
+  /* other */
+  color: #6d7d8b;
   font-size: var(--H-R-fs-quote);
 }
 
@@ -64,6 +74,7 @@
   line-height: var(--H-R-lh-text);
 }
 
+/* responsive settings */
 @media all and (max-width: 1300px) {
   :root {
     --H-R-fs-profileName: 1.28rem;

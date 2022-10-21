@@ -1,7 +1,8 @@
-// Page change button component //
+/* page change button component */
 import React from "react";
 import PaginationCSS from "./pagination.module.css";
 
+// previous button for the pagination components
 export const PreviousButton = ({ currentPage, changePage }) => {
   return (
     <>
@@ -16,6 +17,7 @@ export const PreviousButton = ({ currentPage, changePage }) => {
   );
 };
 
+// next button for the pagination components
 export const NextButton = ({ currentPage, changePage, totalPage }) => {
   return (
     <>

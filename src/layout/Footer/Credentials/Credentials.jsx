@@ -1,8 +1,10 @@
+/* Credential page to give credit to team members and references */
 import React from "react";
 import { MainHeading } from "../../../components/MainHeading/MainHeading";
 import CredentialCSS from "./credentials.module.css";
 import CredentialsData from "../../../data/credentialsData";
 
+/* function to create a card for credentials page */
 function CredentialsCard(props) {
   return (
     <div className={CredentialCSS["credentials-card"]}>
@@ -43,15 +45,17 @@ function CredentialsCard(props) {
   );
 }
 
+/* function to create structure of credential page where data can be mapped */
 export const Credentials = () => {
   return (
     <div className={CredentialCSS["credentials-container"]}>
       <MainHeading headingName="Credentials" />
+      {/* credit to team members */}
       <h1 className={CredentialCSS["credentials-subHeading"]}>
         Developer Team
       </h1>
-
       <div className={CredentialCSS["credentials-team"]}>
+        {/* data map from json file */}
         {CredentialsData.map((credentials) => {
           return (
             <CredentialsCard
@@ -68,8 +72,8 @@ export const Credentials = () => {
           );
         })}
       </div>
+      {/* credit to tools used */}
       <h2 className={CredentialCSS["credentials-subHeading"]}>Tools Used</h2>
-
       <div className={CredentialCSS["credentials-toolUsed"]}>
         <div className={CredentialCSS["credentials-toolName"]}>Unplash:</div>
         <div className={CredentialCSS["credentials-toolLink"]}>

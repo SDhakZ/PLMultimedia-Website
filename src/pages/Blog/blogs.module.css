@@ -1,37 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Roboto:wght@500&display=swap");
-
 :root {
-  --B-fs-title: 1.3rem;
-  --B-fs-body: 1.05rem;
-  --B-w-authorImg: 56px;
-  --B-h-headImg: 38%;
+  --B-fs-title: 1.3rem; /* font size of title */
+  --B-fs-body: 1.05rem; /* font size of body */
+  --B-w-authorImg: 56px; /* width of authorImg */
+  --B-h-headImg: 38%; /* height of headImg */
 }
 
 .blog-page {
+  /* display and box model */
   padding: var(--pd-c);
 }
 
 .blogCard-container {
+  /* display and box model */
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 3rem 1.5rem;
+  /* positioning */
+  justify-content: space-evenly;
 }
 
 /*blog cards css starts here */
 
 .blogCard {
   all: unset;
-  cursor: pointer;
-  width: 350px;
-  height: 500px;
-  background: #fcfcfc;
-  border-radius: 10px;
-  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
-  transition: all 0.5s ease;
+  /* display and box model */
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  width: 350px;
+  height: 500px;
+  /* positioning */
   justify-content: space-between;
+  /* other */
+  cursor: pointer;
+  background: #fcfcfc;
+  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s ease;
 }
 
 .blogCard:active {
@@ -44,6 +49,7 @@
 }
 
 .blog-headImage {
+  /* display and box model */
   width: 100%;
   height: var(--B-h-headImg);
   border-top-right-radius: 10px;
@@ -56,6 +62,7 @@
 
 .blog-bodySection,
 .blog-authorSection {
+  /* display and box model */
   margin-left: 7%;
   margin-right: 7%;
 }
@@ -66,38 +73,47 @@
 }
 
 .blog-body {
+  /* display and box model */
   margin-top: 3%;
-  overflow: hidden;
   height: 100px;
+  /* other */
+  overflow: hidden;
   text-align: justify;
   font-size: var(--B-fs-body);
   color: rgb(103, 112, 119);
 }
 
 .blog-authorSection {
+  /* display and box model */
   display: flex;
-  align-items: center;
   column-gap: 26px;
   margin-bottom: 30px;
+  /* positioning */
+  align-items: center;
 }
 
 .blog-authorImage {
+  /* display and box model */
   width: var(--B-w-authorImg);
   clip-path: circle();
 }
 
 .blog-authorBlog {
+  /* display and box model */
   width: 50%;
 }
 
 .blog-authorName,
 .blog-publishDate {
+  /* display and box model */
+  padding: 3px;
+  /* other */
   font-family: "Mulish";
   font-size: 1rem;
-  padding: 3px;
   color: #6d7d8b;
 }
 
+/* responsive settings */
 @media all and (max-width: 960px) {
   :root {
     --B-fs-title: 1.38rem;

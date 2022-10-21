@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 .loadingPage {
+  /* display and box model */
   height: 82vh;
   display: flex;
   flex-direction: row;
+  /* positioning */
   align-items: center;
   justify-content: center;
+  /* other */
   font-size: 60px;
   font-family: "Varela Round";
   font-weight: 600;
@@ -13,14 +16,17 @@
 }
 
 .loadingPage-loader {
+  /* positioning */
+  margin-bottom: 4px;
+  /* display and box model */
   border: 7.5px solid #2f2f2f;
   border-radius: 50%;
   border-top: 7.5px solid #1771cb;
   width: 33px;
   height: 33px;
+  /* other */
   -webkit-animation: spin infinite;
   animation: spin 0.6s linear infinite;
-  margin-bottom: 4px;
 }
 
 @keyframes spin {
@@ -33,10 +39,12 @@
   }
 }
 
+/* responsiveness settings */
 @media all and (max-width: 1200px) {
   .loadingPage {
     font-size: 45px;
   }
+
   .loadingPage-loader {
     border: 6px solid #2f2f2f;
     border-top: 6px solid #1771cb;
@@ -49,6 +57,7 @@
   .loadingPage {
     font-size: 40px;
   }
+
   .loadingPage-loader {
     border: 5px solid #2f2f2f;
     border-top: 5px solid #1771cb;
@@ -61,6 +70,7 @@
   .loadingPage {
     font-size: 35px;
   }
+
   .loadingPage-loader {
     border: 4.5px solid #2f2f2f;
     border-top: 4.5px solid #1771cb;

@@ -1,9 +1,11 @@
+/* jsx to create portfolio section of home page */
 import React from "react";
 import HomePortfolioCSS from "./homePortfolio.module.css";
 import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
 import portfolioData from "../../../../data/portfolioData";
 import { Link } from "react-router-dom";
 
+// function to create cards for portfolio section
 function HomePortfolioCard(props) {
   return (
     <button className={HomePortfolioCSS["home-portfolio-card"]}>
@@ -23,6 +25,7 @@ function HomePortfolioCard(props) {
   );
 }
 
+// function to create structure for portfolio section and data mapping
 export const HomePortfolio = () => {
   return (
     <div className={HomePortfolioCSS["home-portfolio-container"]}>

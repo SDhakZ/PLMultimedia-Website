@@ -1,8 +1,10 @@
+/* this is the blog card component for the blog page */
 import React from "react";
 import BlogsCSS from "./blogs.module.css";
 import { useHistory } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
+//returns the structure for blog card where data can be mapped with Strapi
 export const BlogCard = (props) => {
   //using history instead of useNavigate because useNavigate seems to not work in this project
   const history = useHistory();

@@ -8,10 +8,12 @@
 }
 
 .indService-back-container {
+  /* display and box model */
+  margin-bottom: 20px;
+  /* other */
   font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 20px;
 }
 
 .indService-backBtn {
@@ -20,36 +22,45 @@
 }
 
 .indService-container {
+  /* display and box model */
   padding: var(--pd-c);
 }
 
 .indService-flexbox {
+  /* display and box model */
   display: flex;
-  justify-content: space-between;
   gap: 30px;
+  /* positioning */
+  justify-content: space-between;
 }
 
 .indService-links {
+  /* display and box model */
   display: flex;
   flex-direction: column;
 }
 
 .indService-left {
+  /* display and box model */ /* display and box model */
   width: 30%;
 }
 
 .indService-right {
+  /* display and box model */
   width: 63%;
   display: flex;
   flex-direction: column;
+  /* positioning */
   align-items: center;
 }
 
 .indService-img {
+  /* display and box model */
   width: 100%;
 }
 
 .indService-img img {
+  /* display and box model */
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 15px -30px,
@@ -64,20 +75,28 @@
 }
 
 .indService-otherServices {
+  /* display and box model */
+  margin-bottom: 25px;
+  /* positioning */
+  text-align: center;
+  /* other */
   font-family: "Roboto";
   font-size: var(--IS-fs-heading1);
-  margin-bottom: 25px;
-  text-align: center;
 }
 
 .indService-contactButton {
+  /* display and box model */
+  padding: 13px 35px;
   border-radius: 26px;
+  border: solid 2px transparent;
+  box-shadow: 2px 1000px 1px #fbfbfd inset;
+  /* positioning */
+  align-self: center;
+  /* other */
   font-family: "Roboto";
   font-size: var(--IS-fs-btn);
   font-weight: 600;
-  padding: 13px 35px;
   color: #2f2f2f;
-  border: solid 2px transparent;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -85,17 +104,17 @@
     linear-gradient(90deg, #62cff5, #c091fc);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #fbfbfd inset;
   transition: all 0.4s ease;
   cursor: pointer;
-  align-self: center;
   text-decoration: none;
 }
 
 .indService-contactButton:hover {
+  /* display and box model */
   border: solid 2px white;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 13px 27px -5px,
     rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+  /* other */
   color: white;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0),
@@ -106,18 +125,21 @@
 }
 
 .indService-link {
+  /* display and box model */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  border: 0px solid black;
+  /* positioning */
+  text-align: center;
+  /* other */
   text-decoration: none;
   font-family: "Roboto";
   font-weight: 500;
   color: #2f2f2f;
   font-size: var(--IS-fs-navlink);
-  text-align: center;
   background-color: #fbfbfd;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 10px;
   transition: all 0.2s ease;
   cursor: pointer;
-  border: 0px solid black;
 }
 
 .indService-link:hover {
@@ -125,50 +147,63 @@
 }
 
 .active {
+  /* display and box model */
   border: 3px solid #1b83fd;
+  /* other */
   color: #1b83fd;
 }
 
 .indService-link:not(:last-child) {
+  /* display and box model */
   margin-bottom: 18px;
 }
 
 .indService-contact {
+  /* display and box model */
   display: flex;
   flex-direction: column;
+  /* positioning */
   justify-content: center;
   align-items: center;
 }
 
 .indService-needHelp {
+  /* display and box model */
+  margin-bottom: 10px;
+  margin-top: 40px;
+  /* other */
   font-family: "Roboto";
   font-weight: 700;
   font-size: var(--IS-fs-heading2);
-  margin-bottom: 10px;
-  margin-top: 40px;
 }
 
 .indService-contactParagraph {
+  /* display and box model */
+  margin-bottom: 20px;
+  max-width: 300px;
+  /* other */
   font-family: "Roboto";
   font-weight: 500;
   font-size: var(--IS-fs-paragraph);
-  margin-bottom: 20px;
-  max-width: 300px;
   text-align: center;
   line-height: var(--IS-lh-paragraph);
 }
 
 .indService-paragraph {
+  /* display and box model */
+  margin-top: 25px;
+  /* positioning */
+  vertical-align: bottom;
+  /* other */
   font-family: "Roboto";
   font-weight: 400;
   font-size: var(--IS-fs-paragraph);
-  margin-top: 25px;
   line-height: var(--IS-lh-paragraph);
   white-space: pre-line;
-  vertical-align: bottom;
   text-align: justify;
 }
 
+/* responsive settings */
 @media all and (max-width: 1400px) {
   :root {
     --IS-fs-heading1: 2.4rem;

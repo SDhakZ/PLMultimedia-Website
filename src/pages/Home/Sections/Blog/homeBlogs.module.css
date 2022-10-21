@@ -1,34 +1,42 @@
 .home-blogComponent {
+  /* display and box model */
   display: flex;
   flex-direction: column;
   padding: var(--pd-c);
 }
 
 .home-blog-cardsContainer {
+  /* display and box model */
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   gap: 3rem 1.5rem;
   flex-wrap: wrap;
   margin-top: 20px;
+  /* positioning */
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .home-blog-viewMore {
+  /* display and box model */
+  padding: 1rem;
+  margin-top: 40px;
+  /* positioning */
+  align-self: flex-end;
+  /* other */
   font-family: "Roboto";
   text-decoration: none;
   color: "#0e63e3";
-  align-self: flex-end;
-  padding: 1rem;
   font-size: 1.25rem;
   font-weight: 500;
   color: #0e63e3;
-  margin-top: 40px;
   transition: all 0.4s ease;
 }
+
 .home-blog-viewMore:hover {
   color: #62cff5;
 }
 
+/* responsive settings */
 @media screen and (max-width: 400px) {
   .home-blog-viewMore {
     font-size: 1rem;

@@ -1,6 +1,8 @@
+/* button that appears when you start scrolling and on click scrolls you to the top of the page */
 import { useState, useEffect } from "react";
 import goToTopCSS from "./goToTop.module.css";
 
+// function to show the button after you scroll down to 600
 export const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,6 +21,7 @@ export const GoToTop = () => {
     }
   };
 
+  // on click scroll to the top of the page
   return (
     <div>
       {isVisible ? (

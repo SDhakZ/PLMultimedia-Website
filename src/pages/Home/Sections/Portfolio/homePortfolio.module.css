@@ -1,63 +1,78 @@
 :root {
-  --H-P-fs-title: 1.4rem;
-  --H-P-fs-brief: 1rem;
-  --H-P-lh-title: 20px;
-  --H-P-lh-brief: 25px;
+  --H-P-fs-title: 1.4rem; /* font size of title */
+  --H-P-fs-brief: 1rem; /* font size of brief */
+  --H-P-lh-title: 20px; /* line height of title */
+  --H-P-lh-brief: 25px; /* line height of brief */
 }
 
 .home-portfolio-container {
+  /* display and box model */
   display: flex;
   flex-direction: column;
 }
 
 .home-portfolio-data {
+  /* display and box model */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 3rem 1.5rem;
-  justify-content: space-evenly;
   height: 310px;
   margin-top: 40px;
+  /* positioning */
+  justify-content: space-evenly;
 }
 
 .home-portfolio-card {
+  /* display and box model */
   height: 250px;
   width: 350px;
-  cursor: pointer;
-  border-radius: 18px;
-  border: 0px;
-  background: #fffcff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  border-radius: 18px;
+  border: 0px;
+  /* other */
+  cursor: pointer;
+  background: #fffcff;
   transition: all 0.5s ease;
   overflow: hidden;
+  text-align: left;
 }
 
 .home-portfolio-card:hover {
-  transform: translateY(-30px);
+  /* display and box model */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   height: 330px;
+  /* other */
+  transform: translateY(-30px);
 }
 
 .home-portfolio-body {
+  /* display and box model */
   padding: 10px 15px;
 }
 
 .home-portfolio-image {
+  /* display and box model */
   width: 100%;
 }
+
 .home-portfolio-image img {
+  /* display and box model */
   width: 100%;
   height: 200px;
 }
+
 .home-portfolio-title {
-  font-family: "Inter";
+  /* display and box model */
   display: flex;
+  /* positioning */
   align-items: center;
+  /* other */
+  font-family: "Inter";
   font-weight: 600;
   font-size: var(--H-P-fs-title);
   line-height: var(--H-P-lh-title);
@@ -65,8 +80,10 @@
 }
 
 .home-portfolio-brief {
-  opacity: 0;
+  /* display and box model */
   margin-top: 7px;
+  /* other */
+  opacity: 0;
   font-family: "Roboto";
   font-weight: 400;
   font-size: var(--H-P-fs-brief);
@@ -74,23 +91,28 @@
   color: #4c565f;
   transition: all 0.5s ease;
 }
+
 .home-portfolio-card:hover .home-portfolio-brief {
   opacity: 1;
 }
+
 .home-portfolio-moreDetails {
+  /* positioning */
+  align-self: flex-end;
+  /* other */
   font-family: "Roboto";
   text-decoration: none;
-  color: "#0e63e3";
-  align-self: flex-end;
   font-size: 1.25rem;
   font-weight: 500;
   color: #0e63e3;
   transition: all 0.4s ease;
 }
+
 .home-portfolio-moreDetails:hover {
   color: #62cff5;
 }
 
+/* responsive settings */
 @media all and (max-width: 1425px) {
   :root {
     --H-P-fs-title: 1.2rem;
@@ -98,33 +120,40 @@
     --H-P-fs-brief: 1rem;
     --H-P-lh-brief: 23px;
   }
+
   .home-portfolio-data {
     gap: 0rem 1.5rem;
     height: 630px;
   }
+
   .home-portfolio-card:hover {
     transform: translateY(-10px);
   }
 }
+
 @media all and (max-width: 960px) {
   :root {
     --H-P-fs-title: 1.2rem;
     --H-P-lh-title: 25px;
     --H-P-fs-brief: 1rem;
   }
+
   .home-portfolio-data {
     gap: 2rem 1.5rem;
   }
+
   .home-portfolio-card {
     height: 275px;
     width: 270px;
   }
+
   .home-portfolio-card:hover {
     transform: translateY(0px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
       rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     height: 280px;
   }
+
   .home-portfolio-image img {
     height: 150px;
   }
@@ -140,51 +169,64 @@
     --H-P-lh-title: 30px;
     --H-P-lh-brief: 25px;
   }
+
   .home-portfolio-data {
     height: 1000px;
   }
+
   .home-portfolio-card {
     height: 310px;
     width: 400px;
   }
+
   .home-portfolio-image img {
     height: 200px;
   }
+
   .home-portfolio-card:hover {
     height: 310px;
   }
+
   .home-portfolio-moreDetails {
     margin-top: 45px;
   }
 }
+
 @media all and (max-width: 600px) {
   :root {
     --H-P-fs-title: 1.2rem;
     --H-P-lh-title: 25px;
     --H-P-lh-brief: 23px;
   }
+
   .home-portfolio-data {
     height: 900px;
     gap: 2rem 1.5rem;
   }
+
   .home-portfolio-card {
     height: 280px;
     width: 320px;
   }
+
   .home-portfolio-card:hover {
     height: 280px;
   }
+
   .home-portfolio-image img {
     height: 150px;
   }
+
   .home-portfolio-brief {
     opacity: 1;
   }
 }
+
 @media all and (max-width: 400px) {
   .home-portfolio-card {
     width: 290px;
   }
+
   .home-portfolio-moreDetails {
     font-size: 1rem;
     margin-top: 30px;

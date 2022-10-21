@@ -1,3 +1,4 @@
+/* jsx to create review section of home page */
 import React from "react";
 import HomeReviewCSS from "./homeReview.module.css";
 import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
@@ -9,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../SwiperJS/SwiperOverride.css";
 
+// function to create cards for review section
 function HomeReviewCard(props) {
   return (
     <div className={HomeReviewCSS["home-review-card"]}>
@@ -39,10 +41,12 @@ function HomeReviewCard(props) {
   );
 }
 
+// function to create structure for review section and data mapping
 export const HomeReview = () => {
   return (
     <>
       <SectionHeading sectionName="What people think about us" />
+      {/* using swiper component to create slider in review section */}
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={3}

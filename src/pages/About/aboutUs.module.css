@@ -18,23 +18,28 @@
 }
 
 .aboutUs-section1 {
+  /* display and box model */
   display: flex;
   gap: 100px;
   margin-bottom: 100px;
 }
 
 .aboutUs-section1-img {
+  /* display and box model */
   margin-left: -25px;
 }
 
 .aboutUs-title {
+  /* display and box model */
+  margin-bottom: 20px;
+  /* other */
   font-weight: 700;
   font-size: var(--AU-fs-heading);
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
 }
 
 .aboutUs-paragraph {
+  /* other */
   font-weight: 400;
   font-size: var(--AU-fs-paragraph);
   line-height: var(--AU-lh-paragraph);
@@ -42,35 +47,44 @@
 }
 
 .aboutUs-section2 {
+  /* display and box model */
   display: flex;
-  justify-content: space-between;
   gap: 100px;
+  /* positioning */
+  justify-content: space-between;
 }
 
 .aboutUs-section2-img {
+  /* display and box model */
   margin-right: -30px;
 }
 
 .aboutUs-ourTeam {
+  /* display and box model */
   margin-top: 50px;
 }
 
 .aboutUs-teamMembers {
+  /* display and box model */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   gap: 20px;
+  /* positioning */
+  justify-content: space-evenly;
 }
 
 .aboutUs-memberDetail {
+  /* display and box model */
   box-shadow: 2px 4px 7px 8px rgba(0, 0, 0, 0.1);
   width: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 25px;
-  text-align: center;
   gap: 20px;
+  padding: 25px;
+  /* positioning */
+  justify-content: space-between;
+  /* other */
+  text-align: center;
   transition: all 0.5s ease;
 }
 
@@ -79,6 +93,7 @@
 }
 
 .aboutUs-membersImage {
+  /* display and box model */
   clip-path: circle();
 }
 
@@ -101,9 +116,11 @@
 }
 
 .aboutUs-socialIcon {
+  /* display and box model */
   display: flex;
-  justify-content: space-evenly;
   flex-direction: row;
+  /* positioning */
+  justify-content: space-evenly;
 }
 
 .aboutUs-socialIcon a {
@@ -112,10 +129,11 @@
   transition: all 0.3s ease-in-out;
 }
 .aboutUs-advisor {
+  /* display and box model */
   margin-top: 50px;
 }
 
-/*Responsive settings*/
+/* responsive settings */
 @media (max-width: 1400px) {
   :root {
     --AU-fs-heading: 3rem; /* heading font size */
@@ -167,6 +185,7 @@
     --AU-fs-position: 1rem;
     --AU-fs-icon: 1.25rem;
   }
+
   .aboutUs-section1 {
     gap: 40px;
   }

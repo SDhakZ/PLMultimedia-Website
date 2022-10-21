@@ -1,8 +1,7 @@
 /*Component for making cards for Interns page*/
-
 import React from "react";
 import InternsCSS from "./interns.module.css";
-
+//structure for intern card where data is mapped from Strapi
 export const InternCard = (props) => {
   var mail = "mailto:" + props.email;
   return (

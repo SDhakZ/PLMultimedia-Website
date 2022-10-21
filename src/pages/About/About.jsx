@@ -1,3 +1,4 @@
+/* Component for about us page */
 import React, { useEffect } from "react";
 import AboutCSS from "./aboutUs.module.css";
 import { MainHeading } from "../../components/MainHeading/MainHeading";

@@ -1,24 +1,31 @@
 .swiper-button-prev {
+  /* positioning */
   left: 0;
 }
 
 .swiper-button-next {
+  /* positioning */
   right: 0;
 }
 
 .swiper {
+  /* display and box model */
   height: 570px;
   width: 95%;
+  /* positioning */
   z-index: 0;
 }
 
 .swiper-slide {
+  /* display and box model */
   margin: none;
   display: flex;
+  /* positioning */
   justify-content: center;
   align-items: center;
 }
 
+/* responsive settings */
 @media all and (max-width: 1500px) {
   .swiper {
     height: 490px;

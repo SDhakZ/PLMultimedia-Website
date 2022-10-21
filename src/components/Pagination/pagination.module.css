@@ -1,10 +1,10 @@
 :root {
-  --PG-fs-pageItem: 1.2rem;
-  --PG-wh-pageItemLink: 28px;
-  --PG-w-button: 30px;
-  --PG-h-button: 28px;
-  --PG-fs-button: 1.3rem;
-  --PG-mt-container: 37px;
+  --PG-fs-pageItem: 1.2rem; /* fontsize of page items */
+  --PG-wh-pageItemLink: 28px; /* width and height of page item link */
+  --PG-w-button: 30px; /* minimum width of button */
+  --PG-h-button: 28px; /* minimum height of button */
+  --PG-fs-button: 1.3rem; /* fontsize of button */
+  --PG-mt-container: 37px; /* margin top for container */
 }
 
 .pagination-container,
@@ -12,60 +12,73 @@
 .pagination-page-item,
 .pagination-page-link,
 .pagination-page-activeLink {
+  /* display and box model */
   display: flex;
+  /* positioning */
   justify-content: center;
   align-items: center;
 }
 
 .pagination-container {
-  gap: 10px;
+  /* display and box model */
   margin-top: var(--PG-mt-container);
+  gap: 10px;
 }
 
 .pagination-list {
-  list-style: none;
+  /* display and box model */
   gap: 10px;
+  /* other */
+  list-style: none;
   flex-wrap: wrap;
 }
 
 .pagination-page-item {
+  /* display and box model */
   width: var(--PG-wh-pageItemLink);
   height: var(--PG-wh-pageItemLink);
   border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* other */
   font-family: "Roboto";
   font-weight: 500;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   font-size: var(--PG-fs-pageItem);
 }
 
 .pagination-page-link {
+  /* display and box model */
   width: var(--PG-wh-pageItemLink);
   height: var(--PG-wh-pageItemLink);
+  /* other */
   text-decoration: none;
   color: #636363;
 }
 
 .pagination-page-activeLink {
+  /* display and box model */
   width: var(--PG-wh-pageItemLink);
   height: var(--PG-wh-pageItemLink);
+  /* other */
   color: #3ec1ee;
   text-decoration: none;
 }
 
 .pagination-button {
-  color: #3ec1ee;
-  font-weight: 500;
-  font-size: var(--PG-fs-button);
+  /* display and box model */
   min-width: var(--PG-w-button);
   height: var(--PG-h-button);
-  cursor: pointer;
   outline: unset;
   border: none;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* other */
+  color: #3ec1ee;
+  font-weight: 500;
+  font-size: var(--PG-fs-button);
   background: none;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .pagination-button:disabled {
@@ -73,6 +86,7 @@
   cursor: not-allowed;
 }
 
+/* responsiveness settings */
 @media all and (max-width: 1200px) {
   :root {
     --PG-fs-pageItem: 1.1rem;

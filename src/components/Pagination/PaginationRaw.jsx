@@ -1,3 +1,4 @@
+/* this pagination component can be used for normal pages */
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -13,8 +14,8 @@ const PaginationRaw = ({ showPerPage, onPaginationChange, total }) => {
     onPaginationChange(value - showPerPage, value);
   }, [currentPage, onPaginationChange, showPerPage]);
 
+  //changes page when next or previous button is clicked and scrolls to top
   const changePage = (type) => {
-    //code
     window.scrollTo({ top: 0 });
     if (type === "prev") {
       setCounter(currentPage - 1);
@@ -22,6 +23,7 @@ const PaginationRaw = ({ showPerPage, onPaginationChange, total }) => {
       setCounter(currentPage + 1);
     }
   };
+  //returns pagination structure design
   return (
     <>
       <div className={PaginationCSS["pagination-container"]}>

@@ -1,3 +1,4 @@
+/* jsx for individual service page for the service that is clicked*/
 import React, { useState } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import IndividualServiceCSS from "./individualService.module.css";
@@ -38,9 +39,8 @@ export const IndividualService = () => {
     setClickNumber(toLoadFromDataArrayNumber + 1);
     window.scrollTo({ top: 60, behavior: "smooth" });
   };
-
+  //goes back a page according to the origin (Home/Services)page
   const goBackMethod = () => {
-    // history.goBack();
     if (loadedFrom === "home") {
       return "/";
     } else if (loadedFrom === "service") {

@@ -8,7 +8,7 @@ import { DomainSearch } from "./DomainSearch";
 import servicesData from "../../data/servicesData";
 import { MainHeading } from "../../components/MainHeading/MainHeading";
 import { useSpring, animated, easings } from "react-spring";
-
+// structure for services page where data can be mapped
 export const Services = () => {
   const style = useSpring({
     from: { opacity: 0, scale: 0 },

@@ -1,3 +1,4 @@
+/* Component for contact page with proper validations */
 import React, { useRef, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ContactCSS from "./contact.module.css";
@@ -138,7 +139,7 @@ export const Contact = () => {
       event.preventDefault();
     }
   };
-
+  // animation setting
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },

@@ -1,5 +1,5 @@
-// this is the service card component.
-// it is basically a function which takes logo,title,& description parameters to generate a service card.
+/* this is the service card component.
+it is basically a function which takes logo,title,& description parameters to generate a service card.*/
 
 import React from "react";
 import { Link } from "react-router-dom";

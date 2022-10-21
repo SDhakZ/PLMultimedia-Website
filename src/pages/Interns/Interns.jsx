@@ -1,3 +1,4 @@
+/*Component for intern page where all interns are showed*/
 import React, { useState } from "react";
 import { MainHeading } from "../../components/MainHeading/MainHeading";
 import InternsCSS from "./interns.module.css";
@@ -19,7 +20,7 @@ export const Interns = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [currentPage, setCurrentPage] = useState(1);
 
-  //Sorting According to dropdown while fetching Strapi data
+  //sorting According to dropdown while fetching Strapi data
   const getInitialState = () => {
     const value = "All";
     return value;
@@ -45,7 +46,7 @@ export const Interns = () => {
         errorMessage="Server is temporarily unable to respond to your request"
       />
     );
-  //returns intern cards with mmapped data
+  //returns intern cards with mapped data
   return (
     <animated.div style={style}>
       <div className={InternsCSS["interns-container"]}>

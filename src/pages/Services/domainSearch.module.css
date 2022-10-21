@@ -1,30 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 :root {
-  --DS-fs-heading: 3.5rem; /* heading font size */
-  --DS-fs-message: 1.2rem; /* message font size*/
-  --DS-fs-textfield: 1.3rem; /* text field font size*/
-  --DS-h-textfield: 55px; /* text field height size*/
-  --DS-fs-btn: 1.5rem; /* button font size */
-  --DS-w-logo: 100px; /* logo width */
+  --DS-fs-heading: 3.5rem; /* font size of heading */
+  --DS-fs-message: 1.2rem; /* font size of message */
+  --DS-fs-textfield: 1.3rem; /* font size of text field */
+  --DS-h-textfield: 55px; /* height size of text field */
+  --DS-fs-btn: 1.5rem; /* font size of button */
+  --DS-w-logo: 100px; /* width of logo */
 }
 
 .domain-searchSection {
+  /* display and box model */
   margin-top: 2%;
   margin-bottom: 7%;
   display: flex;
   flex-direction: column;
   padding: 4%;
-  background: #fff;
   box-shadow: 0px 4px 10px rgba(165, 165, 165, 0.432);
   border-radius: 20px;
+  /* other */
+  background: #fff;
 }
 
 .domain-header {
+  /* display and box model */
   display: flex;
+  /* positioning */
   align-items: center;
 }
 
 .domain-headImg {
+  /* display and box model */
   max-width: var(--DS-w-logo);
   margin-right: 2.2rem;
 }
@@ -36,19 +41,24 @@
 }
 
 .domain-informUser {
-  font-family: "Roboto", sans-serif;
+  /* display and box model */
   margin: 20px 0 0 10px;
+  /* other */
+  font-family: "Roboto", sans-serif;
   font-size: var(--DS-fs-message);
 }
 
 .domain-footer {
+  /* display and box model */
   display: flex;
   margin-top: 1em;
+  /* positioning */
   align-items: center;
   justify-content: space-between;
 }
 
 .domain-textField {
+  /* display and box model */
   width: 80%;
   height: var(--DS-h-textfield);
   margin-right: 5%;
@@ -57,32 +67,38 @@
   padding-left: 20px;
   box-shadow: 0px 0px 10px rgba(192, 192, 192, 0.85);
   border-radius: 10px;
+  /* other */
   transition: all 0.4s;
   background: #fefefe;
 }
 
 .domain-textField:focus {
+  /* display and box model */
   outline-color: #3ec1ee;
 }
 
 .domain-searchButton {
+  /* display and box model */
   width: 15%;
   min-width: 10%;
   height: 55px;
   border-radius: 10px;
   border-width: 0;
+  box-shadow: 0px 0px 10px rgba(192, 192, 192, 0.85);
+  /* other */
   font-size: var(--DS-fs-btn);
   font-weight: 600;
   background: #3ec1ee;
-  box-shadow: 0px 0px 10px rgba(192, 192, 192, 0.85);
   color: #ffffff;
   transition: all 0.3s;
   cursor: pointer;
 }
 
 .domain-searchButton:hover {
-  color: #3ec1ee;
+  /* display and box model */
   box-shadow: inset 0 0 0 4px rgb(62, 193, 238);
+  /* other */
+  color: #3ec1ee;
   background-color: #fbfbfd;
 }
 
@@ -90,7 +106,7 @@
   filter: brightness(90%);
 }
 
-/*tablet optimization*/
+/* responsive settings */
 @media all and (max-width: 1200px) {
   :root {
     --DS-fs-heading: 2.5rem;
@@ -117,6 +133,7 @@
     --DS-w-logo: 80px;
     --DS-h-textfield: 45px;
   }
+
   .domain-searchButton {
     height: 45px;
     width: 25%;
@@ -133,6 +150,7 @@
     --DS-fs-btn: 1rem;
     --DS-w-logo: 60px;
   }
+
   .domain-headImg {
     margin-right: 1.5rem;
   }
@@ -144,13 +162,13 @@
   }
 }
 
-/*mobile optimization*/
 @media all and (max-width: 460px) {
   :root {
     --DS-fs-heading: 1.4rem;
     --DS-fs-message: 0.875rem;
     --DS-w-logo: 50px;
   }
+
   .domain-headImg {
     margin-right: 0.5rem;
   }
@@ -171,6 +189,7 @@
     box-sizing: border-box;
     padding-left: 10px;
   }
+
   .domain-footer {
     justify-content: center;
     flex-direction: column;

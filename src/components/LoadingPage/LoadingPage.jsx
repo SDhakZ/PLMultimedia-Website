@@ -1,6 +1,8 @@
+/* this page is displays the loading animation */
 import React from "react";
 import LoadingPageCSS from "./loadingPage.module.css";
 
+// loading page structure
 export const LoadingPage = () => {
   return (
     <div className={LoadingPageCSS["loadingPage"]}>

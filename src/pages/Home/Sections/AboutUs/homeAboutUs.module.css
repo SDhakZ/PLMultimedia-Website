@@ -1,12 +1,13 @@
 :root {
-  --H-AU-pd-container: 80px 140px 100px; /*container padding*/
-  --H-AU-fs-paragraph: 1.3rem; /* paragraph font size*/
-  --H-AU-lh-paragraph: 35px; /* paragraph line height */
+  --H-AU-pd-container: 80px 140px 100px; /* container padding*/
+  --H-AU-fs-paragraph: 1.3rem; /* font size of paragraph */
+  --H-AU-lh-paragraph: 35px; /* line height of paragraph */
 }
 
-/* About us section */
+/* about us section */
 
 .home-aboutUs-WhoAreWe {
+  /* display and box model */
   display: flex;
   flex-direction: row;
   gap: 250px;
@@ -14,18 +15,21 @@
 }
 
 .home-aboutUs-images {
+  /* positioning */
   position: relative;
 }
 
 .home-aboutUs-leftgirl,
 .home-aboutUs-rightgroup {
+  /* display and box model */
   width: 300px;
 }
 
 .home-aboutUs-rightgroup {
-  position: absolute;
+  /* positioning */
   top: 155px;
   left: 155px;
+  position: absolute;
 }
 
 .home-aboutUs-title,
@@ -35,21 +39,27 @@
 }
 
 .home-aboutUs-title {
+  /* display and box model */
+  margin-top: 3px;
+  /* other */
   font-size: 3.2rem;
   letter-spacing: 0.05em;
   font-weight: 600;
   line-height: 85px;
-  margin-top: 3px;
 }
 
 .home-aboutUs-paragraph {
+  /* display and box model */
+  margin-top: 15px;
+  /* positioning */
+  text-align: justify;
+  /* other */
   font-weight: 400;
   font-size: var(--H-AU-fs-paragraph);
   line-height: var(--H-AU-lh-paragraph);
-  text-align: justify;
-  margin-top: 15px;
 }
 
+/* responsive settings */
 @media all and (max-width: 1200px) {
   :root {
     --H-AU-pd-container: 70px 60px 30px;
@@ -84,10 +94,12 @@
   :root {
     --H-AU-lh-paragraph: 29px;
   }
+
   .home-aboutUs-paragraph {
     margin-top: 5px;
   }
 }
+
 @media all and (max-width: 960px) {
   :root {
     --H-AU-pd-container: 60px 40px 10px;
@@ -170,6 +182,7 @@
     margin-top: 15px;
   }
 }
+
 @media all and (max-width: 400px) {
   :root {
     --H-AU-pd-container: 30px 25px 0px;
