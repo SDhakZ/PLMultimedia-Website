@@ -33,7 +33,7 @@ export const Interns = () => {
   if (value === "All") {
     path = `${host}/api/interns?populate=*&pagination[page]=${currentPage}&pagination[pageSize]=9`;
   } else {
-    path = `${host}/api/interns?populate=*&filters[field][$eq]=${value}&pagination[page]=${currentPage}&pagination[pageSize]=9`;
+    path = `${host}/api/interns?populate=*&filters[field][$eq]=${value}&pagination[page]=1&pagination[pageSize]=9`;
   }
 
   const { loading, error, data } = useFetch(path);
