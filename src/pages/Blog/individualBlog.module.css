@@ -1,21 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Roboto:wght@500&display=swap");
 
 :root {
-  --IB-fs--title: 3.2rem;
-  --IB-fs-author: 1.2rem;
-  --IB-fs-paragraph: 1.1rem;
-  --IB-w-blogImage: 65%;
+  --IB-fs--title: 3.2rem; /* font size of title */
+  --IB-fs-author: 1.2rem; /* font size of author */
+  --IB-fs-paragraph: 1.1rem; /* font size of paragraph */
+  --IB-w-blogImage: 65%; /* width of blog image */
 }
 
 .individualBlogPage {
+  /* display and box model */
   padding: var(--pd-c);
 }
 
 .indBlg-backButton-container {
+  /* display and box model */
+  margin-bottom: 20px;
+  /* other */
   font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 20px;
 }
 
 .indBlg-backButton {
@@ -30,6 +33,7 @@
 }
 
 .indBlg-headerContainer {
+  /* display and box model */
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -38,39 +42,52 @@
 }
 
 .indBlg-auth_date-container {
+  /* display and box model */
   display: flex;
+  /* positioning */
   align-items: center;
 }
 
 .indBlg-author-img {
+  /* display and box model */
   width: 53px;
   clip-path: circle();
 }
 
 .indBlg-authorName,
 .indBlg-uploadDate {
-  font-family: "Mulish";
+  /* display and box model */
   margin: 15px 0px 15px 15px;
+  /* other */
+  font-family: "Mulish";
   color: #6d7d8b;
   font-size: var(--IB-fs-author);
 }
 
 .indBlg-authorName {
+  /* display and box model */
   padding-right: 15px;
   border-right: 1px solid #6d7d8b;
 }
 
 .indBlg-content {
+  /* display and box model */
   display: flex;
   flex-direction: column;
+  /* positioning */
   align-items: center;
 }
 
 .indBlg-blogImage {
+  /* display and box model */
   width: var(--IB-w-blogImage);
 }
 
 .indBlg-blogBody {
+  /* display and box model */
+  margin-top: 50px;
+  max-width: 1200px;
+  /* other */
   font-family: "Roboto";
   font-weight: 400;
   font-size: var(--IB-fs-paragraph);
@@ -78,11 +95,10 @@
   letter-spacing: 0.04em;
   text-align: justify;
   color: #2f2f2f;
-  margin-top: 50px;
   white-space: pre-line;
-  max-width: 1200px;
 }
 
+/* responsive settings */
 @media all and (max-width: 1400px) {
   :root {
     --IB-fs--title: 2.8rem;

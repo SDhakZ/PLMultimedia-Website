@@ -1,10 +1,12 @@
+// navigation page to create the navigation bar for the website
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavbarCSS from "./navBar.module.css";
 
+// function to create the structure of navbar page
 export const NavBar = () => {
   const [click, setClick] = useState(false);
-
+  // function call css for active page and to scroll the page to top
   function handleClick() {
     setClick(!click);
     window.scrollTo({ top: 0 });

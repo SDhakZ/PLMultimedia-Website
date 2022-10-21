@@ -1,3 +1,4 @@
+/* jsx to create blog section of home page */
 import React from "react";
 import { BlogCard } from "../../../Blog/BlogCard";
 import useFetch from "../../../../hooks/useFetch";
@@ -7,13 +8,15 @@ import HomeBlog from "./homeBlogs.module.css";
 import { Link } from "react-router-dom";
 import { SectionHeading } from "../../../../components/SectionHeading/SectionHeading";
 
+// function to create structure for blog section and data mapping
 export const HomeBlogs = () => {
   const host = process.env.REACT_APP_STRAPI_HOST;
   const { loading, data, error } = useFetch(
     `${host}/api/blogs?populate=blogImage,authorInfo.profilePic`
   );
-
+  // condition to open loading page while the page is loading
   if (loading) return LoadingPage;
+  // condition to open error page when an error occurs
   if (error) return ErrorPage;
 
   return (
@@ -26,8 +29,9 @@ export const HomeBlogs = () => {
         }}
       >
         {data.data.slice(0, 3).map((blog) => {
-          const blogImgUrl = blog.attributes.blogImage.data.attributes.url
-          const authorImgUrl = blog.attributes.authorInfo.profilePic.data.attributes.url;
+          const blogImgUrl = blog.attributes.blogImage.data.attributes.url;
+          const authorImgUrl =
+            blog.attributes.authorInfo.profilePic.data.attributes.url;
           return (
             <BlogCard
               key={blog.attributes.id}
