@@ -19,16 +19,16 @@ function TeamMembers(props) {
       <h4 className={AboutCSS["aboutUS-memberName"]}>{props.name}</h4>
       <h5 className={AboutCSS["aboutUS-memberPosition"]}>{props.position}</h5>
       <div className={AboutCSS["aboutUs-socialIcon"]}>
-        <a href={props.facebookLink}>
+        <a href={props.facebookLink} rel="noreferrer" target="_blank">
           <i className={`${AboutCSS.icons} fa fa-facebook`}></i>
         </a>
-        <a href={props.gmailLink}>
+        <a href={props.gmailLink} rel="noreferrer" target="_blank">
           <i className={`${AboutCSS.icons} fa fa-envelope`}></i>
         </a>
-        <a href={props.twitterLink}>
+        <a href={props.twitterLink} rel="noreferrer" target="_blank">
           <i className={`${AboutCSS.icons} fa fa-twitter`}></i>
         </a>
-        <a href={props.linkedInLink}>
+        <a href={props.linkedInLink} rel="noreferrer" target="_blank">
           <i className={`${AboutCSS.icons} fa fa-linkedin`}></i>
         </a>
       </div>
@@ -137,23 +137,23 @@ export const About = () => {
           <div className={AboutCSS["aboutUs-teamMembers"]}>
             <div className={AboutCSS["aboutUs-memberDetail"]}>
               <img
-                src={require("../../assets/Images/AboutUs-Image/profile.jpg")}
+                src={require("../../assets/Images/Home-Image/altImage.jpg")}
                 className={AboutCSS["aboutUs-membersImage"]}
                 alt="Members"
               />
 
               <h4 className={AboutCSS["aboutUS-memberName"]}>Advisor</h4>
               <div className={AboutCSS["aboutUs-socialIcon"]}>
-                <a href="https://www.facebook.com/madurai.boral">
+                <a href="https://www.facebook.com/">
                   <i className={`${AboutCSS.icons} fa fa-facebook`}></i>
                 </a>
-                <a href="https://twitter.com/MultimediaPvt">
+                <a href="https://twitter.com/">
                   <i className={`${AboutCSS.icons} fa fa-twitter`}></i>
                 </a>
                 <a href="mailto: info@plmultimediaservice.com">
                   <i className={`${AboutCSS.icons} fa-solid fa-envelope`}></i>
                 </a>
-                <a href="https://www.linkedin.com/in/pl-multimedia-service-pvt-ltd-b06636251/">
+                <a href="https://www.linkedin.com/">
                   <i className={`${AboutCSS.icons} fa fa-linkedin`}></i>
                 </a>
               </div>

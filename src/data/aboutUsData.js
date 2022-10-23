@@ -5,6 +5,9 @@ const aboutUsData = [
     name: "Madhuri Boral",
     position: "Chairperson",
     facebookLink: "https://www.facebook.com/madurai.boral",
+    gmailLink: "https://www.gmail.com",
+    twitterLink: "https://www.twitter.com",
+    linkedInLink: "https://www.linkedin.com",
   },
   {
     id: 2,
@@ -12,7 +15,9 @@ const aboutUsData = [
     name: "Dilliram Parajuli",
     position: "Technical Director",
     facebookLink: "https://www.facebook.com/NplzzZ",
+    gmailLink: "https://www.gmail.com",
     twitterLink: "https://twitter.com/NplZ_BoY",
+    linkedInLink: "https://www.linkedin.com",
   },
   {
     id: 3,

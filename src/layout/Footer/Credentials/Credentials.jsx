@@ -6,6 +6,7 @@ import CredentialsData from "../../../data/credentialsData";
 
 /* function to create a card for credentials page */
 function CredentialsCard(props) {
+  var mail = "mailto:" + props.gmailLink;
   return (
     <div className={CredentialCSS["credentials-card"]}>
       <img
@@ -15,10 +16,7 @@ function CredentialsCard(props) {
       />
 
       <div className={CredentialCSS["credentials-name"]}>{props.name}</div>
-      <a
-        className={CredentialCSS["credentials-mail"]}
-        href="mailto: {props.gmailLink}"
-      >
+      <a className={CredentialCSS["credentials-mail"]} href={mail}>
         {props.gmailLink}
       </a>
 
