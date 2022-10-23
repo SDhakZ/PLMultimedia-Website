@@ -17,9 +17,9 @@ function CredentialsCard(props) {
       <div className={CredentialCSS["credentials-name"]}>{props.name}</div>
       <a
         className={CredentialCSS["credentials-mail"]}
-        href="https://www.gmail.com"
+        href="mailto: {props.gmailLink}"
       >
-        mail@mail.com
+        {props.gmailLink}
       </a>
 
       <div className={CredentialCSS["credentials-position"]}>

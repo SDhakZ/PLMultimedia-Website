@@ -1,12 +1,12 @@
 // footer page to create the footer of the website
 import React from "react";
 import FooterCSS from "./footer.module.css";
+import KhaltiCheckout from "khalti-checkout-web";
+import config from "../../components/Khalti/khaltiConfig";
 
 // function to create the structure of footer page
 export const Footer = () => {
-  function goToKhalti() {
-    return;
-  }
+  let checkout = new KhaltiCheckout(config);
   function goToEsewa() {
     return;
   }
@@ -123,7 +123,7 @@ export const Footer = () => {
           <div className={FooterCSS["footer-payment"]}>
             We also accept payment through:
             <div className={FooterCSS["footer-logo"]}>
-              <a onClick={goToKhalti} href="# ">
+              <a onClick={() => checkout.show({ amount: 10000 })}>
                 <img
                   src={require("../../assets/Logo/khaltiLogo.png")}
                   className={FooterCSS["footer-khaltiLogo"]}
