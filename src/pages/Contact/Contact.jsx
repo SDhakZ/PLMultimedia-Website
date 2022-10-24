@@ -12,6 +12,7 @@ export const Contact = () => {
     // Anything in here is fired on component mount.
     return () => {
       // Anything in here is fired on component unmount.
+      //eslint-disable-next-line
       toLoadNumber = 0;
     };
   }, []);
@@ -67,28 +68,15 @@ export const Contact = () => {
     return errors;
   };
 
-  const mapNumberToValue = {
-    1: "Advertisement",
-    2: "WebDevelopment",
-    3: "WebHosting",
-    4: "MobileAppDevelopment",
-    5: "SEO Optimization",
-    6: "Digital Marketting",
-    7: "Media Production",
-    8: "Job and Internship",
-    9: "Problems",
-    10: "Other",
-  };
-
   useEffect(() => {
     if (Object.keys(formerror).length === 0 && issubmit) {
       console.log(formvalue);
       emailjs
         .sendForm(
-          "service_l43jr5i",
-          "template_7n5kswn",
+          process.env.REACT_APP_EJS_Service_ID,
+          process.env.REACT_APP_EJS_Template_ID,
           formRef.current,
-          "H4TRK-LowEhYemmhU"
+          process.env.REACT_APP_EJS_Public_Key
         )
         .then(
           (result) => {

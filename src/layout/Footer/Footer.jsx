@@ -123,21 +123,20 @@ export const Footer = () => {
           <div className={FooterCSS["footer-payment"]}>
             We also accept payment through:
             <div className={FooterCSS["footer-logo"]}>
-              <a onClick={() => checkout.show({ amount: 10000 })}>
+              <button onClick={() => checkout.show({ amount: 10000 })}>
                 <img
                   src={require("../../assets/Logo/khaltiLogo.png")}
                   className={FooterCSS["footer-khaltiLogo"]}
                   alt="Khalti Logo"
                 />
-              </a>
-              <a onClick={goToEsewa} href="# ">
+              </button>
+              <button onClick={goToEsewa}>
                 <img
                   src={require("../../assets/Logo/esewaLogo.png")}
                   className={FooterCSS["footer-esewaLogo"]}
                   alt="esewa Logo"
-                  href="# "
                 />
-              </a>
+              </button>
             </div>
           </div>
         </div>
