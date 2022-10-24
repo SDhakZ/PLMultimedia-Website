@@ -262,7 +262,8 @@ export const Contact = () => {
                   <select
                     className={ContactCSS["contact-drop-down"]}
                     name="subject"
-                    required="true"
+                    required={true}
+                    id="subject"
                     // value={formvalue.subject}
                     // value="webHosting"
                     onChange={handlevalidation}
@@ -351,7 +352,7 @@ export const Contact = () => {
                     pattern="([A-Z][a-z]{3,} )([A-Z][a-z]{3,} )?([A-Z][a-z]{3,})"
                     onChange={handlevalidation}
                     title="Please insert your full name using only letters"
-                    required="true"
+                    required={true}
                     onKeyDown={handleEnter}
                   />
 
@@ -362,7 +363,7 @@ export const Contact = () => {
                       name="email"
                       value={formvalue.email}
                       onChange={handlevalidation}
-                      required="true"
+                      required={true}
                       onKeyDown={handleEnter}
                     />
 
@@ -374,7 +375,7 @@ export const Contact = () => {
                       onChange={handlevalidation}
                       pattern="[0-9]{10}"
                       title="Please insert valid phone number, i.e. Phone number must be in number format, include 10 digits"
-                      required="true"
+                      required={true}
                       onKeyDown={handleEnter}
                     />
                   </div>
@@ -385,7 +386,7 @@ export const Contact = () => {
                     name="message"
                     value={formvalue.message}
                     onChange={handlevalidation}
-                    required="true"
+                    required={true}
                   />
 
                   <button

@@ -19,7 +19,7 @@ export const HomeServiceSlider = () => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={3}
-        spaceBetween={5}
+        spaceBetween={-20}
         navigation
         autoplay={{
           delay: 2500,

@@ -39,7 +39,7 @@ export const IndividualBlog = () => {
           to={{ pathname: goBackMethod() }}
           className={INDBLG["indBlg-backButton"]}
         >
-          <i class="fa-sharp fa-solid fa-arrow-left"></i> Go Back
+          <i className="fa-sharp fa-solid fa-arrow-left"></i> Go Back
         </Link>
       </div>
 

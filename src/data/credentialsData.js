@@ -68,7 +68,7 @@ const credentialsData = [
   },
   {
     id: 7,
-    img: require("../assets/Images/Credentials-Image/altImage.jpg"),
+    img: require("../assets/Images/Credentials-Image/Shivan.png"),
     name: "Shivan Jung Kunwar",
     position: "Web Developer | Backend",
     facebookLink: "https://www.facebook.com/profile.php?id=100002042315698",
