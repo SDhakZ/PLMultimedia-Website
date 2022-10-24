@@ -219,6 +219,12 @@
   font-weight: 600;
   line-height: 33px;
 }
+
+.footer-payment button {
+  background: none;
+  color: inherit;
+  border: none;
+}
 .footer-logo {
   /* display and box model */
   display: flex;
