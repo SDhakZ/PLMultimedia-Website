@@ -2,7 +2,7 @@
 :root {
   --F-pd-container: 60px 140px 30px; /*container padding*/
   --F-fs-heading: 1.8rem; /* heading font size */
-  --F-fs-companyName: 2rem; /* company name font size */
+  --F-fs-companyName: 2.1rem; /* company name font size */
   --F-fs-paragraph: 1.15rem; /* paragraph font size*/
   --F-mb-paragraph: 15px; /* margin bottom for links */
   --F-fs-socialIcons: 2.5rem; /* social icons font size */
@@ -44,6 +44,8 @@
 .footer-companyName-container {
   /* display and box model */
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .footer-companyName {

@@ -2,82 +2,64 @@
 import { React } from "react";
 import HomeTopCSS from "./homeTop.module.css";
 import { TypeAnimation } from "react-type-animation";
-import { useSpring, animated, easings } from "react-spring";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 // function to create structure for top section
 export const HomeTop = () => {
-  //animation for the roctet in top section
-  const rocketEnter = useSpring({
-    from: { opacity: 0.3, x: -550, y: 600 },
-    to: { opacity: 1, x: -20, y: 80 },
-    config: { duration: 2000, easing: easings.easeInOutQuart },
-  });
-  //animation for the planet in top section
-  const planetEnter = useSpring({
-    from: { opacity: 0.3, y: -200 },
-    to: { opacity: 1, y: 40 },
-    config: { duration: 2000, easing: easings.easeInOutCubic },
-  });
-  //animation for the floatingman in top section
-  const floatingManEnter = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: 2000, easing: easings.easeInOutBack },
-  });
   return (
-    <div className={HomeTopCSS["home-top"]}>
-      <div className={HomeTopCSS["home-top-main"]}>
+    <>
+      <div className={HomeTopCSS["home-top"]}>
         <div className={HomeTopCSS["home-top-text"]}>
           Let Us
           <TypeAnimation
             sequence={[
               "Solve Your Problems",
-              2500,
+              1600,
               "Accelerate Your Growth",
-              2000, // Waits 2s
+              1300, // Waits 2s
               "Create Your Dreams",
-              2000, // Waits 2s
+              1600, // Waits 2s,
+              "Start our journey together",
+              1500, // Waits 2s
             ]}
             wrapper="h1"
             cursor={true}
             repeat={Infinity}
-            speed={15}
+            speed={25}
           />
         </div>
-        <figure className={HomeTopCSS["home-top-imgCollection"]}>
+
+        <Carousel
+          autoPlay
+          animationHandler="fade"
+          showStatus={false}
+          infiniteLoop={true}
+          showThumbs={false}
+          stopOnHover={false}
+          interval={6000}
+        >
           <img
-            className={HomeTopCSS["home-top-leftbg"]}
-            src={require("../../../../assets/Images/Home-Image/leftBg.png")}
-            alt="background"
+            src={require("../../../../assets/Images/Home-Image/media.jpg")}
+            className={HomeTopCSS["home-top-image"]}
+            alt="media"
           />
           <img
-            className={HomeTopCSS["home-top-rightbg"]}
-            src={require("../../../../assets/Images/Home-Image/rightBg.png")}
-            alt="background"
+            src={require("../../../../assets/Images/Home-Image/team.jpg")}
+            className={HomeTopCSS["home-top-image"]}
+            alt="team"
           />
-          <animated.div style={floatingManEnter}>
-            <img
-              className={HomeTopCSS["home-top-floatingman"]}
-              src={require("../../../../assets/Images/Home-Image/floatingMan.png")}
-              alt="floating man"
-            />
-          </animated.div>
-          <animated.div style={planetEnter}>
-            <img
-              className={HomeTopCSS["home-top-planet"]}
-              src={require("../../../../assets/Images/Home-Image/planet.png")}
-              alt="planet"
-            />
-          </animated.div>
-          <animated.div style={rocketEnter}>
-            <img
-              className={HomeTopCSS["home-top-rocket"]}
-              src={require("../../../../assets/Images/Home-Image/rocket.png")}
-              alt="rocket"
-            />
-          </animated.div>
-        </figure>
+          <img
+            src={require("../../../../assets/Images/Home-Image/hostingGirl.jpg")}
+            className={HomeTopCSS["home-top-image"]}
+            alt="hosting girl"
+          />
+          <img
+            src={require("../../../../assets/Images/Home-Image/plan.jpg")}
+            className={HomeTopCSS["home-top-image"]}
+            alt="plan"
+          />
+        </Carousel>
       </div>
-    </div>
+    </>
   );
 };

@@ -4,7 +4,7 @@
   --nav-pd-container: 0 140px; /* nav container padding */
   --nav-fs-links: 1.2rem; /* nav links size */
   --nav-fs-activeLinks: 1.3rem; /* active nav link size */
-  --nav-fs-logoName: 1.8rem; /* nav logo name size */
+  --nav-fs-logoName: 2rem; /* nav logo name size */
   --nav-fs-logo: 50px; /* nav img logo size */
   --nav-h-container: 5rem; /* nav height */
 }
@@ -39,11 +39,14 @@
   text-decoration: none;
   font-size: var(--nav-fs-logoName);
   font-family: "Cabin";
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .nav-logo img {
   /* display and box model */
   width: var(--nav-fs-logo);
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 /* Navigation ul tag class target */
@@ -116,13 +119,24 @@
 }
 
 /*Responsive settings*/
+@media screen and (max-width: 1400px) {
+  :root {
+    --nav-pd-container: 0 60px;
+    --nav-fs-links: 1.35rem;
+    --nav-fs-activeLinks: 1.2rem;
+    --nav-fs-logoName: 1.7rem;
+
+    --nav-fs-logo: 45px; /* nav img logo size */
+  }
+}
 @media screen and (max-width: 1200px) {
   :root {
     --nav-pd-container: 0 60px;
     --nav-fs-links: 1.15rem;
     --nav-fs-activeLinks: 1.2rem;
-    --nav-fs-logoName: 1.5rem;
+    --nav-fs-logoName: 1.3rem;
     --nav-h-container: 4.8rem;
+    --nav-fs-logo: 45px; /* nav img logo size */
   }
 
   .nav-links {

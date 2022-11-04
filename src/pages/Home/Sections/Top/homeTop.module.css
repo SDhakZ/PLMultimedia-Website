@@ -1,37 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap");
+
 :root {
-  --H-T-fs-staticText: 4.5rem; /* font size of static text */
-  --H-T-fs-text: 6.5rem; /* font size of text */
-  --H-T-vw-homeTop: 43vw; /* viewport width of home top */
-  --H-T-w-rocket: 13%; /* width of rocket */
-  --H-T-w-planet: 9%; /* width of planet */
-  --H-T-w-man: 25%; /* width of man */
-  --H-T-w-background: 30%; /* width of background */
+  --H-T-left-text: 32%;
+  --H-T-top-text: 23%;
+  --H-T-fs-text: 6.4rem;
+  --H-T-fs-staticText: 4.6rem;
 }
-
-.home-top-main {
-  /* display and box model */
-  width: 100%;
-  height: 100%;
-  /* positioning */
+.home-top {
+  overflow: hidden;
   position: relative;
+  z-index: 0;
 }
 
-/*Text*/
+.home-top-image {
+  height: 43vw;
+}
+
 .home-top-text {
+  z-index: 1;
   /* display and box model */
   max-width: 650px;
   /* positioning */
   position: absolute;
-  left: 36%;
-  top: 23%;
+  left: var(--H-T-left-text);
+  top: var(--H-T-top-text);
   /* other */
   font-size: var(--H-T-fs-staticText);
-  font-family: "Baloo 2";
+  font-family: "Kanit";
   line-height: 1;
-  font-weight: 700;
-  background: linear-gradient(45deg, #f65cff, #ab36fd, #a289ff, #0047fd);
+  font-weight: 600;
+  letter-spacing: 5px;
+  background: linear-gradient(45deg, #e05fe7, #ab36fd, #a466d3, #1b59f7);
   background-size: 300%;
   text-transform: uppercase;
   background-clip: text;
@@ -40,10 +41,12 @@
   -moz-animation: animated_text 7s ease-in-out infinite;
   -webkit-animation: animated_text 7s ease-in-out infinite;
   animation-timing-function: ease;
+  -webkit-text-stroke: 2.3px white;
 }
 
 .home-top-text h1 {
   font-size: var(--H-T-fs-text);
+  font-weight: 600;
 }
 
 @keyframes animated_text {
@@ -58,258 +61,72 @@
   }
 }
 
-.home-top {
-  /* display and box model */
-  height: var(--H-T-vw-homeTop);
-  overflow: hidden;
-  display: relative;
-}
-
-.home-top-imgCollection {
-  /* display and box model */
-  width: 100%;
-  height: 100%;
-  /* positioning */
-  position: relative;
-}
-
-.home-top-leftbg {
-  /* display and box model */
-  width: var(--H-T-w-background);
-  /* positioning */
-  position: absolute;
-}
-
-.home-top-rightbg {
-  /* display and box model */
-  width: var(--H-T-w-background);
-  /* positioning */
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.home-top-floatingman {
-  /* display and box model */
-  width: var(--H-T-w-man);
-  /* positioning */
-  position: absolute;
-  bottom: 3%;
-  left: 7%;
-  /* other */
-  animation-name: floating;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-.home-top-planet {
-  /* display and box model */
-  width: var(--H-T-w-planet);
-  /* positioning */
-  position: absolute;
-  top: 7%;
-  left: 5%;
-  /* other */
-  animation-name: planet;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-}
-
-.home-top-rocket {
-  /* display and box model */
-  width: var(--H-T-w-rocket);
-  /* positioning */
-  position: absolute;
-  left: 16%;
-  top: 10%;
-  /* other */
-  animation-name: rocket;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-}
-
-@keyframes rocket {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(5px, -5px);
-  }
-  100% {
-    transform: translate(0, -0px);
-  }
-}
-
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  60% {
-    transform: translate(-5px, 15px);
-  }
-  100% {
-    transform: translate(0, 0px);
-  }
-}
-
-@keyframes planet {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(5px, 3px);
-  }
-  100% {
-    transform: translate(0, -0px);
-  }
-}
-
 /* responsive settings */
 @media all and (max-width: 1400px) {
   :root {
+    --H-T-left-text: 30%;
+    --H-T-top-text: 21%;
+    --H-T-fs-text: 5.3rem;
     --H-T-fs-staticText: 3.5rem;
-    --H-T-fs-text: 5rem;
-  }
-
-  .home-top-text {
-    left: 35%;
-    top: 25%;
   }
 }
 
 @media all and (max-width: 1200px) {
   :root {
+    --H-T-left-text: 27%;
+    --H-T-top-text: 20%;
+    --H-T-fs-text: 4.3rem;
     --H-T-fs-staticText: 3rem;
-    --H-T-fs-text: 4rem;
-    --H-T-vw-homeTop: 45vw;
-    --H-T-w-rocket: 11%;
-    --H-T-w-planet: 10%;
-    --H-T-w-man: 26%;
-    --H-T-w-background: 31%;
   }
 
   .home-top-text {
-    top: 30%;
-  }
-
-  .home-top-rightbg {
-    right: -5%;
+    /* display and box model */
+    max-width: 600px;
+    -webkit-text-stroke: 1.3px white;
   }
 }
 
 @media all and (max-width: 960px) {
   :root {
-    --H-T-fs-staticText: 2.3rem;
-    --H-T-fs-text: 3.3rem;
-    --H-T-vw-homeTop: 50vw;
-    --H-T-w-rocket: 14%;
-    --H-T-w-planet: 11%;
-    --H-T-w-man: 28%;
-    --H-T-w-background: 33%;
+    --H-T-left-text: 15%;
+    --H-T-top-text: 22%;
+    --H-T-fs-text: 3.2rem;
+    --H-T-fs-staticText: 2.5rem;
   }
-
   .home-top-text {
-    left: 37%;
-    top: 27%;
-    max-width: 320px;
-  }
-}
-
-@media all and (max-width: 800px) {
-  :root {
-    --H-T-fs-text: 2.6rem;
-    --H-T-fs-staticText: 1.6rem;
-    --H-T-w-man: 25%;
-    --H-T-w-background: 35%;
-  }
-
-  .home-top-text {
-    left: 34%;
-    top: 32%;
-    max-width: 300px;
-  }
-
-  .home-top-leftbg {
-    left: -5%;
+    -webkit-text-stroke: 0.6px white;
   }
 }
 
 @media all and (max-width: 600px) {
   :root {
-    --H-T-fs-text: 2.3rem;
-    --H-T-fs-staticText: 1.3rem;
-    --H-T-vw-homeTop: 60vw;
-    --H-T-w-rocket: 12%;
-    --H-T-w-planet: 9%;
-    --H-T-w-man: 23%;
-    --H-T-w-background: 50%;
+    --H-T-left-text: 16%;
+    --H-T-top-text: 17%;
+    --H-T-fs-text: 2.55rem;
+    --H-T-fs-staticText: 1.95rem;
   }
-
+  .home-top-image {
+    height: 50vw;
+  }
   .home-top-text {
-    left: 27%;
-    top: 32%;
-  }
-
-  .home-top-leftbg {
-    left: -25%;
-  }
-
-  .home-top-rightbg {
-    right: -10%;
-  }
-
-  .home-top-floatingman {
-    bottom: 10%;
-    left: 5%;
-  }
-
-  .home-top-planet {
-    left: 2%;
-  }
-
-  .home-top-rocket {
-    left: 10%;
+    max-width: 400px;
+    letter-spacing: 2px;
   }
 }
 
 @media all and (max-width: 400px) {
   :root {
-    --H-T-fs-text: 1.8rem;
-    --H-T-fs-staticText: 1rem;
-    --H-T-vw-homeTop: 50vw;
-    --H-T-w-rocket: 13%;
-    --H-T-w-planet: 8%;
-    --H-T-w-man: 26%;
+    --H-T-left-text: 17%;
+    --H-T-top-text: 25%;
+    --H-T-fs-text: 2rem;
+    --H-T-fs-staticText: 1.8rem;
   }
-
+  .home-top-image {
+    height: 60vw;
+  }
   .home-top-text {
-    left: 23%;
-    top: 27%;
-    max-width: 200px;
-  }
-
-  .home-top-floatingman {
-    bottom: 7%;
-    left: 73%;
-  }
-
-  .home-top-leftbg {
-    left: -30%;
-  }
-
-  .home-top-rightbg {
-    right: -20%;
-  }
-
-  .home-top-planet {
-    top: 7%;
-    left: 1%;
-  }
-
-  .home-top-rocket {
-    left: 7%;
+    max-width: 450px;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 0.3px white;
   }
 }

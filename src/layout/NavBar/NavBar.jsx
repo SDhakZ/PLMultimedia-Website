@@ -20,7 +20,7 @@ export const NavBar = () => {
               src={require("../../assets/Logo/companyLogo.png")}
               alt="company logo"
             />
-            Multimedia
+            PLMultimedia
           </NavLink>
 
           <ul

@@ -18,10 +18,12 @@ export const Footer = () => {
         <div className={FooterCSS["footer-companyDetail-container"]}>
           <div className={FooterCSS["footer-companyName-container"]}>
             <img
-              src={require("../../assets/Logo/companyLogoBlack.png")}
+              src={require("../../assets/Logo/companyLogo.png")}
               alt="company logo"
             />
-            <span className={FooterCSS["footer-companyName"]}>Multimedia</span>
+            <span className={FooterCSS["footer-companyName"]}>
+              PLMultimedia
+            </span>
           </div>
           <p>
             We are a complete Multimedia and IT Service provider agency. We are
