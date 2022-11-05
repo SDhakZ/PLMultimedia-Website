@@ -31,12 +31,12 @@ export const HomeTop = () => {
 
         <Carousel
           autoPlay
-          animationHandler="fade"
           showStatus={false}
           infiniteLoop={true}
           showThumbs={false}
           stopOnHover={false}
           interval={6000}
+          emulateTouch={true}
         >
           <img
             src={require("../../../../assets/Images/Home-Image/media.jpg")}

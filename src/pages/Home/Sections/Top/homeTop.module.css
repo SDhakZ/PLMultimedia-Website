@@ -69,6 +69,9 @@
     --H-T-fs-text: 5.3rem;
     --H-T-fs-staticText: 3.5rem;
   }
+  .home-top-image {
+    height: 58vw;
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -77,6 +80,10 @@
     --H-T-top-text: 20%;
     --H-T-fs-text: 4.3rem;
     --H-T-fs-staticText: 3rem;
+  }
+
+  .home-top-image {
+    height: 55vw;
   }
 
   .home-top-text {
@@ -90,8 +97,8 @@
   :root {
     --H-T-left-text: 15%;
     --H-T-top-text: 22%;
-    --H-T-fs-text: 3.2rem;
-    --H-T-fs-staticText: 2.5rem;
+    --H-T-fs-text: 3.3rem;
+    --H-T-fs-staticText: 2.7rem;
   }
   .home-top-text {
     -webkit-text-stroke: 0.6px white;
