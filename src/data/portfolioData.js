@@ -16,7 +16,7 @@ const portfolioData = [
     Heading: "Chitrawan Khabar",
     Link: "https://chitrawankhabar.com/",
     brief:
-      "Website for Chitrawan Khabar a chitwan based newsportal operated by PL Multimedia Services Pvt. Ltd.",
+      "Website for Chitrawan Khabar; a chitwan based newsportal operated by PL Multimedia Services Pvt. Ltd.",
     Description:
       "Chitrawan Khabar a chitwan based newsportal established with the aim of providing every information related to politics, society, and current affairs from local level as well as national and international information to the readers. Its main motto is to make every information feasible to every people residing in every corner of Chitwan and abroad.",
   },
@@ -29,6 +29,16 @@ const portfolioData = [
       "Website designed to take preliminary election survey operated by PL Multimedia Services Pvt. Ltd.",
     Description:
       "This is a special portal which is specifically used for taking preliminary election survey, initiated for the upcoming election for Chitwan: the southwestern corner of Bagmati Province and Nawalpur: a district located in Gandaki Province of Nepal. It is used to estimate the outcome and the portal also displays the remaining time for the election.",
+  },
+  {
+    id: 4,
+    img: require("../assets/Images/Portfolio-Image/chitrawanApp.png"),
+    addClass: "RL",
+    Heading: "Chitrawan Khabar App",
+    brief:
+      "Mobile Application for Chitrawan Khabar; a chitwan based newsportal operated by PL Multimedia Services Pvt. Ltd.",
+    Description:
+      "Chitrawan Khabar app is a chitwan based newsportal application established with the aim of providing every information related to politics, society, and current affairs from local level as well as national and international information to the readers. Its main motto is to make every information feasible to every people residing in every corner of Chitwan and abroad in their mobile phones.",
   },
 ];
 export default portfolioData;

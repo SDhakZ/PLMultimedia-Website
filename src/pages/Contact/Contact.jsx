@@ -202,7 +202,24 @@ export const Contact = () => {
                   <div className={ContactCSS["contact-icons"]}>
                     <i className={`${ContactCSS.phone} fa-solid fa-phone`} />
                   </div>
-                  <a href="tel:+9779860283950">9860283950</a>
+                  <a
+                    href="tel:056-537276"
+                    className={ContactCSS["contact-number"]}
+                  >
+                    056-537276,
+                  </a>
+                  <a
+                    href="tel:+9779849970333"
+                    className={ContactCSS["contact-number"]}
+                  >
+                    9849970333,
+                  </a>
+                  <a
+                    href="tel:+9779860283950"
+                    className={ContactCSS["contact-number"]}
+                  >
+                    9860283950
+                  </a>
                 </div>
 
                 <div className={ContactCSS["contact-links"]}>

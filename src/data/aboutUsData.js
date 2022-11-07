@@ -29,16 +29,6 @@ const aboutUsData = [
     twitterLink: "https://twitter.com/chhotesauji",
     linkedInLink: "https://www.linkedin.com/in/sandiplamichhane/",
   },
-  {
-    id: 4,
-    img: require("../assets/Images/AboutUs-Image/kishorKatuwal.jpeg"),
-    name: "Kishor Katuwal",
-    position: "Fullstack Developer",
-    facebookLink: "https://github.com/iamsuwarna",
-    gmailLink: "mailto: kishorkatuwal96@gmail.com",
-    twitterLink: "https://twitter.com/chhotesauji",
-    linkedInLink: "https://www.linkedin.com/in/sandiplamichhane/",
-  },
 ];
 
 export default aboutUsData;

@@ -312,6 +312,10 @@ textarea:focus {
     linear-gradient(90deg, #f46262, rgb(169, 31, 31));
 }
 
+.contact-links .contact-number {
+  margin-right: -10px;
+}
+
 /* responsive settings */
 @media (max-width: 1400px) {
   :root {

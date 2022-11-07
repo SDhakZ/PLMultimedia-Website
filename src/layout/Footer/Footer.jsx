@@ -104,15 +104,6 @@ export const Footer = () => {
               ></i>
             </a>
             <a
-              href="https://www.instagram.com/instagram/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <i
-                className={`${FooterCSS.instagram} fa-brands fa-instagram`}
-              ></i>
-            </a>
-            <a
               href="https://www.facebook.com/plmultimediaservice"
               rel="noreferrer"
               target="_blank"

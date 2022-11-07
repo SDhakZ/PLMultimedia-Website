@@ -7,9 +7,11 @@ export const Topbar = () => {
   return (
     <div className={TopbarCSS["topbar"]}>
       <div className={TopbarCSS["topbar-contactInfo"]}>
-        <a href="tel:+9779860283950">
-          <i className="fa-solid fa-phone"></i>+977 9860283950
+        <a href="# ">
+          <i className="fa-solid fa-phone"></i>056-537276, 9860283950,
+          9849970333
         </a>
+
         <a
           href="mailto: info@plmultimediaservice.com"
           rel="noreferrer"
