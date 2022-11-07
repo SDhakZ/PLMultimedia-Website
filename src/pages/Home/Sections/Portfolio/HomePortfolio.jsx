@@ -8,7 +8,12 @@ import { Link } from "react-router-dom";
 // function to create cards for portfolio section
 function HomePortfolioCard(props) {
   return (
-    <button className={HomePortfolioCSS["home-portfolio-card"]}>
+    <a
+      href={props.Link}
+      rel="noreferror"
+      target="_blank"
+      className={HomePortfolioCSS["home-portfolio-card"]}
+    >
       <figure className={HomePortfolioCSS["home-portfolio-image"]}>
         <img src={props.img} alt="Project" />
       </figure>
@@ -21,7 +26,7 @@ function HomePortfolioCard(props) {
           {props.brief}
         </div>
       </div>
-    </button>
+    </a>
   );
 }
 
@@ -38,6 +43,7 @@ export const HomePortfolio = () => {
               img={portfolio.img}
               Heading={portfolio.Heading}
               brief={portfolio.brief}
+              Link={portfolio.Link}
             />
           );
         })}

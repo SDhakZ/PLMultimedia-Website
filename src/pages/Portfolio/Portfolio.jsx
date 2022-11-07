@@ -39,6 +39,7 @@ export const Portfolio = () => {
               addClass={portfolio.addClass}
               Heading={portfolio.Heading}
               Description={portfolio.Description}
+              Link={portfolio.Link}
             />
           );
         })}

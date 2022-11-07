@@ -52,9 +52,14 @@ export const PortfolioSection = (props) => {
               {props.Description}
             </p>
           </div>
-          <button className={portfolioCSS["portfolio-button"]}>
+          <a
+            href={props.Link}
+            className={portfolioCSS["portfolio-button"]}
+            target="_blank"
+            rel="noreferrer"
+          >
             View Project
-          </button>
+          </a>
         </div>
       </section>
       <GoToTop />

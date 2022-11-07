@@ -1,41 +1,34 @@
 const portfolioData = [
   {
     id: 1,
-    img: require("../assets/Images/Portfolio-Image/soundBeamPrj.png"),
-    Heading: "Sound Beam Project",
+    img: require("../assets/Images/Portfolio-Image/relievePharma.png"),
+    Heading: "Relieve Pharma",
+    Link: "https://relievepharma.com/",
     brief:
-      "Website for a technology company that creates technology that bring the sensation of sound.",
+      "Website for Relieve Pharmaceuticals Pvt. Ltd. initiated in 2016 A.D.",
     Description:
-      "Project for a technology company that creates technology that bring the sensation of sound. This company is mainly focused on making premium quality headphones.\nThe website boasts the premium quality of their products with the help of complementing colors and fonts that just match the vibes and have suttle animation for making the user feel involved",
+      "Relieve Pharmaceuticals Private Limited is one of the leading business firm based at Bharatpur Metropolitan City, Ward No-10. Vertically integrated and driven by the youth, it deals in finished pharmaceuticals, nutraceuticals and latex surgical gloves. It also offers a diversified range of therapeutic products to essential surgical products.",
   },
   {
     id: 2,
-    img: require("../assets/Images/Portfolio-Image/binancePrj.png"),
+    img: require("../assets/Images/Portfolio-Image/chitrawanKhabar.png"),
     addClass: "RL",
-    Heading: "Binance Project",
+    Heading: "Chitrawan Khabar",
+    Link: "https://chitrawankhabar.com/",
     brief:
-      "Website for a technology company that creates technology that bring the sensation of sound.",
+      "Website for Chitrawan Khabar a chitwan based newsportal operated by PL Multimedia Services Pvt. Ltd.",
     Description:
-      "Project for a technology company that creates technology that bring the sensation of sound. This company is mainly focused on making premium quality headphones.\nThe website boasts the premium quality of their products with the help of complementing colors and fonts that just match the vibes and have suttle animation for making the user feel involved",
+      "Chitrawan Khabar a chitwan based newsportal established with the aim of providing every information related to politics, society, and current affairs from local level as well as national and international information to the readers. Its main motto is to make every information feasible to every people residing in every corner of Chitwan and abroad.",
   },
   {
     id: 3,
-    img: require("../assets/Images/Portfolio-Image/autonoPrj.png"),
-    Heading: "Autono Project",
+    img: require("../assets/Images/Portfolio-Image/electionPortal.png"),
+    Heading: "Election Portal",
+    Link: "https://election.chitrawankhabar.com/",
     brief:
-      "Website for a technology company that creates technology that bring the sensation of sound.",
+      "Website designed to take preliminary election survey operated by PL Multimedia Services Pvt. Ltd.",
     Description:
-      "Project for a technology company that creates technology that bring the sensation of sound. This company is mainly focused on making premium quality headphones.\nThe website boasts the premium quality of their products with the help of complementing colors and fonts that just match the vibes and have suttle animation for making the user feel involved",
-  },
-  {
-    id: 4,
-    img: require("../assets/Images/Portfolio-Image/barPrj.png"),
-    addClass: "RL",
-    Heading: "BAR Project",
-    brief:
-      "Website for a technology company that creates technology that bring the sensation of sound.",
-    Description:
-      "Project for a technology company that creates technology that bring the sensation of sound. This company is mainly focused on making premium quality headphones.\nThe website boasts the premium quality of their products with the help of complementing colors and fonts that just match the vibes and have suttle animation for making the user feel involved",
+      "This is a special portal which is specifically used for taking preliminary election survey, initiated for the upcoming election for Chitwan: the southwestern corner of Bagmati Province and Nawalpur: a district located in Gandaki Province of Nepal. It is used to estimate the outcome and the portal also displays the remaining time for the election.",
   },
 ];
 export default portfolioData;

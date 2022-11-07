@@ -102,6 +102,7 @@
   background-clip: content-box, border-box;
   transition: all 0.4s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .portfolio-button:hover {

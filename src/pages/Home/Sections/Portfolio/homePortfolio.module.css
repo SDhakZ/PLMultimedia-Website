@@ -39,6 +39,7 @@
   transition: all 0.5s ease;
   overflow: hidden;
   text-align: left;
+  text-decoration: none;
 }
 
 .home-portfolio-card:hover {

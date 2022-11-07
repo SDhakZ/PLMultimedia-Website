@@ -30,7 +30,7 @@ export const HomeTop = () => {
         </div>
 
         <Carousel
-          autoPlay
+          autoPlay={true}
           showStatus={false}
           infiniteLoop={true}
           showThumbs={false}
