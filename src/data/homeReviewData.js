@@ -1,45 +1,17 @@
 const homecommentData = [
   {
     id: 1,
-    img: require("../assets/Images/Home-Image/stock.jpg"),
-    name: "Cameron Williamson",
+    img: require("../assets/Images/Home-Image/sudeepRajSubedi.png"),
+    name: "Phr. Sudeep Raj Subedi",
     comment:
-      "All-in-one place for engaging in remote team discussions for collaborating and also tracking progress. With your team you can achieve more efficiently being online.",
+      "Really appreciate how professional they were in providing the services. I loved and admired the interesting communication they use to explain the service in much more precise terms.",
   },
   {
     id: 2,
-    img: require("../assets/Images/Home-Image/stock2.jpg"),
-    name: "Desmond Dickinson",
+    img: require("../assets/Images/Home-Image/smritiDhakal.png"),
+    name: "Smriti Dhakal",
     comment:
-      "All-in-one place for engaging in remote team discussions for collaborating and also tracking progress. With your team you can achieve more efficiently being online.With your team you can achieve more efficiently being online.",
-  },
-  {
-    id: 3,
-    img: require("../assets/Images/Home-Image/altImage.jpg"),
-    name: "Kath Green",
-    comment:
-      "All-in-one place for engaging in remote team discussions for collaborating and also tracking progress. With your team you can achieve more efficiently being online.",
-  },
-  {
-  id: 4,
-    img: require("../assets/Images/Home-Image/stock.jpg"),
-    name: "Cameron Williamson",
-    comment:
-      "All-in-one place for engaging in remote team discussions for collaborating and also tracking progress. With your team you can achieve more efficiently being online.",
-  },
-  {
-    id: 5,
-    img: require("../assets/Images/Home-Image/stock2.jpg"),
-    name: "Desmond Dickinson",
-    comment:
-      "All-in-one place for engaging in remote team discussions for collaborating and also tracking progress. With your team you can achieve more efficiently being online.With your team you can achieve more efficiently being online.",
-  },
-  {
-    id: 6,
-    img: require("../assets/Images/Home-Image/altImage.jpg"),
-    name: "Kath Green",
-    comment:
-      "All-in-one place for engaging in remote team discussions for collaborating and also tracking progress. With your team you can achieve more efficiently being online.",
+      "There are many incredible services to choose from, which means there are many opportunities for your business to grow. I adore the services and products that they provide.",
   },
 ];
 export default homecommentData;

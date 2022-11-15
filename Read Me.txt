@@ -1,0 +1,33 @@
+==========================================================================================================
+📷📷📷📷📷Media recommendation📷📷📷📷📷
+- For better performance, please compress images before uploading them to the assets folder and CMS media library.
+- The recommended aspect ratio for author images in blogs, reviews, internships, and about us credentials is 1:1. (Square shaped)
+
+🗄️🗄️🗄️🗄️🗄️Data mapping🗄️🗄️🗄️🗄️🗄️
+- Datas for Blog page & Intern page is managed via Strapi CMS
+- Datas for Services page, reviews, about us page, faq page, portfolio page is mapped through js file in data folder.
+
+📁📁📁📁📁Folder structure📁📁📁📁📁📁
+- Assets folder contains gloal css, images and logos
+- Data folder contains data js files for data mapping
+- Components folder contains reusael codes that can be used multiple times in website + Khalti api codes as well
+- hooks folder contains Strapi fetch api 
+- Layout folder contains footer, navbar and topbar 
+- Pages folder contains navbar pages codes
+
+XXXXXXX Format for CSS XXXXXXX
+-For root 
+--(page)-(attribute)-(element name): value 
+eg :root {
+  --I-fs-heading: 1.35rem; /* heading name font size */
+  --I-fs-paragraph: 1rem; /* paragraph font size */
+}
+-for class names Syntax: (file name)-(suitable name) eg className={InternsCSS["interns-fieldDropdown"]}
+
+XXXXX Naming convention XXXXX
+- CSS classnames are camel cased 
+- Folder names are pascal cased
+- Images are camel cased
+- Datas are camel cased
+- JSX files are pascal cased
+- CSS files are camel cased
